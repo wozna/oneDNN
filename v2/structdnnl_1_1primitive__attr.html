@@ -688,12 +688,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Sets quantization scale and shift parameters for RNN data tensors. </p>
 <p>For performance reasons, the low-precision configuration of the RNN primitives expect input activations to have the unsigned 8-bit integer data type. The scale and shift parameters are used to quantize floating-point data to unsigned integer and must be passed to the RNN primitive using attributes.</p>
-<p>The quantization formula is <code>scale * (data + shift)</code>.</p>
+<p>The quantization formula is <code>scale * data + shift</code>.</p>
 <p>Example usage: </p>
 <div class="fragment"><div class="line">*      <span class="comment">// RNN parameters</span></div>
 <div class="line">*      <span class="keywordtype">int</span> l = 2, t = 2, mb = 32, sic = 32, slc = 32, dic = 32, dlc = 32;</div>
 <div class="line">*      <span class="comment">// Activations quantization parameters</span></div>
-<div class="line">*      <span class="keywordtype">float</span> scale = 2.0f, shift = 0.5f;</div>
+<div class="line">*      <span class="keywordtype">float</span> scale = 63.f, shift = 64.f;</div>
 <div class="line">* </div>
 <div class="line">*      <a class="code" href="structdnnl_1_1primitive__attr.html#acfbfd85b7ca82bf97e2b07c2427427de">primitive_attr</a> attr;</div>
 <div class="line">* </div>

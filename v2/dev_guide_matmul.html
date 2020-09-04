@@ -121,6 +121,8 @@ $(document).ready(function(){initNavTree('dev_guide_matmul.html','');});
 <td>\(\bias\) </td><td>DNNL_ARG_BIAS </td></tr>
 <tr>
 <td>\(\dst\) </td><td>DNNL_ARG_DST </td></tr>
+<tr>
+<td>\(binary post-op\) </td><td><a class="el" href="group__dnnl__api__primitives__common.html#ga30839136bbf81b03a173e0842ae015e1" title="Arguments for a binary post operation. ">DNNL_ARG_ATTR_MULTIPLE_POST_OP(binary_post_op_position)</a> | DNNL_ARG_SRC_1 </td></tr>
 </table>
 <h2>Implementation Details</h2>
 <h3>General Notes</h3>
@@ -180,6 +182,8 @@ $(document).ready(function(){initNavTree('dev_guide_matmul.html','');});
 <td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a28460923ad579c780e4027a6256fe207">Eltwise</a> </td><td align="left">Applies an <a class="el" href="group__dnnl__api__eltwise.html">Eltwise</a> operation to the result </td><td align="left"></td></tr>
 <tr>
 <td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#ab8e3832e8600216a3646e9050d3bc1f3">Sum</a> </td><td align="left">Adds the operation result to the destination tensor instead of overwriting it </td><td align="left"></td></tr>
+<tr>
+<td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a40bb2b39a685726ac54873b203be41b5">Binary</a> </td><td align="left">Applies a <a class="el" href="group__dnnl__api__binary.html">Binary</a> operation to the result </td><td align="left">General binary post-op restrictions </td></tr>
 </table>
 <p>To facilitate dynamic quantization, the primitive supports run-time output scales. That means a user could configure attributes with output scales set to the <a class="el" href="group__dnnl__api__memory.html#gab16365c11b4dc88fbb453edb51f1979f" title="A wildcard value for floating point values that are unknown at a primitive creation time...">DNNL_RUNTIME_F32_VAL</a> wildcard value instead of the actual scales, if the scales are not known at the primitive descriptor creation stage. In this case, the user must provide the scales as an additional input memory object with argument <code>DNNL_ARG_ATTR_OUTPUT_SCALES</code> during the execution stage.</p>
 <p>Similarly to run-time output scales, the primitive supports run-time zero points. The wildcard value for zero points is <a class="el" href="group__dnnl__api__memory.html#ga30139d5110e9e895ccd93fe503ca4c35" title="A wildcard value for int32_t values that are unknown at a primitive creation time. ">DNNL_RUNTIME_S32_VAL</a>. During the execution stage, the corresponding memory object needs to be passed in the argument with index set to (<code>DNNL_ARG_ATTR_ZERO_POINTS | DNNL_ARG_${MEMORY_INDEX}</code>).</p>

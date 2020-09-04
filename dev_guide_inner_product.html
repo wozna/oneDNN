@@ -133,6 +133,8 @@ $(document).ready(function(){initNavTree('dev_guide_inner_product.html','');});
 <td>\(\diffbias\) </td><td>DNNL_ARG_DIFF_BIAS </td></tr>
 <tr>
 <td>\(\diffdst\) </td><td>DNNL_ARG_DIFF_DST </td></tr>
+<tr>
+<td>\(binary post-op\) </td><td><a class="el" href="group__dnnl__api__primitives__common.html#ga30839136bbf81b03a173e0842ae015e1" title="Arguments for a binary post operation. ">DNNL_ARG_ATTR_MULTIPLE_POST_OP(binary_post_op_position)</a> | DNNL_ARG_SRC_1 </td></tr>
 </table>
 <h2>Implementation Details</h2>
 <h3>General Notes</h3>
@@ -197,9 +199,11 @@ $(document).ready(function(){initNavTree('dev_guide_inner_product.html','');});
 <tr>
 <td align="left">forward </td><td align="left">attribute </td><td align="left"><a class="el" href="structdnnl_1_1primitive__attr.html#a4b81acc8e48886313154f75c1708ae02">Output scale</a> </td><td align="left">Scales the result of inner product by given scale factor(s) </td><td align="left">int8 inner products only </td></tr>
 <tr>
-<td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a28460923ad579c780e4027a6256fe207">eltwise</a> </td><td align="left">Applies an <a class="el" href="group__dnnl__api__eltwise.html">Eltwise</a> operation to the result </td><td align="left"></td></tr>
+<td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a28460923ad579c780e4027a6256fe207">Eltwise</a> </td><td align="left">Applies an <a class="el" href="group__dnnl__api__eltwise.html">Eltwise</a> operation to the result </td><td align="left"></td></tr>
 <tr>
-<td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#ab8e3832e8600216a3646e9050d3bc1f3">sum</a> </td><td align="left">Adds the operation result to the destination tensor instead of overwriting it </td><td align="left"></td></tr>
+<td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#ab8e3832e8600216a3646e9050d3bc1f3">Sum</a> </td><td align="left">Adds the operation result to the destination tensor instead of overwriting it </td><td align="left"></td></tr>
+<tr>
+<td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a40bb2b39a685726ac54873b203be41b5">Binary</a> </td><td align="left">Applies a <a class="el" href="group__dnnl__api__binary.html">Binary</a> operation to the result </td><td align="left">General binary post-op restrictions </td></tr>
 </table>
 <h2>Implementation Limitations</h2>
 <ol type="1">

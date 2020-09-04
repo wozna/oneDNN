@@ -16,6 +16,7 @@ var annotated =
     [ "dnnl_memory_desc_t", "structdnnl__memory__desc__t.html", "structdnnl__memory__desc__t" ],
     [ "dnnl_memory_extra_desc_t", "structdnnl__memory__extra__desc__t.html", "structdnnl__memory__extra__desc__t" ],
     [ "dnnl_pooling_desc_t", "structdnnl__pooling__desc__t.html", "structdnnl__pooling__desc__t" ],
+    [ "dnnl_pooling_v2_desc_t", "structdnnl__pooling__v2__desc__t.html", "structdnnl__pooling__v2__desc__t" ],
     [ "dnnl_post_ops", "structdnnl__post__ops.html", null ],
     [ "dnnl_primitive", "structdnnl__primitive.html", null ],
     [ "dnnl_primitive_attr", "structdnnl__primitive__attr.html", null ],

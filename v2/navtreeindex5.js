@@ -1,5 +1,10 @@
 var NAVTREEINDEX5 =
 {
+"structdnnl_1_1logsoftmax__forward_1_1primitive__desc.html#a5d0a8ba8f62844fbf565afa5e7ed9961":[6,0,0,0,11,0,1,2],
+"structdnnl_1_1logsoftmax__forward_1_1primitive__desc.html#a678a83daec364961b30a7b4bb1d6e78a":[6,0,0,0,11,0,1,3],
+"structdnnl_1_1logsoftmax__forward_1_1primitive__desc.html#a723a4c47f7a2b7118e5fd23f8c2e8113":[6,0,0,0,11,0,1,5],
+"structdnnl_1_1logsoftmax__forward_1_1primitive__desc.html#a85ce084d311fee88d0b59caa6154d436":[6,0,0,0,11,0,1,1],
+"structdnnl_1_1logsoftmax__forward_1_1primitive__desc.html#aa192fcedde074273837c74875f36293d":[6,0,0,0,11,0,1,0],
 "structdnnl_1_1logsoftmax__forward_1_1primitive__desc.html#aa5f99b767e848e94712e563808da092c":[6,0,0,0,11,0,1,4],
 "structdnnl_1_1lrn__backward.html":[6,0,0,0,13,1],
 "structdnnl_1_1lrn__backward.html#a68f483e09faea1a0bc6624547d50c5d5":[6,0,0,0,13,1,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX5 =
 "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa66fd87374b1ec6be9fdbea534e17adeb":[6,0,0,1,0,5,26],
 "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa6758344f9f89d390953c6718f34e9be1":[6,0,0,1,0,5,65],
 "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa6861aaac0752cd0c618f68453416ea5e":[6,0,0,1,0,5,220],
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa68adbe75d944d8f28b6b0f506a701bc9":[6,0,0,1,0,5,116],
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa68f856a42aaec4e873e1086429cde66f":[6,0,0,1,0,5,299],
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa696b071737d3766203b79539d3973cad":[6,0,0,1,0,5,302],
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa69ff0c51b99e2b3a2242c5573db75680":[6,0,0,1,0,5,296],
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa6a19babc839e184e5ca2b277f376bfaf":[6,0,0,1,0,5,160],
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa6b6699fd9768a197cd07ef9ffaf56795":[6,0,0,1,0,5,350]
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa68adbe75d944d8f28b6b0f506a701bc9":[6,0,0,1,0,5,116]
 };

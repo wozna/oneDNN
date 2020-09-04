@@ -171,8 +171,8 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line"></div>
 <div class="line"><span class="comment">// Implementation for naive convolution on nchw (data) and oihw (weights),</span></div>
 <div class="line"><span class="comment">// followed by execution of non-fused relu</span></div>
-<div class="line"><span class="keywordtype">void</span> conv_relu_naive(<a class="code" href="structdnnl_1_1memory.html">memory</a> user_src, <a class="code" href="structdnnl_1_1memory.html">memory</a> user_wei, <a class="code" href="structdnnl_1_1memory.html">memory</a> user_dst,</div>
-<div class="line">        <a class="code" href="structdnnl_1_1engine.html">engine</a> &amp;eng, <a class="code" href="structdnnl_1_1stream.html">stream</a> &amp;s) {</div>
+<div class="line"><span class="keywordtype">void</span> conv_relu_naive(<span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html">memory</a> &amp;user_src, <span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html">memory</a> &amp;user_wei,</div>
+<div class="line">        <a class="code" href="structdnnl_1_1memory.html">memory</a> user_dst, <a class="code" href="structdnnl_1_1engine.html">engine</a> &amp;eng, <a class="code" href="structdnnl_1_1stream.html">stream</a> &amp;s) {</div>
 <div class="line">    <span class="comment">// [Create mem_desc]</span></div>
 <div class="line">    <span class="comment">// copy the dimensions and format from user&#39;s memory</span></div>
 <div class="line">    <span class="keyword">auto</span> conv_src_md = <a name="_a14"></a><a class="code" href="structdnnl_1_1memory_1_1desc.html">memory::desc</a>(user_src.get_desc());</div>
@@ -279,7 +279,7 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line"><span class="comment">// weights and the relu operation fused via a post-op attribute added to the</span></div>
 <div class="line"><span class="comment">// convolution prim_descriptor</span></div>
 <div class="line"><span class="keywordtype">void</span> conv_relu_fused(<a class="code" href="structdnnl_1_1memory.html">memory</a> user_src, <a class="code" href="structdnnl_1_1memory.html">memory</a> user_wei, <a class="code" href="structdnnl_1_1memory.html">memory</a> user_dst,</div>
-<div class="line">        <a class="code" href="structdnnl_1_1engine.html">engine</a> eng, <a class="code" href="structdnnl_1_1stream.html">stream</a> s) {</div>
+<div class="line">        <span class="keyword">const</span> <a class="code" href="structdnnl_1_1engine.html">engine</a> &amp;eng, <a class="code" href="structdnnl_1_1stream.html">stream</a> &amp;s) {</div>
 <div class="line">    <span class="comment">// copy the dimensions and format from user&#39;s memory</span></div>
 <div class="line">    <span class="keyword">auto</span> conv_src_md = <a class="code" href="structdnnl_1_1memory_1_1desc.html">memory::desc</a>(user_src.get_desc());</div>
 <div class="line">    <span class="keyword">auto</span> conv_wei_md = <a class="code" href="structdnnl_1_1memory_1_1desc.html">memory::desc</a>(user_wei.get_desc());</div>

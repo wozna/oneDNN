@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_f32_8cpp-example.htm
 <div class="line">    for (dim_t i = 0; i &lt; src_seq_length_max; i++) {</div>
 <div class="line">        <span class="keywordflow">for</span> (dim_t j = 0; j &lt; batch * feature_size; j++)</div>
 <div class="line">            alignment_model_ptr[i * batch * feature_size + j] = tanhf(</div>
-<div class="line">                    weighted_src_layer.data()[j]</div>
+<div class="line">                    weighted_src_layer[j]</div>
 <div class="line">                    + weighted_annotations[i * batch * feature_size + j]);</div>
 <div class="line">    }</div>
 <div class="line"></div>

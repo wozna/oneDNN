@@ -159,7 +159,7 @@ Different plain layouts</div></div>
 <p><a href="https://www.tensorflow.org/performance/xla/shapes">TensorFlow Doc. Shapes and Layout</a></p>
 <h3>Generalization of the plain data layout</h3>
 <h4>Strides</h4>
-<p>In the previous examples the data was kept packed or in dense form, meaning pixels follow one another. Sometimes it might be necessary to not keep data contiguous in memory. For instance, some might need to work with a sub-tensor within a bigger tensor. Sometimes it might be beneficial to artificially make the data disjoint, as in case of GEMM with a non-trivial leading dimension to get better performance (<a href="https://software.intel.com/en-us/articles/a-simple-example-to-measure-the-performance-of-an-intel-mkl-function">see Tips 6</a>).</p>
+<p>In the previous examples the data was kept packed or in dense form, meaning pixels follow one another. Sometimes it might be necessary to not keep data contiguous in memory. For instance, some might need to work with a sub-tensor within a bigger tensor. Sometimes it might be beneficial to artificially make the data disjoint, as in case of GEMM with a non-trivial leading dimension to get better performance (<a href="https://software.intel.com/content/www/us/en/develop/articles/a-simple-example-to-measure-the-performance-of-an-intel-mkl-function">see Tips 6</a>).</p>
 <p>The following picture shows a simplified case for a 2D matrix of size <code>rows x columns</code> kept in row-major format where rows have some non-trivial (that is, not equal to the number of columns) stride.</p>
 <div class="image">
 <img src="strides.png" alt="strides.png"/>

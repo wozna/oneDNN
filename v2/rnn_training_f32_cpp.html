@@ -114,6 +114,7 @@ $(document).ready(function(){initNavTree('rnn_training_f32_cpp.html','');});
 <div class="line"><span class="preprocessor">#include &lt;cstring&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;numeric&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="dnnl_8hpp.html">dnnl.hpp</a>&quot;</span></div>
 <div class="line"></div>
@@ -261,12 +262,12 @@ $(document).ready(function(){initNavTree('rnn_training_f32_cpp.html','');});
 <div class="line">    <span class="comment">// Create auxillary f32 memory descriptor</span></div>
 <div class="line">    <span class="comment">// based on user- supplied dimensions and layout.</span></div>
 <div class="line">    <span class="keyword">auto</span> formatted_md</div>
-<div class="line">            = [=](<a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> dimensions, <a class="code" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3f">memory::format_tag</a> layout) {</div>
+<div class="line">            = [=](<span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> &amp;dimensions, <a class="code" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3f">memory::format_tag</a> layout) {</div>
 <div class="line">                  <span class="keywordflow">return</span> <a class="code" href="structdnnl_1_1memory_1_1desc.html">memory::desc</a> {{dimensions}, dt::f32, layout};</div>
 <div class="line">              };</div>
 <div class="line">    <span class="comment">// Create auxillary generic f32 memory descriptor</span></div>
 <div class="line">    <span class="comment">// based on supplied dimensions, with format_tag::any.</span></div>
-<div class="line">    <span class="keyword">auto</span> generic_md = [=](<a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> dimensions) {</div>
+<div class="line">    <span class="keyword">auto</span> generic_md = [=](<span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> &amp;dimensions) {</div>
 <div class="line">        <span class="keywordflow">return</span> formatted_md(dimensions, tag::any);</div>
 <div class="line">    };</div>
 <div class="line"></div>

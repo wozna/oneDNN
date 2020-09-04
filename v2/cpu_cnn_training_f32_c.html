@@ -443,10 +443,12 @@ $(document).ready(function(){initNavTree('cpu_cnn_training_f32_c.html','');});
 <div class="line">    <span class="comment">// {BATCH, OC, CONV_OH, CONV_OW} -&gt; {BATCH, OC, POOL_OH, POOL_OW}</span></div>
 <div class="line">    <span class="comment">// kernel: {3, 3}</span></div>
 <div class="line">    <span class="comment">// strides: {POOL_STRIDE, POOL_STRIDE}</span></div>
+<div class="line">    <span class="comment">// dilation: {0, 0}</span></div>
 <div class="line">    <a class="code" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> *pool_dst_sizes = net_dst_sizes;</div>
 <div class="line">    <a class="code" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> pool_kernel[2] = {3, 3};</div>
 <div class="line">    <a class="code" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> pool_strides[2] = {POOL_STRIDE, POOL_STRIDE};</div>
 <div class="line">    <a class="code" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> pool_padding[2] = {POOL_PAD, POOL_PAD};</div>
+<div class="line">    <a class="code" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> pool_dilation[2] = {0, 0};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create memory for user dst data</span></div>
 <div class="line">    <a class="code" href="structdnnl__memory.html">dnnl_memory_t</a> pool_user_dst_memory;</div>
@@ -466,10 +468,10 @@ $(document).ready(function(){initNavTree('cpu_cnn_training_f32_c.html','');});
 <div class="line">        CHECK(<a class="code" href="group__dnnl__api__memory.html#gaff696e368aeefb3036a0419c508dc6be">dnnl_memory_desc_init_by_tag</a>(&amp;pool_dst_md, 4, pool_dst_sizes,</div>
 <div class="line">                <a class="code" href="group__dnnl__api__memory.html#gga012ba1c84ff24bdd068f9d2f9b26a130a6b33889946b183311c39cc1bd0656ae9">dnnl_f32</a>, <a class="code" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dafee39ac6fff0325cae43cd66495c18ac">dnnl_format_tag_any</a>));</div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="structdnnl__pooling__desc__t.html">dnnl_pooling_desc_t</a> pool_desc;</div>
-<div class="line">        CHECK(<a class="code" href="group__dnnl__api__pooling.html#ga1e5b3f2b9088ba7260c996d96268e84e">dnnl_pooling_forward_desc_init</a>(&amp;pool_desc, <a class="code" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a6a59d07a8414bb69b3cb9904ed302adb">dnnl_forward</a>,</div>
+<div class="line">        <a class="code" href="structdnnl__pooling__v2__desc__t.html">dnnl_pooling_v2_desc_t</a> pool_desc;</div>
+<div class="line">        CHECK(<a class="code" href="group__dnnl__api__pooling.html#gadedbffa2fa02e7afdff750c9b622da86">dnnl_pooling_v2_forward_desc_init</a>(&amp;pool_desc, <a class="code" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a6a59d07a8414bb69b3cb9904ed302adb">dnnl_forward</a>,</div>
 <div class="line">                <a class="code" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23acf3529ba1c4761c0da90eb6750def6c7">dnnl_pooling_max</a>, pool_src_md, &amp;pool_dst_md, pool_strides,</div>
-<div class="line">                pool_kernel, pool_padding, pool_padding));</div>
+<div class="line">                pool_kernel, pool_dilation, pool_padding, pool_padding));</div>
 <div class="line"></div>
 <div class="line">        CHECK(<a class="code" href="group__dnnl__api__primitives__common.html#ga336dd467c36d8fe0d3311ddc73f239cb">dnnl_primitive_desc_create</a>(</div>
 <div class="line">                &amp;pool_pd, &amp;pool_desc, NULL, engine, NULL));</div>
@@ -534,10 +536,10 @@ $(document).ready(function(){initNavTree('cpu_cnn_training_f32_c.html','');});
 <div class="line">    <span class="keyword">const</span> <a class="code" href="structdnnl__memory__desc__t.html">dnnl_memory_desc_t</a> *pool_diff_dst_md = pool_dst_md;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create backward pooling descriptor</span></div>
-<div class="line">    <a class="code" href="structdnnl__pooling__desc__t.html">dnnl_pooling_desc_t</a> pool_bwd_desc;</div>
-<div class="line">    CHECK(<a class="code" href="group__dnnl__api__pooling.html#gaa9c943c7a3957b78a94e36b1ed10c577">dnnl_pooling_backward_desc_init</a>(&amp;pool_bwd_desc, <a class="code" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23acf3529ba1c4761c0da90eb6750def6c7">dnnl_pooling_max</a>,</div>
+<div class="line">    <a class="code" href="structdnnl__pooling__v2__desc__t.html">dnnl_pooling_v2_desc_t</a> pool_bwd_desc;</div>
+<div class="line">    CHECK(<a class="code" href="group__dnnl__api__pooling.html#gacfb930c7d22ce1db2ffbca016a1c39aa">dnnl_pooling_v2_backward_desc_init</a>(&amp;pool_bwd_desc, <a class="code" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23acf3529ba1c4761c0da90eb6750def6c7">dnnl_pooling_max</a>,</div>
 <div class="line">            pool_diff_src_md, pool_diff_dst_md, pool_strides, pool_kernel,</div>
-<div class="line">            pool_padding, pool_padding));</div>
+<div class="line">            pool_dilation, pool_padding, pool_padding));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// backward primitive descriptor needs to hint forward descriptor</span></div>
 <div class="line">    <a class="code" href="structdnnl__primitive__desc.html">dnnl_primitive_desc_t</a> pool_bwd_pd;</div>

@@ -19,5 +19,6 @@ var group__dnnl__api__primitives =
     [ "Inner Product", "group__dnnl__api__inner__product.html", "group__dnnl__api__inner__product" ],
     [ "RNN", "group__dnnl__api__rnn.html", "group__dnnl__api__rnn" ],
     [ "Matrix Multiplication", "group__dnnl__api__matmul.html", "group__dnnl__api__matmul" ],
-    [ "Resampling", "group__dnnl__api__resampling.html", "group__dnnl__api__resampling" ]
+    [ "Resampling", "group__dnnl__api__resampling.html", "group__dnnl__api__resampling" ],
+    [ "Dnnl_api_pooling_v2", "group__dnnl__api__pooling__v2.html", "group__dnnl__api__pooling__v2" ]
 ];

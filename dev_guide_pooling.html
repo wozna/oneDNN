@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('dev_guide_pooling.html','');});
 <p>The pooling operation is defined by the following formulas. We show formulas only for 2D spatial data which are straightforward to generalize to cases of higher and lower dimensions. Variable names follow the standard <a class="el" href="dev_guide_conventions.html">Naming Conventions</a>.</p>
 <p>Max pooling:</p>
 <p class="formulaDsp">
-\[ \dst(n, c, oh, ow) = \max\limits_{kh, kw} \left( \src(n, c, oh \cdot SH + kh - PH_L, ow \cdot SW +kw - PW_L) \right) \]
+\[ \dst(n, c, oh, ow) = \max\limits_{kh, kw} \left( \src(n, c, oh \cdot SH + kh \cdot (DH + 1) - PH_L, ow \cdot SW + kw \cdot (DW + 1) - PW_L) \right) \]
 </p>
 <p>Average pooling:</p>
 <p class="formulaDsp">
-\[ \dst(n, c, oh, ow) = \frac{1}{DENOM} \sum\limits_{kh, kw} \src(n, c, oh \cdot SH + kh - PH_L, ow \cdot SW +kw - PW_L) \]
+\[ \dst(n, c, oh, ow) = \frac{1}{DENOM} \sum\limits_{kh, kw} \src(n, c, oh \cdot SH + kh \cdot (DH + 1) - PH_L, ow \cdot SW + kw \cdot (DW + 1) - PW_L) \]
 </p>
 <p>Here output spatial dimensions are calculated similarly to how they are done in <a class="el" href="dev_guide_convolution.html">Convolution</a>.</p>
 <p>Average pooling supports two algorithms:</p>

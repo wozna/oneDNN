@@ -148,7 +148,7 @@ $(document).ready(function(){initNavTree('dev_guide_profilers.html','');});
 <div class="line">benchdnn  libdnnl.so.1.1    dnnl::impl::cpu::jit_avx2_convolution_fwd_t::execute_forward(dnnl::impl::exec_ctx_t <span class="keyword">const</span>&amp;) const::{lambda(intint)<span class="preprocessor">#1}::operator()  0.260602</span></div>
 <div class="line"><span class="preprocessor">benchdnn  vmlinux           plist_check_prev_next                                                                                                              0.115266</span></div>
 </div><!-- fragment --><p>The JIT-ed function <code>jit_avx2_conv_fwd_kernel_f32</code> is shown as belonging to the <code>[Dynamic code]</code> module.</p>
-<p>See more examples in the <a href="https://software.intel.com/en-us/vtune-amplifier-help-tutorials-and-samples">VTune Amplifier User Guide</a></p>
+<p>See more examples in the <a href="https://software.intel.com/content/www/us/en/develop/documentation/vtune-help/top/introduction/tutorials-and-samples.html">VTune Amplifier User Guide</a></p>
 <h2>Example: Profiling with Linux perf</h2>
 <p>The following command instructs oneDNN to enable both jitdump and perfmap profiling modes and write jitdump files into <code>.debug</code> directory in the current directory by setting environment variable <code>JITDUMPDIR</code> to point to the current directory.</p>
 <div class="fragment"><div class="line">$ JITDUMPDIR=. DNNL_JIT_PROFILE=6 perf record -k1 ./tests/benchdnn/benchdnn --mode=P mb1ic32ih14oc32oh14kh3ph1n<span class="stringliteral">&quot;resnet_50:res4a_branch2b*6&quot;</span></div>

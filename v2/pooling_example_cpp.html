@@ -145,10 +145,12 @@ $(document).ready(function(){initNavTree('pooling_example_cpp.html','');});
 <div class="line">            PW_L = 0, <span class="comment">// width padding: left</span></div>
 <div class="line">            PW_R = 0, <span class="comment">// width padding: right</span></div>
 <div class="line">            SH = 4, <span class="comment">// height-wise stride</span></div>
-<div class="line">            SW = 4; <span class="comment">// width-wise stride</span></div>
+<div class="line">            SW = 4, <span class="comment">// width-wise stride</span></div>
+<div class="line">            DH = 1, <span class="comment">// height-wise dilation</span></div>
+<div class="line">            DW = 1; <span class="comment">// width-wise dilation</span></div>
 <div class="line"></div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html#a6ad818e4699872cc913474fa5f122cd5">memory::dim</a> OH = (IH - KH + PH_L + PH_R) / SH + 1;</div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html#a6ad818e4699872cc913474fa5f122cd5">memory::dim</a> OW = (IW - KW + PW_L + PW_R) / SW + 1;</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html#a6ad818e4699872cc913474fa5f122cd5">memory::dim</a> OH = (IH - ((KH - 1) * DH + KH) + PH_L + PH_R) / SH + 1;</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="structdnnl_1_1memory.html#a6ad818e4699872cc913474fa5f122cd5">memory::dim</a> OW = (IW - ((KW - 1) * DW + KW) + PW_L + PW_R) / SW + 1;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Source (src) and destination (dst) tensors dimensions.</span></div>
 <div class="line">    <a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> src_dims = {N, IC, IH, IW};</div>
@@ -161,6 +163,7 @@ $(document).ready(function(){initNavTree('pooling_example_cpp.html','');});
 <div class="line">    <a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> strides_dims = {SH, SW};</div>
 <div class="line">    <a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> padding_dims_l = {PH_L, PW_L};</div>
 <div class="line">    <a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> padding_dims_r = {PH_R, PW_R};</div>
+<div class="line">    <a class="code" href="structdnnl_1_1memory.html#afdd20764d58c0b517d5a31276672aeb8">memory::dims</a> dilation = {DH, DW};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Allocate buffers.</span></div>
 <div class="line">    std::vector&lt;float&gt; src_data(product(src_dims));</div>
@@ -182,12 +185,12 @@ $(document).ready(function(){initNavTree('pooling_example_cpp.html','');});
 <div class="line">    write_to_dnnl_memory(src_data.data(), src_mem);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create operation descriptor.</span></div>
-<div class="line">    <span class="keyword">auto</span> <a class="code" href="group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a8c55c4b147af6d6e1de777e25e519bd4">pooling_d</a> = <a class="code" href="structdnnl_1_1pooling__forward_1_1desc.html">pooling_forward::desc</a>(<a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa24775787fab8f13aa4809e1ce8f82aeb">prop_kind::forward_training</a>,</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code" href="group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a8c55c4b147af6d6e1de777e25e519bd4">pooling_d</a> = <a class="code" href="structdnnl_1_1pooling__v2__forward_1_1desc.html">pooling_v2_forward::desc</a>(<a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa24775787fab8f13aa4809e1ce8f82aeb">prop_kind::forward_training</a>,</div>
 <div class="line">            algorithm::pooling_max, src_md, dst_md, strides_dims, kernel_dims,</div>
-<div class="line">            padding_dims_l, padding_dims_r);</div>
+<div class="line">            dilation, padding_dims_l, padding_dims_r);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create primitive descriptor.</span></div>
-<div class="line">    <span class="keyword">auto</span> pooling_pd = <a class="code" href="structdnnl_1_1pooling__forward_1_1primitive__desc.html">pooling_forward::primitive_desc</a>(pooling_d, engine);</div>
+<div class="line">    <span class="keyword">auto</span> pooling_pd = <a class="code" href="structdnnl_1_1pooling__v2__forward_1_1primitive__desc.html">pooling_v2_forward::primitive_desc</a>(pooling_d, engine);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create workspace memory objects using memory descriptor created by the</span></div>
 <div class="line">    <span class="comment">// primitive descriptor.</span></div>
@@ -196,7 +199,7 @@ $(document).ready(function(){initNavTree('pooling_example_cpp.html','');});
 <div class="line">    <span class="keyword">auto</span> workspace_mem = memory(pooling_pd.workspace_desc(), engine);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create the primitive.</span></div>
-<div class="line">    <span class="keyword">auto</span> pooling_prim = <a class="code" href="structdnnl_1_1pooling__forward.html">pooling_forward</a>(pooling_pd);</div>
+<div class="line">    <span class="keyword">auto</span> pooling_prim = <a class="code" href="structdnnl_1_1pooling__v2__forward.html">pooling_v2_forward</a>(pooling_pd);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Primitive arguments. Set up in-place execution by assigning src as DST.</span></div>
 <div class="line">    std::unordered_map&lt;int, memory&gt; pooling_args;</div>

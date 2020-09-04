@@ -53,5 +53,7 @@ var namespacednnl =
     [ "matmul", "structdnnl_1_1matmul.html", "structdnnl_1_1matmul" ],
     [ "resampling_forward", "structdnnl_1_1resampling__forward.html", "structdnnl_1_1resampling__forward" ],
     [ "resampling_backward", "structdnnl_1_1resampling__backward.html", "structdnnl_1_1resampling__backward" ],
+    [ "pooling_v2_forward", "structdnnl_1_1pooling__v2__forward.html", "structdnnl_1_1pooling__v2__forward" ],
+    [ "pooling_v2_backward", "structdnnl_1_1pooling__v2__backward.html", "structdnnl_1_1pooling__v2__backward" ],
     [ "threadpool_iface", "structdnnl_1_1threadpool__iface.html", "structdnnl_1_1threadpool__iface" ]
 ];
