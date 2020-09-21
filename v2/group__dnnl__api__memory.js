@@ -480,6 +480,7 @@ var group__dnnl__api__memory =
       [ "dnnl_ab", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da1bd907fc29344dfe7ba88336960dcf53", null ],
       [ "dnnl_abc", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dadff5ea69392d7e4da23179dc0ba7cbc2", null ],
       [ "dnnl_abcd", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da6e669cc61278663a5ddbd3d0b25c6c5c", null ],
+      [ "dnnl_acbd", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da6a81c235d5a08451ac61edb1681bd925", null ],
       [ "dnnl_abcde", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da30d5d3c9de2931f06d265af81787ada3", null ],
       [ "dnnl_abcdef", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da74b2db34e6253e56f441764d16e6ec42", null ],
       [ "dnnl_abdc", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dad7bcb765b861ed46b2b752e912989217", null ],

@@ -41,7 +41,8 @@ var NAVTREE =
       [ "Shuffle", "dev_guide_shuffle.html", null ],
       [ "Softmax", "dev_guide_softmax.html", null ],
       [ "Sum", "dev_guide_sum.html", null ],
-      [ "Reorder", "dev_guide_reorder.html", null ]
+      [ "Reorder", "dev_guide_reorder.html", null ],
+      [ "Reduction", "dev_guide_reduction.html", null ]
     ] ],
     [ "Examples", "dev_guide_examples.html", null ],
     [ "Performance Profiling and Inspection", "usergroup3.html", [
@@ -91,15 +92,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__dnnl__api__engine.html#gga04b3dd9eba628ea02218a52c4c4363a2af14bd66bd4a7130da204c539f7cf08b6",
-"group__dnnl__api__primitives__common.html#ga9878f4795e53ad8443e5c0a29e53286a",
-"group__dnnl__api__service.html#ga3a5fbaf64f33c4d9b96816f6976bcaf9",
-"structdnnl_1_1deconvolution__forward_1_1primitive__desc.html#a9f4d214e142ef77363abeab7f48ec9c7",
-"structdnnl_1_1lrn__backward.html#ab85ce3b636dc618d4337f7d66623a0d8",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa6a19babc839e184e5ca2b277f376bfaf",
-"structdnnl_1_1memory.html#aaf3c13ed6f4af1b719ef7413ee36f63d",
-"structdnnl_1_1softmax__backward_1_1desc.html",
-"structdnnl__rnn__desc__t.html#a8030f10b83affa1bb99e6c18ec77632d"
+"group__dnnl__api__engine.html#ga07dcb50917e9ac8d23d5a363f74868b6",
+"group__dnnl__api__primitives__common.html#ga53dc83e64489cd69bd82c1c2025eb5bd",
+"group__dnnl__api__rnn.html#ga051e03160540be590513bee961edd2c4",
+"structdnnl_1_1deconvolution__backward__data_1_1desc.html#a86e49e42fd4399edadd8c7313101dce3",
+"structdnnl_1_1lbr__gru__forward_1_1primitive__desc.html",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa4c76ce9b095243e79cb310e1b041057b",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faeaa37c2eca13f8a741d741640efd7656",
+"structdnnl_1_1resampling__backward_1_1primitive__desc.html#a2487948c1906a70bf68144d236613bfb",
+"structdnnl__matmul__desc__t.html#aff9853c7aee532d6baca81c4ee8ab810"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

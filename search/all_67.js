@@ -8,7 +8,7 @@ var searchData=
   ['get_5fdesc',['get_desc',['../structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a',1,'dnnl::memory']]],
   ['get_5fdst_5fengine',['get_dst_engine',['../structdnnl_1_1reorder_1_1primitive__desc.html#aeea13591e2dc943d337f9617fedec3ff',1,'dnnl::reorder::primitive_desc']]],
   ['get_5feffective_5fcpu_5fisa',['get_effective_cpu_isa',['../group__dnnl__api__service.html#ga3953f71c3f0126d9cc005a1ceff65e8b',1,'dnnl']]],
-  ['get_5fengine',['get_engine',['../structdnnl_1_1memory.html#a4494aca5ff97774b73e707f4f951972d',1,'dnnl::memory::get_engine()'],['../structdnnl_1_1primitive__desc__base.html#a3f3ea17a8e5767653732ebec37eff68f',1,'dnnl::primitive_desc_base::get_engine()']]],
+  ['get_5fengine',['get_engine',['../structdnnl_1_1stream.html#acb0b2dcb354fd2302a7f5d930aa74866',1,'dnnl::stream::get_engine()'],['../structdnnl_1_1memory.html#a4494aca5ff97774b73e707f4f951972d',1,'dnnl::memory::get_engine()'],['../structdnnl_1_1primitive__desc__base.html#a3f3ea17a8e5767653732ebec37eff68f',1,'dnnl::primitive_desc_base::get_engine()']]],
   ['get_5fflags',['get_flags',['../structdnnl_1_1threadpool__iface.html#af94fc0f16e47ca6a3646bfd3b3b1e3cb',1,'dnnl::threadpool_iface']]],
   ['get_5fin_5fparallel',['get_in_parallel',['../structdnnl_1_1threadpool__iface.html#ac83748ff2dbb47f5381293d9fd62ab19',1,'dnnl::threadpool_iface']]],
   ['get_5fkind',['get_kind',['../group__dnnl__api__primitives__common.html#ga30c28d0cebe5b1d4758af2c24fafbdfb',1,'dnnl::primitive::get_kind()'],['../structdnnl_1_1engine.html#a6e9bb6ada8b2ccd815c42e3577b2f2b8',1,'dnnl::engine::get_kind()'],['../structdnnl_1_1primitive__desc__base.html#a622be560a40df3c657b18904f81f2a0a',1,'dnnl::primitive_desc_base::get_kind()']]],

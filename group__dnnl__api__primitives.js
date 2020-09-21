@@ -20,5 +20,6 @@ var group__dnnl__api__primitives =
     [ "RNN", "group__dnnl__api__rnn.html", "group__dnnl__api__rnn" ],
     [ "Matrix Multiplication", "group__dnnl__api__matmul.html", "group__dnnl__api__matmul" ],
     [ "Resampling", "group__dnnl__api__resampling.html", "group__dnnl__api__resampling" ],
+    [ "Reduction", "group__dnnl__api__reduction.html", "group__dnnl__api__reduction" ],
     [ "Dnnl_api_pooling_v2", "group__dnnl__api__pooling__v2.html", "group__dnnl__api__pooling__v2" ]
 ];

@@ -120,6 +120,13 @@ $(document).ready(function(){initNavTree('dev_guide_build.html','');});
 <div class="line">          -DCMAKE_SYSTEM_PROCESSOR=AARCH64 \</div>
 <div class="line">          -DCMAKE_LIBRARY_PATH=/usr/aarch64-linux-gnu/lib \</div>
 <div class="line">          &lt;extra build options&gt;</div>
+</div><!-- fragment --><ul>
+<li>Compile with Arm Compute Library (AArch64 only)</li>
+</ul>
+<div class="fragment"><div class="line">export ACL_ROOT_DIR=&lt;path/to/Compute Library&gt;</div>
+<div class="line">cmake .. \</div>
+<div class="line">         -DDNNL_AARCH64_USE_ACL=ON \</div>
+<div class="line">         &lt;extra build options&gt;</div>
 </div><!-- fragment --><h4>Build and Install the Library</h4>
 <ul>
 <li>Build the library: <div class="fragment"><div class="line">make -j</div>

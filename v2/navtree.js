@@ -47,7 +47,8 @@ var NAVTREE =
       [ "Shuffle", "dev_guide_shuffle.html", null ],
       [ "Softmax", "dev_guide_softmax.html", null ],
       [ "Sum", "dev_guide_sum.html", null ],
-      [ "Reorder", "dev_guide_reorder.html", null ]
+      [ "Reorder", "dev_guide_reorder.html", null ],
+      [ "Reduction", "dev_guide_reduction.html", null ]
     ] ],
     [ "Examples", "dev_guide_examples.html", null ],
     [ "Performance Profiling and Inspection", "usergroup4.html", [
@@ -96,15 +97,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__dnnl__api__engine.html#gae472e59f404ba6527988b046ef24c743",
-"group__dnnl__api__primitives__common.html#ga953b34f004a8222b04e21851487c611a",
-"group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2",
-"structdnnl_1_1deconvolution__forward_1_1primitive__desc.html#a3c698a13a43520eca307861965bc4b88",
-"structdnnl_1_1logsoftmax__forward_1_1primitive__desc.html#a5d0a8ba8f62844fbf565afa5e7ed9961",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa68f856a42aaec4e873e1086429cde66f",
-"structdnnl_1_1memory.html#aabcadfb0e23a36a91272fc571cff105faf59dcd306ec32930f1e78a1d82280b48",
-"structdnnl_1_1softmax__backward_1_1desc.html#a7f6c07b464156be2ad8946e2108fb0f8",
-"structdnnl__rnn__desc__t.html#a8030f10b83affa1bb99e6c18ec77632d"
+"group__dnnl__api__engine.html",
+"group__dnnl__api__primitives__common.html#ga6daaa6a32731e2a670821f95f8e353fd",
+"group__dnnl__api__rnn.html#gac60139476aa94b994c4007a715899283",
+"structdnnl_1_1deconvolution__backward__weights.html#ab723f3cd9b4534d4161ba9f0a75653fe",
+"structdnnl_1_1lbr__gru__forward_1_1primitive__desc.html#aa1ee88b759a5d6111a16fd8f80beca9f",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa5a3b732e0600663606054f6d8dfd465e",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fafa987d0f6bf33d361270f4fd0e4b6b5c",
+"structdnnl_1_1rnn__primitive__desc__base.html#a5e40fd7af2a99bd6877464b1aae537c8",
+"structdnnl__pooling__v2__desc__t.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

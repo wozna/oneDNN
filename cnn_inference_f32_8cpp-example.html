@@ -220,7 +220,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_8cpp-example.html','
 <div class="line"></div>
 <div class="line">    <span class="comment">// AlexNet: relu1</span></div>
 <div class="line">    <span class="comment">// {batch, 96, 55, 55} -&gt; {batch, 96, 55, 55}</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative1_slope = 1.0f;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative1_slope = 0.0f;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//[Create relu primitive]</span></div>
 <div class="line">    <span class="keyword">auto</span> relu1_desc = <a name="_a19"></a><a class="code" href="structdnnl_1_1eltwise__forward_1_1desc.html">eltwise_forward::desc</a>(<a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa3b9fad4f80d45368f856b5403198ac4c">prop_kind::forward_inference</a>,</div>
@@ -338,7 +338,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_8cpp-example.html','
 <div class="line"></div>
 <div class="line">    <span class="comment">// AlexNet: relu2</span></div>
 <div class="line">    <span class="comment">// {batch, 256, 27, 27} -&gt; {batch, 256, 27, 27}</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative2_slope = 1.0f;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative2_slope = 0.0f;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create relu primitive and add it to net</span></div>
 <div class="line">    <span class="keyword">auto</span> relu2_desc = <a class="code" href="structdnnl_1_1eltwise__forward_1_1desc.html">eltwise_forward::desc</a>(<a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa3b9fad4f80d45368f856b5403198ac4c">prop_kind::forward_inference</a>,</div>
@@ -455,7 +455,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_8cpp-example.html','
 <div class="line"></div>
 <div class="line">    <span class="comment">// AlexNet: relu3</span></div>
 <div class="line">    <span class="comment">// {batch, 384, 13, 13} -&gt; {batch, 384, 13, 13}</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative3_slope = 1.0f;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative3_slope = 0.0f;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create relu primitive and add it to net</span></div>
 <div class="line">    <span class="keyword">auto</span> relu3_desc = <a class="code" href="structdnnl_1_1eltwise__forward_1_1desc.html">eltwise_forward::desc</a>(<a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa3b9fad4f80d45368f856b5403198ac4c">prop_kind::forward_inference</a>,</div>
@@ -529,7 +529,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_8cpp-example.html','
 <div class="line"></div>
 <div class="line">    <span class="comment">// AlexNet: relu4</span></div>
 <div class="line">    <span class="comment">// {batch, 384, 13, 13} -&gt; {batch, 384, 13, 13}</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative4_slope = 1.0f;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative4_slope = 0.0f;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create relu primitive and add it to net</span></div>
 <div class="line">    <span class="keyword">auto</span> relu4_desc = <a class="code" href="structdnnl_1_1eltwise__forward_1_1desc.html">eltwise_forward::desc</a>(<a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa3b9fad4f80d45368f856b5403198ac4c">prop_kind::forward_inference</a>,</div>
@@ -602,7 +602,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_8cpp-example.html','
 <div class="line"></div>
 <div class="line">    <span class="comment">// AlexNet: relu5</span></div>
 <div class="line">    <span class="comment">// {batch, 256, 13, 13} -&gt; {batch, 256, 13, 13}</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative5_slope = 1.0f;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> negative5_slope = 0.0f;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create relu primitive and add it to net</span></div>
 <div class="line">    <span class="keyword">auto</span> relu5_desc = <a class="code" href="structdnnl_1_1eltwise__forward_1_1desc.html">eltwise_forward::desc</a>(<a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa3b9fad4f80d45368f856b5403198ac4c">prop_kind::forward_inference</a>,</div>

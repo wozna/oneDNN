@@ -20,7 +20,8 @@ var structdnnl_1_1primitive =
       [ "logsoftmax", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a3e392964a863f0168f631708934c2acf", null ],
       [ "matmul", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a0f2e1c85f0064ca22d3ac468c44b0327", null ],
       [ "resampling", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a4f9776b23053c32400f732de532df397", null ],
-      [ "pooling_v2", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a253e250591ab0d87c37df9b1a4042be4", null ]
+      [ "pooling_v2", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a253e250591ab0d87c37df9b1a4042be4", null ],
+      [ "reduction", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a9477e24c78f1ca8ee9b03111f6227fc2", null ]
     ] ],
     [ "primitive", "structdnnl_1_1primitive.html#a4ba1e667dfc4d3abda8fa47e8bc8bbdb", null ],
     [ "primitive", "structdnnl_1_1primitive.html#add43d05c97c3cd96a5d7cab07d6935f4", null ],

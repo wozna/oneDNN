@@ -10,6 +10,7 @@ var structdnnl_1_1stream =
     [ "stream", "structdnnl_1_1stream.html#af00bbec578ce5bd049c043f534f78e1d", null ],
     [ "stream", "structdnnl_1_1stream.html#a6c7b7055f10354c8926390b79ab57287", null ],
     [ "stream", "structdnnl_1_1stream.html#a343106b5b58a7fee51163cdd2679f0a8", null ],
+    [ "get_engine", "structdnnl_1_1stream.html#acb0b2dcb354fd2302a7f5d930aa74866", null ],
     [ "get_ocl_command_queue", "structdnnl_1_1stream.html#ad7583cd3c56f330f90e0e6b148a9e5c3", null ],
     [ "get_sycl_queue", "structdnnl_1_1stream.html#af1972ee58c04883f8266ac2607aac990", null ],
     [ "wait", "structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c", null ]

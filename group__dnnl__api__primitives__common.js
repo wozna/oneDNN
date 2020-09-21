@@ -21,7 +21,8 @@ var group__dnnl__api__primitives__common =
         [ "logsoftmax", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a3e392964a863f0168f631708934c2acf", null ],
         [ "matmul", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a0f2e1c85f0064ca22d3ac468c44b0327", null ],
         [ "resampling", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a4f9776b23053c32400f732de532df397", null ],
-        [ "pooling_v2", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a253e250591ab0d87c37df9b1a4042be4", null ]
+        [ "pooling_v2", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a253e250591ab0d87c37df9b1a4042be4", null ],
+        [ "reduction", "structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a9477e24c78f1ca8ee9b03111f6227fc2", null ]
       ] ],
       [ "primitive", "structdnnl_1_1primitive.html#a4ba1e667dfc4d3abda8fa47e8bc8bbdb", null ],
       [ "primitive", "structdnnl_1_1primitive.html#add43d05c97c3cd96a5d7cab07d6935f4", null ],
@@ -175,6 +176,7 @@ var group__dnnl__api__primitives__common =
       [ "logsoftmax_d", "group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a88653ad56ff6de4e2f36f3feda914af1", null ],
       [ "matmul_d", "group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a4a7fa4b07a2f5ef2534d7159225f480d", null ],
       [ "resampling_d", "group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1afcc6f3d53b14544cb287a355c2f1f228", null ],
+      [ "reduction_d", "group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a43b064d25fca4afec96d58b81af11f19", null ],
       [ "src_md", "group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a90a729e395453e1d9411ad416c796819", null ],
       [ "diff_src_md", "group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a8f85b9dfff73532e30d8aab798020233", null ],
       [ "weights_md", "group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a06ba7b00a8c95dcf3a90e16d00eeb0e9", null ],
@@ -218,6 +220,7 @@ var group__dnnl__api__primitives__common =
       [ "dnnl_matmul", "group__dnnl__api__primitives__common.html#gga9878f4795e53ad8443e5c0a29e53286aa9e943e8007f69f82a00e30a3079cb407", null ],
       [ "dnnl_resampling", "group__dnnl__api__primitives__common.html#gga9878f4795e53ad8443e5c0a29e53286aa7ab1ead09194e7acb0813c953e66988f", null ],
       [ "dnnl_pooling_v2", "group__dnnl__api__primitives__common.html#gga9878f4795e53ad8443e5c0a29e53286aa8e72f7ad7890633f05e49b81287fef42", null ],
+      [ "dnnl_reduction", "group__dnnl__api__primitives__common.html#gga9878f4795e53ad8443e5c0a29e53286aaf3bb69107badd983d16909afe507ed04", null ],
       [ "dnnl_primitive_kind_max", "group__dnnl__api__primitives__common.html#gga9878f4795e53ad8443e5c0a29e53286aa3246cd9a7193bd0b94facea9e0a2cca9", null ]
     ] ],
     [ "dnnl_alg_kind_t", "group__dnnl__api__primitives__common.html#ga96946c805f6c4922c38c37049ab95d23", [
@@ -265,8 +268,18 @@ var group__dnnl__api__primitives__common =
       [ "dnnl_binary_mul", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23ade272a5bcb8af2b2cb0bc691c78b4e36", null ],
       [ "dnnl_binary_max", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af93b25a1cd108fbecfdbee9f1cfcdd88", null ],
       [ "dnnl_binary_min", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a21a9b503c9d06cea5f231fd170e623cc", null ],
+      [ "dnnl_binary_div", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23ad63a6855c4f438cabd245b0bbff61cf4", null ],
       [ "dnnl_resampling_nearest", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be", null ],
-      [ "dnnl_resampling_linear", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b", null ]
+      [ "dnnl_resampling_linear", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b", null ],
+      [ "dnnl_reduction_max", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23aae4722e394206cf9774ae45db959854e", null ],
+      [ "dnnl_reduction_min", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a3edeac87290d164cfd3e79adcb6ed91a", null ],
+      [ "dnnl_reduction_sum", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23ae74491a0b7bfe0720be69e3732894818", null ],
+      [ "dnnl_reduction_mul", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a9ff432e67749e211f5f0f64d5f707359", null ],
+      [ "dnnl_reduction_mean", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23ac88d2b9bc130483c177868888c705694", null ],
+      [ "dnnl_reduction_norm_lp_max", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23ad6459b4162ab312f59fa48bf9dcf35c3", null ],
+      [ "dnnl_reduction_norm_lp_sum", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a21c93597a1be438219bbbd832830f096", null ],
+      [ "dnnl_reduction_norm_lp_power_p_max", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a3838df4d5d37de3237359043ccebfba1", null ],
+      [ "dnnl_reduction_norm_lp_power_p_sum", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23adcb83e9f76b3beaeb831a59cd257d7dd", null ]
     ] ],
     [ "dnnl_normalization_flags_t", "group__dnnl__api__primitives__common.html#ga301f673522a400c7c1e75f518431c9a3", [
       [ "dnnl_normalization_flags_none", "group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3ab71f2077a94fd4bbc107a09b115a24a4", null ],
@@ -306,6 +319,7 @@ var group__dnnl__api__primitives__common =
       [ "dnnl_query_matmul_d", "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059a1e4a8897b0c5b3e10277ec3f39dcf942", null ],
       [ "dnnl_query_resampling_d", "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059a00299748d58f2d43671011e5662a14aa", null ],
       [ "dnnl_query_pooling_v2_d", "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059a80845ccb1f1c7009c7acdef74f24df9b", null ],
+      [ "dnnl_query_reduction_d", "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059a86bed243debcaf81549d4b11a5c6280a", null ],
       [ "dnnl_query_some_md", "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059a0c4a1096638c39c0771db9a4cb2a3336", null ],
       [ "dnnl_query_src_md", "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059a14a86faee7b85eeb60d0d7886756ffa5", null ],
       [ "dnnl_query_diff_src_md", "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059a2367b043da6df5d691d6038693f363d6", null ],

@@ -106,88 +106,105 @@ $(document).ready(function(){initNavTree('dev_guide_build.html','');});
 </ul>
 <p>See <a class="el" href="dev_guide_build_options.html">Build Options</a> for detailed description of build-time configuration options.</p>
 <h3>Linux/macOS</h3>
-<h4>Prepare the Build Space</h4>
-<div class="fragment"><div class="line">mkdir -p build &amp;&amp; cd build</div>
-</div><!-- fragment --><h4>Generate makefile</h4>
+<h4>GCC, Clang, or Intel C/C++ Compiler</h4>
 <ul>
-<li>Native compilation: <div class="fragment"><div class="line">cmake .. &lt;extra build options&gt;</div>
+<li>Set up the environment for the compiler</li>
+<li>Configure CMake and generate makefiles <div class="fragment"><div class="line">mkdir -p build</div>
+<div class="line">cd build</div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor"># Uncomment the following lines to build with Clang</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor"># export CC=clang</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor"># export CXX=clang++</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line"><span class="preprocessor"># Uncomment the following lines to build with Intel C/C++ Compiler</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor"># export CC=icc</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor"># export CXX=icpc</span></div>
+<div class="line"><span class="preprocessor">cmake .. &lt;extra build options&gt;</span></div>
 </div><!-- fragment --></li>
-<li>Cross compilation (AArch64 target on Intel 64 host)</li>
+<li>Build the library <div class="fragment"><div class="line">make -j</div>
+</div><!-- fragment --></li>
 </ul>
-<div class="fragment"><div class="line">export CC=aarch64-linux-gnu-gcc</div>
+<h4>oneAPI DPC++ Compiler</h4>
+<ul>
+<li>Set up the environment for oneAPI DPC++ Compiler. For Intel oneAPI Base Toolkit distribution installed to default location you can do this using <code>setenv.sh</code> script <div class="fragment"><div class="line">source /opt/intel/oneapi/setvars.sh</div>
+</div><!-- fragment --></li>
+<li>Configure CMake and generate makefiles <div class="fragment"><div class="line">mkdir -p build</div>
+<div class="line">cd build</div>
+<div class="line"></div>
+<div class="line">export CC=clang</div>
+<div class="line">export CXX=clang++</div>
+<div class="line"></div>
+<div class="line">cmake .. \</div>
+<div class="line">          -DDNNL_CPU_RUNTIME=DPCPP</div>
+<div class="line">          -DDNNL_GPU_RUNTIME=DPCPP</div>
+<div class="line">          &lt;extra build options&gt;</div>
+</div><!-- fragment --></li>
+<li>Compile with Arm Compute Library (AArch64 only)</li>
+</ul>
+<div class="fragment"><div class="line">export ACL_ROOT_DIR=&lt;path/to/Compute Library&gt;</div>
+<div class="line">cmake .. \</div>
+<div class="line">         -DDNNL_AARCH64_USE_ACL=ON \</div>
+<div class="line">         &lt;extra build options&gt;</div>
+</div><!-- fragment --><h4>Build and Install the Library</h4>
+<ul>
+<li>Build the library <div class="fragment"><div class="line">make -j</div>
+</div><!-- fragment --></li>
+</ul>
+<h4>GCC targeting AArch64</h4>
+<ul>
+<li>Set up the environment for the compiler</li>
+<li>Configure CMake and generate makefiles <div class="fragment"><div class="line">export CC=aarch64-linux-gnu-gcc</div>
 <div class="line">export CXX=aarch64-linux-gnu-g++</div>
 <div class="line">cmake .. \</div>
 <div class="line">          -DCMAKE_SYSTEM_NAME=Linux \</div>
 <div class="line">          -DCMAKE_SYSTEM_PROCESSOR=AARCH64 \</div>
 <div class="line">          -DCMAKE_LIBRARY_PATH=/usr/aarch64-linux-gnu/lib \</div>
 <div class="line">          &lt;extra build options&gt;</div>
-</div><!-- fragment --><h4>Build and Install the Library</h4>
-<ul>
-<li>Build the library: <div class="fragment"><div class="line">make -j</div>
 </div><!-- fragment --></li>
-<li>Build the documentation: <div class="fragment"><div class="line">make doc</div>
-</div><!-- fragment --></li>
-<li>Install the library, headers, and documentation: <div class="fragment"><div class="line">make install</div>
+<li>Build the library <div class="fragment"><div class="line">make -j</div>
 </div><!-- fragment --></li>
 </ul>
 <h3>Windows</h3>
+<h4>Microsoft Visual C++ Compiler or Intel C/C++ Compiler</h4>
 <ul>
-<li>Generate a Microsoft Visual Studio solution: <div class="fragment"><div class="line">mkdir build &amp;&amp; cd build &amp;&amp; cmake -G <span class="stringliteral">&quot;Visual Studio 15 2017 Win64&quot;</span> ..</div>
+<li>Generate a Microsoft Visual Studio solution <div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake -G <span class="stringliteral">&quot;Visual Studio 15 2017 Win64&quot;</span> ..</div>
 </div><!-- fragment --> For the solution to use the Intel C++ Compiler, select the corresponding toolchain using the cmake <code>-T</code> switch: <div class="fragment"><div class="line">cmake -G <span class="stringliteral">&quot;Visual Studio 15 2017 Win64&quot;</span> -T <span class="stringliteral">&quot;Intel C++ Compiler 19.0&quot;</span> ..</div>
 </div><!-- fragment --></li>
-<li>Build the library: <div class="fragment"><div class="line">cmake --build .</div>
-</div><!-- fragment --> You can also use the <code>msbuild</code> command-line tool directly (here <code>/p:Configuration</code> selects the build configuration which can be different from the one specified in <code>CMAKE_BUILD_TYPE</code>, and <code>/m</code> enables a parallel build): <div class="fragment"><div class="line">msbuild <span class="stringliteral">&quot;oneDNN.sln&quot;</span> /p:Configuration=Release /m</div>
-</div><!-- fragment --></li>
-<li>Build the documentation <div class="fragment"><div class="line">cmake --build . --target DOC</div>
-</div><!-- fragment --></li>
-<li>Install the library, headers, and documentation: <div class="fragment"><div class="line">cmake --build . --target INSTALL</div>
+<li>Build the library <div class="fragment"><div class="line">cmake --build .</div>
 </div><!-- fragment --></li>
 </ul>
-<h3>Building with DPCPP runtime</h3>
-<p>DPCPP runtime requires Intel oneAPI DPC++ Compiler, Intel oneAPI TBB, and optionally oneAPI Level Zero.</p>
-<dl class="section note"><dt>Note</dt><dd>If you installed only Intel oneAPI DPC++ Compiler, you can explicitly specify the path to a compatible version of Intel oneAPI TBB using the <code>-DTBBROOT</code> CMake option.</dd></dl>
-<h4>Linux</h4>
-<div class="fragment"><div class="line"><span class="preprocessor"># Set Intel oneAPI DPC++ Compiler and Intel oneAPI TBB environment.</span></div>
-<div class="line"><span class="preprocessor"></span>source /opt/intel/oneapi/setvars.sh</div>
-<div class="line"><span class="preprocessor"># The command above assumes that the compiler is installed to the default directory.</span></div>
-<div class="line"><span class="preprocessor"></span><span class="preprocessor"># If the installation directory was customized, setvars.sh is in the customized directory.</span></div>
-<div class="line"><span class="preprocessor"></span></div>
-<div class="line"><span class="preprocessor"># Set C and C++ compilers</span></div>
-<div class="line"><span class="preprocessor"></span>export CC=clang</div>
-<div class="line">export CXX=clang++</div>
-</div><!-- fragment --><h5>Build with Support for Level Zero and OpenCL Backends</h5>
-<div class="fragment"><div class="line">mkdir build</div>
+<dl class="section note"><dt>Note</dt><dd>You can also open <code>oneDNN.sln</code> to build the project from the Microsoft Visual Studio IDE.</dd></dl>
+<h4>oneAPI DPC++ Compiler</h4>
+<ul>
+<li>Set up the environment for oneAPI DPC++ Compiler. For Intel oneAPI Base Toolkit distribution installed to default location you can do this using <code>setvars.bat</code> script <div class="fragment"><div class="line"><span class="stringliteral">&quot;C:\Program Files (x86)\Intel\oneAPI\setvars.bat&quot;</span></div>
+</div><!-- fragment --> or open <code>Intel oneAPI Commmand Prompt</code> instead.</li>
+<li>Download <a href="https://github.com/oneapi-src/level-zero/releases/tag/v1.0">oneAPI Level Zero headers</a> from Github and unpack the archive.</li>
+<li>Generate <code>Ninja</code> project <div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
-<div class="line">cmake -DDNNL_CPU_RUNTIME=DPCPP -DDNNL_GPU_RUNTIME=DPCPP -DCMAKE_PREFIX_PATH=/path/to/level/zero ..</div>
-<div class="line">cmake --build .</div>
-</div><!-- fragment --><h5>Build with Support for OpenCL Backend</h5>
-<div class="fragment"><div class="line">mkdir build</div>
-<div class="line">cd build</div>
-<div class="line">cmake -DDNNL_CPU_RUNTIME=DPCPP -DDNNL_GPU_RUNTIME=DPCPP ..</div>
-<div class="line">cmake --build .</div>
-</div><!-- fragment --><h4>Windows</h4>
-<div class="fragment"><div class="line">:: Set Intel oneAPI DPC++ Compiler and Intel oneAPI TBB environment.</div>
-<div class="line">call <span class="stringliteral">&quot;C:\Program Files (x86)\Intel\oneAPI\setvars.bat&quot;</span></div>
-<div class="line">:: The command above assumes that the compiler is installed to the <span class="keywordflow">default</span> directory.</div>
-<div class="line">:: If the installation directory was customized, setvars.bat is in the customized directory.</div>
 <div class="line"></div>
 <div class="line">:: Set C and C++ compilers</div>
 <div class="line">set CC=clang</div>
 <div class="line">set CXX=clang++</div>
-</div><!-- fragment --><h5>Build with Support for Level Zero and OpenCL Backends</h5>
-<div class="fragment"><div class="line">mkdir build</div>
-<div class="line">cd build</div>
-<div class="line">cmake -G Ninja -DDNNL_CPU_RUNTIME=DPCPP -DDNNL_GPU_RUNTIME=DPCPP -DCMAKE_PREFIX_PATH=/path/to/level/zero ..</div>
-<div class="line">cmake --build .</div>
-</div><!-- fragment --><h5>Build with Support for OpenCL Backend</h5>
-<div class="fragment"><div class="line">mkdir build</div>
-<div class="line">cd build</div>
-<div class="line">cmake -G Ninja -DDNNL_CPU_RUNTIME=DPCPP -DDNNL_GPU_RUNTIME=DPCPP ..</div>
-<div class="line">cmake --build .</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>On Windows, oneDNN with DPCPP runtime can be built only with Ninja. The CC and CXX variables must be set to clang and clang++ respectively and not to dpcpp.</dd></dl>
+<div class="line">cmake .. -G Ninja -DDNNL_CPU_RUNTIME=DPCPP ^</div>
+<div class="line">                  -DDNNL_GPU_RUNTIME=DPCPP ^</div>
+<div class="line">                  -DCMAKE_PREFIX_PATH=&lt;path to Level Zero headers&gt; ^</div>
+<div class="line">                  &lt;extra build options&gt;</div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>The only CMake generator that supports oneAPI DPC++ Compiler on Windows is Ninja. CC and CXX variables must be set to clang and clang++ respectively.</dd></dl>
+</li>
+<li>Build the library <div class="fragment"><div class="line">cmake --build .</div>
+</div><!-- fragment --></li>
+</ul>
 <h2>Validate the Build</h2>
-<p>If the library is built for the host system, you can run unit tests using:</p>
+<p>If the library is built for the host system, you can run unit tests using: </p>
 <div class="fragment"><div class="line">ctest</div>
+</div><!-- fragment --><h2>Build documenation</h2>
+<p>Build the documentation: </p>
+<div class="fragment"><div class="line">cmake --build . --target doc</div>
+</div><!-- fragment --><h2>Install library</h2>
+<p>Install the library, headers, and documentation </p>
+<div class="fragment"><div class="line">cmake --build . --target install</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="footer">

@@ -22,6 +22,7 @@ var annotated =
     [ "dnnl_primitive_attr", "structdnnl__primitive__attr.html", null ],
     [ "dnnl_primitive_desc", "structdnnl__primitive__desc.html", null ],
     [ "dnnl_primitive_desc_iterator", "structdnnl__primitive__desc__iterator.html", null ],
+    [ "dnnl_reduction_desc_t", "structdnnl__reduction__desc__t.html", "structdnnl__reduction__desc__t" ],
     [ "dnnl_resampling_desc_t", "structdnnl__resampling__desc__t.html", "structdnnl__resampling__desc__t" ],
     [ "dnnl_rnn_desc_t", "structdnnl__rnn__desc__t.html", "structdnnl__rnn__desc__t" ],
     [ "dnnl_rnn_packed_desc_t", "structdnnl__rnn__packed__desc__t.html", null ],

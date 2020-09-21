@@ -161,6 +161,10 @@ $(document).ready(function(){initNavTree('dev_guide_pooling.html','');});
 <td align="left">forward </td><td align="left">f16 </td><td align="left">f16 </td></tr>
 <tr>
 <td align="left">forward </td><td align="left">s8, u8, s32 </td><td align="left">s32 </td></tr>
+<tr>
+<td align="left">forward inference </td><td align="left">s8, u8 / f32 </td><td align="left">f32 </td></tr>
+<tr>
+<td align="left">forward inference </td><td align="left">f32 / s8, u8 </td><td align="left">f32 </td></tr>
 </table>
 <dl class="section warning"><dt>Warning</dt><dd>There might be hardware and/or implementation specific restrictions. Check <a class="el" href="dev_guide_pooling.html#dg_pool_impl_limits">Implementation Limitations</a> section below.</dd></dl>
 <h3>Data Representation</h3>
@@ -194,7 +198,11 @@ $(document).ready(function(){initNavTree('dev_guide_pooling.html','');});
 <p><a class="anchor" id="dg_pool_impl_limits"></a></p>
 <h2>Implementation Limitations</h2>
 <ol type="1">
-<li>No primitive specific limitations. Refer to <a class="el" href="dev_guide_data_types.html">Data Types</a> for limitations related to data types support.</li>
+<li>Refer to <a class="el" href="dev_guide_data_types.html">Data Types</a> for limitations related to data types support.</li>
+<li><b>CPU</b><ul>
+<li>Different data types of source and destination in forward inference are not supported.</li>
+</ul>
+</li>
 </ol>
 <h2>Performance Tips</h2>
 <p>N/A</p>

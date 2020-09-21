@@ -253,6 +253,8 @@ Back, bottom, and right </td><td align="left">\(PD_R\) </td><td align="left">\(P
 <tr>
 <td align="left">forward </td><td align="left">attribute </td><td align="left"><a class="el" href="structdnnl_1_1primitive__attr.html#a4b81acc8e48886313154f75c1708ae02">Output scale</a> </td><td align="left">Scales the result of convolution by given scale factor(s) </td><td align="left">int8 convolutions only </td></tr>
 <tr>
+<td align="left">forward </td><td align="left">attribute </td><td align="left"><a class="el" href="structdnnl_1_1primitive__attr.html#aee82deb014cf9702ceb3e725156c25a1">Zero points</a> </td><td align="left">Sets zero point(s) for the corresponding tensors </td><td align="left">int8 convolutions only </td></tr>
+<tr>
 <td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a28460923ad579c780e4027a6256fe207">Eltwise</a> </td><td align="left">Applies an <a class="el" href="group__dnnl__api__eltwise.html">Eltwise</a> operation to the result </td><td align="left"></td></tr>
 <tr>
 <td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#ab8e3832e8600216a3646e9050d3bc1f3">Sum</a> </td><td align="left">Adds the operation result to the destination tensor instead of overwriting it </td><td align="left"></td></tr>
@@ -260,6 +262,10 @@ Back, bottom, and right </td><td align="left">\(PD_R\) </td><td align="left">\(P
 <td align="left">forward </td><td align="left">post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a40bb2b39a685726ac54873b203be41b5">Binary</a> </td><td align="left">Applies a <a class="el" href="group__dnnl__api__binary.html">Binary</a> operation to the result </td><td align="left">General binary post-op restrictions </td></tr>
 </table>
 <p>To facilitate dynamic quantization, the primitive supports run-time output scales. That means a user could configure attributes with output scales set to the <a class="el" href="group__dnnl__api__memory.html#gab16365c11b4dc88fbb453edb51f1979f" title="A wildcard value for floating point values that are unknown at a primitive creation time...">DNNL_RUNTIME_F32_VAL</a> wildcard value instead of the actual scales, if the scales are not known at the primitive descriptor creation stage. In this case, the user must provide the scales as an additional input memory object with argument <code>DNNL_ARG_ATTR_OUTPUT_SCALES</code> during the execution stage.</p>
+<p>Similarly to run-time output scales, the primitive supports run-time zero points. The wildcard value for zero points is <a class="el" href="group__dnnl__api__memory.html#ga30139d5110e9e895ccd93fe503ca4c35" title="A wildcard value for int32_t values that are unknown at a primitive creation time. ">DNNL_RUNTIME_S32_VAL</a>. During the execution stage, the corresponding memory object must be passed as an argument with its index set to (<code>DNNL_ARG_ATTR_ZERO_POINTS | DNNL_ARG_${MEMORY_INDEX}</code>). Possible <code>${MEMORY_INDEX}</code> values are <code>DNNL_ARG_SRC</code> and <code>DNNL_ARG_DST</code>.</p>
+<ul>
+<li>For instance, a source tensor zero points memory argument would be passed with index (<code>DNNL_ARG_ATTR_ZERO_POINTS | DNNL_ARG_SRC</code>).</li>
+</ul>
 <dl class="section note"><dt>Note</dt><dd>The library does not prevent using post-ops in training, but note that not all post-ops are feasible for training usage. For instance, using ReLU with non-zero negative slope parameter as a post-op would not produce an additional output <code>workspace</code> that is required to compute backward propagation correctly. Hence, in this particular case one should use separate convolution and eltwise primitives for training.</dd></dl>
 <p>The library supports any number and order of post operations, but only the following sequences deploy optimized code:</p>
 <table class="doxtable">
@@ -272,14 +278,16 @@ Back, bottom, and right </td><td align="left">\(PD_R\) </td><td align="left">\(P
 </table>
 <p>The attributes and post-ops take effect in the following sequence:</p>
 <ul>
+<li>Source zero point attribute,</li>
 <li>Output scale attribute,</li>
-<li>Post-ops, in order they were attached.</li>
+<li>Post-ops, in the order they were attached,</li>
+<li>Destination zero point attribute.</li>
 </ul>
 <p>The operations during attributes and post-ops applying are done in single precision floating point data type. The conversion to the actual destination data type happens just before the actual storing.</p>
 <h4>Example 1</h4>
-<p>Consider the following pseudo code:</p>
-<div class="fragment"><div class="line">attribute attr;</div>
-<div class="line">attr.set_output_scale(alpha);</div>
+<p>Consider the following pseudo-code:</p>
+<div class="fragment"><div class="line">primitive_attr attr;</div>
+<div class="line">attr.set_output_scale(<span class="comment">/* mask */</span> 0, alpha);</div>
 <div class="line">attr.set_post_ops({</div>
 <div class="line">        { sum={scale=beta} },</div>
 <div class="line">        { eltwise={scale=gamma, type=tanh, alpha=ignore, beta=ignored }</div>
@@ -291,9 +299,9 @@ Back, bottom, and right </td><td align="left">\(PD_R\) </td><td align="left">\(P
 \[ \dst(\overline{x}) = \gamma \cdot \tanh \left( \alpha \cdot conv(\src, \weights) + \beta \cdot \dst(\overline{x}) \right) \]
 </p>
 <h4>Example 2</h4>
-<p>The following pseudo code:</p>
-<div class="fragment"><div class="line">attribute attr;</div>
-<div class="line">attr.set_output_scale(alpha);</div>
+<p>The following pseudo-code:</p>
+<div class="fragment"><div class="line">primitive_attr attr;</div>
+<div class="line">attr.set_output_scale(<span class="comment">/* mask */</span> 0, alpha);</div>
 <div class="line">attr.set_post_ops({</div>
 <div class="line">        { eltwise={scale=gamma, type=relu, alpha=eta, beta=ignored }</div>
 <div class="line">        { sum={scale=beta} },</div>
@@ -303,6 +311,21 @@ Back, bottom, and right </td><td align="left">\(PD_R\) </td><td align="left">\(P
 </div><!-- fragment --><p>That would lead to the following:</p>
 <p class="formulaDsp">
 \[ \dst(\overline{x}) = \beta \cdot \dst(\overline{x}) + \gamma \cdot ReLU \left( \alpha \cdot conv(\src, \weights), \eta \right) \]
+</p>
+<h4>Example 3</h4>
+<p>The following pseudo-code:</p>
+<div class="fragment"><div class="line">primitive_attr attr;</div>
+<div class="line">attr.set_output_scale(<span class="comment">/* mask */</span> 0, alpha);</div>
+<div class="line">attr.set_zero_point(src, <span class="comment">/* mask */</span> 0, shift_src);</div>
+<div class="line">attr.set_zero_point(dst, <span class="comment">/* mask */</span> 0, shift_dst);</div>
+<div class="line">attr.set_post_ops({</div>
+<div class="line">        { eltwise={scale=gamma, type=relu, alpha=eta, beta=ignored }</div>
+<div class="line">    });</div>
+<div class="line"></div>
+<div class="line">convolution_forward(src, weights, dst, attr)</div>
+</div><!-- fragment --><p>That would lead to the following:</p>
+<p class="formulaDsp">
+\[ \dst(\overline{x}) = \gamma \cdot ReLU \left( \alpha \cdot conv(\src - shift_{src}, \weights), \eta \right) + shift_{dst} \]
 </p>
 <h2>Algorithms</h2>
 <p>oneDNN implements convolution primitives using several different algorithms:</p>

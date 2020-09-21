@@ -16,6 +16,7 @@ var group__dnnl__api__stream =
       [ "stream", "structdnnl_1_1stream.html#ad264b142d2f7c728fe8c84aa65d62b13", null ],
       [ "stream", "structdnnl_1_1stream.html#af00bbec578ce5bd049c043f534f78e1d", null ],
       [ "stream", "structdnnl_1_1stream.html#a6c7b7055f10354c8926390b79ab57287", null ],
+      [ "get_engine", "structdnnl_1_1stream.html#acb0b2dcb354fd2302a7f5d930aa74866", null ],
       [ "get_ocl_command_queue", "structdnnl_1_1stream.html#ad7583cd3c56f330f90e0e6b148a9e5c3", null ],
       [ "wait", "structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c", null ]
     ] ],
@@ -35,6 +36,7 @@ var group__dnnl__api__stream =
     [ "dnnl_stream_create", "group__dnnl__api__stream.html#gaefca700bdec59b22c05f248df5bb3354", null ],
     [ "dnnl_stream_create_v2", "group__dnnl__api__stream.html#ga86fa72f1fdd47e0d59299bac914a790b", null ],
     [ "dnnl_stream_create_ocl", "group__dnnl__api__stream.html#ga4403b8d09197fdf6c7f957092bac0306", null ],
+    [ "dnnl_stream_get_engine", "group__dnnl__api__stream.html#ga817016eb87a4d87a889f32b52b71a93b", null ],
     [ "dnnl_stream_get_ocl_command_queue", "group__dnnl__api__stream.html#ga77f34bf9765aed054da5ca078d5d0906", null ],
     [ "dnnl_stream_wait", "group__dnnl__api__stream.html#ga6a8175b9384349b1ee73a78a24b5883f", null ],
     [ "dnnl_stream_destroy", "group__dnnl__api__stream.html#gae7fe8b23136cafa62a39301799cd6e44", null ]

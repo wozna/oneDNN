@@ -100,7 +100,16 @@ var group__dnnl__api__attributes =
       [ "binary_max", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a4ae0aa1c0bf5bd1bf54564a2485618be", null ],
       [ "binary_min", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640ad096699e4ea7ada3d71428484e6119d8", null ],
       [ "resampling_nearest", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a091b262cfae5e610fcad1490bfb79431", null ],
-      [ "resampling_linear", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a05731680a83c6dccd19a758b72a4ecbd", null ]
+      [ "resampling_linear", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a05731680a83c6dccd19a758b72a4ecbd", null ],
+      [ "reduction_max", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a42483cece49698bff4fc700cd2de655c", null ],
+      [ "reduction_min", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a8cc607027ba7c9399ba610f22b88b3eb", null ],
+      [ "reduction_sum", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640af710a5a162f3ac1c005876b5c96a6087", null ],
+      [ "reduction_mul", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640aab991281eb5a55118f233a6d906be210", null ],
+      [ "reduction_mean", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640ae2afc4d79ef0f2e8de6c4d7292ea1a8e", null ],
+      [ "reduction_norm_lp_max", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a67f19545c23e777ffbae900ab1b8cde5", null ],
+      [ "reduction_norm_lp_sum", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640ad73ba421a6b061afe16e49a6acc0733a", null ],
+      [ "reduction_norm_lp_power_p_max", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a423e9857dd013140a323235cd520bad5", null ],
+      [ "reduction_norm_lp_power_p_sum", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a161d82b9c140979ea6fc5ce7ad1afcbd", null ]
     ] ],
     [ "dnnl_scratchpad_mode_t", "group__dnnl__api__attributes.html#gacda323181ab267e571c31435b0817de4", [
       [ "dnnl_scratchpad_mode_library", "group__dnnl__api__attributes.html#ggacda323181ab267e571c31435b0817de4ac6aab09a2f8ef442a6a59800549b0487", null ],

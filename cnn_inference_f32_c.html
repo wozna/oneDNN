@@ -359,7 +359,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_c.html','');});
 <div class="line"></div>
 <div class="line">    <span class="comment">// AlexNet: relu</span></div>
 <div class="line">    <span class="comment">// {BATCH, OC, CONV_OH, CONV_OW} -&gt; {BATCH, OC, CONV_OH, CONV_OW}</span></div>
-<div class="line">    <span class="keywordtype">float</span> negative_slope = 1.0f;</div>
+<div class="line">    <span class="keywordtype">float</span> negative_slope = 0.0f;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create relu memory descriptor on dst memory descriptor</span></div>
 <div class="line">    <span class="comment">// from previous primitive</span></div>
