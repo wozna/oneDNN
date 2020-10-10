@@ -64,6 +64,7 @@ var group__dnnl__api__memory =
         [ "decab", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fab9a152e018d02395e6e94c5619da4a91", null ],
         [ "abced", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faebb080afaac3a990ad3f1d0f21742fac", null ],
         [ "abcdef", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fae80b5017098950fc58aad83c8c14978e", null ],
+        [ "abdfce", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa7c4600767ddcc2dba9d42133b390e593", null ],
         [ "acbdef", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa66fd87374b1ec6be9fdbea534e17adeb", null ],
         [ "defcab", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fac9cdbbb9640597fea44206cee7f8a151", null ],
         [ "abcdfe", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faeb4c431d71c552a2bc16fab86156738e", null ],
@@ -270,6 +271,10 @@ var group__dnnl__api__memory =
         [ "aBCd4c8b2c", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa2dc655c6b0e242b96908c6ec42a21279", null ],
         [ "aBCde4c8b2c", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa41bb5b49467c596935a0925d524094e8", null ],
         [ "aBCdef4c8b2c", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa3b147225642d3a9f8afd4f34c0ba7630", null ],
+        [ "AB32a32b8a4b", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa235270d63611411252eb2ee8b154b8ae", null ],
+        [ "AB32a32b8a2b", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa648e2d7f561473aa47889906a9493971", null ],
+        [ "AB8a4b", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faf862a5103a447f4ee8a024d24c20843a", null ],
+        [ "AB8a2b", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fab6b19312da9179f07b87273c45951588", null ],
         [ "format_tag_last", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa3d78b4610da52a1b6bff0c40b5a02404", null ],
         [ "nCdhw16c", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa6861aaac0752cd0c618f68453416ea5e", null ],
         [ "nCdhw4c", "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa94adcd68022f332e02475001d4fc9201", null ],
@@ -454,7 +459,8 @@ var group__dnnl__api__memory =
       [ "flags", "structdnnl__memory__extra__desc__t.html#a31ba8b2b692bb3f77023f8f5f1cb2bcb", null ],
       [ "compensation_mask", "structdnnl__memory__extra__desc__t.html#a81e3983d9a062c65b346b54e32ca75f0", null ],
       [ "scale_adjust", "structdnnl__memory__extra__desc__t.html#adbf548bbb58dd9dfaf9966621845b2a1", null ],
-      [ "reserved", "structdnnl__memory__extra__desc__t.html#a174a1f0d7fddfd508465a940e0c6e875", null ]
+      [ "asymm_compensation_mask", "structdnnl__memory__extra__desc__t.html#a8bf7bad194cd0865de05966e46f580ca", null ],
+      [ "reserved", "structdnnl__memory__extra__desc__t.html#a305aa924612dd8fcd21802707d0cc364", null ]
     ] ],
     [ "dnnl_memory_desc_t", "structdnnl__memory__desc__t.html", [
       [ "ndims", "structdnnl__memory__desc__t.html#a72ed50c98f23f513550255ca8917b473", null ],
@@ -515,6 +521,7 @@ var group__dnnl__api__memory =
       [ "dnnl_abcdefghijkl", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da24084d001c72ff2e0543fe09d543678f", null ],
       [ "dnnl_abdc", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dad7bcb765b861ed46b2b752e912989217", null ],
       [ "dnnl_abdec", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091daab417c26841486da2a0da84730d0874d", null ],
+      [ "dnnl_abdfce", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091daa9483a5b4d17c8aebd14a9894ff67fe5", null ],
       [ "dnnl_acb", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091daf8537ed269eb5d0586456db114039c00", null ],
       [ "dnnl_acbde", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dac5f398cc58f5625915719ec541bb152e", null ],
       [ "dnnl_acbdef", "group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da8463916a68cb816050fbaf71817093ae", null ],

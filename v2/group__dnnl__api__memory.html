@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.95.0</div>
+   <div id="projectnumber">1.96.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -238,12 +238,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga722a97a6fb834a4347deb3e70a240008"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__memory.html#ga722a97a6fb834a4347deb3e70a240008">dnnl_memory_set_data_handle_v2</a> (<a class="el" href="group__dnnl__api__memory.html#ga2b79954bd7bb293e766a89189e8440fd">dnnl_memory_t</a> memory, void *handle, <a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> stream)</td></tr>
 <tr class="memdesc:ga722a97a6fb834a4347deb3e70a240008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the underlying memory buffer.  <a href="#ga722a97a6fb834a4347deb3e70a240008">More...</a><br/></td></tr>
 <tr class="separator:ga722a97a6fb834a4347deb3e70a240008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf0f56c1bdffa7889ee408445883cca16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__memory.html#gaf0f56c1bdffa7889ee408445883cca16">dnnl_memory_get_ocl_mem_object</a> (<a class="el" href="group__dnnl__api__memory.html#ga1a1df843f4d0f72cde135a9a6adf20f3">const_dnnl_memory_t</a> memory, cl_mem *mem_object)</td></tr>
-<tr class="memdesc:gaf0f56c1bdffa7889ee408445883cca16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an OpenCL memory object associated with a memory object.  <a href="#gaf0f56c1bdffa7889ee408445883cca16">More...</a><br/></td></tr>
-<tr class="separator:gaf0f56c1bdffa7889ee408445883cca16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad8fb998362d50ce9014cb2988c209016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__memory.html#gad8fb998362d50ce9014cb2988c209016">dnnl_memory_set_ocl_mem_object</a> (<a class="el" href="group__dnnl__api__memory.html#ga2b79954bd7bb293e766a89189e8440fd">dnnl_memory_t</a> memory, cl_mem mem_object)</td></tr>
-<tr class="memdesc:gad8fb998362d50ce9014cb2988c209016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets OpenCL memory object associated with a memory object.  <a href="#gad8fb998362d50ce9014cb2988c209016">More...</a><br/></td></tr>
-<tr class="separator:gad8fb998362d50ce9014cb2988c209016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa219225aae8e53489caab3fe1bc80a52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__memory.html#gaa219225aae8e53489caab3fe1bc80a52">dnnl_memory_destroy</a> (<a class="el" href="group__dnnl__api__memory.html#ga2b79954bd7bb293e766a89189e8440fd">dnnl_memory_t</a> memory)</td></tr>
 <tr class="memdesc:gaa219225aae8e53489caab3fe1bc80a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a memory object.  <a href="#gaa219225aae8e53489caab3fe1bc80a52">More...</a><br/></td></tr>
 <tr class="separator:gaa219225aae8e53489caab3fe1bc80a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,7 +253,7 @@ Functions</h2></td></tr>
 <p>The user can query the amount of memory required by a memory descriptor using the <a class="el" href="structdnnl_1_1memory_1_1desc.html#a3a12698f833b44ed55af9fc6621c4917" title="Returns size of the memory descriptor in bytes. ">dnnl::memory::desc::get_size()</a> function. The size of data in general cannot be computed as the product of dimensions multiplied by the size of the data type. So users are required to use this function for better code portability.</p>
 <p class="startli">Two memory descriptors can be compared using the equality and inequality operators. The comparison is especially useful when checking whether it is necessary to reorder data from the user's data format to a primitive's format.</p>
 </li>
-<li><b>Memory object</b> &ndash; an engine-specific object that handles the memory buffer and its description (a memory descriptor). For the CPU engine or with USM, the memory buffer handle is simply a pointer to <code>void</code>. The memory buffer can be queried using #dnnl::memory::get_data_handle() and set using #dnnl::memory::set_data_handle(). The underlying SYCL buffer, when used, can be queried using #dnnl::memory::get_sycl_buffer and set using #dnnl::memory::set_sycl_buffer. A memory object can also be queried for the underlying memory descriptor and for its engine using #dnnl::memory::get_desc() and dnnl::memory::get_engine().</li>
+<li><b>Memory object</b> &ndash; an engine-specific object that handles the memory buffer and its description (a memory descriptor). For the CPU engine or with USM, the memory buffer handle is simply a pointer to <code>void</code>. The memory buffer can be queried using <a class="el" href="structdnnl_1_1memory.html#a1b81db911a391cefc31e35bbe9ca95fe" title="Returns the underlying memory buffer. ">dnnl::memory::get_data_handle()</a> and set using <a class="el" href="structdnnl_1_1memory.html#afa06ef3c32a86ab1577e32424e6d4a00" title="Sets the underlying memory buffer. ">dnnl::memory::set_data_handle()</a>. The underlying SYCL buffer, when used, can be queried using <a class="el" href="namespacednnl_1_1sycl__interop.html#aa79e54806e23001f638483f5cd3319b4" title="Returns the SYCL buffer associated with a memory object. ">dnnl::sycl_interop::get_buffer</a> and set using <a class="el" href="namespacednnl_1_1sycl__interop.html#aa0d461dded1b8dee57c6ad7bf5ee3069" title="Sets SYCL buffer associated with a memory object. ">dnnl::sycl_interop::set_buffer</a>. A memory object can also be queried for the underlying memory descriptor and for its engine using <a class="el" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a" title="Returns the associated memory descriptor. ">dnnl::memory::get_desc()</a> and <a class="el" href="structdnnl_1_1memory.html#a4494aca5ff97774b73e707f4f951972d" title="Returns the associated engine. ">dnnl::memory::get_engine()</a>.</li>
 </ol>
 <p>Along with ordinary memory descriptors with all dimensions being positive, the library supports <em>zero-volume</em> memory descriptors with one or more dimensions set to zero. This is used to support the NumPy* convention. If a zero-volume memory is passed to a primitive, the primitive typically does not perform any computations with this memory. For example:</p>
 <ul>
@@ -325,7 +319,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A wildcard value for floating point values that are unknown at a primitive creation time. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_matmul_quantization_8cpp-example.html#a10">cpu_matmul_quantization.cpp</a>, <a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#a8">cpu_sgemm_and_matmul.cpp</a>, and <a class="el" href="inference_int8_matmul_8cpp-example.html#a9">inference_int8_matmul.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_matmul_quantization_8cpp-example.html#a11">cpu_matmul_quantization.cpp</a>, <a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#a8">cpu_sgemm_and_matmul.cpp</a>, and <a class="el" href="inference_int8_matmul_8cpp-example.html#a9">inference_int8_matmul.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -340,7 +334,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A wildcard value for int32_t values that are unknown at a primitive creation time. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_matmul_quantization_8cpp-example.html#a12">cpu_matmul_quantization.cpp</a>, and <a class="el" href="inference_int8_matmul_8cpp-example.html#a11">inference_int8_matmul.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_matmul_quantization_8cpp-example.html#a13">cpu_matmul_quantization.cpp</a>, and <a class="el" href="inference_int8_matmul_8cpp-example.html#a11">inference_int8_matmul.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -526,11 +520,32 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da74b2db34e6253e56f441764d16e6ec42"></a>dnnl_abcdef</em>&nbsp;</td><td class="fielddoc">
 <p>plain 6D tensor </p>
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091daa6db6b10c9279959f5de845d454c19f0"></a>dnnl_abcdefg</em>&nbsp;</td><td class="fielddoc">
+<p>plain 7D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da12cecc4b1febc6f7bbc4ddced6482155"></a>dnnl_abcdefgh</em>&nbsp;</td><td class="fielddoc">
+<p>plain 8D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da0a0796a36ef631a3f1bdd9210e59684e"></a>dnnl_abcdefghi</em>&nbsp;</td><td class="fielddoc">
+<p>plain 9D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091dafaaf9a62cda825a376f1e35936dbf5b1"></a>dnnl_abcdefghij</em>&nbsp;</td><td class="fielddoc">
+<p>plain 10D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da571cdcd3d6fd3ae211377f7c2068846a"></a>dnnl_abcdefghijk</em>&nbsp;</td><td class="fielddoc">
+<p>plain 11D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da24084d001c72ff2e0543fe09d543678f"></a>dnnl_abcdefghijkl</em>&nbsp;</td><td class="fielddoc">
+<p>plain 12D tensor </p>
+</td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091dad7bcb765b861ed46b2b752e912989217"></a>dnnl_abdc</em>&nbsp;</td><td class="fielddoc">
 <p>permuted 4D tensor </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091daab417c26841486da2a0da84730d0874d"></a>dnnl_abdec</em>&nbsp;</td><td class="fielddoc">
 <p>permuted 5D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091daa9483a5b4d17c8aebd14a9894ff67fe5"></a>dnnl_abdfce</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 6D tensor </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091daf8537ed269eb5d0586456db114039c00"></a>dnnl_acb</em>&nbsp;</td><td class="fielddoc">
 <p>permuted 3D tensor </p>
@@ -585,6 +600,30 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da73502e9308b365e74da295eaa83703ad"></a>dnnl_defcab</em>&nbsp;</td><td class="fielddoc">
 <p>permuted 6D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091dac2006f669dbddbc93e5fd8cf2abbe005"></a>dnnl_abced</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 5D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da2e7f7dc1fa5cc578ee70b018ae78d63d"></a>dnnl_abcdfe</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 6D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da28fa9c38c8aba3f7366a40c5f28f5894"></a>dnnl_abcdegf</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 7D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da013495943a14ba43871723e2a1f29de8"></a>dnnl_abcdefhg</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 8D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091dad1ce4f5554fe6c5338ca3de649477545"></a>dnnl_abcdefgih</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 9D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091daf8dc3817d010338ab9150378f8fded79"></a>dnnl_abcdefghji</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 10D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da190b0571914d2675e1bc51d154e0de48"></a>dnnl_abcdefghikj</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 11D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091dadeb66e32bfc557ea52fbeeb532287b45"></a>dnnl_abcdefghijlk</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 12D tensor </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga395e42b594683adb25ed2d842bb3091da3e2da6258e387e0eb149b22f57209056"></a>dnnl_aBc16b</em>&nbsp;</td><td class="fielddoc">
 <p>3D tensor blocked by 2nd dimension with block size 16 </p>
@@ -1574,79 +1613,6 @@ Even when the memory object is used to hold values that stay constant during the
     <tr><td class="paramname">memory</td><td>Memory object. </td></tr>
     <tr><td class="paramname">handle</td><td>Data handle. For the CPU engine, the data handle is a pointer to the actual data. For OpenCL it is a <code>cl_mem</code>. </td></tr>
     <tr><td class="paramname">stream</td><td>Stream to use to execute padding in. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf0f56c1bdffa7889ee408445883cca16"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_memory_get_ocl_mem_object </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__memory.html#ga1a1df843f4d0f72cde135a9a6adf20f3">const_dnnl_memory_t</a>&#160;</td>
-          <td class="paramname"><em>memory</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cl_mem *&#160;</td>
-          <td class="paramname"><em>mem_object</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an OpenCL memory object associated with a memory object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">memory</td><td>Memory object. </td></tr>
-    <tr><td class="paramname">mem_object</td><td>Output OpenCL memory object. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad8fb998362d50ce9014cb2988c209016"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_memory_set_ocl_mem_object </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__memory.html#ga2b79954bd7bb293e766a89189e8440fd">dnnl_memory_t</a>&#160;</td>
-          <td class="paramname"><em>memory</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cl_mem&#160;</td>
-          <td class="paramname"><em>mem_object</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets OpenCL memory object associated with a memory object. </p>
-<p>For behavioral details, see <a class="el" href="group__dnnl__api__memory.html#ga6888f8c17f272d6729c9bc258ed41fcf" title="Sets the underlying memory buffer. ">dnnl_memory_set_data_handle()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">memory</td><td>Memory object. </td></tr>
-    <tr><td class="paramname">mem_object</td><td>OpenCL memory object. </td></tr>
   </table>
   </dd>
 </dl>

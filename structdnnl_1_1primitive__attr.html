@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.6.0</div>
+   <div id="projectnumber">1.7.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -106,14 +106,14 @@ Inheritance diagram for dnnl::primitive_attr:</div>
 <div class="dyncontent">
 <div class="center"><img src="structdnnl_1_1primitive__attr__inherit__graph.png" border="0" usemap="#dnnl_1_1primitive__attr_inherit__map" alt="Inheritance graph"/></div>
 <map name="dnnl_1_1primitive__attr_inherit__map" id="dnnl_1_1primitive__attr_inherit__map">
-<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_primitive_attr_t \&gt;" alt="" coords="6,6,151,47"/></map>
+<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_primitive_attr_t \&gt;" alt="" coords="5,6,133,47"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for dnnl::primitive_attr:</div>
 <div class="dyncontent">
 <div class="center"><img src="structdnnl_1_1primitive__attr__coll__graph.png" border="0" usemap="#dnnl_1_1primitive__attr_coll__map" alt="Collaboration graph"/></div>
 <map name="dnnl_1_1primitive__attr_coll__map" id="dnnl_1_1primitive__attr_coll__map">
-<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_primitive_attr_t \&gt;" alt="" coords="6,6,151,47"/></map>
+<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_primitive_attr_t \&gt;" alt="" coords="5,6,133,47"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -159,9 +159,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39ce5aa8b06ed331d8e2158108cc8324"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1primitive__attr.html#a39ce5aa8b06ed331d8e2158108cc8324">set_rnn_data_qparams</a> (float scale, float shift)</td></tr>
 <tr class="memdesc:a39ce5aa8b06ed331d8e2158108cc8324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets quantization scale and shift parameters for RNN data tensors.  <a href="#a39ce5aa8b06ed331d8e2158108cc8324">More...</a><br/></td></tr>
 <tr class="separator:a39ce5aa8b06ed331d8e2158108cc8324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d567defa762761daa2af604798d799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1primitive__attr.html#a47d567defa762761daa2af604798d799">get_rnn_data_qparams</a> (float &amp;scale, float &amp;shift)</td></tr>
+<tr class="memdesc:a47d567defa762761daa2af604798d799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quantization scale and shift parameters for RNN data tensors.  <a href="#a47d567defa762761daa2af604798d799">More...</a><br/></td></tr>
+<tr class="separator:a47d567defa762761daa2af604798d799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61bd70f97baa628fd49b2c8b334b913e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1primitive__attr.html#a61bd70f97baa628fd49b2c8b334b913e">set_rnn_weights_qparams</a> (int mask, const std::vector&lt; float &gt; &amp;scales)</td></tr>
 <tr class="memdesc:a61bd70f97baa628fd49b2c8b334b913e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets quantization scaling factors for RNN weights tensors.  <a href="#a61bd70f97baa628fd49b2c8b334b913e">More...</a><br/></td></tr>
 <tr class="separator:a61bd70f97baa628fd49b2c8b334b913e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bbe9ac516e3aabe7dfea214210a3335"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1primitive__attr.html#a3bbe9ac516e3aabe7dfea214210a3335">get_rnn_weights_qparams</a> (int &amp;mask, std::vector&lt; float &gt; &amp;scales)</td></tr>
+<tr class="memdesc:a3bbe9ac516e3aabe7dfea214210a3335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quantization scaling factors for RNN projection weights tensors.  <a href="#a3bbe9ac516e3aabe7dfea214210a3335">More...</a><br/></td></tr>
+<tr class="separator:a3bbe9ac516e3aabe7dfea214210a3335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5a8c12f28421c249633bf2092fbe3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1primitive__attr.html#a6e5a8c12f28421c249633bf2092fbe3f">set_rnn_weights_projection_qparams</a> (int mask, const std::vector&lt; float &gt; &amp;scales)</td></tr>
+<tr class="memdesc:a6e5a8c12f28421c249633bf2092fbe3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets quantization scaling factors for RNN projection weights tensors.  <a href="#a6e5a8c12f28421c249633bf2092fbe3f">More...</a><br/></td></tr>
+<tr class="separator:a6e5a8c12f28421c249633bf2092fbe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c41b29c5cd74d9485b5e753ba57f1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1primitive__attr.html#a53c41b29c5cd74d9485b5e753ba57f1d">get_rnn_weights_projection_qparams</a> (int &amp;mask, std::vector&lt; float &gt; &amp;scales)</td></tr>
+<tr class="memdesc:a53c41b29c5cd74d9485b5e753ba57f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quantization scaling factors for RNN projection weights tensors.  <a href="#a53c41b29c5cd74d9485b5e753ba57f1d">More...</a><br/></td></tr>
+<tr class="separator:a53c41b29c5cd74d9485b5e753ba57f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structdnnl_1_1handle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structdnnl_1_1handle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structdnnl_1_1handle.html">dnnl::handle&lt; dnnl_primitive_attr_t &gt;</a></td></tr>
 <tr class="memitem:a8569ba9d1b62264df858f3b3316577c6 inherit pub_methods_structdnnl_1_1handle"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1handle.html#a8569ba9d1b62264df858f3b3316577c6">operator==</a> (const <a class="el" href="structdnnl_1_1handle.html">handle</a>&lt; <a class="el" href="group__dnnl__api__attributes.html#ga06d701a25b82d4c8a93aaabb93e03dc3">dnnl_primitive_attr_t</a>, <a class="el" href="structdnnl_1_1handle__traits.html">handle_traits</a>&lt; <a class="el" href="group__dnnl__api__attributes.html#ga06d701a25b82d4c8a93aaabb93e03dc3">dnnl_primitive_attr_t</a> &gt; &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a8569ba9d1b62264df858f3b3316577c6 inherit pub_methods_structdnnl_1_1handle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator.  <a href="#a8569ba9d1b62264df858f3b3316577c6">More...</a><br/></td></tr>
@@ -716,6 +728,50 @@ Public Member Functions</h2></td></tr>
 </dl>
 </div>
 </div>
+<a class="anchor" id="a47d567defa762761daa2af604798d799"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnnl::primitive_attr::get_rnn_data_qparams </td>
+          <td>(</td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>shift</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the quantization scale and shift parameters for RNN data tensors. </p>
+<dl class="section note"><dt>Note</dt><dd>Quantization scale and shift are common for src_layer, src_iter, dst_iter, and dst_layer.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The value to scale the data by. </td></tr>
+    <tr><td class="paramname">shift</td><td>The value to shift the data by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a61bd70f97baa628fd49b2c8b334b913e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -762,6 +818,141 @@ Quantization scales are common for weights_layer and weights_iteration</dd></dl>
 </dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_rnn_inference_int8_8cpp-example.html#a21">cpu_rnn_inference_int8.cpp</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a3bbe9ac516e3aabe7dfea214210a3335"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnnl::primitive_attr::get_rnn_weights_qparams </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scales</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the quantization scaling factors for RNN projection weights tensors. </p>
+<dl class="section note"><dt>Note</dt><dd>The dimension order is always native and does not depend on the actual layout used. For example, five-dimensional weights always have (l, d, i, g, o) logical dimension ordering.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Scaling factors correspondence mask that defines the correspondence between the output tensor dimensions and the <code>scales</code> vector. The set i-th bit indicates that a dedicated scaling factor should be used each index along that dimension. Set the mask to 0 to use a common scaling factor for the whole output tensor. </td></tr>
+    <tr><td class="paramname">scales</td><td>Constant vector of output scaling factors. The following equality must hold: \(scales.size() = \prod\limits_{d \in mask} weights.dims[d].\) Violations can only be detected when the attributes are used to create a primitive descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6e5a8c12f28421c249633bf2092fbe3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnnl::primitive_attr::set_rnn_weights_projection_qparams </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scales</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets quantization scaling factors for RNN projection weights tensors. </p>
+<p>passed to RNN primitives using attributes.</p>
+<dl class="section note"><dt>Note</dt><dd>The dimension order is always native and does not depend on the actual layout used. For example, five-dimensional weights always have (l, d, i, g, o) logical dimension ordering.</dd>
+<dd>
+Quantization scales are common for weights_layer and weights_iteration</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Scaling factors correspondence mask that defines the correspondence between the output tensor dimensions and the <code>scales</code> vector. The set i-th bit indicates that a dedicated scaling factor should be used each index along that dimension. Set the mask to 0 to use a common scaling factor for the whole output tensor. </td></tr>
+    <tr><td class="paramname">scales</td><td>Constant vector of output scaling factors. The following equality must hold: \(scales.size() = \prod\limits_{d \in mask} weights.dims[d].\) Violations can only be detected when the attributes are used to create a primitive descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a53c41b29c5cd74d9485b5e753ba57f1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnnl::primitive_attr::get_rnn_weights_projection_qparams </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scales</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the quantization scaling factors for RNN projection weights tensors. </p>
+<dl class="section note"><dt>Note</dt><dd>The dimension order is always native and does not depend on the actual layout used. For example, five-dimensional weights always have (l, d, i, g, o) logical dimension ordering.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Scaling factors correspondence mask that defines the correspondence between the output tensor dimensions and the <code>scales</code> vector. The set i-th bit indicates that a dedicated scaling factor should be used each index along that dimension. Set the mask to 0 to use a common scaling factor for the whole output tensor. </td></tr>
+    <tr><td class="paramname">scales</td><td>Constant vector of output scaling factors. The following equality must hold: \(scales.size() = \prod\limits_{d \in mask} weights.dims[d].\) Violations can only be detected when the attributes are used to create a primitive descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>

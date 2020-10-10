@@ -32,6 +32,7 @@ var searchData=
   ['binary_5fmax',['binary_max',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a4ae0aa1c0bf5bd1bf54564a2485618be',1,'dnnl']]],
   ['binary_5fmin',['binary_min',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640ad096699e4ea7ada3d71428484e6119d8',1,'dnnl']]],
   ['binary_5fmul',['binary_mul',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a0905fc5c22e79a8eed0988681eb6a0ae',1,'dnnl']]],
+  ['binary_5fsub',['binary_sub',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a979309f9436f7ebfa278b0ce682dd706',1,'dnnl']]],
   ['blocked',['blocked',['../structdnnl_1_1memory.html#aabcadfb0e23a36a91272fc571cff105fa61326117ed4a9ddf3f754e71e119e5b3',1,'dnnl::memory']]],
   ['blocking',['blocking',['../structdnnl__memory__desc__t.html#a376a38353672131bfc67fe92bceb6c9e',1,'dnnl_memory_desc_t']]],
   ['basic_20concepts',['Basic Concepts',['../dev_guide_basic_concepts.html',1,'']]],

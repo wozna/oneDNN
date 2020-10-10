@@ -25,7 +25,7 @@
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
    <div id="projectname">oneAPI Deep Neural Network Library (oneDNN)
-   &#160;<span id="projectnumber">1.6.0</span>
+   &#160;<span id="projectnumber">1.6.4</span>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
 </div>
@@ -89,11 +89,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p class="formulaDsp">
 \[ \dst(m, n) = \sum_{k=0}^{K} \left( \src(m, k) \cdot \weights(k, n) \right) + \bias(m, n) \]
 </p>
-<p>The MatMul primitive also supports batching multiple independent matrix multiplication operations, in which case the tensors must be 3D:</p>
+<p>The MatMul primitive also supports batching multiple independent matrix multiplication operations, in which case the tensors can be up to 12D:</p>
 <p class="formulaDsp">
-\[ \dst(mb, m, n) = \sum_{k=0}^{K} \left( \src(mb, m, k) \cdot \weights(mb, k, n) \right) + \bias(mb, m, n) \]
+\[ \dst(bs_0, bs_1, bs_2, \ldots, m, n) = \sum_{k=0}^{K} \left( \src(bs_0, bs_1, bs_2, \ldots, m, k) \cdot \weights(bs_0, bs_1, bs_2, \ldots, k, n) \right) + \bias(bs_0, bs_1, bs_2, \ldots, m, n) \]
 </p>
-<p>The bias tensor is optional and supports implicit broadcast semantics: any of its dimensions can be 1 and the same value would be used across the corresponding dimension. However, \(\bias\) must have the same number of dimensions as the \(\dst\).</p>
+<p>MatMul also supports implicit broadcast semantics i.e., \(\src\) can be broadcasted into \(\weights\) if the corresponding dimension in \(\src\) is 1 (and vice versa). However, all tensors (including \(\bias\), if it exists) must have the same number of dimensions.</p>
+<p>The shape of \(\dst\) only depends on \(\src\) and \(\weights\) tensors. The \(\bias\) cannot change the dimensions of \(\dst\) by broadcasting. In other words, for every dimension, the following constraint must hold true: <code>dimension(bias) == dimension(dst) || dimension(bias) == 1</code>.</p>
 <h2>Execution Arguments</h2>
 <p>When executed, the inputs and outputs should be mapped to an execution argument index as specified by the following table.</p>
 <table class="doxtable">
@@ -111,7 +112,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2>Implementation Details</h2>
 <h3>General Notes</h3>
 <ol type="1">
-<li><p class="startli">The MatMul primitive supports input and output tensors with run-time specified shapes and memory formats. The run-time specified dimensions or strides are specified using the <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a> wildcard value during the primitive initialization and creation stage. At the execution stage, the user must pass fully specified memory objects so that the primitive is able to perform the computations. Note that the less information about shapes or format is available at the creation stage, the less performant execution will be. In particular, if the shape is not known at creation stage, one cannot use the special format tag <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa100b8cad7cf2a56f6df78f171f97a1ec" title="Placeholder memory format tag. ">dnnl::memory::format_tag::any</a> to enable an implementation to choose the most appropriate memory format for the corresponding input or output shapes. On the other hand, run-time specified shapes enable users to create a primitive once and use it in different situations.</p>
+<li>The MatMul primitive supports input and output tensors with run-time specified shapes and memory formats. The run-time specified dimensions or strides are specified using the <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a> wildcard value during the primitive initialization and creation stage. At the execution stage, the user must pass fully specified memory objects so that the primitive is able to perform the computations. Note that the less information about shapes or format is available at the creation stage, the less performant execution will be. In particular, if the shape is not known at creation stage, one cannot use the special format tag <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa100b8cad7cf2a56f6df78f171f97a1ec" title="Placeholder memory format tag. ">dnnl::memory::format_tag::any</a> to enable an implementation to choose the most appropriate memory format for the corresponding input or output shapes. On the other hand, run-time specified shapes enable users to create a primitive once and use it in different situations.</li>
+<li>Inconsistency with dimensions being "primitive-creation-time-defined" vs "runtime-defined" is invalid. For example, \(\src\) and \(\weights\) with dimensions set to <code>{3, 4, 4}</code> and <code>{DNNL_RUNTIME_DIM_VAL, 4, 4}</code> respectively is invalid.</li>
+<li><p class="startli">The broadcasting shape consistency check is not done for the dimensions with <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a>. It is user responsibility to make sure the dimensions for the tensors are valid.</p>
 <dl class="section see"><dt>See Also</dt><dd>Please check tutorials below to see <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a> support in use.</dd></dl>
 <h3>Data Types</h3>
 </li>
@@ -137,22 +140,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td align="left">2D </td><td align="left">\(M \times K\) </td><td align="left">\(K \times N\) </td><td align="left">\(M \times N\) </td><td align="left">None or \((M \text{ or } 1) \times (N \text{ or } 1)\) </td></tr>
 <tr>
-<td align="left">3D </td><td align="left">\(MB \times M \times K\) </td><td align="left">\(MB \times K \times N\) </td><td align="left">\(MB \times M \times N\) </td><td align="left">None or \((MB \text{ or } 1) \times (M \text{ or } 1) \times (N \text{ or } 1)\) </td></tr>
+<td align="left">ND </td><td align="left">\((\prod_{i=0}^{ND - 2} src{\_}dims[i]) \times M \times K\) </td><td align="left">\((\prod_{i=0}^{ND - 2} weights{\_}dims[i]) \times K \times N\) </td><td align="left">\((\prod_{i=0}^{ND - 2} dst{\_}dims[i]) \times M \times N\) </td><td align="left">None or \(\prod_{i=0}^{ND} (dst{\_}dims[i] { or } 1)\) </td></tr>
 </table>
-<p>The MatMul primitive is generally optimized for the case in which memory objects use plain memory formats (with some restrictions; see the table below). However, it is recommended to use the placeholder memory format <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa100b8cad7cf2a56f6df78f171f97a1ec" title="Placeholder memory format tag. ">dnnl::memory::format_tag::any</a> if an input tensor is reused across multiple executions. In this case, the primitive will set the most appropriate memory format for the corresponding input tensor.</p>
-<p>The table below shows the combinations of memory formats for which the MatMul primitive is optimized. The memory format of the destination tensor should always be <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa187ef4436122d1cc2f40dc2b92f0eba0" title="plain 2D tensor ">dnnl::memory::format_tag::ab</a> for the 2D case and <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa900150983cd24fb0d6963f7d28e17f72" title="plain 3D tensor ">dnnl::memory::format_tag::abc</a> for the 3D one.</p>
-<table class="doxtable">
-<tr>
-<th align="left">Dims </th><th align="left">Logical tensors </th><th align="left">MatMul is optimized for the following memory formats  </th></tr>
-<tr>
-<td align="left">2D </td><td align="left">Source: \(M \times K\) <br/>
- Weights: \(K \times N\) </td><td align="left">Source: <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da1bd907fc29344dfe7ba88336960dcf53" title="plain 2D tensor ">dnnl_ab</a> or <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da6a6dbc0b30468d92e32a9cb3f6615c43" title="permuted 2D tensor ">dnnl_ba</a> <br/>
- Weights: <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da1bd907fc29344dfe7ba88336960dcf53" title="plain 2D tensor ">dnnl_ab</a> or <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da6a6dbc0b30468d92e32a9cb3f6615c43" title="permuted 2D tensor ">dnnl_ba</a> </td></tr>
-<tr>
-<td align="left">3D </td><td align="left">Source: \(MB \times M \times K\) <br/>
- Weights: \(MB \times K \times N\) </td><td align="left">Source: <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dadff5ea69392d7e4da23179dc0ba7cbc2" title="plain 3D tensor ">dnnl_abc</a> or <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091daf8537ed269eb5d0586456db114039c00" title="permuted 3D tensor ">dnnl_acb</a> <br/>
- Weights: <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dadff5ea69392d7e4da23179dc0ba7cbc2" title="plain 3D tensor ">dnnl_abc</a> or <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091daf8537ed269eb5d0586456db114039c00" title="permuted 3D tensor ">dnnl_acb</a> </td></tr>
-</table>
+<p>The MatMul primitive is generally optimized for the case in which memory objects use plain memory formats. Additionally, the \(\src\) and \(\weights\) must have at least one of the axes <code>m</code> or <code>k</code> and <code>n</code> or <code>k</code> contiguous (i.e., stride=1) respectively. However, it is recommended to use the placeholder memory format <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa100b8cad7cf2a56f6df78f171f97a1ec" title="Placeholder memory format tag. ">dnnl::memory::format_tag::any</a> if an input tensor is reused across multiple executions. In this case, the primitive will set the most appropriate memory format for the corresponding input tensor.</p>
+<p>The memory format of the destination tensor should always be plain with <code>n</code> axis contiguous. For example, <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa187ef4436122d1cc2f40dc2b92f0eba0" title="plain 2D tensor ">dnnl::memory::format_tag::ab</a> for the 2D case and <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa900150983cd24fb0d6963f7d28e17f72" title="plain 3D tensor ">dnnl::memory::format_tag::abc</a> or <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa79ec16df80b57696a03bb364410061f3" title="permuted 3D tensor ">dnnl::memory::format_tag::bac</a> for the 3D one.</p>
 <h3>Attributes and Post-ops</h3>
 <p>Attributes and post-ops enable modifying the behavior of the MatMul primitive. The following attributes and post-ops are supported:</p>
 <table class="doxtable">

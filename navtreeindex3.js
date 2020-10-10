@@ -1,5 +1,12 @@
 var NAVTREEINDEX3 =
 {
+"group__dnnl__api__reduction.html#ga507b07a09447e911f68d11aad0fecdde":[6,0,0,0,20,2],
+"group__dnnl__api__reorder.html":[6,0,0,0,2],
+"group__dnnl__api__reorder.html#ga099efa7b8fd12ae8de0e3e98fd0ae3ec":[6,0,0,0,2,1],
+"group__dnnl__api__resampling.html":[6,0,0,0,19],
+"group__dnnl__api__resampling.html#ga5ef7bfb7acf8c0e2f66c6eca90d6401a":[6,0,0,0,19,4],
+"group__dnnl__api__resampling.html#ga9f866ba136e2a9a013b78386cc73bdc5":[6,0,0,0,19,3],
+"group__dnnl__api__rnn.html":[6,0,0,0,17],
 "group__dnnl__api__rnn.html#ga051e03160540be590513bee961edd2c4":[6,0,0,0,17,25],
 "group__dnnl__api__rnn.html#ga0a340195a137f906e858418d91397777":[6,0,0,0,17,26],
 "group__dnnl__api__rnn.html#ga1552168adfd901681cc6eab2d6da4112":[6,0,0,0,17,22],
@@ -242,12 +249,5 @@ var NAVTREEINDEX3 =
 "structdnnl_1_1convolution__forward_1_1primitive__desc.html#a2eb6ae222b86834bd773192651ff71fe":[6,0,0,0,6,0,1,0],
 "structdnnl_1_1convolution__forward_1_1primitive__desc.html#a3133b6e5243cb96ca6fc2bd31ec1132b":[6,0,0,0,6,0,1,1],
 "structdnnl_1_1convolution__forward_1_1primitive__desc.html#a35dd3a81d18046e7f505705c131fe26d":[6,0,0,0,6,0,1,6],
-"structdnnl_1_1convolution__forward_1_1primitive__desc.html#a4de82bd01b6898243758d498188e1531":[6,0,0,0,6,0,1,2],
-"structdnnl_1_1convolution__forward_1_1primitive__desc.html#a9c2c8e357be96e74eaf4f3674c0f491a":[6,0,0,0,6,0,1,3],
-"structdnnl_1_1convolution__forward_1_1primitive__desc.html#ab37a43278df38ccd4365391ca1450cec":[6,0,0,0,6,0,1,5],
-"structdnnl_1_1deconvolution__backward__data.html":[6,0,0,0,7,1],
-"structdnnl_1_1deconvolution__backward__data.html#a474185ff81af61f1a972cf53ef1814c7":[6,0,0,0,7,1,2],
-"structdnnl_1_1deconvolution__backward__data.html#a47fdec8f6615245111d2b847d7a9de82":[6,0,0,0,7,1,3],
-"structdnnl_1_1deconvolution__backward__data_1_1desc.html":[6,0,0,0,7,1,0],
-"structdnnl_1_1deconvolution__backward__data_1_1desc.html#a4aac0ae3c42454b1d9eecead6a9c316b":[6,0,0,0,7,1,0,1]
+"structdnnl_1_1convolution__forward_1_1primitive__desc.html#a4de82bd01b6898243758d498188e1531":[6,0,0,0,6,0,1,2]
 };

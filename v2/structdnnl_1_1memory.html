@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.95.0</div>
+   <div id="projectnumber">1.96.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('structdnnl_1_1memory.html','');});
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structdnnl_1_1memory-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">dnnl::memory Struct Reference<div class="ingroups"><a class="el" href="group__dnnl__api__memory.html">Memory</a></div></div>  </div>
@@ -104,20 +103,20 @@ $(document).ready(function(){initNavTree('structdnnl_1_1memory.html','');});
 <p>Memory object.  
  <a href="structdnnl_1_1memory.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="dnnl_8hpp_source.html">dnnl.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="oneapi_2dnnl_2dnnl_8hpp_source.html">dnnl.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for dnnl::memory:</div>
 <div class="dyncontent">
 <div class="center"><img src="structdnnl_1_1memory__inherit__graph.png" border="0" usemap="#dnnl_1_1memory_inherit__map" alt="Inheritance graph"/></div>
 <map name="dnnl_1_1memory_inherit__map" id="dnnl_1_1memory_inherit__map">
-<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_memory_t \&gt;" alt="" coords="5,6,149,47"/></map>
+<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_memory_t \&gt;" alt="" coords="5,6,133,47"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for dnnl::memory:</div>
 <div class="dyncontent">
 <div class="center"><img src="structdnnl_1_1memory__coll__graph.png" border="0" usemap="#dnnl_1_1memory_coll__map" alt="Collaboration graph"/></div>
 <map name="dnnl_1_1memory_coll__map" id="dnnl_1_1memory_coll__map">
-<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_memory_t \&gt;" alt="" coords="5,6,149,47"/></map>
+<area shape="rect" id="node2" href="structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_memory_t \&gt;" alt="" coords="5,6,133,47"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -150,6 +149,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f509ba0d38054c147f1dceef1a42d44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#a5f509ba0d38054c147f1dceef1a42d44">memory</a> ()=default</td></tr>
 <tr class="memdesc:a5f509ba0d38054c147f1dceef1a42d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a5f509ba0d38054c147f1dceef1a42d44">More...</a><br/></td></tr>
 <tr class="separator:a5f509ba0d38054c147f1dceef1a42d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7463ff54b529ec2b5392230861212a09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#a7463ff54b529ec2b5392230861212a09">memory</a> (const <a class="el" href="structdnnl_1_1memory_1_1desc.html">desc</a> &amp;md, const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;aengine, void *<a class="el" href="structdnnl_1_1handle.html">handle</a>)</td></tr>
+<tr class="memdesc:a7463ff54b529ec2b5392230861212a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a memory object.  <a href="#a7463ff54b529ec2b5392230861212a09">More...</a><br/></td></tr>
+<tr class="separator:a7463ff54b529ec2b5392230861212a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0892880e22c2cced48c44f405ced029"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#ab0892880e22c2cced48c44f405ced029">memory</a> (const <a class="el" href="structdnnl_1_1memory_1_1desc.html">desc</a> &amp;md, const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;aengine)</td></tr>
+<tr class="memdesc:ab0892880e22c2cced48c44f405ced029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a memory object.  <a href="#ab0892880e22c2cced48c44f405ced029">More...</a><br/></td></tr>
+<tr class="separator:ab0892880e22c2cced48c44f405ced029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bfc99db50d87d133c6b3b4f438b967a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bfc99db50d87d133c6b3b4f438b967a"></a>
+<a class="el" href="structdnnl_1_1memory_1_1desc.html">desc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a">get_desc</a> () const </td></tr>
+<tr class="memdesc:a6bfc99db50d87d133c6b3b4f438b967a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the associated memory descriptor. <br/></td></tr>
+<tr class="separator:a6bfc99db50d87d133c6b3b4f438b967a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4494aca5ff97774b73e707f4f951972d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4494aca5ff97774b73e707f4f951972d"></a>
+<a class="el" href="structdnnl_1_1engine.html">engine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#a4494aca5ff97774b73e707f4f951972d">get_engine</a> () const </td></tr>
+<tr class="memdesc:a4494aca5ff97774b73e707f4f951972d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the associated engine. <br/></td></tr>
+<tr class="separator:a4494aca5ff97774b73e707f4f951972d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b81db911a391cefc31e35bbe9ca95fe"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#a1b81db911a391cefc31e35bbe9ca95fe">get_data_handle</a> () const </td></tr>
+<tr class="memdesc:a1b81db911a391cefc31e35bbe9ca95fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying memory buffer.  <a href="#a1b81db911a391cefc31e35bbe9ca95fe">More...</a><br/></td></tr>
+<tr class="separator:a1b81db911a391cefc31e35bbe9ca95fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa06ef3c32a86ab1577e32424e6d4a00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#afa06ef3c32a86ab1577e32424e6d4a00">set_data_handle</a> (void *<a class="el" href="structdnnl_1_1handle.html">handle</a>, const <a class="el" href="structdnnl_1_1stream.html">stream</a> &amp;astream) const </td></tr>
+<tr class="memdesc:afa06ef3c32a86ab1577e32424e6d4a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the underlying memory buffer.  <a href="#afa06ef3c32a86ab1577e32424e6d4a00">More...</a><br/></td></tr>
+<tr class="separator:afa06ef3c32a86ab1577e32424e6d4a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3c13ed6f4af1b719ef7413ee36f63d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#aaf3c13ed6f4af1b719ef7413ee36f63d">set_data_handle</a> (void *<a class="el" href="structdnnl_1_1handle.html">handle</a>) const </td></tr>
+<tr class="memdesc:aaf3c13ed6f4af1b719ef7413ee36f63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the underlying memory buffer.  <a href="#aaf3c13ed6f4af1b719ef7413ee36f63d">More...</a><br/></td></tr>
+<tr class="separator:aaf3c13ed6f4af1b719ef7413ee36f63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11ae4ffa08379b58eb096d15304739a"><td class="memTemplParams" colspan="2">template&lt;typename T  = void&gt; </td></tr>
+<tr class="memitem:ad11ae4ffa08379b58eb096d15304739a"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#ad11ae4ffa08379b58eb096d15304739a">map_data</a> () const </td></tr>
+<tr class="memdesc:ad11ae4ffa08379b58eb096d15304739a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps a memory object and returns a host-side pointer to a memory buffer with a copy of its contents.  <a href="#ad11ae4ffa08379b58eb096d15304739a">More...</a><br/></td></tr>
+<tr class="separator:ad11ae4ffa08379b58eb096d15304739a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e68837f42415aca5e141a6d8a97996e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#a9e68837f42415aca5e141a6d8a97996e">unmap_data</a> (void *mapped_ptr) const </td></tr>
+<tr class="memdesc:a9e68837f42415aca5e141a6d8a97996e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmaps a memory object and writes back any changes made to the previously mapped memory buffer.  <a href="#a9e68837f42415aca5e141a6d8a97996e">More...</a><br/></td></tr>
+<tr class="separator:a9e68837f42415aca5e141a6d8a97996e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structdnnl_1_1handle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structdnnl_1_1handle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structdnnl_1_1handle.html">dnnl::handle&lt; dnnl_memory_t &gt;</a></td></tr>
 <tr class="memitem:a8569ba9d1b62264df858f3b3316577c6 inherit pub_methods_structdnnl_1_1handle"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1handle.html#a8569ba9d1b62264df858f3b3316577c6">operator==</a> (const <a class="el" href="structdnnl_1_1handle.html">handle</a>&lt; <a class="el" href="group__dnnl__api__memory.html#ga2b79954bd7bb293e766a89189e8440fd">dnnl_memory_t</a>, <a class="el" href="structdnnl_1_1handle__traits.html">handle_traits</a>&lt; <a class="el" href="group__dnnl__api__memory.html#ga2b79954bd7bb293e766a89189e8440fd">dnnl_memory_t</a> &gt; &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a8569ba9d1b62264df858f3b3316577c6 inherit pub_methods_structdnnl_1_1handle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator.  <a href="#a8569ba9d1b62264df858f3b3316577c6">More...</a><br/></td></tr>
@@ -200,17 +229,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a02c4d5aa4a07650977ba57ed65bd9a"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#a5a02c4d5aa4a07650977ba57ed65bd9a">validate_dims</a> (const std::vector&lt; T &gt; &amp;v, int min_size=0)</td></tr>
 <tr class="memdesc:a5a02c4d5aa4a07650977ba57ed65bd9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function that validates that an <code>std::vector</code> of dimensions can be safely converted to the C API array <a class="el" href="group__dnnl__api__memory.html#ga8331e1160e52a5d4babe96736464095a" title="A type to describe tensor dimensions. ">dnnl_dims_t</a>.  <a href="#a5a02c4d5aa4a07650977ba57ed65bd9a">More...</a><br/></td></tr>
 <tr class="separator:a5a02c4d5aa4a07650977ba57ed65bd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:af2d95e24e4a5af8e3ea0e14f37455513"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1memory.html#af2d95e24e4a5af8e3ea0e14f37455513">__pad0__</a>: <a class="el" href="structdnnl_1_1memory.html">memory</a>(with_sycl_tag {}</td></tr>
-<tr class="memdesc:af2d95e24e4a5af8e3ea0e14f37455513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a memory object.  <a href="#af2d95e24e4a5af8e3ea0e14f37455513">More...</a><br/></td></tr>
-<tr class="separator:af2d95e24e4a5af8e3ea0e14f37455513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory object. </p>
 <p>A memory object encapsulates a handle to a memory buffer allocated on a specific engine, tensor dimensions, data type, and memory format, which is the way tensor indices map to offsets in linear memory space. Memory objects are passed to primitives during execution. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="batch_normalization_8cpp-example.html#_a5">batch_normalization.cpp</a>, <a class="el" href="binary_8cpp-example.html#_a5">binary.cpp</a>, <a class="el" href="cnn_inference_f32_8cpp-example.html#_a4">cnn_inference_f32.cpp</a>, <a class="el" href="cnn_inference_int8_8cpp-example.html#_a4">cnn_inference_int8.cpp</a>, <a class="el" href="cnn_training_bf16_8cpp-example.html#_a4">cnn_training_bf16.cpp</a>, <a class="el" href="cnn_training_f32_8cpp-example.html#_a4">cnn_training_f32.cpp</a>, <a class="el" href="concat_8cpp-example.html#_a5">concat.cpp</a>, <a class="el" href="convolution_8cpp-example.html#_a4">convolution.cpp</a>, <a class="el" href="cpu_matmul_quantization_8cpp-example.html#_a2">cpu_matmul_quantization.cpp</a>, <a class="el" href="cpu_rnn_inference_f32_8cpp-example.html#_a10">cpu_rnn_inference_f32.cpp</a>, <a class="el" href="cpu_rnn_inference_int8_8cpp-example.html#_a11">cpu_rnn_inference_int8.cpp</a>, <a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#_a15">cpu_sgemm_and_matmul.cpp</a>, <a class="el" href="cross_engine_reorder_8cpp-example.html#_a0">cross_engine_reorder.cpp</a>, <a class="el" href="eltwise_8cpp-example.html#_a5">eltwise.cpp</a>, <a class="el" href="getting_started_8cpp-example.html#_a5">getting_started.cpp</a>, <a class="el" href="gpu_opencl_interop_8cpp-example.html#_a6">gpu_opencl_interop.cpp</a>, <a class="el" href="inference_int8_matmul_8cpp-example.html#_a17">inference_int8_matmul.cpp</a>, <a class="el" href="inner_product_8cpp-example.html#_a5">inner_product.cpp</a>, <a class="el" href="layer_normalization_8cpp-example.html#_a5">layer_normalization.cpp</a>, <a class="el" href="logsoftmax_8cpp-example.html#_a5">logsoftmax.cpp</a>, <a class="el" href="lrn_8cpp-example.html#_a5">lrn.cpp</a>, <a class="el" href="lstm_8cpp-example.html#_a5">lstm.cpp</a>, <a class="el" href="matmul_8cpp-example.html#_a5">matmul.cpp</a>, <a class="el" href="memory_format_propagation_8cpp-example.html#_a10">memory_format_propagation.cpp</a>, <a class="el" href="performance_profiling_8cpp-example.html#_a0">performance_profiling.cpp</a>, <a class="el" href="pooling_8cpp-example.html#_a5">pooling.cpp</a>, <a class="el" href="reduction_8cpp-example.html#_a5">reduction.cpp</a>, <a class="el" href="reorder_8cpp-example.html#_a5">reorder.cpp</a>, <a class="el" href="resampling_8cpp-example.html#_a5">resampling.cpp</a>, <a class="el" href="rnn_training_f32_8cpp-example.html#_a8">rnn_training_f32.cpp</a>, <a class="el" href="shuffle_8cpp-example.html#_a5">shuffle.cpp</a>, <a class="el" href="softmax_8cpp-example.html#_a5">softmax.cpp</a>, <a class="el" href="sum_8cpp-example.html#_a5">sum.cpp</a>, and <a class="el" href="sycl_interop_8cpp-example.html#_a5">sycl_interop.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="batch_normalization_8cpp-example.html#_a5">batch_normalization.cpp</a>, <a class="el" href="binary_8cpp-example.html#_a5">binary.cpp</a>, <a class="el" href="cnn_inference_f32_8cpp-example.html#_a4">cnn_inference_f32.cpp</a>, <a class="el" href="cnn_inference_int8_8cpp-example.html#_a4">cnn_inference_int8.cpp</a>, <a class="el" href="cnn_training_bf16_8cpp-example.html#_a4">cnn_training_bf16.cpp</a>, <a class="el" href="cnn_training_f32_8cpp-example.html#_a4">cnn_training_f32.cpp</a>, <a class="el" href="concat_8cpp-example.html#_a5">concat.cpp</a>, <a class="el" href="convolution_8cpp-example.html#_a4">convolution.cpp</a>, <a class="el" href="cpu_matmul_quantization_8cpp-example.html#_a2">cpu_matmul_quantization.cpp</a>, <a class="el" href="cpu_rnn_inference_f32_8cpp-example.html#_a10">cpu_rnn_inference_f32.cpp</a>, <a class="el" href="cpu_rnn_inference_int8_8cpp-example.html#_a11">cpu_rnn_inference_int8.cpp</a>, <a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#_a15">cpu_sgemm_and_matmul.cpp</a>, <a class="el" href="cross_engine_reorder_8cpp-example.html#_a0">cross_engine_reorder.cpp</a>, <a class="el" href="eltwise_8cpp-example.html#_a5">eltwise.cpp</a>, <a class="el" href="getting_started_8cpp-example.html#_a5">getting_started.cpp</a>, <a class="el" href="gpu_opencl_interop_8cpp-example.html#_a6">gpu_opencl_interop.cpp</a>, <a class="el" href="inference_int8_matmul_8cpp-example.html#_a17">inference_int8_matmul.cpp</a>, <a class="el" href="inner_product_8cpp-example.html#_a5">inner_product.cpp</a>, <a class="el" href="layer_normalization_8cpp-example.html#_a5">layer_normalization.cpp</a>, <a class="el" href="logsoftmax_8cpp-example.html#_a5">logsoftmax.cpp</a>, <a class="el" href="lrn_8cpp-example.html#_a5">lrn.cpp</a>, <a class="el" href="lstm_8cpp-example.html#_a5">lstm.cpp</a>, <a class="el" href="matmul_8cpp-example.html#_a5">matmul.cpp</a>, <a class="el" href="memory_format_propagation_8cpp-example.html#_a10">memory_format_propagation.cpp</a>, <a class="el" href="performance_profiling_8cpp-example.html#_a0">performance_profiling.cpp</a>, <a class="el" href="pooling_8cpp-example.html#_a5">pooling.cpp</a>, <a class="el" href="reduction_8cpp-example.html#_a5">reduction.cpp</a>, <a class="el" href="reorder_8cpp-example.html#_a5">reorder.cpp</a>, <a class="el" href="resampling_8cpp-example.html#_a5">resampling.cpp</a>, <a class="el" href="rnn_training_f32_8cpp-example.html#_a8">rnn_training_f32.cpp</a>, <a class="el" href="shuffle_8cpp-example.html#_a5">shuffle.cpp</a>, <a class="el" href="softmax_8cpp-example.html#_a5">softmax.cpp</a>, <a class="el" href="sum_8cpp-example.html#_a5">sum.cpp</a>, and <a class="el" href="sycl_interop_buffer_8cpp-example.html#_a5">sycl_interop_buffer.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="afdd20764d58c0b517d5a31276672aeb8"></a>
 <div class="memitem">
@@ -224,7 +247,7 @@ Public Attributes</h2></td></tr>
 
 <p>Vector of dimensions. </p>
 <p>Implementations are free to force a limit on the vector's length. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#a14">cpu_sgemm_and_matmul.cpp</a>, and <a class="el" href="inference_int8_matmul_8cpp-example.html#a18">inference_int8_matmul.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#a14">cpu_sgemm_and_matmul.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -426,7 +449,13 @@ Public Attributes</h2></td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fab9a152e018d02395e6e94c5619da4a91"></a>decab</em>&nbsp;</td><td class="fielddoc">
 <p>permuted 5D tensor </p>
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faebb080afaac3a990ad3f1d0f21742fac"></a>abced</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 5D tensor </p>
+</td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fae80b5017098950fc58aad83c8c14978e"></a>abcdef</em>&nbsp;</td><td class="fielddoc">
+<p>plain 6D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa7c4600767ddcc2dba9d42133b390e593"></a>abdfce</em>&nbsp;</td><td class="fielddoc">
 <p>plain 6D tensor </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa66fd87374b1ec6be9fdbea534e17adeb"></a>acbdef</em>&nbsp;</td><td class="fielddoc">
@@ -434,6 +463,45 @@ Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fac9cdbbb9640597fea44206cee7f8a151"></a>defcab</em>&nbsp;</td><td class="fielddoc">
 <p>plain 6D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faeb4c431d71c552a2bc16fab86156738e"></a>abcdfe</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 6D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa7ac66c0f148de9519b8bd264312c4d64"></a>abcdefg</em>&nbsp;</td><td class="fielddoc">
+<p>plain 7D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa189fe48d1050763b571517a9e2aa113b"></a>abcdegf</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 7D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fae8dc4081b13434b45189a720b77b6818"></a>abcdefgh</em>&nbsp;</td><td class="fielddoc">
+<p>plain 8D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa9899b60d60de786c689156d87433c254"></a>abcdefhg</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 8D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa8aa99b1f439ff71293e95357bac6fd94"></a>abcdefghi</em>&nbsp;</td><td class="fielddoc">
+<p>plain 9D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa838730cad01311dbfba64353015e329b"></a>abcdefgih</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 9D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faa925576942e94b2ef57a066101b48876"></a>abcdefghij</em>&nbsp;</td><td class="fielddoc">
+<p>plain 10D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa84356605428eb3b9ad6da81d3d0b5b26"></a>abcdefghji</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 10D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa92b9cccc0b98c3a0b8d0df25a421c0e3"></a>abcdefghijk</em>&nbsp;</td><td class="fielddoc">
+<p>plain 11D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faeb9ee2026bb8d37a7e777264cf4bcde2"></a>abcdefghikj</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 11D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa9fc9d606912030dca86582ed62595cf7"></a>abcdefghijkl</em>&nbsp;</td><td class="fielddoc">
+<p>plain 12D tensor </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa9b19e0f5975e33696433bcc7360c61aa"></a>abcdefghijlk</em>&nbsp;</td><td class="fielddoc">
+<p>permuted 12D tensor </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa9dd4e461268c8034f5c8564e155c67a6"></a>x</em>&nbsp;</td><td class="fielddoc">
 <p>1D tensor; an alias for <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa0cc175b9c0f1b6a831c399e269772661" title="plain 1D tensor ">dnnl::memory::format_tag::a</a> </p>
@@ -617,6 +685,107 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7463ff54b529ec2b5392230861212a09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dnnl::memory::memory </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdnnl_1_1memory_1_1desc.html">desc</a> &amp;&#160;</td>
+          <td class="paramname"><em>md</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;&#160;</td>
+          <td class="paramname"><em>aengine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a memory object. </p>
+<p>Unless <code>handle</code> is equal to <a class="el" href="group__dnnl__api__memory.html#ga96c8752fb3cb4f01cf64bf56190b1343" title="Special pointer value that indicates that a memory object should not have an underlying buffer...">DNNL_MEMORY_NONE</a>, the constructed memory object will have the underlying buffer set. In this case, the buffer will be initialized as if <a class="el" href="structdnnl_1_1memory.html#afa06ef3c32a86ab1577e32424e6d4a00" title="Sets the underlying memory buffer. ">dnnl::memory::set_data_handle()</a> had been called.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="structdnnl_1_1memory.html#afa06ef3c32a86ab1577e32424e6d4a00" title="Sets the underlying memory buffer. ">memory::set_data_handle()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md</td><td>Memory descriptor. </td></tr>
+    <tr><td class="paramname">aengine</td><td>Engine to store the data on. </td></tr>
+    <tr><td class="paramname">handle</td><td>Handle of the memory buffer to use.<ul>
+<li>A pointer to the user-allocated buffer. In this case the library doesn't own the buffer.</li>
+<li>The <a class="el" href="group__dnnl__api__memory.html#gaf19cbfbf1f0a9508283f2a25561ae0e4" title="Special pointer value that indicates that the library needs to allocate an underlying buffer for a me...">DNNL_MEMORY_ALLOCATE</a> special value. Instructs the library to allocate the buffer for the memory object. In this case the library owns the buffer.</li>
+<li><a class="el" href="group__dnnl__api__memory.html#ga96c8752fb3cb4f01cf64bf56190b1343" title="Special pointer value that indicates that a memory object should not have an underlying buffer...">DNNL_MEMORY_NONE</a> to create <a class="el" href="structdnnl_1_1memory.html" title="Memory object. ">dnnl::memory</a> without an underlying buffer. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0892880e22c2cced48c44f405ced029"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dnnl::memory::memory </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdnnl_1_1memory_1_1desc.html">desc</a> &amp;&#160;</td>
+          <td class="paramname"><em>md</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;&#160;</td>
+          <td class="paramname"><em>aengine</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a memory object. </p>
+<p>The underlying buffer for the memory will be allocated by the library.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md</td><td>Memory descriptor. </td></tr>
+    <tr><td class="paramname">aengine</td><td>Engine to store the data on. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5a02c4d5aa4a07650977ba57ed65bd9a"></a>
 <div class="memitem">
@@ -664,23 +833,180 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="af2d95e24e4a5af8e3ea0e14f37455513"></a>
+<a class="anchor" id="a1b81db911a391cefc31e35bbe9ca95fe"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">dnnl::memory::__pad0__</td>
+          <td class="memname">void* dnnl::memory::get_data_handle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Constructs a memory object. </p>
+<p>Returns the underlying memory buffer. </p>
+<p>On the CPU engine, or when using USM, this is a pointer to the allocated memory. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_rnn_inference_f32_8cpp-example.html#a33">cpu_rnn_inference_f32.cpp</a>, and <a class="el" href="cpu_rnn_inference_int8_8cpp-example.html#a48">cpu_rnn_inference_int8.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="afa06ef3c32a86ab1577e32424e6d4a00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnnl::memory::set_data_handle </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdnnl_1_1stream.html">stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>astream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the underlying memory buffer. </p>
+<p>This function may write zero values to the memory specified by the <code>handle</code> if the memory object has a zero padding area. This may be time consuming and happens each time this function is called. The operation is always blocking and the stream parameter is a hint.</p>
+<dl class="section note"><dt>Note</dt><dd>The zero padding is required by memory objects created with blocked memory format tags like <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da9523ccda38e86a8f7f58f8f780ef6eac" title="4D tensor blocked by 2nd dimension with block size 8 ">dnnl_aBcd8b</a> when any of the dimensions is not a multiple of the corresponding block size. For "plain" formats like <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faded7ac40158367123c5467281d44cbeb" title="4D CNN activations tensor; an alias for dnnl::memory::format_tag::abcd ">dnnl::memory::format_tag::nchw</a> or <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa763cbf7ba1b7b8793dcdc6e2157b5c42" title="4D CNN activations tensor; an alias for dnnl::memory::format_tag::acdb ">dnnl::memory::format_tag::nhwc</a> zero padding area needs to be set up explicitly when creating the corresponding memory descriptors. See <a class="el" href="dev_guide_understanding_memory_formats.html">Understanding Memory Formats</a> for more details.</dd>
+<dd>
+Even when the memory object is used to hold values that stay constant during the execution of the program (pre-packed weights during inference, for example), the function will still write zeroes to the padding area if it exists. Hence, the <code>handle</code> parameter cannot and does not have a const qualifier.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">md</td><td>Memory descriptor. </td></tr>
-    <tr><td class="paramname">aengine</td><td>Engine to store the data on. </td></tr>
-    <tr><td class="paramname">handle</td><td>Handle of the memory buffer to use. </td></tr>
+    <tr><td class="paramname">handle</td><td>Memory buffer to use. On the CPU engine or when USM is used, the memory buffer is a pointer to the actual data. For OpenCL it is a cl_mem. It must have at least <a class="el" href="structdnnl_1_1memory_1_1desc.html#a3a12698f833b44ed55af9fc6621c4917" title="Returns size of the memory descriptor in bytes. ">dnnl::memory::desc::get_size()</a> bytes allocated. </td></tr>
+    <tr><td class="paramname">astream</td><td>Stream to use to execute padding in. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cpu_rnn_inference_f32_8cpp-example.html#a36">cpu_rnn_inference_f32.cpp</a>, and <a class="el" href="cpu_rnn_inference_int8_8cpp-example.html#a51">cpu_rnn_inference_int8.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aaf3c13ed6f4af1b719ef7413ee36f63d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnnl::memory::set_data_handle </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the underlying memory buffer. </p>
+<p>See documentation for <a class="el" href="structdnnl_1_1memory.html#afa06ef3c32a86ab1577e32424e6d4a00" title="Sets the underlying memory buffer. ">dnnl::memory::set_data_handle(void *, const stream &amp;) const</a> for more information.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Memory buffer to use. For the CPU engine, the memory buffer is a pointer to the actual data. For OpenCL it is a cl_mem. It must have at least <a class="el" href="structdnnl_1_1memory_1_1desc.html#a3a12698f833b44ed55af9fc6621c4917" title="Returns size of the memory descriptor in bytes. ">dnnl::memory::desc::get_size()</a> bytes allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad11ae4ffa08379b58eb096d15304739a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* dnnl::memory::map_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maps a memory object and returns a host-side pointer to a memory buffer with a copy of its contents. </p>
+<p>Mapping enables read/write directly from/to the memory contents for engines that do not support direct memory access.</p>
+<p>Mapping is an exclusive operation - a memory object cannot be used in other operations until it is unmapped via <a class="el" href="structdnnl_1_1memory.html#a9e68837f42415aca5e141a6d8a97996e" title="Unmaps a memory object and writes back any changes made to the previously mapped memory buffer...">dnnl::memory::unmap_data()</a> call.</p>
+<dl class="section note"><dt>Note</dt><dd>Any primitives working with the memory should be completed before the memory is mapped. Use <a class="el" href="structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c" title="Waits for all primitives executing in the stream to finish. ">dnnl::stream::wait()</a> to synchronize the corresponding execution stream.</dd>
+<dd>
+The map_data and unmap_data functions are provided mainly for debug and testing purposes and their performance may be suboptimal.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Data type to return a pointer to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the mapped memory. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e68837f42415aca5e141a6d8a97996e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnnl::memory::unmap_data </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mapped_ptr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unmaps a memory object and writes back any changes made to the previously mapped memory buffer. </p>
+<dl class="section note"><dt>Note</dt><dd>The map_data and unmap_data functions are provided mainly for debug and testing purposes and their performance may be suboptimal.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mapped_ptr</td><td>A pointer previously returned by <a class="el" href="structdnnl_1_1memory.html#ad11ae4ffa08379b58eb096d15304739a" title="Maps a memory object and returns a host-side pointer to a memory buffer with a copy of its contents...">dnnl::memory::map_data()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -688,7 +1014,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/<a class="el" href="dnnl_8hpp_source.html">dnnl.hpp</a></li>
+<li>include/oneapi/dnnl/<a class="el" href="oneapi_2dnnl_2dnnl_8hpp_source.html">dnnl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

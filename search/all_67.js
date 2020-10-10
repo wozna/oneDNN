@@ -27,6 +27,9 @@ var searchData=
   ['get_5fprimitive_5fattr',['get_primitive_attr',['../structdnnl_1_1primitive__desc__base.html#a9d26b8c1068f0849da74a6ba358e5de6',1,'dnnl::primitive_desc_base']]],
   ['get_5fprimitive_5fcache_5fcapacity',['get_primitive_cache_capacity',['../group__dnnl__api__primitive__cache.html#gacc0f23351595504f3e2c2b6fcf603770',1,'dnnl']]],
   ['get_5fprimitive_5fdesc',['get_primitive_desc',['../group__dnnl__api__primitives__common.html#ga1fa3eca53abce941ace7d28f9af1ec61',1,'dnnl::primitive']]],
+  ['get_5frnn_5fdata_5fqparams',['get_rnn_data_qparams',['../structdnnl_1_1primitive__attr.html#a47d567defa762761daa2af604798d799',1,'dnnl::primitive_attr']]],
+  ['get_5frnn_5fweights_5fprojection_5fqparams',['get_rnn_weights_projection_qparams',['../structdnnl_1_1primitive__attr.html#a53c41b29c5cd74d9485b5e753ba57f1d',1,'dnnl::primitive_attr']]],
+  ['get_5frnn_5fweights_5fqparams',['get_rnn_weights_qparams',['../structdnnl_1_1primitive__attr.html#a3bbe9ac516e3aabe7dfea214210a3335',1,'dnnl::primitive_attr']]],
   ['get_5fscales',['get_scales',['../structdnnl_1_1primitive__attr.html#a80388f05674a791c6614efe64a43b980',1,'dnnl::primitive_attr']]],
   ['get_5fscratchpad_5fmode',['get_scratchpad_mode',['../structdnnl_1_1primitive__attr.html#a05ff5d73eae0eba28b341b5d2b6186a7',1,'dnnl::primitive_attr']]],
   ['get_5fsize',['get_size',['../structdnnl_1_1memory_1_1desc.html#a3a12698f833b44ed55af9fc6621c4917',1,'dnnl::memory::desc']]],
@@ -43,8 +46,8 @@ var searchData=
   ['getting_20started_20on_20gpu_20with_20opencl_20extensions_20api',['Getting started on GPU with OpenCL extensions API',['../gpu_opencl_interop_cpp.html',1,'']]],
   ['gpu_5fruntime',['gpu_runtime',['../structdnnl__version__t.html#ac15e5566f96a65b2c97903c787f129ac',1,'dnnl_version_t']]],
   ['group_5fsize',['group_size',['../structdnnl__shuffle__desc__t.html#ade974f8027fee2319a64477110bd0619',1,'dnnl_shuffle_desc_t']]],
-  ['gru_5fbackward',['gru_backward',['../structdnnl_1_1gru__backward.html',1,'dnnl']]],
   ['gru_5fbackward',['gru_backward',['../structdnnl_1_1gru__backward.html#a8916d8de8e768a15255d94d69e9f0a68',1,'dnnl::gru_backward::gru_backward()=default'],['../structdnnl_1_1gru__backward.html#a8a341b3745ab0c27b1d48b88fa4ac1f6',1,'dnnl::gru_backward::gru_backward(const primitive_desc &amp;pd)']]],
-  ['gru_5fforward',['gru_forward',['../structdnnl_1_1gru__forward.html#ac3bfe27a9088c8e2a27ad88c7929de38',1,'dnnl::gru_forward::gru_forward()=default'],['../structdnnl_1_1gru__forward.html#a120dbe542bd785423ac1dea0128764aa',1,'dnnl::gru_forward::gru_forward(const primitive_desc &amp;pd)']]],
-  ['gru_5fforward',['gru_forward',['../structdnnl_1_1gru__forward.html',1,'dnnl']]]
+  ['gru_5fbackward',['gru_backward',['../structdnnl_1_1gru__backward.html',1,'dnnl']]],
+  ['gru_5fforward',['gru_forward',['../structdnnl_1_1gru__forward.html',1,'dnnl']]],
+  ['gru_5fforward',['gru_forward',['../structdnnl_1_1gru__forward.html#ac3bfe27a9088c8e2a27ad88c7929de38',1,'dnnl::gru_forward::gru_forward()=default'],['../structdnnl_1_1gru__forward.html#a120dbe542bd785423ac1dea0128764aa',1,'dnnl::gru_forward::gru_forward(const primitive_desc &amp;pd)']]]
 ];

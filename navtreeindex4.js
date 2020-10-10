@@ -1,5 +1,12 @@
 var NAVTREEINDEX4 =
 {
+"structdnnl_1_1convolution__forward_1_1primitive__desc.html#a9c2c8e357be96e74eaf4f3674c0f491a":[6,0,0,0,6,0,1,3],
+"structdnnl_1_1convolution__forward_1_1primitive__desc.html#ab37a43278df38ccd4365391ca1450cec":[6,0,0,0,6,0,1,5],
+"structdnnl_1_1deconvolution__backward__data.html":[6,0,0,0,7,1],
+"structdnnl_1_1deconvolution__backward__data.html#a474185ff81af61f1a972cf53ef1814c7":[6,0,0,0,7,1,2],
+"structdnnl_1_1deconvolution__backward__data.html#a47fdec8f6615245111d2b847d7a9de82":[6,0,0,0,7,1,3],
+"structdnnl_1_1deconvolution__backward__data_1_1desc.html":[6,0,0,0,7,1,0],
+"structdnnl_1_1deconvolution__backward__data_1_1desc.html#a4aac0ae3c42454b1d9eecead6a9c316b":[6,0,0,0,7,1,0,1],
 "structdnnl_1_1deconvolution__backward__data_1_1desc.html#a86e49e42fd4399edadd8c7313101dce3":[6,0,0,0,7,1,0,0],
 "structdnnl_1_1deconvolution__backward__data_1_1primitive__desc.html":[6,0,0,0,7,1,1],
 "structdnnl_1_1deconvolution__backward__data_1_1primitive__desc.html#a252bc0f86a44a28c194c6898843a1f2d":[6,0,0,0,7,1,1,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX4 =
 "structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#abc200b3d1e869b359fc1f395c3f811fe":[6,0,0,0,17,8,1,11],
 "structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#abcac0c5ec72dc67cf8e151279eccc4e7":[6,0,0,0,17,8,1,7],
 "structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#ad053b344e7006418ff252795bbf68fe5":[6,0,0,0,17,8,1,8],
-"structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#ad57aedb55f14e86234d00009563dadf7":[6,0,0,0,17,8,1,9],
-"structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#ae5fd8ca1bc1e4b2f7248f17f09cb4a71":[6,0,0,0,17,8,1,17],
-"structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#afd36882be6feff617de18bfe2b73073b":[6,0,0,0,17,8,1,13],
-"structdnnl_1_1lbr__gru__forward.html":[6,0,0,0,17,7],
-"structdnnl_1_1lbr__gru__forward.html#a24b678deaaf45f7554a6730e1b0c6bb7":[6,0,0,0,17,7,2],
-"structdnnl_1_1lbr__gru__forward.html#a9ba7eb699c98dd91c3a1a1f040bded1c":[6,0,0,0,17,7,3],
-"structdnnl_1_1lbr__gru__forward_1_1desc.html":[6,0,0,0,17,7,0],
-"structdnnl_1_1lbr__gru__forward_1_1desc.html#ab8d844d4c0064585db084de317446659":[6,0,0,0,17,7,0,0]
+"structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#ad57aedb55f14e86234d00009563dadf7":[6,0,0,0,17,8,1,9]
 };

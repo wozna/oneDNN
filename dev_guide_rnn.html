@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.6.0</div>
+   <div id="projectnumber">1.7.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -171,7 +171,7 @@ Figure 1: Example of stacked recurrent cells unrolled over the time dimension an
 </p>
 <p>where \(P_*\) are stored in <code>weights_peephole</code>, and the other parameters are the same as in vanilla LSTM.</p>
 <dl class="section note"><dt>Note</dt><dd>If the <code>weights_peephole_desc</code> passed to the operation descriptor constructor is a zero memory desciptor, the primitive will behave the same as in LSTM primitive without peephole.</dd></dl>
-<h4>LSTM with Projection</h4>
+<h4>LSTM with Projection (or LSTMP)</h4>
 <p>A four-gate long short-term memory recurrent cell with projection initialized with <a class="el" href="structdnnl_1_1lstm__forward_1_1desc.html#a34bca69c5da0771ca90bdd2c037ceb6b" title="Constructs a descriptor for an LSTM (with or without peephole and with or without projection) forward...">dnnl::lstm_forward::desc::desc()</a> or <a class="el" href="structdnnl_1_1lstm__backward_1_1desc.html#a39e5609147948d5aedcbe6289420ee3c" title="Constructs an LSTM (with or without peephole and with or without projection) descriptor for backward ...">dnnl::lstm_backward::desc::desc()</a> as in the following example.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> lstm_desc = <a class="code" href="structdnnl_1_1lstm__forward_1_1desc.html">dnnl::lstm_forward::desc</a>(</div>
 <div class="line">    aprop, direction, src_layer_desc, src_iter_h_desc, src_iter_c_desc,</div>
@@ -276,7 +276,7 @@ Figure 1: Example of stacked recurrent cells unrolled over the time dimension an
 <tr>
 <td>Forward </td><td>All (3) </td><td>f16 </td><td>f16 </td><td>f16 </td><td>f16 </td><td>f16 </td></tr>
 <tr>
-<td>Forward inference </td><td>Vanilla LSTM </td><td>u8 </td><td>u8 </td><td>s8 </td><td>f32 </td><td>u8, f32 </td></tr>
+<td>Forward inference </td><td>Vanilla LSTM, LSTMP and GRU </td><td>u8 </td><td>u8 </td><td>s8 </td><td>f32 </td><td>u8, f32 </td></tr>
 </table>
 <p>(1) With LSTM and Peephole LSTM cells, the cell state datatype is always f32.</p>
 <p>(2) In backward propagation, all <code>diff_*</code> tensors are in f32.</p>
@@ -287,16 +287,18 @@ Figure 1: Example of stacked recurrent cells unrolled over the time dimension an
 <p>The following table summarizes the data layouts supported by the RNN primitive.</p>
 <table class="doxtable">
 <tr>
-<th>Input/Output Data </th><th>Recurrent Data </th><th>Layer and Iteration Weights </th><th>Peephole Weights and Bias </th><th>Projection LSTM Weights  </th></tr>
+<th>Propagation </th><th>Input/Output Data </th><th>Recurrent Data </th><th>Layer and Iteration Weights </th><th>Peephole Weights and Bias </th><th>Projection LSTM Weights  </th></tr>
 <tr>
-<td>any </td><td>any </td><td>any </td><td>ldgo </td><td>any, ldio (Forward propagation) </td></tr>
+<td>Forward / Backward </td><td>any </td><td>any </td><td>any </td><td>ldgo </td><td>any </td></tr>
 <tr>
-<td>ntc, tnc </td><td>ldnc </td><td>ldigo, ldgoi </td><td>ldgo </td><td>any, ldio (Forward propagation) </td></tr>
+<td>Forward </td><td>ntc, tnc </td><td>ldnc </td><td>ldigo </td><td>ldgo </td><td>ldio </td></tr>
+<tr>
+<td>Backward </td><td>ntc, tnc </td><td>ldnc </td><td>ldgoi </td><td>ldgo </td><td>ldoi </td></tr>
 </table>
 <p>While an RNN primitive can be created with memory formats specified explicitly, the performance is likely to be sub-optimal. When using <code>any</code> it is necessary to first create an RNN primitive descriptor and then query it for the actual data and weight memory objects formats.</p>
 <dl class="section note"><dt>Note</dt><dd>The RNN primitive supports padded tensors and views. So even if two memory descriptors share the same data layout, they might still be different.</dd></dl>
 <h3>Post-ops and Attributes</h3>
-<p>Currently post-ops and attributes are only used by the int8 variant of LSTM. See the markdown <a class="el" href="cpu_rnn_inference_int8_cpp.html">RNN int8 inference example</a> for more details on how to use and set these quantization parameters.</p>
+<p>Currently post-ops and attributes are only used by the int8 variants of LSTM and GRU. See the markdown <a class="el" href="cpu_rnn_inference_int8_cpp.html">RNN int8 inference example</a> for more details on how to use and set these quantization parameters.</p>
 <h2>Implementation Limitations</h2>
 <ol type="1">
 <li>Refer to <a class="el" href="dev_guide_data_types.html">Data Types</a> for limitations related to data types support.</li>
