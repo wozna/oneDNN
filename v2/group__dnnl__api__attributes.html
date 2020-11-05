@@ -244,9 +244,21 @@ Functions</h2></td></tr>
 <tr class="memitem:ga0067a4b6e5dd2fe7578cd4a25dddfe39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__attributes.html#ga0067a4b6e5dd2fe7578cd4a25dddfe39">dnnl_primitive_attr_set_rnn_data_qparams</a> (<a class="el" href="group__dnnl__api__attributes.html#ga06d701a25b82d4c8a93aaabb93e03dc3">dnnl_primitive_attr_t</a> attr, const float scale, const float shift)</td></tr>
 <tr class="memdesc:ga0067a4b6e5dd2fe7578cd4a25dddfe39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set quantization scale and shift parameters for RNN data tensors.  <a href="#ga0067a4b6e5dd2fe7578cd4a25dddfe39">More...</a><br/></td></tr>
 <tr class="separator:ga0067a4b6e5dd2fe7578cd4a25dddfe39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae04744b95cdabcbcda1087229759be04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__attributes.html#gae04744b95cdabcbcda1087229759be04">dnnl_primitive_attr_get_rnn_data_qparams</a> (<a class="el" href="group__dnnl__api__attributes.html#gab7ba17dbb2692c0f5ee2a3e102c707d9">const_dnnl_primitive_attr_t</a> attr, float *scale, float *shift)</td></tr>
+<tr class="memdesc:gae04744b95cdabcbcda1087229759be04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quantization scale and shift parameters for RNN data tensors.  <a href="#gae04744b95cdabcbcda1087229759be04">More...</a><br/></td></tr>
+<tr class="separator:gae04744b95cdabcbcda1087229759be04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga815dbfe548cfcb70076fe091888e5466"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__attributes.html#ga815dbfe548cfcb70076fe091888e5466">dnnl_primitive_attr_set_rnn_weights_qparams</a> (<a class="el" href="group__dnnl__api__attributes.html#ga06d701a25b82d4c8a93aaabb93e03dc3">dnnl_primitive_attr_t</a> attr, <a class="el" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> count, int mask, const float *scales)</td></tr>
 <tr class="memdesc:ga815dbfe548cfcb70076fe091888e5466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets quantization scaling factors for RNN weights tensors.  <a href="#ga815dbfe548cfcb70076fe091888e5466">More...</a><br/></td></tr>
 <tr class="separator:ga815dbfe548cfcb70076fe091888e5466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bb88cfe42454f01884ddcdb906f6f7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__attributes.html#ga5bb88cfe42454f01884ddcdb906f6f7c">dnnl_primitive_attr_get_rnn_weights_qparams</a> (<a class="el" href="group__dnnl__api__attributes.html#gab7ba17dbb2692c0f5ee2a3e102c707d9">const_dnnl_primitive_attr_t</a> attr, <a class="el" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> *count, int *mask, const float **scales)</td></tr>
+<tr class="memdesc:ga5bb88cfe42454f01884ddcdb906f6f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quantization scaling factors for RNN weights tensors.  <a href="#ga5bb88cfe42454f01884ddcdb906f6f7c">More...</a><br/></td></tr>
+<tr class="separator:ga5bb88cfe42454f01884ddcdb906f6f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7973cc7b4c62eb6766e9ac96c51d49d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__attributes.html#gac7973cc7b4c62eb6766e9ac96c51d49d">dnnl_primitive_attr_set_rnn_weights_projection_qparams</a> (<a class="el" href="group__dnnl__api__attributes.html#ga06d701a25b82d4c8a93aaabb93e03dc3">dnnl_primitive_attr_t</a> attr, <a class="el" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> count, int mask, const float *scales)</td></tr>
+<tr class="memdesc:gac7973cc7b4c62eb6766e9ac96c51d49d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets quantization scaling factors for RNN projection weights tensors.  <a href="#gac7973cc7b4c62eb6766e9ac96c51d49d">More...</a><br/></td></tr>
+<tr class="separator:gac7973cc7b4c62eb6766e9ac96c51d49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa33206be6e7a0b7de2341041da75cc90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__attributes.html#gaa33206be6e7a0b7de2341041da75cc90">dnnl_primitive_attr_get_rnn_weights_projection_qparams</a> (<a class="el" href="group__dnnl__api__attributes.html#gab7ba17dbb2692c0f5ee2a3e102c707d9">const_dnnl_primitive_attr_t</a> attr, <a class="el" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> *count, int *mask, const float **scales)</td></tr>
+<tr class="memdesc:gaa33206be6e7a0b7de2341041da75cc90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quantization scaling factors for RNN projection weights tensors.  <a href="#gaa33206be6e7a0b7de2341041da75cc90">More...</a><br/></td></tr>
+<tr class="separator:gaa33206be6e7a0b7de2341041da75cc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa30f540e1ed09b2865f153fd599c967b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__attributes.html#gacda323181ab267e571c31435b0817de4">dnnl_scratchpad_mode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__attributes.html#gaa30f540e1ed09b2865f153fd599c967b">dnnl::convert_to_c</a> (scratchpad_mode mode)</td></tr>
 <tr class="memdesc:gaa30f540e1ed09b2865f153fd599c967b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a scratchpad mode enum value from C++ API to C API type.  <a href="#gaa30f540e1ed09b2865f153fd599c967b">More...</a><br/></td></tr>
 <tr class="separator:gaa30f540e1ed09b2865f153fd599c967b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -523,6 +535,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga00377dd4982333e42e8ae1d09a309640a2835085341c109a886106f1b671aff71"></a>binary_div</em>&nbsp;</td><td class="fielddoc">
 <p>Binary div. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga00377dd4982333e42e8ae1d09a309640a979309f9436f7ebfa278b0ce682dd706"></a>binary_sub</em>&nbsp;</td><td class="fielddoc">
+<p>Binary sub. </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga00377dd4982333e42e8ae1d09a309640a091b262cfae5e610fcad1490bfb79431"></a>resampling_nearest</em>&nbsp;</td><td class="fielddoc">
 <p>Nearest Neighbor resampling method. </p>
@@ -2091,6 +2106,50 @@ The lifetime of <code>zero_points</code> array is the same as that of the primit
 
 </div>
 </div>
+<a class="anchor" id="gae04744b95cdabcbcda1087229759be04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_primitive_attr_get_rnn_data_qparams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__attributes.html#gab7ba17dbb2692c0f5ee2a3e102c707d9">const_dnnl_primitive_attr_t</a>&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>shift</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the quantization scale and shift parameters for RNN data tensors. </p>
+<dl class="section note"><dt>Note</dt><dd>Quantization scale and shift are common for src_layer, src_iter, dst_iter, and dst_layer.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>Primitive attributes. </td></tr>
+    <tr><td class="paramname">scale</td><td>The value to scale the data by. </td></tr>
+    <tr><td class="paramname">shift</td><td>The value to shift the data by. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ga815dbfe548cfcb70076fe091888e5466"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2141,6 +2200,167 @@ Quantization scales are common for weights_layer and weights_iteration</dd></dl>
 \[count = \prod\limits_{d \in mask} weights.dims[d].\]
 </p>
  Violations can only be detected when the attributes are used to create a primitive descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5bb88cfe42454f01884ddcdb906f6f7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_primitive_attr_get_rnn_weights_qparams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__attributes.html#gab7ba17dbb2692c0f5ee2a3e102c707d9">const_dnnl_primitive_attr_t</a>&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> *&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float **&#160;</td>
+          <td class="paramname"><em>scales</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the quantization scaling factors for RNN weights tensors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>Primitive attributes. </td></tr>
+    <tr><td class="paramname">count</td><td>Number of elements in the <code>scales</code> array. </td></tr>
+    <tr><td class="paramname">mask</td><td>Scaling factors correspondence mask that defines the correspondence between the output tensor dimensions and the <code>scales</code> vector. The set i-th bit indicates that a dedicated scaling factor should be used for each index along that dimension. Set the mask to 0 to use a common scaling factor for the whole output tensor. </td></tr>
+    <tr><td class="paramname">scales</td><td>Array of output scaling factors that contain <code>count</code> values and the following equality must hold: <p class="formulaDsp">
+\[count = \prod\limits_{d \in mask} weights.dims[d].\]
+</p>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac7973cc7b4c62eb6766e9ac96c51d49d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_primitive_attr_set_rnn_weights_projection_qparams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__attributes.html#ga06d701a25b82d4c8a93aaabb93e03dc3">dnnl_primitive_attr_t</a>&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a>&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>scales</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets quantization scaling factors for RNN projection weights tensors. </p>
+<p>The low-precision configuration of the RNN primitives expects input weights to use the signed 8-bit integer data type. The scaling factors are used to quantize floating-point data to signed integer and must be passed to RNN primitives using attributes.</p>
+<dl class="section note"><dt>Note</dt><dd>The dimension order is always native and does not depend on the actual layout used. For example, five-dimensional weights always have (l, d, i, g, o) logical dimension ordering.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>Primitive attributes. </td></tr>
+    <tr><td class="paramname">count</td><td>Number of elements in the <code>scales</code> array. </td></tr>
+    <tr><td class="paramname">mask</td><td>Scaling factors correspondence mask that defines the correspondence between the output tensor dimensions and the <code>scales</code> vector. The set i-th bit indicates that a dedicated scaling factor should be used for each index along that dimension. Set the mask to 0 to use a common scaling factor for the whole output tensor. </td></tr>
+    <tr><td class="paramname">scales</td><td>Array of output scaling factors that must contain <code>count</code> values and the following equality must hold: <p class="formulaDsp">
+\[count = \prod\limits_{d \in mask} weights.dims[d].\]
+</p>
+ Violations can only be detected when the attributes are used to create a primitive descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa33206be6e7a0b7de2341041da75cc90"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_primitive_attr_get_rnn_weights_projection_qparams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__attributes.html#gab7ba17dbb2692c0f5ee2a3e102c707d9">const_dnnl_primitive_attr_t</a>&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> *&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float **&#160;</td>
+          <td class="paramname"><em>scales</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the quantization scaling factors for RNN projection weights tensors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>Primitive attributes. </td></tr>
+    <tr><td class="paramname">count</td><td>Number of elements in the <code>scales</code> array. </td></tr>
+    <tr><td class="paramname">mask</td><td>Scaling factors correspondence mask that defines the correspondence between the output tensor dimensions and the <code>scales</code> vector. The set i-th bit indicates that a dedicated scaling factor should be used for each index along that dimension. Set the mask to 0 to use a common scaling factor for the whole output tensor. </td></tr>
+    <tr><td class="paramname">scales</td><td>Array of output scaling factors that contain <code>count</code> values and the following equality must hold: <p class="formulaDsp">
+\[count = \prod\limits_{d \in mask} weights.dims[d].\]
+</p>
+ </td></tr>
   </table>
   </dd>
 </dl>

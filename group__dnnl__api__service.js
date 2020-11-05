@@ -40,7 +40,8 @@ var group__dnnl__api__service =
       [ "avx512_core", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83aa427cc9f00ac692056a83a8cb5e37fa4", null ],
       [ "avx512_core_vnni", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83acac6fe12844735aafd8fd1fd81738f8e", null ],
       [ "avx512_core_bf16", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83af9b353b49d5aa4dfe76e22337b5a02cf", null ],
-      [ "avx512_core_amx", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83ad49189665b06a3259b3bf3603319fd0d", null ]
+      [ "avx512_core_amx", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83ad49189665b06a3259b3bf3603319fd0d", null ],
+      [ "avx2_vnni", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a59548f83cb32f5f6272186734a9a711d", null ]
     ] ],
     [ "dnnl_cpu_isa_t", "group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2", [
       [ "dnnl_cpu_isa_all", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a4f614e9d72ffc6338fdfc420b77601c8", null ],
@@ -52,7 +53,8 @@ var group__dnnl__api__service =
       [ "dnnl_cpu_isa_avx512_core", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a574f09a9b057ba134d48dadf6d8aa201", null ],
       [ "dnnl_cpu_isa_avx512_core_vnni", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a3aced59a3047f7e407b1fe3310430554", null ],
       [ "dnnl_cpu_isa_avx512_core_bf16", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a9ced36845ccb9a8dd63cd49ec103412b", null ],
-      [ "dnnl_cpu_isa_avx512_core_amx", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a3a4b0c594f109982fde90e221087ded9", null ]
+      [ "dnnl_cpu_isa_avx512_core_amx", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a3a4b0c594f109982fde90e221087ded9", null ],
+      [ "dnnl_cpu_isa_avx2_vnni", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a8f2cbdae2834cebd2e5bf86b8c65e9d4", null ]
     ] ],
     [ "dnnl_set_verbose", "group__dnnl__api__service.html#ga14cc3b56337322e1e5132c5ee0c84856", null ],
     [ "dnnl_set_jit_dump", "group__dnnl__api__service.html#ga03c8f4af3d01f76060f98e78039837fc", null ],

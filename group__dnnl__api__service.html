@@ -351,6 +351,9 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="ggabad017feb1850634bf3babdb68234f83ad49189665b06a3259b3bf3603319fd0d"></a>avx512_core_amx</em>&nbsp;</td><td class="fielddoc">
 <p>Intel AVX-512, Intel DL Boost and bfloat16 support and Intel AMX with 8-bit integer and bfloat16 support (initial support) </p>
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggabad017feb1850634bf3babdb68234f83a59548f83cb32f5f6272186734a9a711d"></a>avx2_vnni</em>&nbsp;</td><td class="fielddoc">
+<p>Intel AVX2 and Intel Deep Learning Boost (Intel DL Boost) support. </p>
+</td></tr>
 </table>
 
 </div>
@@ -396,6 +399,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga303bab5d2e7b371bb44495864df21dd2a3a4b0c594f109982fde90e221087ded9"></a>dnnl_cpu_isa_avx512_core_amx</em>&nbsp;</td><td class="fielddoc">
 <p>Intel AVX-512, Intel DL Boost and bfloat16 support and Intel AMX with 8-bit integer and bfloat16 support (initial support) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga303bab5d2e7b371bb44495864df21dd2a8f2cbdae2834cebd2e5bf86b8c65e9d4"></a>dnnl_cpu_isa_avx2_vnni</em>&nbsp;</td><td class="fielddoc">
+<p>Intel AVX2 and Intel Deep Learning Boost (Intel DL Boost) support. </p>
 </td></tr>
 </table>
 
@@ -571,7 +577,8 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 <dl class="section note"><dt>Note</dt><dd>The ISAs are only partially ordered:<ul>
 <li>SSE41 &lt; AVX &lt; AVX2,</li>
 <li>AVX2 &lt; AVX512_MIC &lt; AVX512_MIC_4OPS,</li>
-<li>AVX2 &lt; AVX512_CORE &lt; AVX512_CORE_VNNI &lt; AVX512_CORE_BF16 &lt; AVX512_CORE_AMX.</li>
+<li>AVX2 &lt; AVX512_CORE &lt; AVX512_CORE_VNNI &lt; AVX512_CORE_BF16 &lt; AVX512_CORE_AMX,</li>
+<li>AVX2 &lt; AVX2_VNNI.</li>
 </ul>
 </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_dispatcher_control.html">CPU Dispatcher Control</a> for more details</dd></dl>
@@ -825,7 +832,8 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 <dl class="section note"><dt>Note</dt><dd>The ISAs are only partially ordered:<ul>
 <li>SSE41 &lt; AVX &lt; AVX2,</li>
 <li>AVX2 &lt; AVX512_MIC &lt; AVX512_MIC_4OPS,</li>
-<li>AVX2 &lt; AVX512_CORE &lt; AVX512_CORE_VNNI &lt; AVX512_CORE_BF16 &lt; AVX512_CORE_AMX.</li>
+<li>AVX2 &lt; AVX512_CORE &lt; AVX512_CORE_VNNI &lt; AVX512_CORE_BF16 &lt; AVX512_CORE_AMX,</li>
+<li>AVX2 &lt; AVX2_VNNI.</li>
 </ul>
 </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_dispatcher_control.html">CPU Dispatcher Control</a> for more details</dd></dl>

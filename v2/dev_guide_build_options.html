@@ -123,6 +123,8 @@ $(document).ready(function(){initNavTree('dev_guide_build_options.html','');});
 <td align="left">DNNL_AARCH64_USE_ACL </td><td align="left">ON, <b>OFF</b> </td><td align="left">Enables integration with Arm Compute Library for AArch64 builds </td></tr>
 <tr>
 <td align="left">DNNL_BLAS_VENDOR </td><td align="left"><b>NONE</b>, ARMPL </td><td align="left">Defines an external BLAS library to link to for GEMM-like operations </td></tr>
+<tr>
+<td align="left">DNNL_GPU_VENDOR </td><td align="left"><b>INTEL</b>, NVIDIA </td><td align="left">Defines GPU vendor for GPU engines </td></tr>
 </table>
 <p>All other building options or values that can be found in CMake files are intended for development/debug purposes and are subject to change without notice. Please avoid using them.</p>
 <h2>Common options</h2>

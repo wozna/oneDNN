@@ -26,7 +26,6 @@ var NAVTREE =
       [ "Interoperability with DPC++ and OpenCL", "usergroup2.html", [
         [ "OpenCL Interoperability", "dev_guide_opencl_interoperability.html", null ],
         [ "DPC++ Interoperability", "dev_guide_dpcpp_interoperability.html", null ],
-        [ "Unified Shared Memory with DPC++", "dev_guide_dpcpp_usm.html", null ],
         [ "DPC++ Backends", "dev_guide_dpcpp_backends.html", null ]
       ] ]
     ] ],
@@ -97,15 +96,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__dnnl__api__engine.html#ga1ce7843660e8203ed6e1af9bfd23e14f",
-"group__dnnl__api__primitives__common.html#ga47e492dff0bba4376b8e9f30522c6207",
-"group__dnnl__api__resampling.html",
-"structdnnl_1_1convolution__forward.html#a47c1106e8a332097b4e355fe743963c4",
-"structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#a72261d946a2fe263c884aaabaaca2164",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa3d78b4610da52a1b6bff0c40b5a02404",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fadfa7f0ee91a58b03b5d65c293125858a",
-"structdnnl_1_1reorder.html#af04b380a824816defecb488a724bfb37",
-"structdnnl__lrn__desc__t.html#a9c1ed9b76189957ec269ae6ff2101b7b"
+"group__dnnl__api__eltwise.html#ga5606fd4c9291f7caca8b015460d2f037",
+"group__dnnl__api__primitives__common.html#ga30c28d0cebe5b1d4758af2c24fafbdfb",
+"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a68c8ec51f34458261cac7d12eee01372",
+"structdnnl_1_1convolution__backward__weights_1_1desc.html#ad72317d76925fa15f96c9f2459bea055",
+"structdnnl_1_1lbr__gru__backward.html#a40c9872f52e24b681108489dd5dc5cb7",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa33beeac1eb5bc81f5c2259347e8ebd6b",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fac707d55115ef824284f55cb5d22614ed",
+"structdnnl_1_1primitive__desc__base.html#a28661bd29607c71ecb8602d6c98adbc5",
+"structdnnl__convolution__desc__t.html#ac05cda60b6614029cc7a28fd2f1f77cb"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

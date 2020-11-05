@@ -47,6 +47,7 @@ var searchData=
   ['asynchronous',['ASYNCHRONOUS',['../structdnnl_1_1threadpool__iface.html#a740361555b71b3ddd2f740c8e0bcfdba',1,'dnnl::threadpool_iface']]],
   ['avx',['avx',['../group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a73758c37e4499f20ac5f995a144abba6',1,'dnnl']]],
   ['avx2',['avx2',['../group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a220c4ad92e33497ef256a48712352b84',1,'dnnl']]],
+  ['avx2_5fvnni',['avx2_vnni',['../group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a59548f83cb32f5f6272186734a9a711d',1,'dnnl']]],
   ['avx512_5fcore',['avx512_core',['../group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83aa427cc9f00ac692056a83a8cb5e37fa4',1,'dnnl']]],
   ['avx512_5fcore_5famx',['avx512_core_amx',['../group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83ad49189665b06a3259b3bf3603319fd0d',1,'dnnl']]],
   ['avx512_5fcore_5fbf16',['avx512_core_bf16',['../group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83af9b353b49d5aa4dfe76e22337b5a02cf',1,'dnnl']]],

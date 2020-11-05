@@ -1,5 +1,14 @@
 var NAVTREEINDEX3 =
 {
+"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a68c8ec51f34458261cac7d12eee01372":[6,0,0,0,0,80,0],
+"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a6a59d07a8414bb69b3cb9904ed302adb":[6,0,0,0,0,80,4],
+"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a992e03bebfe623ac876b3636333bbce0":[6,0,0,0,0,80,1],
+"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4aa15193604f51a9b42ecff7469bf51cc2":[6,0,0,0,0,80,8],
+"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4ac25fc36ccfd726a98b3bd218373fb0e8":[6,0,0,0,0,80,3],
+"group__dnnl__api__reduction.html":[6,0,0,0,20],
+"group__dnnl__api__reduction.html#ga507b07a09447e911f68d11aad0fecdde":[6,0,0,0,20,2],
+"group__dnnl__api__reorder.html":[6,0,0,0,2],
+"group__dnnl__api__reorder.html#ga099efa7b8fd12ae8de0e3e98fd0ae3ec":[6,0,0,0,2,1],
 "group__dnnl__api__resampling.html":[6,0,0,0,19],
 "group__dnnl__api__resampling.html#ga5ef7bfb7acf8c0e2f66c6eca90d6401a":[6,0,0,0,19,4],
 "group__dnnl__api__resampling.html#ga9f866ba136e2a9a013b78386cc73bdc5":[6,0,0,0,19,3],
@@ -75,6 +84,7 @@ var NAVTREEINDEX3 =
 "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a4f614e9d72ffc6338fdfc420b77601c8":[6,0,0,5,18,0],
 "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a574f09a9b057ba134d48dadf6d8aa201":[6,0,0,5,18,6],
 "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a5e2f2cccadb94b34700a90bba91e0fe3":[6,0,0,5,18,1],
+"group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a8f2cbdae2834cebd2e5bf86b8c65e9d4":[6,0,0,5,18,10],
 "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a9ced36845ccb9a8dd63cd49ec103412b":[6,0,0,5,18,8],
 "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2ad30d60a53b03395ab914e685656436e2":[6,0,0,5,18,5],
 "group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda20ab085a3c46af7db87fc1806865b329":[6,0,0,5,16,6],
@@ -86,6 +96,7 @@ var NAVTREEINDEX3 =
 "group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cddaeea82822a38c56f5e03aae6ae1775adb":[6,0,0,5,16,4],
 "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a046d44270c4d1f4f1c76ae337c97ccf3":[6,0,0,5,17,4],
 "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a220c4ad92e33497ef256a48712352b84":[6,0,0,5,17,3],
+"group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a59548f83cb32f5f6272186734a9a711d":[6,0,0,5,17,10],
 "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a73758c37e4499f20ac5f995a144abba6":[6,0,0,5,17,2],
 "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83aa181a603769c1f98ad927e7367c7aa51":[6,0,0,5,17,0],
 "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83aa427cc9f00ac692056a83a8cb5e37fa4":[6,0,0,5,17,6],
@@ -238,16 +249,5 @@ var NAVTREEINDEX3 =
 "structdnnl_1_1convolution__backward__weights_1_1desc.html":[6,0,0,0,6,2,0],
 "structdnnl_1_1convolution__backward__weights_1_1desc.html#a22f11db6486e320a2f478ac576600959":[6,0,0,0,6,2,0,1],
 "structdnnl_1_1convolution__backward__weights_1_1desc.html#a2d660abe71de37bbc75fab3fe227da20":[6,0,0,0,6,2,0,2],
-"structdnnl_1_1convolution__backward__weights_1_1desc.html#a4cc6f6b8188002b343c5620ece8f8a72":[6,0,0,0,6,2,0,3],
-"structdnnl_1_1convolution__backward__weights_1_1desc.html#ad72317d76925fa15f96c9f2459bea055":[6,0,0,0,6,2,0,0],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html":[6,0,0,0,6,2,1],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a2088ac84ee53b5ee1673cf5eaa836698":[6,0,0,0,6,2,1,7],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a2a3a724c917eeb3f77174e8118ead4b3":[6,0,0,0,6,2,1,6],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a2d2c0750f733cd79da51454cd718ff78":[6,0,0,0,6,2,1,4],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a3ce1d91ca97a4c51c935d2dfbb5a9e99":[6,0,0,0,6,2,1,2],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a4c76ab88f4eee91cfda2eba496d7ac38":[6,0,0,0,6,2,1,3],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#ac5e0c28ebaa99aa9ad3957dc64079181":[6,0,0,0,6,2,1,0],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#ac8e2d74ed74f23e984893f2a1c8c1baa":[6,0,0,0,6,2,1,1],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#ae065dc95bd3a7ebd670c9012d505fa08":[6,0,0,0,6,2,1,5],
-"structdnnl_1_1convolution__forward.html":[6,0,0,0,6,0]
+"structdnnl_1_1convolution__backward__weights_1_1desc.html#a4cc6f6b8188002b343c5620ece8f8a72":[6,0,0,0,6,2,0,3]
 };

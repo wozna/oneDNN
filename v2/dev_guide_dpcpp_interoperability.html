@@ -93,8 +93,13 @@ $(document).ready(function(){initNavTree('dev_guide_dpcpp_interoperability.html'
 <div class="title">DPC++ Interoperability </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>oneDNN may use the DPC++ runtime for CPU and GPU engines to interact with the hardware. Users may need to use oneDNN with other code that uses DPC++. For that purpose, the library provides API extensions to interoperate with underlying SYCL objects.</p>
-<p>One of the possible scenarios is executing a SYCL kernel for a custom operation not provided by oneDNN. In this case, the library provides all necessary API to "seamlessly" submit a kernel, sharing the execution context with oneDNN: using the same device and queue.</p>
+<div class="textblock"><blockquote class="doxtable">
+<p><a class="el" href="group__dnnl__api__sycl__interop.html">API Reference</a></p>
+<p></p>
+</blockquote>
+<h2>Overview</h2>
+<p>oneDNN may use the DPC++ runtime for CPU and GPU engines to interact with the hardware. Users may need to use oneDNN with other code that uses DPC++. For that purpose, the library provides API extensions to interoperate with underlying SYCL objects. This interoperability API is defined in the <code>dnnl_sycl.hpp</code> header.</p>
+<p>One of the possible scenarios is executing a SYCL kernel for a custom operation not provided by oneDNN. In this case, the library provides all the necessary API to "seamlessly" submit a kernel, sharing the execution context with oneDNN: using the same device and queue.</p>
 <p>The interoperability API is provided for two scenarios:</p>
 <ul>
 <li>Construction of oneDNN objects based on existing SYCL objects</li>
@@ -109,32 +114,52 @@ $(document).ready(function(){initNavTree('dev_guide_dpcpp_interoperability.html'
 <tr>
 <td align="left">Stream </td><td align="left"><code>cl::sycl::queue</code> </td></tr>
 <tr>
-<td align="left">Memory </td><td align="left"><code>cl::sycl::buffer&lt;uint8_t, 1&gt;</code> </td></tr>
+<td align="left">Memory (Buffer-based) </td><td align="left"><code>cl::sycl::buffer&lt;uint8_t, 1&gt;</code> </td></tr>
+<tr>
+<td align="left">Memory (USM-based) </td><td align="left">Unified Shared Memory (USM) pointer </td></tr>
 </table>
-<dl class="section note"><dt>Note</dt><dd>Internally, library memory objects use 1D <code>uint8_t</code> SYCL buffers, however user may initialize and access memory using SYCL buffers of a different type, in this case buffers will be reinterpreted to the underlying type <code>cl::sycl::buffer&lt;uint8_t, 1&gt;</code>.</dd></dl>
-<h2>C++ API Extensions for Interoperability with DPC++</h2>
-<h3>API to Construct oneDNN Objects</h3>
+<p>The table below summarizes how to construct oneDNN objects based on SYCL objects and how to query underlying SYCL objects for existing oneDNN objects.</p>
 <table class="doxtable">
 <tr>
-<th align="left">oneDNN object </th><th align="left">API to construct oneDNN object  </th></tr>
+<th align="left">oneDNN object </th><th align="left">API to construct oneDNN object </th><th align="left">API to access SYCL object(s)  </th></tr>
 <tr>
-<td align="left">Engine </td><td align="left"><a class="el" href="structdnnl_1_1engine.html">dnnl::engine(kind, sycl_dev, sycl_ctx)</a> </td></tr>
+<td align="left">Engine </td><td align="left"><a class="el" href="namespacednnl_1_1sycl__interop.html#a38a3e5df773eac0eca657c210e3bb937" title="Constructs an engine from SYCL device and context objects. ">dnnl::sycl_interop::make_engine(const cl::sycl::device &amp;, const cl::sycl::context &amp;)</a> </td><td align="left"><a class="el" href="namespacednnl_1_1sycl__interop.html#ac4198f877f40ff0d037b0f8b88611207" title="Returns the SYCL device associated with an engine. ">dnnl::sycl_interop::get_device(const engine &amp;)</a> <br/>
+ <a class="el" href="namespacednnl_1_1sycl__interop.html#a351bee0c0076334dd0eb211720448d7e" title="Returns the SYCL context associated with an engine. ">dnnl::sycl_interop::get_context(const engine &amp;)</a> </td></tr>
 <tr>
-<td align="left">Stream </td><td align="left"><a class="el" href="structdnnl_1_1stream.html">dnnl::stream(engine, sycl_queue)</a> </td></tr>
+<td align="left">Stream </td><td align="left"><a class="el" href="namespacednnl_1_1sycl__interop.html#a21b76da69a016e68eae8036f16cc51b8" title="Creates an execution stream for a given engine associated with a SYCL queue. ">dnnl::sycl_interop::make_stream(const engine &amp;, cl::sycl::queue &amp;)</a> </td><td align="left"><a class="el" href="namespacednnl_1_1sycl__interop.html#a1e01cd09b687a1698d229705493c6acd" title="Returns the SYCL queue associated with an execution stream. ">dnnl::sycl_interop::get_queue(const stream &amp;)</a> </td></tr>
 <tr>
-<td align="left">Memory </td><td align="left"><a class="el" href="structdnnl_1_1memory.html">dnnl::memory(memory_desc, engine, sycl_buf)</a> </td></tr>
+<td align="left">Memory (Buffer-based) </td><td align="left"><a class="el" href="namespacednnl_1_1sycl__interop.html#adc40aabb36c9343ec3e2e5913b57090d" title="Constructs a memory object from a SYCL buffer. ">dnnl::sycl_interop::make_memory(const memory::desc &amp;, const engine &amp;, cl::sycl::buffer&lt;T, ndims&gt; &amp;)</a> </td><td align="left"><a class="el" href="namespacednnl_1_1sycl__interop.html#aa79e54806e23001f638483f5cd3319b4" title="Returns the SYCL buffer associated with a memory object. ">dnnl::sycl_interop::get_buffer&lt;T, ndims&gt;(const memory &amp;)</a> </td></tr>
+<tr>
+<td align="left">Memory (USM-based) </td><td align="left"><a class="el" href="structdnnl_1_1memory.html" title="Memory object. ">dnnl::memory(const memory::desc &amp;, const engine &amp;, void *)</a> </td><td align="left"><a class="el" href="structdnnl_1_1memory.html#a1b81db911a391cefc31e35bbe9ca95fe" title="Returns the underlying memory buffer. ">dnnl::memory::get_data_handle()</a> </td></tr>
 </table>
-<h3>API to Access SYCL Objects</h3>
-<table class="doxtable">
-<tr>
-<th align="left">oneDNN object </th><th align="left">API to access SYCL object(s)  </th></tr>
-<tr>
-<td align="left">Engine </td><td align="left">dnnl::engine::get_sycl_device() and dnnl::engine::get_sycl_context() </td></tr>
-<tr>
-<td align="left">Stream </td><td align="left">dnnl::stream::get_sycl_queue() </td></tr>
-<tr>
-<td align="left">Memory </td><td align="left">dnnl::memory::get_sycl_buffer&lt;T&gt;() </td></tr>
-</table>
+<dl class="section note"><dt>Note</dt><dd>Internally, library buffer-based memory objects use 1D <code>uint8_t</code> SYCL buffers; however, the user may initialize and access memory using SYCL buffers of a different type. In this case, buffers will be reinterpreted to the underlying type <code>cl::sycl::buffer&lt;uint8_t, 1&gt;</code>.</dd></dl>
+<h2>SYCL Buffers and DPC++ USM Interfaces for Memory Objects</h2>
+<p>The memory model in SYCL 1.2.1 is based on SYCL buffers. DPC++ further extends the programming model with a Unified Shared Memory (USM) alternative, which provides the ability to allocate and use memory in a uniform way on host and DPC++ devices.</p>
+<p>oneDNN supports both programming models. USM is the default and can be used with the usual oneDNN <a class="el" href="group__dnnl__api__memory.html">memory API</a>. The buffer-based programming model requires using the interoperability API.</p>
+<p>To construct a oneDNN memory object, use one of the following interfaces:</p>
+<ul>
+<li><p class="startli"><a class="el" href="namespacednnl_1_1sycl__interop.html#ac4f19c86efba789310d287ad1edfb657" title="Creates a memory object. ">dnnl::sycl_interop::make_memory(const memory::desc &amp;, const engine &amp;, sycl_interop::memory_kind kind, void *handle)</a></p>
+<p class="startli">Constructs a USM-based or buffer-based memory object depending on memory allocation kind <code>kind</code>. The <code>handle</code> could be one of special values <a class="el" href="group__dnnl__api__memory.html#gaf19cbfbf1f0a9508283f2a25561ae0e4" title="Special pointer value that indicates that the library needs to allocate an underlying buffer for a me...">DNNL_MEMORY_ALLOCATE</a> or <a class="el" href="group__dnnl__api__memory.html#ga96c8752fb3cb4f01cf64bf56190b1343" title="Special pointer value that indicates that a memory object should not have an underlying buffer...">DNNL_MEMORY_NONE</a>, or it could be a user-provided USM pointer. The latter works only when <code>kind</code> is <a class="el" href="namespacednnl_1_1sycl__interop.html#a9c7def46b2c0556f56e2f0aab5fbffeba81e61a0cab904f0e620dd3226f7f6582" title="USM (device, shared, host, or unknown) memory allocation kind. ">dnnl::sycl_interop::memory_kind::usm</a>.</p>
+</li>
+<li><p class="startli"><a class="el" href="structdnnl_1_1memory.html" title="Memory object. ">dnnl::memory(const memory::desc &amp;, const engine &amp;, void *)</a></p>
+<p class="startli">Constructs a USM-based memory object. The call is equivalent to calling the function above with with <code>kind</code> equal to <a class="el" href="namespacednnl_1_1sycl__interop.html#a9c7def46b2c0556f56e2f0aab5fbffeba81e61a0cab904f0e620dd3226f7f6582" title="USM (device, shared, host, or unknown) memory allocation kind. ">dnnl::sycl_interop::memory_kind::usm</a>.</p>
+</li>
+<li><p class="startli"><a class="el" href="namespacednnl_1_1sycl__interop.html#adc40aabb36c9343ec3e2e5913b57090d" title="Constructs a memory object from a SYCL buffer. ">dnnl::sycl_interop::make_memory(const memory::desc &amp;, const engine &amp;, cl::sycl::buffer&lt;T, ndims&gt; &amp;)</a></p>
+<p class="startli">Constructs a buffer-based memory object based on a user-provided SYCL buffer.</p>
+</li>
+</ul>
+<p>To identify whether a memory object is USM-based or buffer-based, <a class="el" href="namespacednnl_1_1sycl__interop.html#a9859fd3ed9a833cc88cb02882051cffb" title="Returns the memory allocation kind associated with a memory object. ">dnnl::sycl_interop::get_memory_kind()</a> query can be used.</p>
+<h2>Handling Dependencies with USM</h2>
+<p>SYCL queues could be in-order or out-of-order. For out-of-order queues, the order of execution is defined by the dependencies between SYCL tasks. The runtime tracks dependencies based on accessors created for SYCL buffers. USM pointers cannot be used to create accessors and users must handle dependencies on their own using SYCL events.</p>
+<p>oneDNN provides two mechanisms to handle dependencies when USM memory is used:</p>
+<ol type="1">
+<li><p class="startli"><a class="el" href="namespacednnl_1_1sycl__interop.html#afc6c83e27a688e120b72e5355786d4c9" title="Executes computations specified by the primitive in a specified stream and returns a SYCL event...">dnnl::sycl_interop::execute()</a> interface</p>
+<p class="startli">This interface enables you to pass dependencies between primitives using SYCL events. In this case, the user is responsible for passing proper dependencies for every primitive execution.</p>
+</li>
+<li><p class="startli">In-order oneDNN stream</p>
+<p class="startli">oneDNN enables you to create in-order streams when submitted primitives are executed in the order they were submitted. Using in-order streams prevents possible read-before-write or concurrent read/write issues. </p>
+</li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="footer">

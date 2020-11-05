@@ -114,13 +114,15 @@ $(document).ready(function(){initNavTree('dev_guide_cpu_dispatcher_control.html'
 <tr>
 <td align="left"></td><td align="left">AVX2 </td><td align="left">Intel Advanced Vector Extensions 2 (Intel AVX2) </td></tr>
 <tr>
+<td align="left"></td><td align="left">AVX2_VNNI </td><td align="left">Intel AVX2 with Intel Deep Learning Boost (Intel DL Boost) </td></tr>
+<tr>
 <td align="left"></td><td align="left">AVX512_MIC </td><td align="left">Intel Advanced Vector Extensions 512 (Intel AVX-512) with AVX512CD, AVX512ER, and AVX512PF extensions </td></tr>
 <tr>
 <td align="left"></td><td align="left">AVX512_MIC_4OPS </td><td align="left">Intel AVX-512 with AVX512_4FMAPS and AVX512_4VNNIW extensions </td></tr>
 <tr>
 <td align="left"></td><td align="left">AVX512_CORE </td><td align="left">Intel AVX-512 with AVX512BW, AVX512VL, and AVX512DQ extensions </td></tr>
 <tr>
-<td align="left"></td><td align="left">AVX512_CORE_VNNI </td><td align="left">Intel AVX-512 with Intel Deep Learning Boost (Intel DL Boost) </td></tr>
+<td align="left"></td><td align="left">AVX512_CORE_VNNI </td><td align="left">Intel AVX-512 with Intel DL Boost </td></tr>
 <tr>
 <td align="left"></td><td align="left">AVX512_CORE_BF16 </td><td align="left">Intel AVX-512 with Intel DL Boost and bfloat16 support </td></tr>
 <tr>
@@ -131,7 +133,8 @@ $(document).ready(function(){initNavTree('dev_guide_cpu_dispatcher_control.html'
 <dl class="section note"><dt>Note</dt><dd>The ISAs are partially ordered:<ul>
 <li>SSE41 &lt; AVX &lt; AVX2,</li>
 <li>AVX2 &lt; AVX512_MIC &lt; AVX512_MIC_4OPS,</li>
-<li>AVX2 &lt; AVX512_CORE &lt; AVX512_CORE_VNNI &lt; AVX512_CORE_BF16 &lt; AVX512_CORE_AMX.</li>
+<li>AVX2 &lt; AVX512_CORE &lt; AVX512_CORE_VNNI &lt; AVX512_CORE_BF16 &lt; AVX512_CORE_AMX,</li>
+<li>AVX2 &lt; AVX2_VNNI.</li>
 </ul>
 </dd></dl>
 <p>This feature can also be managed at run-time with the following functions:</p>

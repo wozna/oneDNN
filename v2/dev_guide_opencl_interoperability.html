@@ -93,7 +93,12 @@ $(document).ready(function(){initNavTree('dev_guide_opencl_interoperability.html
 <div class="title">OpenCL Interoperability </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>oneDNN uses the OpenCL runtime for GPU engines to interact with the GPU. Users may need to use oneDNN with other code that uses OpenCL. For that purpose, the library provides API extensions to interoperate with underlying OpenCL objects.</p>
+<div class="textblock"><blockquote class="doxtable">
+<p><a class="el" href="group__dnnl__api__ocl__interop.html">API Reference</a></p>
+<p></p>
+</blockquote>
+<h2>Overview</h2>
+<p>oneDNN uses the OpenCL runtime for GPU engines to interact with the GPU. Users may need to use oneDNN with other code that uses OpenCL. For that purpose, the library provides API extensions to interoperate with underlying OpenCL objects. This interoperability API is defined in the <code>dnnl_ocl.hpp</code> header.</p>
 <p>The interoperability API is provided for two scenarios:</p>
 <ul>
 <li>Construction of oneDNN objects based on existing OpenCL objects</li>
@@ -110,54 +115,21 @@ $(document).ready(function(){initNavTree('dev_guide_opencl_interoperability.html
 <tr>
 <td align="left">Memory </td><td align="left"><code>cl_mem</code> </td></tr>
 </table>
-<h2>C++ API Extensions for Interoperability with OpenCL</h2>
-<h3>API to Construct oneDNN Objects</h3>
+<p>The table below summarizes how to construct oneDNN objects based on OpenCL objects and how to query underlying OpenCL objects for existing oneDNN objects.</p>
 <table class="doxtable">
 <tr>
-<th align="left">oneDNN object </th><th align="left">API to construct oneDNN object  </th></tr>
+<th align="left">oneDNN object </th><th align="left">API to construct oneDNN object </th><th align="left">API to access OpenCL object(s)  </th></tr>
 <tr>
-<td align="left">Engine </td><td align="left"><a class="el" href="structdnnl_1_1engine.html">dnnl::engine(kind, ocl_dev, ocl_ctx)</a> </td></tr>
+<td align="left">Engine </td><td align="left"><a class="el" href="namespacednnl_1_1ocl__interop.html#aaa1b1a194ca813f3db12effd29a359d7" title="Constructs an engine from OpenCL device and context objects. ">dnnl::ocl_interop::make_engine(cl_device_id, cl_context)</a> </td><td align="left"><a class="el" href="namespacednnl_1_1ocl__interop.html#a37ef1ccb75d09063ed049076fb23b927" title="Returns OpenCL device associated with the engine. ">dnnl::ocl_interop::get_device(const engine &amp;)</a> <br/>
+ <a class="el" href="namespacednnl_1_1ocl__interop.html#a248df8106d035e5a7e1ac5fd196c93c3" title="Returns OpenCL context associated with the engine. ">dnnl::ocl_interop::get_context(const engine &amp;)</a> </td></tr>
 <tr>
-<td align="left">Stream </td><td align="left"><a class="el" href="structdnnl_1_1stream.html">dnnl::stream(engine, ocl_queue)</a> </td></tr>
+<td align="left">Stream </td><td align="left"><a class="el" href="namespacednnl_1_1ocl__interop.html#ad29aa52fd99fb371018ae6761b0bc8fa" title="Constructs an execution stream for the specified engine and OpenCL queue. ">dnnl::ocl_interop::make_stream(const engine &amp;, cl_command_queue)</a> </td><td align="left"><a class="el" href="namespacednnl_1_1ocl__interop.html#a14281f69db5178363ff0c971510d0452" title="Returns OpenCL queue object associated with the execution stream. ">dnnl::ocl_interop::get_command_queue(const stream &amp;)</a> </td></tr>
 <tr>
-<td align="left">Memory </td><td align="left"><a class="el" href="structdnnl_1_1memory.html">dnnl::memory(memory_desc, engine, ocl_mem)</a> </td></tr>
+<td align="left">Memory </td><td align="left"><a class="el" href="structdnnl_1_1memory.html" title="Memory object. ">dnnl::memory(const memory::desc &amp;, const engine &amp;, cl_mem)</a> </td><td align="left"><a class="el" href="namespacednnl_1_1ocl__interop.html#ac117d62fba9de220fe53b0eedb9671f9" title="Returns the OpenCL memory object associated with the memory object. ">dnnl::ocl_interop::get_mem_object(const memory &amp;)</a> </td></tr>
 </table>
-<dl class="section note"><dt>Note</dt><dd>oneDNN follows retain/release OpenCL semantics when using OpenCL objects during construction. An OpenCL object is retained on construction and released on destruction - that ensures that the OpenCL object will not be destroyed while the oneDNN object stores a reference to it.</dd></dl>
-<h3>API to Access OpenCL Objects</h3>
-<table class="doxtable">
-<tr>
-<th align="left">oneDNN object </th><th align="left">API to access OpenCL object(s)  </th></tr>
-<tr>
-<td align="left">Engine </td><td align="left">dnnl::engine::get_ocl_device() and dnnl::engine::get_ocl_context() </td></tr>
-<tr>
-<td align="left">Stream </td><td align="left">dnnl::stream::get_ocl_command_queue() </td></tr>
-<tr>
-<td align="left">Memory </td><td align="left">dnnl::memory::get_ocl_mem_object() </td></tr>
-</table>
-<dl class="section note"><dt>Note</dt><dd>The access interfaces do not retain the OpenCL object. It is the user's responsibility to retain the returned OpenCL object if necessary.</dd></dl>
-<h2>C API Extensions for Interoperability with OpenCL</h2>
-<h3>API to Construct oneDNN Objects</h3>
-<table class="doxtable">
-<tr>
-<th align="left">oneDNN object </th><th align="left">API to construct oneDNN object  </th></tr>
-<tr>
-<td align="left">Engine </td><td align="left"><a class="el" href="group__dnnl__api__ocl__interop.html#ga52edd1810d72a2a08a881b122c7ada70">dnnl_engine_create_ocl(&amp;engine, kind, ocl_dev, ocl_ctx)</a> </td></tr>
-<tr>
-<td align="left">Stream </td><td align="left"><a class="el" href="group__dnnl__api__ocl__interop.html#ga9a9007c6661472d701b2bbfb43ddf07c">dnnl_stream_create_ocl(&amp;stream, engine, ocl_queue)</a> </td></tr>
-<tr>
-<td align="left">Memory </td><td align="left"><a class="el" href="group__dnnl__api__memory.html#ga52a9246bd7f4e498b08d61e75e689a0c">dnnl_memory_create(&amp;memory, memory_desc, engine, &amp;ocl_mem)</a> </td></tr>
-</table>
-<h3>API to Access OpenCL Objects</h3>
-<table class="doxtable">
-<tr>
-<th align="left">oneDNN object </th><th align="left">API to access OpenCL object(s)  </th></tr>
-<tr>
-<td align="left">Engine </td><td align="left">dnnl_engine_get_ocl_device() and dnnl_engine_get_ocl_context() </td></tr>
-<tr>
-<td align="left">Stream </td><td align="left">dnnl_stream_get_ocl_command_queue() </td></tr>
-<tr>
-<td align="left">Memory </td><td align="left">dnnl_memory_get_ocl_mem_object() </td></tr>
-</table>
+<dl class="section note"><dt>Note</dt><dd>oneDNN follows retain/release OpenCL semantics when using OpenCL objects during construction. An OpenCL object is retained on construction and released on destruction. This ensures that the OpenCL object will not be destroyed while the oneDNN object stores a reference to it.</dd>
+<dd>
+The access interfaces do not retain the OpenCL object. It is the user's responsibility to retain the returned OpenCL object if necessary. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="footer">

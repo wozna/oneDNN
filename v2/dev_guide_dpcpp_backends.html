@@ -99,9 +99,9 @@ $(document).ready(function(){initNavTree('dev_guide_dpcpp_backends.html','');});
 <tr>
 <th>API </th><th><code><a class="el" href="structdnnl_1_1engine.html#a2635da16314dcbdb9bd9ea431316bb1aad9747e2da342bdb995f6389533ad1a3d" title="CPU engine. ">dnnl::engine::kind::cpu</a></code> </th><th><code><a class="el" href="structdnnl_1_1engine.html#a2635da16314dcbdb9bd9ea431316bb1aa0aa0be2a866411d9ff03515227454947" title="GPU engine. ">dnnl::engine::kind::gpu</a></code>  </th></tr>
 <tr>
-<td><a class="el" href="structdnnl_1_1engine.html">dnnl::engine(kind, index)</a> </td><td>DPC++ devices: CPU (OpenCL) </td><td>DPC++ devices: GPU (OpenCL and Level Zero) </td></tr>
+<td><a class="el" href="structdnnl_1_1engine.html" title="An execution engine. ">dnnl::engine(engine::kind, int)</a> </td><td>DPC++ devices: CPU (OpenCL) </td><td>DPC++ devices: GPU (OpenCL and Level Zero) </td></tr>
 <tr>
-<td><a class="el" href="structdnnl_1_1engine.html">dnnl::engine(kind, sycl_dev, sycl_ctx)</a> </td><td>DPC++ devices: CPU (OpenCL) and host </td><td>DPC++ devices: GPU (OpenCL and Level Zero) </td></tr>
+<td><a class="el" href="namespacednnl_1_1sycl__interop.html#a38a3e5df773eac0eca657c210e3bb937" title="Constructs an engine from SYCL device and context objects. ">dnnl::sycl_interop::make_engine(const cl::sycl::device &amp;, const cl::sycl::context &amp;)</a> </td><td>DPC++ devices: CPU (OpenCL) and host </td><td>DPC++ devices: GPU (OpenCL and Level Zero) </td></tr>
 </table>
 <p>The host device in DPC++ does not require a backend and is implemented in the DPC++ runtime directly.</p>
 <p>The following sections describe the behavior of oneDNN and the prerequisites with respect to different backends.</p>

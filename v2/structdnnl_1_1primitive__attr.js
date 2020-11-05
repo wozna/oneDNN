@@ -13,5 +13,9 @@ var structdnnl_1_1primitive__attr =
     [ "get_post_ops", "structdnnl_1_1primitive__attr.html#a8f6b7226d2a1ccaf11142553faa17f1b", null ],
     [ "set_post_ops", "structdnnl_1_1primitive__attr.html#ac830fa9f4fcf480b494d73153ad579bf", null ],
     [ "set_rnn_data_qparams", "structdnnl_1_1primitive__attr.html#a39ce5aa8b06ed331d8e2158108cc8324", null ],
-    [ "set_rnn_weights_qparams", "structdnnl_1_1primitive__attr.html#a61bd70f97baa628fd49b2c8b334b913e", null ]
+    [ "get_rnn_data_qparams", "structdnnl_1_1primitive__attr.html#a47d567defa762761daa2af604798d799", null ],
+    [ "set_rnn_weights_qparams", "structdnnl_1_1primitive__attr.html#a61bd70f97baa628fd49b2c8b334b913e", null ],
+    [ "get_rnn_weights_qparams", "structdnnl_1_1primitive__attr.html#a3bbe9ac516e3aabe7dfea214210a3335", null ],
+    [ "set_rnn_weights_projection_qparams", "structdnnl_1_1primitive__attr.html#a6e5a8c12f28421c249633bf2092fbe3f", null ],
+    [ "get_rnn_weights_projection_qparams", "structdnnl_1_1primitive__attr.html#a53c41b29c5cd74d9485b5e753ba57f1d", null ]
 ];
