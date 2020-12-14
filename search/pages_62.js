@@ -2,6 +2,7 @@ var searchData=
 [
   ['batch_20normalization_20primitive_20example',['Batch Normalization Primitive Example',['../batch_normalization_example_cpp.html',1,'']]],
   ['binary_20primitive_20example',['Binary Primitive Example',['../binary_example_cpp.html',1,'']]],
+  ['bnorm_20u8_20by_20binary_20post_2dops_20example',['Bnorm u8 by binary post-ops example',['../bnorm_u8_via_binary_postops_cpp.html',1,'']]],
   ['basic_20concepts',['Basic Concepts',['../dev_guide_basic_concepts.html',1,'']]],
   ['batch_20normalization',['Batch Normalization',['../dev_guide_batch_normalization.html',1,'']]],
   ['benchmarking_20performance',['Benchmarking Performance',['../dev_guide_benchdnn.html',1,'']]],

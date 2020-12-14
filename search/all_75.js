@@ -12,5 +12,6 @@ var searchData=
   ['unmap_5fdata',['unmap_data',['../structdnnl_1_1memory.html#a9e68837f42415aca5e141a6d8a97996e',1,'dnnl::memory']]],
   ['use_5fglobal_5fstats',['use_global_stats',['../group__dnnl__api__primitives__common.html#ggad8ef0fcbb7b10cae3d67dd46892002bea95768ff8afb8ee75dc24be0d307627f8',1,'dnnl']]],
   ['use_5fscale_5fshift',['use_scale_shift',['../group__dnnl__api__primitives__common.html#ggad8ef0fcbb7b10cae3d67dd46892002bea0cbad8a346551ec47da7ff1afb1e1f76',1,'dnnl']]],
-  ['user',['user',['../group__dnnl__api__attributes.html#ggac24d40ceea0256c7d6cc3a383a0fa07faee11cbb19052e40b07aac0ca060c23ee',1,'dnnl']]]
+  ['user',['user',['../group__dnnl__api__attributes.html#ggac24d40ceea0256c7d6cc3a383a0fa07faee11cbb19052e40b07aac0ca060c23ee',1,'dnnl']]],
+  ['usm',['usm',['../namespacednnl_1_1sycl__interop.html#a9c7def46b2c0556f56e2f0aab5fbffeba81e61a0cab904f0e620dd3226f7f6582',1,'dnnl::sycl_interop']]]
 ];

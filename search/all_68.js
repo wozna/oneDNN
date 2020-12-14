@@ -9,7 +9,6 @@ var searchData=
   ['handle_3c_20dnnl_5fprimitive_5fdesc_5fiterator_20_3e',['handle&lt; dnnl_primitive_desc_iterator &gt;',['../structdnnl_1_1handle.html',1,'dnnl']]],
   ['handle_3c_20dnnl_5fprimitive_5fdesc_5ft_20_3e',['handle&lt; dnnl_primitive_desc_t &gt;',['../structdnnl_1_1handle.html',1,'dnnl']]],
   ['handle_3c_20dnnl_5fprimitive_5ft_20_3e',['handle&lt; dnnl_primitive_t &gt;',['../structdnnl_1_1handle.html',1,'dnnl']]],
-  ['handle_3c_20dnnl_5fstream_5fattr_5ft_20_3e',['handle&lt; dnnl_stream_attr_t &gt;',['../structdnnl_1_1handle.html',1,'dnnl']]],
   ['handle_3c_20dnnl_5fstream_5ft_20_3e',['handle&lt; dnnl_stream_t &gt;',['../structdnnl_1_1handle.html',1,'dnnl']]],
   ['handle_5ftraits',['handle_traits',['../structdnnl_1_1handle__traits.html',1,'dnnl']]],
   ['hash',['hash',['../structdnnl__version__t.html#a1c2a7e8b3f26ed376b537dd511feccad',1,'dnnl_version_t']]],

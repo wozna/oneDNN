@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -113,14 +113,15 @@ $(document).ready(function(){initNavTree('gpu_opencl_interop_cpp.html','');});
 </ul>
 <h1><a class="anchor" id="gpu_opencl_interop_cpp_headers"></a>
 Public headers</h1>
-<p>To start using oneDNN, we must first include the <a class="el" href="dnnl_8hpp.html">dnnl.hpp</a> header file in the application. We also include CL/cl.h for using OpenCL APIs and <a class="el" href="dnnl__debug_8h.html">dnnl_debug.h</a>, which contains some debugging facilities such as returning a string representation for common oneDNN C types. All C++ API types and functions reside in the <code>dnnl</code> namespace. For simplicity of the example we import this namespace.</p>
+<p>To start using oneDNN, we must first include the <a class="el" href="oneapi_2dnnl_2dnnl_8hpp.html">dnnl.hpp</a> header file in the application. We also include CL/cl.h for using OpenCL APIs and <a class="el" href="oneapi_2dnnl_2dnnl__debug_8h.html">dnnl_debug.h</a>, which contains some debugging facilities such as returning a string representation for common oneDNN C types. All C++ API types and functions reside in the <code>dnnl</code> namespace. For simplicity of the example we import this namespace.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;numeric&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &lt;CL/cl.h&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="dnnl_8hpp.html">dnnl.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="oneapi_2dnnl_2dnnl_8hpp.html">oneapi/dnnl/dnnl.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;oneapi/dnnl/dnnl_ocl.hpp&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;example_utils.hpp&quot;</span></div>
 <div class="line"></div>
@@ -158,12 +159,12 @@ Initialize the data by executing a custom OpenCL kernel</h2>
 </div><!-- fragment --><p> Create/Build Opencl kernel by <code>create_init_opencl_kernel()</code> function. Refer to the full code example for the <code>create_init_opencl_kernel()</code> function. </p>
 <div class="fragment"><div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *kernel_name = <span class="stringliteral">&quot;init&quot;</span>;</div>
 <div class="line">    cl_kernel ocl_init_kernel = create_init_opencl_kernel(</div>
-<div class="line">            eng.get_ocl_context(), kernel_name, ocl_code);</div>
-</div><!-- fragment --><p> The next step is to execute our OpenCL kernel by setting its arguments and enqueueing to an OpenCL queue. You can extract the underlying OpenCL buffer from the memory object using the interoperability interface: <a class="el" href="structdnnl_1_1memory.html#a9767b76689ed4a9c8fbb96e443e374d4" title="Returns the OpenCL memory object associated with the memory. ">dnnl::memory::get_ocl_mem_object()</a> . For simplicity we can just construct a stream, extract the underlying OpenCL queue, and enqueue the kernel to this queue. </p>
-<div class="fragment"><div class="line">    cl_mem ocl_buf = mem.get_ocl_mem_object();</div>
+<div class="line">            ocl_interop::get_context(eng), kernel_name, ocl_code);</div>
+</div><!-- fragment --><p> The next step is to execute our OpenCL kernel by setting its arguments and enqueueing to an OpenCL queue. You can extract the underlying OpenCL buffer from the memory object using the interoperability interface: dnnl::memory::get_ocl_mem_object() . For simplicity we can just construct a stream, extract the underlying OpenCL queue, and enqueue the kernel to this queue. </p>
+<div class="fragment"><div class="line">    cl_mem ocl_buf = ocl_interop::get_mem_object(mem);</div>
 <div class="line">    OCL_CHECK(clSetKernelArg(ocl_init_kernel, 0, <span class="keyword">sizeof</span>(ocl_buf), &amp;ocl_buf));</div>
 <div class="line"></div>
-<div class="line">    cl_command_queue ocl_queue = strm.get_ocl_command_queue();</div>
+<div class="line">    cl_command_queue ocl_queue = ocl_interop::get_command_queue(strm);</div>
 <div class="line">    OCL_CHECK(clEnqueueNDRangeKernel(ocl_queue, ocl_init_kernel, 1, <span class="keyword">nullptr</span>, &amp;N,</div>
 <div class="line">            <span class="keyword">nullptr</span>, 0, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
 </div><!-- fragment --> <h2><a class="anchor" id="gpu_opencl_interop_cpp_sub4"></a>

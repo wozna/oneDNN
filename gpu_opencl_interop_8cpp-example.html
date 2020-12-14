@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -122,7 +122,8 @@ $(document).ready(function(){initNavTree('gpu_opencl_interop_8cpp-example.html',
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &lt;CL/cl.h&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="dnnl_8hpp.html">dnnl.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="oneapi_2dnnl_2dnnl_8hpp.html">oneapi/dnnl/dnnl.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;oneapi/dnnl/dnnl_ocl.hpp&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;example_utils.hpp&quot;</span></div>
 <div class="line"></div>
@@ -189,27 +190,27 @@ $(document).ready(function(){initNavTree('gpu_opencl_interop_8cpp-example.html',
 <div class="line">    <span class="comment">// [oclkernel create]</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *kernel_name = <span class="stringliteral">&quot;init&quot;</span>;</div>
 <div class="line">    cl_kernel ocl_init_kernel = create_init_opencl_kernel(</div>
-<div class="line">            eng.<a name="a7"></a><a class="code" href="structdnnl_1_1engine.html#a739ba77b89cc3dc890819bc85d038198">get_ocl_context</a>(), kernel_name, ocl_code);</div>
+<div class="line">            <a name="a7"></a><a class="code" href="namespacednnl_1_1ocl__interop.html#a248df8106d035e5a7e1ac5fd196c93c3">ocl_interop::get_context</a>(eng), kernel_name, ocl_code);</div>
 <div class="line">    <span class="comment">//  [oclkernel create]</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// [oclexecution]</span></div>
-<div class="line">    cl_mem ocl_buf = mem.get_ocl_mem_object();</div>
+<div class="line">    cl_mem ocl_buf = <a name="a8"></a><a class="code" href="namespacednnl_1_1ocl__interop.html#ac117d62fba9de220fe53b0eedb9671f9">ocl_interop::get_mem_object</a>(mem);</div>
 <div class="line">    OCL_CHECK(clSetKernelArg(ocl_init_kernel, 0, <span class="keyword">sizeof</span>(ocl_buf), &amp;ocl_buf));</div>
 <div class="line"></div>
-<div class="line">    cl_command_queue ocl_queue = strm.get_ocl_command_queue();</div>
+<div class="line">    cl_command_queue ocl_queue = <a name="a9"></a><a class="code" href="namespacednnl_1_1ocl__interop.html#a14281f69db5178363ff0c971510d0452">ocl_interop::get_command_queue</a>(strm);</div>
 <div class="line">    OCL_CHECK(clEnqueueNDRangeKernel(ocl_queue, ocl_init_kernel, 1, <span class="keyword">nullptr</span>, &amp;N,</div>
 <div class="line">            <span class="keyword">nullptr</span>, 0, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
 <div class="line">    <span class="comment">// [oclexecution]</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//  [relu creation]</span></div>
-<div class="line">    <span class="keyword">auto</span> relu_d = <a name="_a8"></a><a class="code" href="structdnnl_1_1eltwise__forward_1_1desc.html">eltwise_forward::desc</a>(</div>
-<div class="line">            <a name="a9"></a><a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa965dbaac085fc891bfbbd4f9d145bbc8">prop_kind::forward</a>, <a name="a10"></a><a class="code" href="group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640aba09bebb742494255b90b43871c01c69">algorithm::eltwise_relu</a>, mem_d, 0.0f);</div>
-<div class="line">    <span class="keyword">auto</span> relu_pd = <a name="_a11"></a><a class="code" href="structdnnl_1_1eltwise__forward_1_1primitive__desc.html">eltwise_forward::primitive_desc</a>(relu_d, eng);</div>
-<div class="line">    <span class="keyword">auto</span> relu = <a name="_a12"></a><a class="code" href="structdnnl_1_1eltwise__forward.html">eltwise_forward</a>(relu_pd);</div>
+<div class="line">    <span class="keyword">auto</span> relu_d = <a name="_a10"></a><a class="code" href="structdnnl_1_1eltwise__forward_1_1desc.html">eltwise_forward::desc</a>(</div>
+<div class="line">            <a name="a11"></a><a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa965dbaac085fc891bfbbd4f9d145bbc8">prop_kind::forward</a>, <a name="a12"></a><a class="code" href="group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640aba09bebb742494255b90b43871c01c69">algorithm::eltwise_relu</a>, mem_d, 0.0f);</div>
+<div class="line">    <span class="keyword">auto</span> relu_pd = <a name="_a13"></a><a class="code" href="structdnnl_1_1eltwise__forward_1_1primitive__desc.html">eltwise_forward::primitive_desc</a>(relu_d, eng);</div>
+<div class="line">    <span class="keyword">auto</span> relu = <a name="_a14"></a><a class="code" href="structdnnl_1_1eltwise__forward.html">eltwise_forward</a>(relu_pd);</div>
 <div class="line">    <span class="comment">//  [relu creation]</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// [relu exec]</span></div>
-<div class="line">    relu.execute(strm, {{<a name="a13"></a><a class="code" href="group__dnnl__api__primitives__common.html#gac37ad67b48edeb9e742af0e50b70fe09">DNNL_ARG_SRC</a>, mem}, {<a name="a14"></a><a class="code" href="group__dnnl__api__primitives__common.html#ga3ca217e4a06d42a0ede3c018383c388f">DNNL_ARG_DST</a>, mem}});</div>
+<div class="line">    relu.execute(strm, {{<a name="a15"></a><a class="code" href="group__dnnl__api__primitives__common.html#gac37ad67b48edeb9e742af0e50b70fe09">DNNL_ARG_SRC</a>, mem}, {<a name="a16"></a><a class="code" href="group__dnnl__api__primitives__common.html#ga3ca217e4a06d42a0ede3c018383c388f">DNNL_ARG_DST</a>, mem}});</div>
 <div class="line">    strm.wait();</div>
 <div class="line">    <span class="comment">// [relu exec]</span></div>
 <div class="line"><span class="comment"></span></div>

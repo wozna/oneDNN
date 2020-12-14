@@ -6,6 +6,6 @@ var searchData=
   ['alpha',['alpha',['../structdnnl__eltwise__desc__t.html#a10784684fa814edcb365c0a8fecdef59',1,'dnnl_eltwise_desc_t']]],
   ['arg',['arg',['../structdnnl__exec__arg__t.html#a46c7f77870713b8af3fd37dc66e9690b',1,'dnnl_exec_arg_t']]],
   ['asymm_5fcompensation_5fmask',['asymm_compensation_mask',['../structdnnl__memory__extra__desc__t.html#a8bf7bad194cd0865de05966e46f580ca',1,'dnnl_memory_extra_desc_t']]],
-  ['asynchronous',['ASYNCHRONOUS',['../structdnnl_1_1threadpool__iface.html#a740361555b71b3ddd2f740c8e0bcfdba',1,'dnnl::threadpool_iface']]],
+  ['asynchronous',['ASYNCHRONOUS',['../structdnnl_1_1threadpool__interop_1_1threadpool__iface.html#a9e6d861d659445fe5abcf302e464d9e5',1,'dnnl::threadpool_interop::threadpool_iface']]],
   ['axis',['axis',['../structdnnl__shuffle__desc__t.html#a1bb136f69743fc7381990f4406bf7fe2',1,'dnnl_shuffle_desc_t']]]
 ];

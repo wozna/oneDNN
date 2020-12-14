@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -130,7 +130,8 @@ $(document).ready(function(){initNavTree('dev_guide_matmul.html','');});
 <ol type="1">
 <li>The MatMul primitive supports input and output tensors with run-time specified shapes and memory formats. The run-time specified dimensions or strides are specified using the <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a> wildcard value during the primitive initialization and creation stage. At the execution stage, the user must pass fully specified memory objects so that the primitive is able to perform the computations. Note that the less information about shapes or format is available at the creation stage, the less performant execution will be. In particular, if the shape is not known at creation stage, one cannot use the special format tag <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa100b8cad7cf2a56f6df78f171f97a1ec" title="Placeholder memory format tag. ">dnnl::memory::format_tag::any</a> to enable an implementation to choose the most appropriate memory format for the corresponding input or output shapes. On the other hand, run-time specified shapes enable users to create a primitive once and use it in different situations.</li>
 <li>Inconsistency with dimensions being "primitive-creation-time-defined" vs "runtime-defined" is invalid. For example, \(\src\) and \(\weights\) with dimensions set to <code>{3, 4, 4}</code> and <code>{DNNL_RUNTIME_DIM_VAL, 4, 4}</code> respectively is invalid.</li>
-<li><p class="startli">The broadcasting shape consistency check is not done for the dimensions with <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a>. It is user responsibility to make sure the dimensions for the tensors are valid.</p>
+<li>The broadcasting shape consistency check is not done for the dimensions with <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a>. It is user responsibility to make sure the dimensions for the tensors are valid.</li>
+<li><p class="startli">Currently multiple batch dimensions and broadcasting of batch dimensions of <code>src</code> and <code>weights</code> is only supported for CPU engine.</p>
 <dl class="section see"><dt>See Also</dt><dd>Please check tutorials below to see <a class="el" href="group__dnnl__api__memory.html#gaa596c5a6102df77a550bad98f0d5cc12" title="A wildcard value for dimensions that are unknown at a primitive creation time. ">DNNL_RUNTIME_DIM_VAL</a> support in use.</dd></dl>
 <h3>Data Types</h3>
 </li>

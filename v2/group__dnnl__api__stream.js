@@ -14,8 +14,9 @@ var group__dnnl__api__stream =
     [ "dnnl_stream", "structdnnl__stream.html", null ],
     [ "dnnl_stream_t", "group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca", null ],
     [ "const_dnnl_stream_t", "group__dnnl__api__stream.html#ga06049a9f0b80366e5f2f54b10b9be956", null ],
+    [ "dnnl_stream_attr_t", "group__dnnl__api__stream.html#ga2c94efc726062d353677595e02854d82", null ],
+    [ "const_dnnl_stream_attr_t", "group__dnnl__api__stream.html#ga030e9d99db4439062f83dc65af98742b", null ],
     [ "dnnl_stream_flags_t", "group__dnnl__api__stream.html#ga3d74cfed8fe92b0e4498a1f2bdab5547", [
-      [ "dnnl_stream_in_order", "group__dnnl__api__stream.html#gga3d74cfed8fe92b0e4498a1f2bdab5547a4cb57d18d4769548e671aaff38a80478", null ],
       [ "dnnl_stream_out_of_order", "group__dnnl__api__stream.html#gga3d74cfed8fe92b0e4498a1f2bdab5547a8e9e057b28a7898a9b52120b8c7bd356", null ],
       [ "dnnl_stream_default_flags", "group__dnnl__api__stream.html#gga3d74cfed8fe92b0e4498a1f2bdab5547acf05c543bccebd58e6d4e0db7137fb92", null ]
     ] ],

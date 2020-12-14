@@ -2,6 +2,7 @@ var searchData=
 [
   ['opencl_20interoperability',['OpenCL Interoperability',['../dev_guide_opencl_interoperability.html',1,'']]],
   ['onednn_20api',['oneDNN API',['../group__dnnl__api.html',1,'']]],
+  ['opencl_20interoperability_20api',['OpenCL interoperability API',['../group__dnnl__api__ocl__interop.html',1,'']]],
   ['odhwi',['odhwi',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fabf55006478a9dae3506eb67923703a1d',1,'dnnl::memory']]],
   ['offset0',['offset0',['../structdnnl__memory__desc__t.html#a20a5edce338892ffdba47f8f11ddfe91',1,'dnnl_memory_desc_t']]],
   ['ohwi',['ohwi',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fab889a0cb4d051674706433941a2e867f',1,'dnnl::memory']]],
@@ -9,6 +10,7 @@ var searchData=
   ['oidhw',['oidhw',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa98407962f915285419b23f5b0a223882',1,'dnnl::memory']]],
   ['oihw',['oihw',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa14b72a467aeefa06a5cb802ec4a7743c',1,'dnnl::memory']]],
   ['oiw',['oiw',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa3a8cb832bca6da72735b742014560a5b',1,'dnnl::memory']]],
+  ['oneapi',['oneapi',['../namespaceoneapi.html',1,'']]],
   ['op_5fd',['op_d',['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a80d6826f84ba733d4bd57ca0812d1d24',1,'dnnl']]],
   ['operator_20bool',['operator bool',['../structdnnl_1_1handle.html#af014b68c14db64b9bb6a2034fe04440e',1,'dnnl::handle::operator bool()'],['../structdnnl_1_1memory_1_1desc.html#a4769a56d2e87ddcab113db3c0d4eb8bf',1,'dnnl::memory::desc::operator bool()']]],
   ['operator_20t',['operator T',['../structdnnl_1_1handle.html#ab3560c3d12724f48e9fdbe47077ff342',1,'dnnl::handle']]],

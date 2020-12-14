@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -135,6 +135,14 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga2e98ba1f2fa907d8b11b009fecae32da">DNNL_RUNTIME_OCL</a>&#160;&#160;&#160;256u</td></tr>
 <tr class="memdesc:ga2e98ba1f2fa907d8b11b009fecae32da"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCL runtime. <br/></td></tr>
 <tr class="separator:ga2e98ba1f2fa907d8b11b009fecae32da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c26ca286652838cb6927ca8bcd57ed7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6c26ca286652838cb6927ca8bcd57ed7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga6c26ca286652838cb6927ca8bcd57ed7">DNNL_RUNTIME_SYCL</a>&#160;&#160;&#160;512u</td></tr>
+<tr class="memdesc:ga6c26ca286652838cb6927ca8bcd57ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">SYCL runtime. <br/></td></tr>
+<tr class="separator:ga6c26ca286652838cb6927ca8bcd57ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd8370864d13a1667f7dc1d67b64e7c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabd8370864d13a1667f7dc1d67b64e7c1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#gabd8370864d13a1667f7dc1d67b64e7c1">DNNL_RUNTIME_DPCPP</a>&#160;&#160;&#160;<a class="el" href="group__dnnl__api__service.html#ga6c26ca286652838cb6927ca8bcd57ed7">DNNL_RUNTIME_SYCL</a></td></tr>
+<tr class="memdesc:gabd8370864d13a1667f7dc1d67b64e7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">DPC++ runtime. <br/></td></tr>
+<tr class="separator:gabd8370864d13a1667f7dc1d67b64e7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7ceacd6430988ed4bf58f5b01cd9c5a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7ceacd6430988ed4bf58f5b01cd9c5a4"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga7ceacd6430988ed4bf58f5b01cd9c5a4">DNNL_JIT_PROFILE_NONE</a>&#160;&#160;&#160;0u</td></tr>
 <tr class="memdesc:ga7ceacd6430988ed4bf58f5b01cd9c5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable profiling completely. <br/></td></tr>
@@ -185,9 +193,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga03c8f4af3d01f76060f98e78039837fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga03c8f4af3d01f76060f98e78039837fc">dnnl_set_jit_dump</a> (int enable)</td></tr>
 <tr class="memdesc:ga03c8f4af3d01f76060f98e78039837fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures dumping of JIT-generated code.  <a href="#ga03c8f4af3d01f76060f98e78039837fc">More...</a><br/></td></tr>
 <tr class="separator:ga03c8f4af3d01f76060f98e78039837fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3a5fbaf64f33c4d9b96816f6976bcaf9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdnnl__version__t.html">dnnl_version_t</a> DNNL_API *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga3a5fbaf64f33c4d9b96816f6976bcaf9">dnnl_version</a> ()</td></tr>
-<tr class="memdesc:ga3a5fbaf64f33c4d9b96816f6976bcaf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns library version information.  <a href="#ga3a5fbaf64f33c4d9b96816f6976bcaf9">More...</a><br/></td></tr>
-<tr class="separator:ga3a5fbaf64f33c4d9b96816f6976bcaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73e40d184386e9d9ca917756e76fb232"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdnnl__version__t.html">dnnl_version_t</a> DNNL_API *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga73e40d184386e9d9ca917756e76fb232">dnnl_version</a> (void)</td></tr>
+<tr class="memdesc:ga73e40d184386e9d9ca917756e76fb232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns library version information.  <a href="#ga73e40d184386e9d9ca917756e76fb232">More...</a><br/></td></tr>
+<tr class="separator:ga73e40d184386e9d9ca917756e76fb232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51ef634e4f201a12d32e573955943f48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga51ef634e4f201a12d32e573955943f48">dnnl_set_jit_profiling_flags</a> (unsigned flags)</td></tr>
 <tr class="memdesc:ga51ef634e4f201a12d32e573955943f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets library profiling flags.  <a href="#ga51ef634e4f201a12d32e573955943f48">More...</a><br/></td></tr>
 <tr class="separator:ga51ef634e4f201a12d32e573955943f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -465,13 +473,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga3a5fbaf64f33c4d9b96816f6976bcaf9"></a>
+<a class="anchor" id="ga73e40d184386e9d9ca917756e76fb232"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="structdnnl__version__t.html">dnnl_version_t</a> DNNL_API* dnnl_version </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

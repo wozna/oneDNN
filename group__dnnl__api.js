@@ -7,6 +7,8 @@ var group__dnnl__api =
     [ "Primitive Cache", "group__dnnl__api__primitive__cache.html", "group__dnnl__api__primitive__cache" ],
     [ "Service", "group__dnnl__api__service.html", "group__dnnl__api__service" ],
     [ "BLAS functions", "group__dnnl__api__blas.html", "group__dnnl__api__blas" ],
+    [ "Runtime interoperability API", "group__dnnl__api__interop.html", "group__dnnl__api__interop" ],
     [ "Utilities", "group__dnnl__api__utils.html", "group__dnnl__api__utils" ],
-    [ "dnnl", "namespacednnl.html", null ]
+    [ "dnnl", "namespacednnl.html", null ],
+    [ "oneapi", "namespaceoneapi.html", null ]
 ];

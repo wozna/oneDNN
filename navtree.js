@@ -22,9 +22,14 @@ var NAVTREE =
       ] ],
       [ "Data Types", "dev_guide_data_types.html", null ],
       [ "Reorder Between CPU and GPU Engines", "cross_engine_reorder_cpp.html", null ],
-      [ "C and C++ API", "dev_guide_c_and_cpp_apis.html", null ]
+      [ "C and C++ API", "dev_guide_c_and_cpp_apis.html", null ],
+      [ "Interoperability with DPC++ and OpenCL", "usergroup2.html", [
+        [ "OpenCL Interoperability", "dev_guide_opencl_interoperability.html", null ],
+        [ "DPC++ Interoperability", "dev_guide_dpcpp_interoperability.html", null ],
+        [ "DPC++ Backends", "dev_guide_dpcpp_backends.html", null ]
+      ] ]
     ] ],
-    [ "Supported Primitives", "usergroup2.html", [
+    [ "Supported Primitives", "usergroup3.html", [
       [ "(De-)Convolution", "dev_guide_convolution.html", null ],
       [ "Inner Product", "dev_guide_inner_product.html", null ],
       [ "Matrix Multiplication", "dev_guide_matmul.html", null ],
@@ -37,6 +42,7 @@ var NAVTREE =
       [ "Local Response Normalization", "dev_guide_lrn.html", null ],
       [ "Logsoftmax", "dev_guide_logsoftmax.html", null ],
       [ "Pooling", "dev_guide_pooling.html", null ],
+      [ "Prelu", "dev_guide_prelu.html", null ],
       [ "Resampling", "dev_guide_resampling.html", null ],
       [ "Shuffle", "dev_guide_shuffle.html", null ],
       [ "Softmax", "dev_guide_softmax.html", null ],
@@ -45,7 +51,7 @@ var NAVTREE =
       [ "Reduction", "dev_guide_reduction.html", null ]
     ] ],
     [ "Examples", "dev_guide_examples.html", null ],
-    [ "Performance Profiling and Inspection", "usergroup3.html", [
+    [ "Performance Profiling and Inspection", "usergroup4.html", [
       [ "Verbose Mode", "dev_guide_verbose.html", null ],
       [ "Configuring oneDNN for Benchmarking", "dev_guide_performance_settings.html", null ],
       [ "Performance Benchmark", "dev_guide_benchdnn.html", null ],
@@ -54,16 +60,15 @@ var NAVTREE =
       [ "Performance Profiling Example", "performance_profiling_cpp.html", null ],
       [ "CPU Dispatcher Controls", "dev_guide_cpu_dispatcher_control.html", null ]
     ] ],
-    [ "Advanced Topics", "usergroup4.html", [
+    [ "Advanced Topics", "usergroup5.html", [
       [ "Transition from v0.x to v1.x", "dev_guide_transition_to_v1.html", null ],
       [ "Transition from Intel MKL-DNN to oneDNN", "dev_guide_transition_to_dnnl.html", null ],
       [ "Understanding oneDNN Memory Formats", "dev_guide_understanding_memory_formats.html", null ],
       [ "Nuances of int8 computations", "dev_guide_int8_computations.html", null ],
-      [ "OpenCL Interoperability", "dev_guide_opencl_interoperability.html", null ],
       [ "Primitive Cache", "dev_guide_primitive_cache.html", null ],
       [ "Using oneDNN with Threadpool-based Threading", "dev_guide_threadpool.html", null ]
     ] ],
-    [ "API Reference", "usergroup5.html", [
+    [ "API Reference", "usergroup6.html", [
       [ "Modules", "modules.html", "modules" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
@@ -92,15 +97,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__dnnl__api__eltwise.html",
-"group__dnnl__api__primitives__common.html#ga3ca217e4a06d42a0ede3c018383c388f",
-"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4ac25fc36ccfd726a98b3bd218373fb0e8",
-"structdnnl_1_1convolution__forward_1_1primitive__desc.html#a2eb6ae222b86834bd773192651ff71fe",
-"structdnnl_1_1lbr__gru__backward_1_1primitive__desc.html#abc200b3d1e869b359fc1f395c3f811fe",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa3ba5d84f4cb5f66841c2dabc7fe4fc6c",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3facdf43d4ebfe0a9d95e8932b3e70517c7",
-"structdnnl_1_1primitive__desc__base.html#aa3936cde6aa188f79cc379200de718b3",
-"structdnnl__convolution__desc__t.html#aeb5243cdb8efc246eecd28398716b76f"
+"group__dnnl__api__deconvolution.html#ga394d097b787b65b164039ee8cc772405",
+"group__dnnl__api__primitives__common.html#ga1fa3eca53abce941ace7d28f9af1ec61",
+"group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059ad78b3945c7d4da7938ca77daa425afab",
+"structdnnl_1_1convolution__backward__data_1_1desc.html#aa190da119ae1cdddef55031dd0a15b6a",
+"structdnnl_1_1layer__normalization__forward.html#aff43626ba95cf18f0d1aa599d8e3c034",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa235270d63611411252eb2ee8b154b8ae",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faa928acc956c3370b8acae8085c7cfa06",
+"structdnnl_1_1post__ops.html#a128429160104654adcfb651e9ee02905",
+"structdnnl_1_1stream.html#acb0b2dcb354fd2302a7f5d930aa74866",
+"structdnnl__version__t.html#a2d0bade7e7ab7ff25d68f9011a3978e2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

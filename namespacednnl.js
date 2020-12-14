@@ -1,11 +1,13 @@
 var namespacednnl =
 [
+    [ "ocl_interop", "namespacednnl_1_1ocl__interop.html", null ],
+    [ "sycl_interop", "namespacednnl_1_1sycl__interop.html", null ],
+    [ "threadpool_interop", "namespacednnl_1_1threadpool__interop.html", "namespacednnl_1_1threadpool__interop" ],
     [ "error", "structdnnl_1_1error.html", "structdnnl_1_1error" ],
     [ "handle_traits", "structdnnl_1_1handle__traits.html", null ],
     [ "handle", "structdnnl_1_1handle.html", "structdnnl_1_1handle" ],
     [ "primitive", "structdnnl_1_1primitive.html", "structdnnl_1_1primitive" ],
     [ "engine", "structdnnl_1_1engine.html", "structdnnl_1_1engine" ],
-    [ "stream_attr", "structdnnl_1_1stream__attr.html", "structdnnl_1_1stream__attr" ],
     [ "stream", "structdnnl_1_1stream.html", "structdnnl_1_1stream" ],
     [ "memory", "structdnnl_1_1memory.html", "structdnnl_1_1memory" ],
     [ "post_ops", "structdnnl_1_1post__ops.html", "structdnnl_1_1post__ops" ],
@@ -55,6 +57,7 @@ var namespacednnl =
     [ "resampling_backward", "structdnnl_1_1resampling__backward.html", "structdnnl_1_1resampling__backward" ],
     [ "pooling_v2_forward", "structdnnl_1_1pooling__v2__forward.html", "structdnnl_1_1pooling__v2__forward" ],
     [ "pooling_v2_backward", "structdnnl_1_1pooling__v2__backward.html", "structdnnl_1_1pooling__v2__backward" ],
-    [ "reduction", "structdnnl_1_1reduction.html", "structdnnl_1_1reduction" ],
-    [ "threadpool_iface", "structdnnl_1_1threadpool__iface.html", "structdnnl_1_1threadpool__iface" ]
+    [ "prelu_forward", "structdnnl_1_1prelu__forward.html", "structdnnl_1_1prelu__forward" ],
+    [ "prelu_backward", "structdnnl_1_1prelu__backward.html", "structdnnl_1_1prelu__backward" ],
+    [ "reduction", "structdnnl_1_1reduction.html", "structdnnl_1_1reduction" ]
 ];

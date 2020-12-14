@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('cross_engine_reorder_cpp.html','');});
 </blockquote>
 <h1><a class="anchor" id="cross_engine_reorder_cpp_headers"></a>
 Public headers</h1>
-<p>To start using oneDNN, we must first include the <a class="el" href="dnnl_8hpp.html">dnnl.hpp</a> header file in the application. We also include <a class="el" href="dnnl__debug_8h.html">dnnl_debug.h</a>, which contains some debugging facilities such as returning a string representation for common oneDNN C types.</p>
+<p>To start using oneDNN, we must first include the <a class="el" href="oneapi_2dnnl_2dnnl_8hpp.html">dnnl.hpp</a> header file in the application. We also include <a class="el" href="oneapi_2dnnl_2dnnl__debug_8h.html">dnnl_debug.h</a>, which contains some debugging facilities such as returning a string representation for common oneDNN C types.</p>
 <p>All C++ API types and functions reside in the <code>dnnl</code> namespace. For simplicity of the example we import this namespace.</p>
 <h1><a class="anchor" id="cross_engine_reorder_cpp_tutorial"></a>
 cross_engine_reorder_tutorial() function</h1>
@@ -109,11 +109,11 @@ cross_engine_reorder_tutorial() function</h1>
 Engine and stream</h2>
 <p>All oneDNN primitives and memory objects are attached to a particular <a class="el" href="structdnnl_1_1engine.html">dnnl::engine</a>, which is an abstraction of a computational device (see also <a class="el" href="dev_guide_basic_concepts.html">Basic Concepts</a>). The primitives are created and optimized for the device they are attached to, and the memory objects refer to memory residing on the corresponding device. In particular, that means neither memory objects nor primitives that were created for one engine can be used on another.</p>
 <p>To create engines, we must specify the <a class="el" href="structdnnl_1_1engine.html#a2635da16314dcbdb9bd9ea431316bb1a">dnnl::engine::kind</a> and the index of the device of the given kind. There is only one CPU engine and one GPU engine, so the index for both engines must be 0.</p>
-<div class="fragment"><div class="line">    <span class="keyword">auto</span> cpu_engine = engine(engine::kind::cpu, 0);</div>
-<div class="line">    <span class="keyword">auto</span> gpu_engine = engine(engine::kind::gpu, 0);</div>
+<div class="fragment"><div class="line">    <span class="keyword">auto</span> cpu_engine = engine(validate_engine_kind(engine::kind::cpu), 0);</div>
+<div class="line">    <span class="keyword">auto</span> gpu_engine = engine(validate_engine_kind(engine::kind::gpu), 0);</div>
 </div><!-- fragment --><p> In addition to an engine, all primitives require a <a class="el" href="structdnnl_1_1stream.html">dnnl::stream</a> for the execution. The stream encapsulates an execution context and is tied to a particular engine.</p>
 <p>In this example, a GPU stream is created.</p>
-<div class="fragment"><div class="line">    <span class="keyword">auto</span> stream_gpu = stream(gpu_engine);</div>
+<div class="fragment"><div class="line">    <span class="keyword">auto</span> stream_gpu = stream(gpu_engine, stream::flags::in_order);</div>
 </div><!-- fragment --> <h2><a class="anchor" id="cross_engine_reorder_cpp_sub2"></a>
 Wrapping data into oneDNN GPU memory object</h2>
 <p>Fill the data in CPU memory first, and then move data from CPU to GPU memory by reorder. </p>

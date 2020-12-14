@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_f32_8cpp-example.htm
 <div class="line"><span class="preprocessor">#include &lt;numeric&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="dnnl_8hpp.html">dnnl.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="oneapi_2dnnl_2dnnl_8hpp.html">oneapi/dnnl/dnnl.hpp</a>&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;example_utils.hpp&quot;</span></div>
 <div class="line"></div>
@@ -659,7 +659,7 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_f32_8cpp-example.htm
 <div class="line">    std::vector&lt;float&gt; weighted_annotations(</div>
 <div class="line">            src_seq_length_max * batch * feature_size, 1.0f);</div>
 <div class="line"></div>
-<div class="line">    <span class="keyword">auto</span> execute = [&amp;]() {</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code" href="namespacednnl_1_1sycl__interop.html#afc6c83e27a688e120b72e5355786d4c9">execute</a> = [&amp;]() {</div>
 <div class="line">        assert(encoder_net.size() == encoder_net_args.size()</div>
 <div class="line">                &amp;&amp; <span class="stringliteral">&quot;something is missing&quot;</span>);</div>
 <div class="line">        <span class="comment">//[run enc]</span></div>
@@ -728,7 +728,7 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_f32_8cpp-example.htm
 <div class="line">              &lt;&lt; <span class="stringliteral">&quot; number of layers of the decoder = &quot;</span> &lt;&lt; dec_n_layers</div>
 <div class="line">              &lt;&lt; std::endl;</div>
 <div class="line"></div>
-<div class="line">    execute();</div>
+<div class="line">    <a class="code" href="namespacednnl_1_1sycl__interop.html#afc6c83e27a688e120b72e5355786d4c9">execute</a>();</div>
 <div class="line">    s.wait();</div>
 <div class="line">}</div>
 <div class="line"></div>

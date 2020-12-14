@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('getting_started_cpp.html','');});
 <p>These steps are implemented in the <a class="el" href="getting_started_cpp.html#getting_started_cpp_tutorial">getting_started_tutorial() function</a>, which in turn is called from <a class="el" href="getting_started_cpp.html#getting_started_cpp_main">main() function</a> (which is also responsible for error handling).</p>
 <h1><a class="anchor" id="getting_started_cpp_headers"></a>
 Public headers</h1>
-<p>To start using oneDNN we must first include the <a class="el" href="dnnl_8hpp.html">dnnl.hpp</a> header file in the program. We also include <a class="el" href="dnnl__debug_8h.html">dnnl_debug.h</a> in <a class="el" href="example__utils_8hpp_source.html">example_utils.hpp</a>, which contains some debugging facilities like returning a string representation for common oneDNN C types.</p>
+<p>To start using oneDNN we must first include the <a class="el" href="oneapi_2dnnl_2dnnl_8hpp.html">dnnl.hpp</a> header file in the program. We also include <a class="el" href="oneapi_2dnnl_2dnnl__debug_8h.html">dnnl_debug.h</a> in <a class="el" href="example__utils_8hpp_source.html">example_utils.hpp</a>, which contains some debugging facilities like returning a string representation for common oneDNN C types.</p>
 <h1><a class="anchor" id="getting_started_cpp_tutorial"></a>
 getting_started_tutorial() function</h1>
 <h2><a class="anchor" id="getting_started_cpp_sub1"></a>
@@ -307,25 +307,25 @@ Obtaining the result and validation</h2>
 <div class="line">    <span class="comment">// memory format.</span></div>
 <div class="line">    std::vector&lt;float&gt; relu_image(image_size);</div>
 <div class="line">    read_from_dnnl_memory(relu_image.data(), dst_mem);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// Check the results</span></div>
-<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; N; ++n)</div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> h = 0; h &lt; H; ++h)</div>
-<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> w = 0; w &lt; W; ++w)</div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; C; ++c) {</div>
-<div class="line">                    <span class="keywordtype">int</span> off = offset(</div>
-<div class="line">                            n, h, w, c); <span class="comment">// get the physical offset of a pixel</span></div>
-<div class="line">                    <span class="keywordtype">float</span> expected = image[off] &lt; 0</div>
-<div class="line">                            ? 0.f</div>
-<div class="line">                            : image[off]; <span class="comment">// expected value</span></div>
-<div class="line">                    <span class="keywordflow">if</span> (relu_image[off] != expected) {</div>
-<div class="line">                        std::cout &lt;&lt; <span class="stringliteral">&quot;At index(&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; c &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; h</div>
-<div class="line">                                  &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; w &lt;&lt; <span class="stringliteral">&quot;) expect &quot;</span> &lt;&lt; expected</div>
-<div class="line">                                  &lt;&lt; <span class="stringliteral">&quot; but got &quot;</span> &lt;&lt; relu_image[off]</div>
-<div class="line">                                  &lt;&lt; std::endl;</div>
-<div class="line">                        <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Accuracy check failed.&quot;</span>);</div>
-<div class="line">                    }</div>
-<div class="line">                }</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    // Check the results</span></div>
+<div class="line"><span class="comment">    for (int n = 0; n &lt; N; ++n)</span></div>
+<div class="line"><span class="comment">        for (int h = 0; h &lt; H; ++h)</span></div>
+<div class="line"><span class="comment">            for (int w = 0; w &lt; W; ++w)</span></div>
+<div class="line"><span class="comment">                for (int c = 0; c &lt; C; ++c) {</span></div>
+<div class="line"><span class="comment">                    int off = offset(</span></div>
+<div class="line"><span class="comment">                            n, h, w, c); // get the physical offset of a pixel</span></div>
+<div class="line"><span class="comment">                    float expected = image[off] &lt; 0</span></div>
+<div class="line"><span class="comment">                            ? 0.f</span></div>
+<div class="line"><span class="comment">                            : image[off]; // expected value</span></div>
+<div class="line"><span class="comment">                    if (relu_image[off] != expected) {</span></div>
+<div class="line"><span class="comment">                        std::cout &lt;&lt; &quot;At index(&quot; &lt;&lt; n &lt;&lt; &quot;, &quot; &lt;&lt; c &lt;&lt; &quot;, &quot; &lt;&lt; h</span></div>
+<div class="line"><span class="comment">                                  &lt;&lt; &quot;, &quot; &lt;&lt; w &lt;&lt; &quot;) expect &quot; &lt;&lt; expected</span></div>
+<div class="line"><span class="comment">                                  &lt;&lt; &quot; but got &quot; &lt;&lt; relu_image[off]</span></div>
+<div class="line"><span class="comment">                                  &lt;&lt; std::endl;</span></div>
+<div class="line"><span class="comment">                        throw std::logic_error(&quot;Accuracy check failed.&quot;);</span></div>
+<div class="line"><span class="comment">                    }</span></div>
+<div class="line"><span class="comment">                }</span></div>
 </div><!-- fragment --> <h1><a class="anchor" id="getting_started_cpp_main"></a>
 main() function</h1>
 <p>We now just call everything we prepared earlier.</p>
@@ -366,7 +366,7 @@ main() function</h1>
 </div><!-- fragment --><p>we should get the following output:</p>
 <div class="fragment"><div class="line">oneDNN error caught:</div>
 <div class="line">        Status: <a class="code" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda242ac674d98ee2191f0bbf6de851d2d0">invalid_arguments</a></div>
-<div class="line">        Message: could not execute a primitive</div>
+<div class="line">        Message: could not <a class="code" href="namespacednnl_1_1sycl__interop.html#afc6c83e27a688e120b72e5355786d4c9">execute</a> a primitive</div>
 <div class="line">Example failed.</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->

@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -100,9 +100,9 @@ $(document).ready(function(){initNavTree('dev_guide_build_options.html','');});
 <tr>
 <td align="left">DNNL_LIBRARY_TYPE </td><td align="left"><b>SHARED</b>, STATIC </td><td align="left">Defines the resulting library type </td></tr>
 <tr>
-<td align="left">DNNL_CPU_RUNTIME </td><td align="left"><b>OMP</b>, TBB, SEQ, THREADPOOL </td><td align="left">Defines the threading runtime for CPU engines </td></tr>
+<td align="left">DNNL_CPU_RUNTIME </td><td align="left"><b>OMP</b>, TBB, SEQ, THREADPOOL, DPCPP</td><td align="left">Defines the threading runtime for CPU engines </td></tr>
 <tr>
-<td align="left">DNNL_GPU_RUNTIME </td><td align="left"><b>NONE</b>, OCL </td><td align="left">Defines the offload runtime for GPU engines </td></tr>
+<td align="left">DNNL_GPU_RUNTIME </td><td align="left"><b>NONE</b>, OCL, DPCPP </td><td align="left">Defines the offload runtime for GPU engines </td></tr>
 <tr>
 <td align="left">DNNL_BUILD_EXAMPLES </td><td align="left"><b>ON</b>, OFF </td><td align="left">Controls building the examples </td></tr>
 <tr>
@@ -123,6 +123,8 @@ $(document).ready(function(){initNavTree('dev_guide_build_options.html','');});
 <td align="left">DNNL_AARCH64_USE_ACL </td><td align="left">ON, <b>OFF</b> </td><td align="left">Enables integration with Arm Compute Library for AArch64 builds </td></tr>
 <tr>
 <td align="left">DNNL_BLAS_VENDOR </td><td align="left"><b>NONE</b>, ARMPL </td><td align="left">Defines an external BLAS library to link to for GEMM-like operations </td></tr>
+<tr>
+<td align="left">DNNL_GPU_VENDOR </td><td align="left"><b>INTEL</b>, NVIDIA </td><td align="left">Defines GPU vendor for GPU engines </td></tr>
 </table>
 <p>All other building options or values that can be found in CMake files are intended for development/debug purposes and are subject to change without notice. Please avoid using them.</p>
 <h2>Common options</h2>

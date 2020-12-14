@@ -29,15 +29,20 @@
 <area shape="rect" id="node30" href="$structdnnl_1_1matmul.html" title="Matrix multiplication (matmul) primitive. " alt="" coords="393,1539,490,1565"/>
 <area shape="rect" id="node31" href="$structdnnl_1_1pooling__backward.html" title="Pooling backward propagation primitive. " alt="" coords="362,1589,521,1616"/>
 <area shape="rect" id="node32" href="$structdnnl_1_1pooling__forward.html" title="Pooling forward propagation primitive. " alt="" coords="369,1640,514,1667"/>
-<area shape="rect" id="node33" href="$structdnnl_1_1reorder.html" title="Reorder primitive. " alt="" coords="394,1691,489,1717"/>
-<area shape="rect" id="node34" href="$structdnnl_1_1resampling__backward.html" title="Resampling backward propagation primitive. " alt="" coords="351,1741,531,1768"/>
-<area shape="rect" id="node35" href="$structdnnl_1_1resampling__forward.html" title="Resampling forward propagation. " alt="" coords="358,1792,525,1819"/>
-<area shape="rect" id="node36" href="$structdnnl_1_1shuffle__backward.html" title="Shuffle backward propagation primitive. " alt="" coords="363,1843,519,1869"/>
-<area shape="rect" id="node37" href="$structdnnl_1_1shuffle__forward.html" title="Shuffle forward propagation primitive. " alt="" coords="370,1893,513,1920"/>
-<area shape="rect" id="node38" href="$structdnnl_1_1softmax__backward.html" title="Softmax backward propagation primitive. " alt="" coords="359,1944,523,1971"/>
-<area shape="rect" id="node39" href="$structdnnl_1_1softmax__forward.html" title="Softmax forward propagation primitive. " alt="" coords="366,1995,517,2021"/>
-<area shape="rect" id="node40" href="$structdnnl_1_1sum.html" title="Out&#45;of&#45;place summation (sum) primitive. " alt="" coords="402,2045,481,2072"/>
-<area shape="rect" id="node41" href="$structdnnl_1_1vanilla__rnn__backward.html" title="Vanilla RNN backward propagation primitive. " alt="" coords="352,2096,531,2123"/>
-<area shape="rect" id="node42" href="$structdnnl_1_1vanilla__rnn__forward.html" title="Vanilla RNN forward propagation primitive. " alt="" coords="358,2147,525,2173"/>
-<area shape="rect" id="node2" href="$structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_primitive_t \&gt;" alt="" coords="5,1151,133,1193"/>
+<area shape="rect" id="node33" href="$structdnnl_1_1pooling__v2__backward.html" title="Pooling v2 (dilated pooling) backward propagation primitive. " alt="" coords="352,1691,531,1717"/>
+<area shape="rect" id="node34" href="$structdnnl_1_1pooling__v2__forward.html" title="Pooling v2 (dilated pooling) forward propagation primitive. " alt="" coords="358,1741,525,1768"/>
+<area shape="rect" id="node35" href="$structdnnl_1_1prelu__backward.html" title="PReLU backward propagation primitive. " alt="" coords="369,1792,514,1819"/>
+<area shape="rect" id="node36" href="$structdnnl_1_1prelu__forward.html" title="PReLU forward propagation primitive. " alt="" coords="375,1843,507,1869"/>
+<area shape="rect" id="node37" href="$structdnnl_1_1reduction.html" title="Reduction. " alt="" coords="388,1893,495,1920"/>
+<area shape="rect" id="node38" href="$structdnnl_1_1reorder.html" title="Reorder primitive. " alt="" coords="394,1944,489,1971"/>
+<area shape="rect" id="node39" href="$structdnnl_1_1resampling__backward.html" title="Resampling backward propagation primitive. " alt="" coords="351,1995,531,2021"/>
+<area shape="rect" id="node40" href="$structdnnl_1_1resampling__forward.html" title="Resampling forward propagation. " alt="" coords="358,2045,525,2072"/>
+<area shape="rect" id="node41" href="$structdnnl_1_1shuffle__backward.html" title="Shuffle backward propagation primitive. " alt="" coords="363,2096,519,2123"/>
+<area shape="rect" id="node42" href="$structdnnl_1_1shuffle__forward.html" title="Shuffle forward propagation primitive. " alt="" coords="370,2147,513,2173"/>
+<area shape="rect" id="node43" href="$structdnnl_1_1softmax__backward.html" title="Softmax backward propagation primitive. " alt="" coords="359,2197,523,2224"/>
+<area shape="rect" id="node44" href="$structdnnl_1_1softmax__forward.html" title="Softmax forward propagation primitive. " alt="" coords="366,2248,517,2275"/>
+<area shape="rect" id="node45" href="$structdnnl_1_1sum.html" title="Out&#45;of&#45;place summation (sum) primitive. " alt="" coords="402,2299,481,2325"/>
+<area shape="rect" id="node46" href="$structdnnl_1_1vanilla__rnn__backward.html" title="Vanilla RNN backward propagation primitive. " alt="" coords="352,2349,531,2376"/>
+<area shape="rect" id="node47" href="$structdnnl_1_1vanilla__rnn__forward.html" title="Vanilla RNN forward propagation primitive. " alt="" coords="358,2400,525,2427"/>
+<area shape="rect" id="node2" href="$structdnnl_1_1handle.html" title="dnnl::handle\&lt; dnnl\l_primitive_t \&gt;" alt="" coords="5,1278,133,1319"/>
 </map>

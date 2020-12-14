@@ -7,9 +7,6 @@ var structdnnl_1_1engine =
     ] ],
     [ "engine", "structdnnl_1_1engine.html#a400b0f6aacb6ce747d2aa747be23fa19", null ],
     [ "engine", "structdnnl_1_1engine.html#a2e23ffff24322cc9d3e108a098a88d31", null ],
-    [ "engine", "structdnnl_1_1engine.html#af524a86465d6194ec8f2ea7d615f3006", null ],
     [ "engine", "structdnnl_1_1engine.html#aaf1d5abca0d866002487fa8715c66132", null ],
-    [ "get_kind", "structdnnl_1_1engine.html#a6e9bb6ada8b2ccd815c42e3577b2f2b8", null ],
-    [ "get_ocl_context", "structdnnl_1_1engine.html#a739ba77b89cc3dc890819bc85d038198", null ],
-    [ "get_ocl_device", "structdnnl_1_1engine.html#a2f7013922cf742705ec04b425fa06a7f", null ]
+    [ "get_kind", "structdnnl_1_1engine.html#a6e9bb6ada8b2ccd815c42e3577b2f2b8", null ]
 ];

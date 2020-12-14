@@ -57,5 +57,7 @@ var namespacednnl =
     [ "resampling_backward", "structdnnl_1_1resampling__backward.html", "structdnnl_1_1resampling__backward" ],
     [ "pooling_v2_forward", "structdnnl_1_1pooling__v2__forward.html", "structdnnl_1_1pooling__v2__forward" ],
     [ "pooling_v2_backward", "structdnnl_1_1pooling__v2__backward.html", "structdnnl_1_1pooling__v2__backward" ],
+    [ "prelu_forward", "structdnnl_1_1prelu__forward.html", "structdnnl_1_1prelu__forward" ],
+    [ "prelu_backward", "structdnnl_1_1prelu__backward.html", "structdnnl_1_1prelu__backward" ],
     [ "reduction", "structdnnl_1_1reduction.html", "structdnnl_1_1reduction" ]
 ];

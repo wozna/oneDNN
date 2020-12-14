@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -104,9 +104,6 @@ $(document).ready(function(){initNavTree('group__dnnl__api__stream.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream__attr.html">dnnl::stream_attr</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A container for stream attributes.  <a href="structdnnl_1_1stream__attr.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html">dnnl::stream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An execution stream.  <a href="structdnnl_1_1stream.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,27 +138,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaeacacc3d21a4b04b63fcfac712c2b1bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#gaeacacc3d21a4b04b63fcfac712c2b1bf">dnnl_stream_attr_create</a> (<a class="el" href="group__dnnl__api__stream.html#ga2c94efc726062d353677595e02854d82">dnnl_stream_attr_t</a> *attr, <a class="el" href="group__dnnl__api__engine.html#ga04b3dd9eba628ea02218a52c4c4363a2">dnnl_engine_kind_t</a> kind)</td></tr>
-<tr class="memdesc:gaeacacc3d21a4b04b63fcfac712c2b1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates execution stream attributes for a stream that runs on an engine of a particular kind.  <a href="#gaeacacc3d21a4b04b63fcfac712c2b1bf">More...</a><br/></td></tr>
-<tr class="separator:gaeacacc3d21a4b04b63fcfac712c2b1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa29dd53ec0953329b4bf5af3a15b042b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#gaa29dd53ec0953329b4bf5af3a15b042b">dnnl_stream_attr_destroy</a> (<a class="el" href="group__dnnl__api__stream.html#ga2c94efc726062d353677595e02854d82">dnnl_stream_attr_t</a> attr)</td></tr>
-<tr class="memdesc:gaa29dd53ec0953329b4bf5af3a15b042b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys execution stream attributes.  <a href="#gaa29dd53ec0953329b4bf5af3a15b042b">More...</a><br/></td></tr>
-<tr class="separator:gaa29dd53ec0953329b4bf5af3a15b042b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaefca700bdec59b22c05f248df5bb3354"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#gaefca700bdec59b22c05f248df5bb3354">dnnl_stream_create</a> (<a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> *stream, <a class="el" href="group__dnnl__api__engine.html#ga1ce7843660e8203ed6e1af9bfd23e14f">dnnl_engine_t</a> engine, unsigned flags)</td></tr>
 <tr class="memdesc:gaefca700bdec59b22c05f248df5bb3354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an execution stream.  <a href="#gaefca700bdec59b22c05f248df5bb3354">More...</a><br/></td></tr>
 <tr class="separator:gaefca700bdec59b22c05f248df5bb3354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga86fa72f1fdd47e0d59299bac914a790b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#ga86fa72f1fdd47e0d59299bac914a790b">dnnl_stream_create_v2</a> (<a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> *stream, <a class="el" href="group__dnnl__api__engine.html#ga1ce7843660e8203ed6e1af9bfd23e14f">dnnl_engine_t</a> engine, unsigned flags, <a class="el" href="group__dnnl__api__stream.html#ga030e9d99db4439062f83dc65af98742b">const_dnnl_stream_attr_t</a> attr)</td></tr>
-<tr class="memdesc:ga86fa72f1fdd47e0d59299bac914a790b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an execution stream.  <a href="#ga86fa72f1fdd47e0d59299bac914a790b">More...</a><br/></td></tr>
-<tr class="separator:ga86fa72f1fdd47e0d59299bac914a790b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4403b8d09197fdf6c7f957092bac0306"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#ga4403b8d09197fdf6c7f957092bac0306">dnnl_stream_create_ocl</a> (<a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> *stream, <a class="el" href="group__dnnl__api__engine.html#ga1ce7843660e8203ed6e1af9bfd23e14f">dnnl_engine_t</a> engine, cl_command_queue queue)</td></tr>
-<tr class="memdesc:ga4403b8d09197fdf6c7f957092bac0306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an execution stream for a given engine associated with an OpenCL command queue.  <a href="#ga4403b8d09197fdf6c7f957092bac0306">More...</a><br/></td></tr>
-<tr class="separator:ga4403b8d09197fdf6c7f957092bac0306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga817016eb87a4d87a889f32b52b71a93b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#ga817016eb87a4d87a889f32b52b71a93b">dnnl_stream_get_engine</a> (<a class="el" href="group__dnnl__api__stream.html#ga06049a9f0b80366e5f2f54b10b9be956">const_dnnl_stream_t</a> stream, <a class="el" href="group__dnnl__api__engine.html#ga1ce7843660e8203ed6e1af9bfd23e14f">dnnl_engine_t</a> *engine)</td></tr>
 <tr class="memdesc:ga817016eb87a4d87a889f32b52b71a93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the engine of a stream object.  <a href="#ga817016eb87a4d87a889f32b52b71a93b">More...</a><br/></td></tr>
 <tr class="separator:ga817016eb87a4d87a889f32b52b71a93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga77f34bf9765aed054da5ca078d5d0906"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#ga77f34bf9765aed054da5ca078d5d0906">dnnl_stream_get_ocl_command_queue</a> (<a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> stream, cl_command_queue *queue)</td></tr>
-<tr class="memdesc:ga77f34bf9765aed054da5ca078d5d0906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the OpenCL command queue associated with an execution stream.  <a href="#ga77f34bf9765aed054da5ca078d5d0906">More...</a><br/></td></tr>
-<tr class="separator:ga77f34bf9765aed054da5ca078d5d0906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6a8175b9384349b1ee73a78a24b5883f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__stream.html#ga6a8175b9384349b1ee73a78a24b5883f">dnnl_stream_wait</a> (<a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> stream)</td></tr>
 <tr class="memdesc:ga6a8175b9384349b1ee73a78a24b5883f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for all primitives in the execution stream to finish computations.  <a href="#ga6a8175b9384349b1ee73a78a24b5883f">More...</a><br/></td></tr>
 <tr class="separator:ga6a8175b9384349b1ee73a78a24b5883f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,14 +167,7 @@ Functions</h2></td></tr>
 
 <p>Stream flags. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga3d74cfed8fe92b0e4498a1f2bdab5547a3be21155a3c838376548722c9f9af1a8"></a>dnnl_stream_default_order</em>&nbsp;</td><td class="fielddoc">
-<p>Default order execution. </p>
-<p>Either in-order or out-of-order depending on the runtime. </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga3d74cfed8fe92b0e4498a1f2bdab5547a4cb57d18d4769548e671aaff38a80478"></a>dnnl_stream_in_order</em>&nbsp;</td><td class="fielddoc">
-<p>In-order execution. </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga3d74cfed8fe92b0e4498a1f2bdab5547a8e9e057b28a7898a9b52120b8c7bd356"></a>dnnl_stream_out_of_order</em>&nbsp;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga3d74cfed8fe92b0e4498a1f2bdab5547a8e9e057b28a7898a9b52120b8c7bd356"></a>dnnl_stream_out_of_order</em>&nbsp;</td><td class="fielddoc">
 <p>Out-of-order execution. </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga3d74cfed8fe92b0e4498a1f2bdab5547acf05c543bccebd58e6d4e0db7137fb92"></a>dnnl_stream_default_flags</em>&nbsp;</td><td class="fielddoc">
@@ -203,67 +178,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gaeacacc3d21a4b04b63fcfac712c2b1bf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_stream_attr_create </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__stream.html#ga2c94efc726062d353677595e02854d82">dnnl_stream_attr_t</a> *&#160;</td>
-          <td class="paramname"><em>attr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__engine.html#ga04b3dd9eba628ea02218a52c4c4363a2">dnnl_engine_kind_t</a>&#160;</td>
-          <td class="paramname"><em>kind</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates execution stream attributes for a stream that runs on an engine of a particular kind. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">attr</td><td>Output execution stream attributes. </td></tr>
-    <tr><td class="paramname">kind</td><td>Target engine kind. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa29dd53ec0953329b4bf5af3a15b042b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_stream_attr_destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__stream.html#ga2c94efc726062d353677595e02854d82">dnnl_stream_attr_t</a>&#160;</td>
-          <td class="paramname"><em>attr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destroys execution stream attributes. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">attr</td><td>Execution stream attributes to destroy. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="gaefca700bdec59b22c05f248df5bb3354"></a>
 <div class="memitem">
 <div class="memproto">
@@ -309,105 +223,6 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ga86fa72f1fdd47e0d59299bac914a790b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_stream_create_v2 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> *&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__engine.html#ga1ce7843660e8203ed6e1af9bfd23e14f">dnnl_engine_t</a>&#160;</td>
-          <td class="paramname"><em>engine</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>flags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__stream.html#ga030e9d99db4439062f83dc65af98742b">const_dnnl_stream_attr_t</a>&#160;</td>
-          <td class="paramname"><em>attr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates an execution stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stream</td><td>Output execution stream. </td></tr>
-    <tr><td class="paramname">engine</td><td>Engine to create the execution stream on. </td></tr>
-    <tr><td class="paramname">flags</td><td>Stream behavior flags (</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__dnnl__api__stream.html#ga3d74cfed8fe92b0e4498a1f2bdab5547" title="Stream flags. ">dnnl_stream_flags_t</a>). </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">attr</td><td>Stream attributes. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga4403b8d09197fdf6c7f957092bac0306"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_stream_create_ocl </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a> *&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__engine.html#ga1ce7843660e8203ed6e1af9bfd23e14f">dnnl_engine_t</a>&#160;</td>
-          <td class="paramname"><em>engine</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cl_command_queue&#160;</td>
-          <td class="paramname"><em>queue</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates an execution stream for a given engine associated with an OpenCL command queue. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stream</td><td>Output execution stream. </td></tr>
-    <tr><td class="paramname">engine</td><td>Engine to create the execution stream on. </td></tr>
-    <tr><td class="paramname">queue</td><td>OpenCL command queue to use. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="ga817016eb87a4d87a889f32b52b71a93b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -437,42 +252,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Stream object. </td></tr>
     <tr><td class="paramname">engine</td><td>Output engine on which the stream is created. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga77f34bf9765aed054da5ca078d5d0906"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_stream_get_ocl_command_queue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__dnnl__api__stream.html#ga735eb19cfd205c108c468b5657de4eca">dnnl_stream_t</a>&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cl_command_queue *&#160;</td>
-          <td class="paramname"><em>queue</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the OpenCL command queue associated with an execution stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stream</td><td>Execution stream to query. </td></tr>
-    <tr><td class="paramname">queue</td><td>Output OpenCL command queue. </td></tr>
   </table>
   </dd>
 </dl>

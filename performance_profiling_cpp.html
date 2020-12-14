@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -158,6 +158,7 @@ Naive Implementation</h1>
 <div class="line">                    {<a class="code" href="group__dnnl__api__primitives__common.html#ga3ca217e4a06d42a0ede3c018383c388f">DNNL_ARG_DST</a>, user_dst}});</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">    <span class="comment">// execute relu (on convolution&#39;s destination format, whatever it is)</span></div>
 <div class="line">    create_and_execute_relu(user_dst, eng, s);</div>
+<div class="line">    s.wait();</div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>The function for creation and execution of ReLU primitive is defined elsewhere to keep this example clean. It is an non-intensive operation, so the <code>create_and_execute_relu()</code> function uses whatever the input data format is at the time it is called.</dd></dl>
 <p>Using NCHW data format may result in suboptimal performance for compute intensive primitives, as shown in the following DNNL_VERBOSE output by the convolution and relu execution times of 38.3 and 2.9 milliseconds, respectively.</p>
 <p><em>DNNL_VERBOSE output (see configuration notice*):</em> </p>

@@ -13,6 +13,8 @@ var group__dnnl__api__primitives =
     [ "Softmax", "group__dnnl__api__softmax.html", "group__dnnl__api__softmax" ],
     [ "LogSoftmax", "group__dnnl__api__logsoftmax.html", "group__dnnl__api__logsoftmax" ],
     [ "Pooling", "group__dnnl__api__pooling.html", "group__dnnl__api__pooling" ],
+    [ "Pooling_v2", "group__dnnl__api__pooling__v2.html", "group__dnnl__api__pooling__v2" ],
+    [ "PReLU", "group__dnnl__api__prelu.html", "group__dnnl__api__prelu" ],
     [ "LRN", "group__dnnl__api__lrn.html", "group__dnnl__api__lrn" ],
     [ "Batch Normalization", "group__dnnl__api__batch__normalization.html", "group__dnnl__api__batch__normalization" ],
     [ "Layer Normalization", "group__dnnl__api__layer__normalization.html", "group__dnnl__api__layer__normalization" ],
@@ -20,6 +22,5 @@ var group__dnnl__api__primitives =
     [ "RNN", "group__dnnl__api__rnn.html", "group__dnnl__api__rnn" ],
     [ "Matrix Multiplication", "group__dnnl__api__matmul.html", "group__dnnl__api__matmul" ],
     [ "Resampling", "group__dnnl__api__resampling.html", "group__dnnl__api__resampling" ],
-    [ "Reduction", "group__dnnl__api__reduction.html", "group__dnnl__api__reduction" ],
-    [ "Dnnl_api_pooling_v2", "group__dnnl__api__pooling__v2.html", "group__dnnl__api__pooling__v2" ]
+    [ "Reduction", "group__dnnl__api__reduction.html", "group__dnnl__api__reduction" ]
 ];

@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -195,7 +195,7 @@ Back, bottom, and right </td><td align="left">\(PD_R\) </td><td align="left">\(P
 <tr>
 <td align="left">forward / backward </td><td align="left">f32 </td><td align="left">f32 </td><td align="left">f32 </td><td align="left">f32 </td></tr>
 <tr>
-<td align="left">forward </td><td align="left">f16 </td><td align="left">f16 </td><td align="left">f16 </td><td align="left">f16 </td></tr>
+<td align="left">forward </td><td align="left">f16 </td><td align="left">f16 </td><td align="left">f16, f32 </td><td align="left">f16, f32 </td></tr>
 <tr>
 <td align="left">forward </td><td align="left">u8, s8 </td><td align="left">s8 </td><td align="left">u8, s8, s32, f32 </td><td align="left">u8, s8, s32, f32 </td></tr>
 <tr>
@@ -376,10 +376,6 @@ Back, bottom, and right </td><td align="left">\(PD_R\) </td><td align="left">\(P
 <li><b>CPU</b><ul>
 <li>Winograd are implemented only for processors with Intel AVX-512 and Intel DL Boost instruction sets</li>
 <li>Run-time output scales are not supported</li>
-</ul>
-</li>
-<li><b>GPU</b><ul>
-<li>No support for Winograd algorithm</li>
 </ul>
 </li>
 </ol>

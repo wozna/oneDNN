@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('structdnnl_1_1stream.html','');});
 <p>An execution stream.  
  <a href="structdnnl_1_1stream.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="dnnl_8hpp_source.html">dnnl.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="oneapi_2dnnl_2dnnl_8hpp_source.html">dnnl.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for dnnl::stream:</div>
 <div class="dyncontent">
@@ -128,19 +128,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad264b142d2f7c728fe8c84aa65d62b13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html#ad264b142d2f7c728fe8c84aa65d62b13">stream</a> ()=default</td></tr>
 <tr class="memdesc:ad264b142d2f7c728fe8c84aa65d62b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty stream.  <a href="#ad264b142d2f7c728fe8c84aa65d62b13">More...</a><br/></td></tr>
 <tr class="separator:ad264b142d2f7c728fe8c84aa65d62b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af00bbec578ce5bd049c043f534f78e1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html#af00bbec578ce5bd049c043f534f78e1d">stream</a> (const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;aengine, <a class="el" href="structdnnl_1_1stream.html#abc7ec7dfa1718f366abd8f495164de59">flags</a> aflags=<a class="el" href="structdnnl_1_1stream.html#abc7ec7dfa1718f366abd8f495164de59aeffb2d149f637ca450767d77cd927108">flags::default_flags</a>, const <a class="el" href="structdnnl_1_1stream__attr.html">stream_attr</a> &amp;attr=<a class="el" href="structdnnl_1_1stream__attr.html">stream_attr</a>())</td></tr>
-<tr class="memdesc:af00bbec578ce5bd049c043f534f78e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a stream for the specified engine and with behavior controlled by the specified flags.  <a href="#af00bbec578ce5bd049c043f534f78e1d">More...</a><br/></td></tr>
-<tr class="separator:af00bbec578ce5bd049c043f534f78e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c7b7055f10354c8926390b79ab57287"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html#a6c7b7055f10354c8926390b79ab57287">stream</a> (const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;aengine, cl_command_queue queue)</td></tr>
-<tr class="memdesc:a6c7b7055f10354c8926390b79ab57287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a stream for the specified engine and the OpenCL queue.  <a href="#a6c7b7055f10354c8926390b79ab57287">More...</a><br/></td></tr>
-<tr class="separator:a6c7b7055f10354c8926390b79ab57287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cddfb27bc0d7577f8f9ff0327ca598"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html#a91cddfb27bc0d7577f8f9ff0327ca598">stream</a> (const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;aengine, <a class="el" href="structdnnl_1_1stream.html#abc7ec7dfa1718f366abd8f495164de59">flags</a> aflags=<a class="el" href="structdnnl_1_1stream.html#abc7ec7dfa1718f366abd8f495164de59aeffb2d149f637ca450767d77cd927108">flags::default_flags</a>)</td></tr>
+<tr class="memdesc:a91cddfb27bc0d7577f8f9ff0327ca598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a stream for the specified engine and with behavior controlled by the specified flags.  <a href="#a91cddfb27bc0d7577f8f9ff0327ca598">More...</a><br/></td></tr>
+<tr class="separator:a91cddfb27bc0d7577f8f9ff0327ca598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb0b2dcb354fd2302a7f5d930aa74866"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb0b2dcb354fd2302a7f5d930aa74866"></a>
 <a class="el" href="structdnnl_1_1engine.html">engine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html#acb0b2dcb354fd2302a7f5d930aa74866">get_engine</a> () const </td></tr>
 <tr class="memdesc:acb0b2dcb354fd2302a7f5d930aa74866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the associated engine. <br/></td></tr>
 <tr class="separator:acb0b2dcb354fd2302a7f5d930aa74866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7583cd3c56f330f90e0e6b148a9e5c3"><td class="memItemLeft" align="right" valign="top">cl_command_queue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html#ad7583cd3c56f330f90e0e6b148a9e5c3">get_ocl_command_queue</a> () const </td></tr>
-<tr class="memdesc:ad7583cd3c56f330f90e0e6b148a9e5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying OpenCL queue object.  <a href="#ad7583cd3c56f330f90e0e6b148a9e5c3">More...</a><br/></td></tr>
-<tr class="separator:ad7583cd3c56f330f90e0e6b148a9e5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59985fa8746436057cf51a820ef8929c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdnnl_1_1stream.html">stream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c">wait</a> ()</td></tr>
 <tr class="memdesc:a59985fa8746436057cf51a820ef8929c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for all primitives executing in the stream to finish.  <a href="#a59985fa8746436057cf51a820ef8929c">More...</a><br/></td></tr>
 <tr class="separator:a59985fa8746436057cf51a820ef8929c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,7 +184,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An execution stream. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="batch_normalization_8cpp-example.html#_a3">batch_normalization.cpp</a>, <a class="el" href="binary_8cpp-example.html#_a3">binary.cpp</a>, <a class="el" href="cnn_inference_f32_8cpp-example.html#_a3">cnn_inference_f32.cpp</a>, <a class="el" href="cnn_inference_int8_8cpp-example.html#_a3">cnn_inference_int8.cpp</a>, <a class="el" href="cnn_training_bf16_8cpp-example.html#_a3">cnn_training_bf16.cpp</a>, <a class="el" href="cnn_training_f32_8cpp-example.html#_a3">cnn_training_f32.cpp</a>, <a class="el" href="concat_8cpp-example.html#_a3">concat.cpp</a>, <a class="el" href="convolution_8cpp-example.html#_a3">convolution.cpp</a>, <a class="el" href="cpu_matmul_quantization_8cpp-example.html#_a4">cpu_matmul_quantization.cpp</a>, <a class="el" href="cpu_rnn_inference_f32_8cpp-example.html#_a4">cpu_rnn_inference_f32.cpp</a>, <a class="el" href="cpu_rnn_inference_int8_8cpp-example.html#_a5">cpu_rnn_inference_int8.cpp</a>, <a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#_a16">cpu_sgemm_and_matmul.cpp</a>, <a class="el" href="cross_engine_reorder_8cpp-example.html#_a4">cross_engine_reorder.cpp</a>, <a class="el" href="eltwise_8cpp-example.html#_a3">eltwise.cpp</a>, <a class="el" href="getting_started_8cpp-example.html#_a1">getting_started.cpp</a>, <a class="el" href="gpu_opencl_interop_8cpp-example.html#_a2">gpu_opencl_interop.cpp</a>, <a class="el" href="inference_int8_matmul_8cpp-example.html#_a23">inference_int8_matmul.cpp</a>, <a class="el" href="inner_product_8cpp-example.html#_a3">inner_product.cpp</a>, <a class="el" href="layer_normalization_8cpp-example.html#_a3">layer_normalization.cpp</a>, <a class="el" href="logsoftmax_8cpp-example.html#_a3">logsoftmax.cpp</a>, <a class="el" href="lrn_8cpp-example.html#_a3">lrn.cpp</a>, <a class="el" href="lstm_8cpp-example.html#_a3">lstm.cpp</a>, <a class="el" href="matmul_8cpp-example.html#_a3">matmul.cpp</a>, <a class="el" href="memory_format_propagation_8cpp-example.html#_a1">memory_format_propagation.cpp</a>, <a class="el" href="performance_profiling_8cpp-example.html#_a4">performance_profiling.cpp</a>, <a class="el" href="pooling_8cpp-example.html#_a3">pooling.cpp</a>, <a class="el" href="reduction_8cpp-example.html#_a3">reduction.cpp</a>, <a class="el" href="reorder_8cpp-example.html#_a3">reorder.cpp</a>, <a class="el" href="resampling_8cpp-example.html#_a3">resampling.cpp</a>, <a class="el" href="rnn_training_f32_8cpp-example.html#_a3">rnn_training_f32.cpp</a>, <a class="el" href="shuffle_8cpp-example.html#_a3">shuffle.cpp</a>, <a class="el" href="softmax_8cpp-example.html#_a3">softmax.cpp</a>, and <a class="el" href="sum_8cpp-example.html#_a3">sum.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="batch_normalization_8cpp-example.html#_a3">batch_normalization.cpp</a>, <a class="el" href="binary_8cpp-example.html#_a3">binary.cpp</a>, <a class="el" href="bnorm_u8_via_binary_postops_8cpp-example.html#_a3">bnorm_u8_via_binary_postops.cpp</a>, <a class="el" href="cnn_inference_f32_8cpp-example.html#_a3">cnn_inference_f32.cpp</a>, <a class="el" href="cnn_inference_int8_8cpp-example.html#_a3">cnn_inference_int8.cpp</a>, <a class="el" href="cnn_training_bf16_8cpp-example.html#_a3">cnn_training_bf16.cpp</a>, <a class="el" href="cnn_training_f32_8cpp-example.html#_a3">cnn_training_f32.cpp</a>, <a class="el" href="concat_8cpp-example.html#_a3">concat.cpp</a>, <a class="el" href="convolution_8cpp-example.html#_a3">convolution.cpp</a>, <a class="el" href="cpu_matmul_quantization_8cpp-example.html#_a4">cpu_matmul_quantization.cpp</a>, <a class="el" href="cpu_rnn_inference_f32_8cpp-example.html#_a4">cpu_rnn_inference_f32.cpp</a>, <a class="el" href="cpu_rnn_inference_int8_8cpp-example.html#_a5">cpu_rnn_inference_int8.cpp</a>, <a class="el" href="cpu_sgemm_and_matmul_8cpp-example.html#_a16">cpu_sgemm_and_matmul.cpp</a>, <a class="el" href="cross_engine_reorder_8cpp-example.html#_a4">cross_engine_reorder.cpp</a>, <a class="el" href="eltwise_8cpp-example.html#_a3">eltwise.cpp</a>, <a class="el" href="getting_started_8cpp-example.html#_a1">getting_started.cpp</a>, <a class="el" href="gpu_opencl_interop_8cpp-example.html#_a2">gpu_opencl_interop.cpp</a>, <a class="el" href="inference_int8_matmul_8cpp-example.html#_a23">inference_int8_matmul.cpp</a>, <a class="el" href="inner_product_8cpp-example.html#_a3">inner_product.cpp</a>, <a class="el" href="layer_normalization_8cpp-example.html#_a3">layer_normalization.cpp</a>, <a class="el" href="logsoftmax_8cpp-example.html#_a3">logsoftmax.cpp</a>, <a class="el" href="lrn_8cpp-example.html#_a3">lrn.cpp</a>, <a class="el" href="lstm_8cpp-example.html#_a3">lstm.cpp</a>, <a class="el" href="matmul_8cpp-example.html#_a3">matmul.cpp</a>, <a class="el" href="memory_format_propagation_8cpp-example.html#_a1">memory_format_propagation.cpp</a>, <a class="el" href="performance_profiling_8cpp-example.html#_a4">performance_profiling.cpp</a>, <a class="el" href="pooling_8cpp-example.html#_a3">pooling.cpp</a>, <a class="el" href="prelu_8cpp-example.html#_a3">prelu.cpp</a>, <a class="el" href="reduction_8cpp-example.html#_a3">reduction.cpp</a>, <a class="el" href="reorder_8cpp-example.html#_a3">reorder.cpp</a>, <a class="el" href="resampling_8cpp-example.html#_a3">resampling.cpp</a>, <a class="el" href="rnn_training_f32_8cpp-example.html#_a3">rnn_training_f32.cpp</a>, <a class="el" href="shuffle_8cpp-example.html#_a3">shuffle.cpp</a>, <a class="el" href="softmax_8cpp-example.html#_a3">softmax.cpp</a>, <a class="el" href="sum_8cpp-example.html#_a3">sum.cpp</a>, and <a class="el" href="sycl_interop_buffer_8cpp-example.html#_a1">sycl_interop_buffer.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="abc7ec7dfa1718f366abd8f495164de59"></a>
 <div class="memitem">
@@ -212,11 +206,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Stream flags. Can be combined using the bitwise OR operator. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="abc7ec7dfa1718f366abd8f495164de59aeedb23e15d8dfa33877588b9bcf9df8c"></a>default_order</em>&nbsp;</td><td class="fielddoc">
-<p>Default order execution. </p>
-<p>Either in-order or out-of-order depending on the engine runtime. </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="abc7ec7dfa1718f366abd8f495164de59af51b25ca6f591d130cd0b575bf7821b3"></a>in_order</em>&nbsp;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="abc7ec7dfa1718f366abd8f495164de59af51b25ca6f591d130cd0b575bf7821b3"></a>in_order</em>&nbsp;</td><td class="fielddoc">
 <p>In-order execution. </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="abc7ec7dfa1718f366abd8f495164de59a6f68b64d0cb895344cb033c850457f0b"></a>out_of_order</em>&nbsp;</td><td class="fielddoc">
@@ -256,7 +246,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af00bbec578ce5bd049c043f534f78e1d"></a>
+<a class="anchor" id="a91cddfb27bc0d7577f8f9ff0327ca598"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -273,13 +263,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structdnnl_1_1stream.html#abc7ec7dfa1718f366abd8f495164de59">flags</a>&#160;</td>
-          <td class="paramname"><em>aflags</em> = <code><a class="el" href="structdnnl_1_1stream.html#abc7ec7dfa1718f366abd8f495164de59aeffb2d149f637ca450767d77cd927108">flags::default_flags</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdnnl_1_1stream__attr.html">stream_attr</a> &amp;&#160;</td>
-          <td class="paramname"><em>attr</em> = <code><a class="el" href="structdnnl_1_1stream__attr.html">stream_attr</a>()</code>&#160;</td>
+          <td class="paramname"><em>aflags</em> = <code><a class="el" href="structdnnl_1_1stream.html#abc7ec7dfa1718f366abd8f495164de59aeffb2d149f637ca450767d77cd927108">flags::default_flags</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -299,50 +283,6 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">aengine</td><td>Engine to create the stream on. </td></tr>
     <tr><td class="paramname">aflags</td><td>Flags controlling stream behavior. </td></tr>
-    <tr><td class="paramname">attr</td><td>Stream attributes. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a6c7b7055f10354c8926390b79ab57287"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dnnl::stream::stream </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdnnl_1_1engine.html">engine</a> &amp;&#160;</td>
-          <td class="paramname"><em>aengine</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cl_command_queue&#160;</td>
-          <td class="paramname"><em>queue</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs a stream for the specified engine and the OpenCL queue. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">aengine</td><td>Engine to create the stream on. </td></tr>
-    <tr><td class="paramname">queue</td><td>OpenCL queue to use for the stream. </td></tr>
   </table>
   </dd>
 </dl>
@@ -350,32 +290,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad7583cd3c56f330f90e0e6b148a9e5c3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cl_command_queue dnnl::stream::get_ocl_command_queue </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the underlying OpenCL queue object. </p>
-<dl class="section return"><dt>Returns</dt><dd>OpenCL queue. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a59985fa8746436057cf51a820ef8929c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -399,12 +313,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Waits for all primitives executing in the stream to finish. </p>
 <dl class="section return"><dt>Returns</dt><dd>The stream itself. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="batch_normalization_8cpp-example.html#a18">batch_normalization.cpp</a>, <a class="el" href="binary_8cpp-example.html#a18">binary.cpp</a>, <a class="el" href="cnn_inference_f32_8cpp-example.html#a34">cnn_inference_f32.cpp</a>, <a class="el" href="cnn_inference_int8_8cpp-example.html#a26">cnn_inference_int8.cpp</a>, <a class="el" href="cnn_training_bf16_8cpp-example.html#a51">cnn_training_bf16.cpp</a>, <a class="el" href="cnn_training_f32_8cpp-example.html#a47">cnn_training_f32.cpp</a>, <a class="el" href="convolution_8cpp-example.html#a23">convolution.cpp</a>, <a class="el" href="eltwise_8cpp-example.html#a13">eltwise.cpp</a>, <a class="el" href="getting_started_8cpp-example.html#a13">getting_started.cpp</a>, <a class="el" href="inner_product_8cpp-example.html#a21">inner_product.cpp</a>, <a class="el" href="layer_normalization_8cpp-example.html#a16">layer_normalization.cpp</a>, <a class="el" href="logsoftmax_8cpp-example.html#a12">logsoftmax.cpp</a>, <a class="el" href="lrn_8cpp-example.html#a14">lrn.cpp</a>, <a class="el" href="lstm_8cpp-example.html#a24">lstm.cpp</a>, <a class="el" href="matmul_8cpp-example.html#a18">matmul.cpp</a>, <a class="el" href="memory_format_propagation_8cpp-example.html#a19">memory_format_propagation.cpp</a>, <a class="el" href="pooling_8cpp-example.html#a14">pooling.cpp</a>, <a class="el" href="reduction_8cpp-example.html#a12">reduction.cpp</a>, <a class="el" href="reorder_8cpp-example.html#a12">reorder.cpp</a>, <a class="el" href="resampling_8cpp-example.html#a13">resampling.cpp</a>, <a class="el" href="rnn_training_f32_8cpp-example.html#a41">rnn_training_f32.cpp</a>, <a class="el" href="shuffle_8cpp-example.html#a12">shuffle.cpp</a>, <a class="el" href="softmax_8cpp-example.html#a12">softmax.cpp</a>, and <a class="el" href="sum_8cpp-example.html#a10">sum.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="batch_normalization_8cpp-example.html#a18">batch_normalization.cpp</a>, <a class="el" href="binary_8cpp-example.html#a18">binary.cpp</a>, <a class="el" href="bnorm_u8_via_binary_postops_8cpp-example.html#a21">bnorm_u8_via_binary_postops.cpp</a>, <a class="el" href="cnn_inference_f32_8cpp-example.html#a34">cnn_inference_f32.cpp</a>, <a class="el" href="cnn_inference_int8_8cpp-example.html#a26">cnn_inference_int8.cpp</a>, <a class="el" href="cnn_training_bf16_8cpp-example.html#a51">cnn_training_bf16.cpp</a>, <a class="el" href="cnn_training_f32_8cpp-example.html#a47">cnn_training_f32.cpp</a>, <a class="el" href="convolution_8cpp-example.html#a23">convolution.cpp</a>, <a class="el" href="eltwise_8cpp-example.html#a13">eltwise.cpp</a>, <a class="el" href="getting_started_8cpp-example.html#a13">getting_started.cpp</a>, <a class="el" href="inner_product_8cpp-example.html#a21">inner_product.cpp</a>, <a class="el" href="layer_normalization_8cpp-example.html#a16">layer_normalization.cpp</a>, <a class="el" href="logsoftmax_8cpp-example.html#a12">logsoftmax.cpp</a>, <a class="el" href="lrn_8cpp-example.html#a14">lrn.cpp</a>, <a class="el" href="lstm_8cpp-example.html#a24">lstm.cpp</a>, <a class="el" href="matmul_8cpp-example.html#a18">matmul.cpp</a>, <a class="el" href="memory_format_propagation_8cpp-example.html#a19">memory_format_propagation.cpp</a>, <a class="el" href="performance_profiling_8cpp-example.html#a22">performance_profiling.cpp</a>, <a class="el" href="pooling_8cpp-example.html#a14">pooling.cpp</a>, <a class="el" href="prelu_8cpp-example.html#a16">prelu.cpp</a>, <a class="el" href="reduction_8cpp-example.html#a12">reduction.cpp</a>, <a class="el" href="reorder_8cpp-example.html#a12">reorder.cpp</a>, <a class="el" href="resampling_8cpp-example.html#a13">resampling.cpp</a>, <a class="el" href="rnn_training_f32_8cpp-example.html#a41">rnn_training_f32.cpp</a>, <a class="el" href="shuffle_8cpp-example.html#a12">shuffle.cpp</a>, <a class="el" href="softmax_8cpp-example.html#a12">softmax.cpp</a>, and <a class="el" href="sum_8cpp-example.html#a10">sum.cpp</a>.</dd>
 </dl>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/<a class="el" href="dnnl_8hpp_source.html">dnnl.hpp</a></li>
+<li>include/oneapi/dnnl/<a class="el" href="oneapi_2dnnl_2dnnl_8hpp_source.html">dnnl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

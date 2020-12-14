@@ -8,6 +8,7 @@ var searchData=
   ['reorder',['Reorder',['../dev_guide_reorder.html',1,'']]],
   ['resampling',['Resampling',['../dev_guide_resampling.html',1,'']]],
   ['rnn',['RNN',['../dev_guide_rnn.html',1,'']]],
+  ['runtime_20interoperability_20api',['Runtime interoperability API',['../group__dnnl__api__interop.html',1,'']]],
   ['reduction',['Reduction',['../group__dnnl__api__reduction.html',1,'']]],
   ['reorder',['Reorder',['../group__dnnl__api__reorder.html',1,'']]],
   ['resampling',['Resampling',['../group__dnnl__api__resampling.html',1,'']]],

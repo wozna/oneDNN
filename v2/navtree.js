@@ -42,6 +42,7 @@ var NAVTREE =
       [ "Local Response Normalization", "dev_guide_lrn.html", null ],
       [ "Logsoftmax", "dev_guide_logsoftmax.html", null ],
       [ "Pooling", "dev_guide_pooling.html", null ],
+      [ "Prelu", "dev_guide_prelu.html", null ],
       [ "Resampling", "dev_guide_resampling.html", null ],
       [ "Shuffle", "dev_guide_shuffle.html", null ],
       [ "Softmax", "dev_guide_softmax.html", null ],
@@ -96,15 +97,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__dnnl__api__eltwise.html#ga5606fd4c9291f7caca8b015460d2f037",
-"group__dnnl__api__primitives__common.html#ga30c28d0cebe5b1d4758af2c24fafbdfb",
-"group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a68c8ec51f34458261cac7d12eee01372",
-"structdnnl_1_1convolution__backward__weights_1_1desc.html#ad72317d76925fa15f96c9f2459bea055",
-"structdnnl_1_1lbr__gru__backward.html#a40c9872f52e24b681108489dd5dc5cb7",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa33beeac1eb5bc81f5c2259347e8ebd6b",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fac707d55115ef824284f55cb5d22614ed",
-"structdnnl_1_1primitive__desc__base.html#a28661bd29607c71ecb8602d6c98adbc5",
-"structdnnl__convolution__desc__t.html#ac05cda60b6614029cc7a28fd2f1f77cb"
+"group__dnnl__api__eltwise.html",
+"group__dnnl__api__primitives__common.html#ga24d0c96468ef0e28a96f8a6f1b2869b3",
+"group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059afef5b19704b36da50f1bcfa5b66a61a2",
+"structdnnl_1_1convolution__backward__data_1_1primitive__desc.html#a8971254eacd239994fd895969cf60730",
+"structdnnl_1_1layer__normalization__forward_1_1primitive__desc.html#a2ef6471431f9d9007e3855e1d763f276",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa26fc0a2cce0ced17c59a50ba3ac1a21a",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faaba5aa6bc9babf518224361d68731126",
+"structdnnl_1_1post__ops.html#a8d59100bcd254a15d6d0ee4309e07959",
+"structdnnl_1_1sum_1_1primitive__desc.html#a4f4275779d85cc2003830cb0e8f4f657",
+"usergroup3.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line"><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="dnnl_8hpp.html">dnnl.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="oneapi_2dnnl_2dnnl_8hpp.html">oneapi/dnnl/dnnl.hpp</a>&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;example_utils.hpp&quot;</span></div>
 <div class="line"></div>
@@ -202,6 +202,7 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line"><span class="comment"></span>    <span class="comment">// [Create and execute relu]</span></div>
 <div class="line">    <span class="comment">// execute relu (on convolution&#39;s destination format, whatever it is)</span></div>
 <div class="line">    create_and_execute_relu(user_dst, eng, s);</div>
+<div class="line">    s.<a name="a22"></a><a class="code" href="structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c">wait</a>();</div>
 <div class="line">    <span class="comment">// [Create and execute relu]</span></div>
 <div class="line"><span class="comment"></span>}</div>
 <div class="line"></div>
@@ -216,7 +217,7 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line">    <span class="keyword">auto</span> conv_dst_md = <a class="code" href="structdnnl_1_1memory_1_1desc.html">memory::desc</a>(user_dst.<a class="code" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a">get_desc</a>());</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// reset format to &quot;any&quot; to allow convolution to pick the best implementation</span></div>
-<div class="line">    conv_src_md.<a name="a22"></a><a class="code" href="structdnnl_1_1memory_1_1desc.html#afea646e8777c2341509a61f4ae17dcf3">data</a>.<a name="a23"></a><a class="code" href="structdnnl__memory__desc__t.html#ae6f8322c5cff0068a97e7fba2f123e2c">format_kind</a> = <a name="a24"></a><a class="code" href="group__dnnl__api__memory.html#ggaa75cad747fa467d9dc527d943ba3367da77ae35388e04dc3e98d90675a7110c83">dnnl_format_kind_any</a>;</div>
+<div class="line">    conv_src_md.<a name="a23"></a><a class="code" href="structdnnl_1_1memory_1_1desc.html#afea646e8777c2341509a61f4ae17dcf3">data</a>.<a name="a24"></a><a class="code" href="structdnnl__memory__desc__t.html#ae6f8322c5cff0068a97e7fba2f123e2c">format_kind</a> = <a name="a25"></a><a class="code" href="group__dnnl__api__memory.html#ggaa75cad747fa467d9dc527d943ba3367da77ae35388e04dc3e98d90675a7110c83">dnnl_format_kind_any</a>;</div>
 <div class="line">    conv_wei_md.<a class="code" href="structdnnl_1_1memory_1_1desc.html#afea646e8777c2341509a61f4ae17dcf3">data</a>.<a class="code" href="structdnnl__memory__desc__t.html#ae6f8322c5cff0068a97e7fba2f123e2c">format_kind</a> = <a class="code" href="group__dnnl__api__memory.html#ggaa75cad747fa467d9dc527d943ba3367da77ae35388e04dc3e98d90675a7110c83">dnnl_format_kind_any</a>;</div>
 <div class="line">    conv_dst_md.<a class="code" href="structdnnl_1_1memory_1_1desc.html#afea646e8777c2341509a61f4ae17dcf3">data</a>.<a class="code" href="structdnnl__memory__desc__t.html#ae6f8322c5cff0068a97e7fba2f123e2c">format_kind</a> = <a class="code" href="group__dnnl__api__memory.html#ggaa75cad747fa467d9dc527d943ba3367da77ae35388e04dc3e98d90675a7110c83">dnnl_format_kind_any</a>;</div>
 <div class="line">    <span class="comment">// [Create mem_desc with tag=any]</span></div>
@@ -235,8 +236,8 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line">    <a class="code" href="structdnnl_1_1memory.html">memory</a> conv_src = user_src;</div>
 <div class="line">    <span class="keywordflow">if</span> (conv_pd.src_desc() != user_src.<a class="code" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a">get_desc</a>()) {</div>
 <div class="line">        conv_src = <a class="code" href="structdnnl_1_1memory.html">memory</a>(conv_pd.src_desc(), eng);</div>
-<div class="line">        <span class="keyword">auto</span> r_pd = <a name="_a25"></a><a class="code" href="structdnnl_1_1reorder_1_1primitive__desc.html">reorder::primitive_desc</a>(user_src, conv_src);</div>
-<div class="line">        <a name="_a26"></a><a class="code" href="structdnnl_1_1reorder.html">reorder</a>(r_pd).<a name="a27"></a><a class="code" href="structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7">execute</a>(s, user_src, conv_src);</div>
+<div class="line">        <span class="keyword">auto</span> r_pd = <a name="_a26"></a><a class="code" href="structdnnl_1_1reorder_1_1primitive__desc.html">reorder::primitive_desc</a>(user_src, conv_src);</div>
+<div class="line">        <a name="_a27"></a><a class="code" href="structdnnl_1_1reorder.html">reorder</a>(r_pd).<a name="a28"></a><a class="code" href="structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7">execute</a>(s, user_src, conv_src);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// prepare convolution weights</span></div>
@@ -270,6 +271,7 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line">        <span class="keyword">auto</span> r_pd = <a class="code" href="structdnnl_1_1reorder_1_1primitive__desc.html">reorder::primitive_desc</a>(conv_dst, user_dst);</div>
 <div class="line">        <a class="code" href="structdnnl_1_1reorder.html">reorder</a>(r_pd).<a class="code" href="structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7">execute</a>(s, conv_dst, user_dst);</div>
 <div class="line">    }</div>
+<div class="line">    s.<a class="code" href="structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c">wait</a>();</div>
 <div class="line">    <span class="comment">// reorder data to the user&#39;s format if needed.</span></div>
 <div class="line">}</div>
 <div class="line"></div>
@@ -277,7 +279,7 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line"><span class="comment">// weights and the relu operation fused via a post-op attribute added to the</span></div>
 <div class="line"><span class="comment">// convolution prim_descriptor</span></div>
 <div class="line"><span class="keywordtype">void</span> conv_relu_fused(<a class="code" href="structdnnl_1_1memory.html">memory</a> user_src, <a class="code" href="structdnnl_1_1memory.html">memory</a> user_wei, <a class="code" href="structdnnl_1_1memory.html">memory</a> user_dst,</div>
-<div class="line">        <span class="keyword">const</span> <a class="code" href="structdnnl_1_1engine.html">engine</a> &amp;eng, <span class="keyword">const</span> <a class="code" href="structdnnl_1_1stream.html">stream</a> &amp;s) {</div>
+<div class="line">        <span class="keyword">const</span> <a class="code" href="structdnnl_1_1engine.html">engine</a> &amp;eng, <a class="code" href="structdnnl_1_1stream.html">stream</a> &amp;s) {</div>
 <div class="line">    <span class="comment">// copy the dimensions and format from user&#39;s memory</span></div>
 <div class="line">    <span class="keyword">auto</span> conv_src_md = <a class="code" href="structdnnl_1_1memory_1_1desc.html">memory::desc</a>(user_src.<a class="code" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a">get_desc</a>());</div>
 <div class="line">    <span class="keyword">auto</span> conv_wei_md = <a class="code" href="structdnnl_1_1memory_1_1desc.html">memory::desc</a>(user_wei.<a class="code" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a">get_desc</a>());</div>
@@ -336,6 +338,7 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line">        <span class="keyword">auto</span> r_pd = <a class="code" href="structdnnl_1_1reorder_1_1primitive__desc.html">reorder::primitive_desc</a>(conv_dst, user_dst);</div>
 <div class="line">        <a class="code" href="structdnnl_1_1reorder.html">reorder</a>(r_pd).<a class="code" href="structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7">execute</a>(s, conv_dst, user_dst);</div>
 <div class="line">    }</div>
+<div class="line">    s.<a class="code" href="structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c">wait</a>();</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"></div>
@@ -355,11 +358,11 @@ $(document).ready(function(){initNavTree('performance_profiling_8cpp-example.htm
 <div class="line"></div>
 <div class="line">    <span class="comment">// [Create memory objects]</span></div>
 <div class="line">    <span class="comment">// create oneDNN memory objects for user&#39;s tensors (in nchw and oihw formats)</span></div>
-<div class="line">    <span class="keyword">auto</span> user_src = <a class="code" href="structdnnl_1_1memory.html">memory</a>({{BATCH, IC, IH, IW}, <a name="a28"></a><a class="code" href="structdnnl_1_1memory.html#a8e83474ec3a50e08e37af76c8c075dcea512dc597be7ae761876315165dc8bd2e">memory::data_type::f32</a>,</div>
-<div class="line">                                   <a name="a29"></a><a class="code" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faded7ac40158367123c5467281d44cbeb">memory::format_tag::nchw</a>},</div>
+<div class="line">    <span class="keyword">auto</span> user_src = <a class="code" href="structdnnl_1_1memory.html">memory</a>({{BATCH, IC, IH, IW}, <a name="a29"></a><a class="code" href="structdnnl_1_1memory.html#a8e83474ec3a50e08e37af76c8c075dcea512dc597be7ae761876315165dc8bd2e">memory::data_type::f32</a>,</div>
+<div class="line">                                   <a name="a30"></a><a class="code" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faded7ac40158367123c5467281d44cbeb">memory::format_tag::nchw</a>},</div>
 <div class="line">            eng);</div>
 <div class="line">    <span class="keyword">auto</span> user_wei = <a class="code" href="structdnnl_1_1memory.html">memory</a>({{OC, IC, KH, KW}, <a class="code" href="structdnnl_1_1memory.html#a8e83474ec3a50e08e37af76c8c075dcea512dc597be7ae761876315165dc8bd2e">memory::data_type::f32</a>,</div>
-<div class="line">                                   <a name="a30"></a><a class="code" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa14b72a467aeefa06a5cb802ec4a7743c">memory::format_tag::oihw</a>},</div>
+<div class="line">                                   <a name="a31"></a><a class="code" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa14b72a467aeefa06a5cb802ec4a7743c">memory::format_tag::oihw</a>},</div>
 <div class="line">            eng);</div>
 <div class="line">    <span class="keyword">auto</span> user_dst = <a class="code" href="structdnnl_1_1memory.html">memory</a>({{BATCH, OC, OH, OW}, <a class="code" href="structdnnl_1_1memory.html#a8e83474ec3a50e08e37af76c8c075dcea512dc597be7ae761876315165dc8bd2e">memory::data_type::f32</a>,</div>
 <div class="line">                                   <a class="code" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faded7ac40158367123c5467281d44cbeb">memory::format_tag::nchw</a>},</div>

@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_8c-example.html','')
 <div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="dnnl_8h.html">dnnl.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="oneapi_2dnnl_2dnnl_8h.html">oneapi/dnnl/dnnl.h</a>&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;example_utils.h&quot;</span></div>
 <div class="line"></div>
@@ -452,7 +452,7 @@ $(document).ready(function(){initNavTree('cnn_inference_f32_8c-example.html','')
 <div class="line"></div>
 <div class="line">    <span class="comment">// create a pooling</span></div>
 <div class="line">    <a name="_a47"></a><a class="code" href="structdnnl__pooling__v2__desc__t.html">dnnl_pooling_v2_desc_t</a> pool_desc;</div>
-<div class="line">    CHECK(<a name="a48"></a><a class="code" href="group__dnnl__api__pooling.html#gadedbffa2fa02e7afdff750c9b622da86">dnnl_pooling_v2_forward_desc_init</a>(&amp;pool_desc, <a class="code" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a6a59d07a8414bb69b3cb9904ed302adb">dnnl_forward</a>,</div>
+<div class="line">    CHECK(<a name="a48"></a><a class="code" href="group__dnnl__api__pooling__v2.html#gadedbffa2fa02e7afdff750c9b622da86">dnnl_pooling_v2_forward_desc_init</a>(&amp;pool_desc, <a class="code" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a6a59d07a8414bb69b3cb9904ed302adb">dnnl_forward</a>,</div>
 <div class="line">            <a name="a49"></a><a class="code" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23acf3529ba1c4761c0da90eb6750def6c7">dnnl_pooling_max</a>, pool_src_md, &amp;pool_dst_any_md, pool_strides,</div>
 <div class="line">            pool_kernel, pool_dilation, pool_padding, pool_padding));</div>
 <div class="line"></div>

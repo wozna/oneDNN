@@ -1,6 +1,7 @@
 var annotated =
 [
     [ "dnnl", "namespacednnl.html", "namespacednnl" ],
+    [ "oneapi", "namespaceoneapi.html", null ],
     [ "dnnl_batch_normalization_desc_t", "structdnnl__batch__normalization__desc__t.html", "structdnnl__batch__normalization__desc__t" ],
     [ "dnnl_binary_desc_t", "structdnnl__binary__desc__t.html", "structdnnl__binary__desc__t" ],
     [ "dnnl_blocking_desc_t", "structdnnl__blocking__desc__t.html", "structdnnl__blocking__desc__t" ],

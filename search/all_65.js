@@ -10,6 +10,8 @@ var searchData=
   ['eltwise_5fbackward',['eltwise_backward',['../structdnnl_1_1eltwise__backward.html#a4f60bb4e596dbf16ef9f7edfdd303bfd',1,'dnnl::eltwise_backward::eltwise_backward()=default'],['../structdnnl_1_1eltwise__backward.html#adaf18ede58521c74dbccf53f8ca7f2fa',1,'dnnl::eltwise_backward::eltwise_backward(const primitive_desc &amp;pd)']]],
   ['eltwise_5fbounded_5frelu',['eltwise_bounded_relu',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a4142c71f159526fef4c85b8c5ae78a72',1,'dnnl']]],
   ['eltwise_5fclip',['eltwise_clip',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a2aa1edfbe21c6770d63301058ec753ed',1,'dnnl']]],
+  ['eltwise_5fclip_5fv2',['eltwise_clip_v2',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a22b6d0ccfd823457c36e94d1a0fc4e50',1,'dnnl']]],
+  ['eltwise_5fclip_5fv2_5fuse_5fdst_5ffor_5fbwd',['eltwise_clip_v2_use_dst_for_bwd',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a4253206d681eaea3183e9593547196c1',1,'dnnl']]],
   ['eltwise_5fd',['eltwise_d',['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a43bc6c42da7ccfcbc6ef6a26035ed932',1,'dnnl']]],
   ['eltwise_5felu',['eltwise_elu',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a690376cad4a7f001e967a6a40d04da3a',1,'dnnl']]],
   ['eltwise_5felu_5fuse_5fdst_5ffor_5fbwd',['eltwise_elu_use_dst_for_bwd',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a09b26fc530b10556b14bc8e9b2d29d35',1,'dnnl']]],
@@ -25,6 +27,7 @@ var searchData=
   ['eltwise_5flog',['eltwise_log',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640af2a460e3ec273e904c6f6b39baa5e477',1,'dnnl']]],
   ['eltwise_5flogistic',['eltwise_logistic',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a282836cce833348ee509b0ecd764d217',1,'dnnl']]],
   ['eltwise_5flogistic_5fuse_5fdst_5ffor_5fbwd',['eltwise_logistic_use_dst_for_bwd',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a40f1d6681d0ad7bf3e9313641e03ae14',1,'dnnl']]],
+  ['eltwise_5flogsigmoid',['eltwise_logsigmoid',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640acd2c124f619fa58b4f5bbf74c6432474',1,'dnnl']]],
   ['eltwise_5fpow',['eltwise_pow',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a30977b2a33c3a2bd6a5d71a352fa4bcc',1,'dnnl']]],
   ['eltwise_5frelu',['eltwise_relu',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640aba09bebb742494255b90b43871c01c69',1,'dnnl']]],
   ['eltwise_5frelu_5fuse_5fdst_5ffor_5fbwd',['eltwise_relu_use_dst_for_bwd',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640ac227b99192be41d4060b700d1e788fd6',1,'dnnl']]],
@@ -37,9 +40,9 @@ var searchData=
   ['eltwise_5ftanh',['eltwise_tanh',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a38dd7159307eab45742c78e72f06abb0',1,'dnnl']]],
   ['eltwise_5ftanh_5fuse_5fdst_5ffor_5fbwd',['eltwise_tanh_use_dst_for_bwd',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a0be1df5ff86383197efdfeb01b10e046',1,'dnnl']]],
   ['engine',['engine',['../structdnnl_1_1engine.html',1,'dnnl']]],
-  ['engine',['engine',['../structdnnl_1_1engine.html#a400b0f6aacb6ce747d2aa747be23fa19',1,'dnnl::engine::engine()=default'],['../structdnnl_1_1engine.html#a2e23ffff24322cc9d3e108a098a88d31',1,'dnnl::engine::engine(kind akind, size_t index)'],['../structdnnl_1_1engine.html#af524a86465d6194ec8f2ea7d615f3006',1,'dnnl::engine::engine(kind akind, cl_device_id device, cl_context context)'],['../structdnnl_1_1engine.html#aaf1d5abca0d866002487fa8715c66132',1,'dnnl::engine::engine(const handle&lt; dnnl_primitive_desc_t &gt; &amp;pd)'],['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1aad1943a9fd6d3d7ee1e6af41a5b0d3e7',1,'dnnl::engine()']]],
-  ['error',['error',['../structdnnl_1_1error.html',1,'dnnl']]],
+  ['engine',['engine',['../structdnnl_1_1engine.html#a400b0f6aacb6ce747d2aa747be23fa19',1,'dnnl::engine::engine()=default'],['../structdnnl_1_1engine.html#a2e23ffff24322cc9d3e108a098a88d31',1,'dnnl::engine::engine(kind akind, size_t index)'],['../structdnnl_1_1engine.html#aaf1d5abca0d866002487fa8715c66132',1,'dnnl::engine::engine(const handle&lt; dnnl_primitive_desc_t &gt; &amp;pd)'],['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1aad1943a9fd6d3d7ee1e6af41a5b0d3e7',1,'dnnl::engine()']]],
   ['error',['error',['../structdnnl_1_1error.html#a67984998eff9083077daf1cd1a1acb01',1,'dnnl::error']]],
+  ['error',['error',['../structdnnl_1_1error.html',1,'dnnl']]],
   ['exec_5farg_5fmd',['exec_arg_md',['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1ad531896cf1d66c4832790f428623f164',1,'dnnl']]],
-  ['execute',['execute',['../structdnnl_1_1primitive.html#a18a484f0f1fecbc6a58fca1a58f6d8d4',1,'dnnl::primitive::execute()'],['../structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7',1,'dnnl::reorder::execute()']]]
+  ['execute',['execute',['../structdnnl_1_1primitive.html#a18a484f0f1fecbc6a58fca1a58f6d8d4',1,'dnnl::primitive::execute()'],['../structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7',1,'dnnl::reorder::execute()'],['../namespacednnl_1_1sycl__interop.html#afc6c83e27a688e120b72e5355786d4c9',1,'dnnl::sycl_interop::execute()']]]
 ];

@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">1.7.0</div>
+   <div id="projectnumber">2.0.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -137,7 +137,7 @@ Activations</div></div>
 </div><!-- fragment --><p>We use <code>nchw</code> here to denote that <code>w</code> is the inner-most dimension, meaning that two elements adjacent in memory would share the same indices of <code>n</code>, <code>c</code>, and <code>h</code>, and their index of <code>w</code> would be different by <code>1</code>. This is of course true only for non-border elements. On the contrary, <code>n</code> is the outermost dimension here, meaning that if you need to take the same pixel <code>(c, h, w)</code> but on the next image, you have to jump over the whole image size <code>C*H*W</code>.</p>
 <p>This data format is called <b>NCHW</b> and is used by default in BVLC* Caffe. TensorFlow* also supports this data format.</p>
 <dl class="section note"><dt>Note</dt><dd>It is just a coincidence that <code>offset_nchw()</code> is the same as <code>value()</code> in this example.</dd></dl>
-<p>One can create memory with <b>NCHW</b> data layout using <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da83a751aedeb59613312339d0f8b90f54" title="4D CNN activations tensor, an alias to dnnl_abcd ">dnnl_nchw</a> of the enum type <a class="el" href="group__dnnl__api__memory.html#ga395e42b594683adb25ed2d842bb3091d" title="Memory format tag specification. ">dnnl_format_tag_t</a> defined in <a href="https://github.com/oneapi-src/oneDNN/blob/master/include/dnnl_types.h">dnnl_types.h</a> for the C API, and <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faded7ac40158367123c5467281d44cbeb" title="4D CNN activations tensor; an alias for dnnl::memory::format_tag::abcd ">dnnl::memory::format_tag::nchw</a> defined in <a href="https://github.com/oneapi-src/oneDNN/blob/master/include/dnnl.hpp">dnnl.hpp</a> for the C++ API.</p>
+<p>One can create memory with <b>NCHW</b> data layout using <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da83a751aedeb59613312339d0f8b90f54" title="4D CNN activations tensor, an alias to dnnl_abcd ">dnnl_nchw</a> of the enum type <a class="el" href="group__dnnl__api__memory.html#ga395e42b594683adb25ed2d842bb3091d" title="Memory format tag specification. ">dnnl_format_tag_t</a> defined in <a href="https://github.com/oneapi-src/oneDNN/blob/master/include/oneapi/dnnl/dnnl_types.h">dnnl_types.h</a> for the C API, and <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faded7ac40158367123c5467281d44cbeb" title="4D CNN activations tensor; an alias for dnnl::memory::format_tag::abcd ">dnnl::memory::format_tag::nchw</a> defined in <a href="https://github.com/oneapi-src/oneDNN/blob/master/include/oneapi/dnnl/dnnl.hpp">dnnl.hpp</a> for the C++ API.</p>
 <h4>NHWC</h4>
 <p>Another quite popular data format is <b>NHWC</b>, which uses the following offset function: </p>
 <div class="fragment"><div class="line">offset_nhwc(n, c, h, w) = n * HWC + h * WC + w * C + c</div>

@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('dev_guide_cpu_dispatcher_control.html'
 <div class="contents">
 <div class="textblock"><p>oneDNN uses JIT code generation to implement most of its functionality and will choose the best code based on detected processor features. Sometimes it is necessary to control which features oneDNN detects. This is sometimes useful for debugging purposes or for performance exploration.</p>
 <h2>Build-time Controls</h2>
-<p>At build-time, support for this feature is controlled via cmake option <code>DNNL_ENABLE_JIT_PROFILING</code>.</p>
+<p>At build-time, support for this feature is controlled via cmake option <code>DNNL_ENABLE_MAX_CPU_ISA</code>.</p>
 <table class="doxtable">
 <tr>
 <th align="left">CMake Option </th><th align="left">Supported values (defaults in bold) </th><th align="left">Description  </th></tr>

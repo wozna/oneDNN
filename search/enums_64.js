@@ -17,5 +17,6 @@ var searchData=
   ['dnnl_5fscratchpad_5fmode_5ft',['dnnl_scratchpad_mode_t',['../group__dnnl__api__attributes.html#gacda323181ab267e571c31435b0817de4',1,'dnnl_types.h']]],
   ['dnnl_5fstatus_5ft',['dnnl_status_t',['../group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a',1,'dnnl_types.h']]],
   ['dnnl_5fstream_5fflags_5ft',['dnnl_stream_flags_t',['../group__dnnl__api__stream.html#ga3d74cfed8fe92b0e4498a1f2bdab5547',1,'dnnl_types.h']]],
+  ['dnnl_5fsycl_5finterop_5fmemory_5fkind_5ft',['dnnl_sycl_interop_memory_kind_t',['../group__dnnl__api__sycl__interop.html#ga8315f93ce0f395f59420094f3456b96c',1,'dnnl_sycl_types.h']]],
   ['dnnl_5fwino_5fmemory_5fformat_5ft',['dnnl_wino_memory_format_t',['../group__dnnl__api__memory.html#gaaab02321c4a85efc3dbd94ee3b0594c9',1,'dnnl_types.h']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['types',['Types',['../group__c__api__types.html',1,'']]]
+  ['threadpool_20interoperability_20api',['Threadpool interoperability API',['../group__dnnl__api__threadpool__interop.html',1,'']]]
 ];

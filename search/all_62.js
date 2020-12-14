@@ -35,6 +35,8 @@ var searchData=
   ['binary_5fsub',['binary_sub',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a979309f9436f7ebfa278b0ce682dd706',1,'dnnl']]],
   ['blocked',['blocked',['../structdnnl_1_1memory.html#aabcadfb0e23a36a91272fc571cff105fa61326117ed4a9ddf3f754e71e119e5b3',1,'dnnl::memory']]],
   ['blocking',['blocking',['../structdnnl__memory__desc__t.html#a376a38353672131bfc67fe92bceb6c9e',1,'dnnl_memory_desc_t']]],
+  ['bnorm_20u8_20by_20binary_20post_2dops_20example',['Bnorm u8 by binary post-ops example',['../bnorm_u8_via_binary_postops_cpp.html',1,'']]],
+  ['buffer',['buffer',['../namespacednnl_1_1sycl__interop.html#a9c7def46b2c0556f56e2f0aab5fbffeba7f2db423a49b305459147332fb01cf87',1,'dnnl::sycl_interop']]],
   ['basic_20concepts',['Basic Concepts',['../dev_guide_basic_concepts.html',1,'']]],
   ['batch_20normalization',['Batch Normalization',['../dev_guide_batch_normalization.html',1,'']]],
   ['benchmarking_20performance',['Benchmarking Performance',['../dev_guide_benchdnn.html',1,'']]],
