@@ -3,6 +3,7 @@ var searchData=
   ['scratchpad_5fdesc',['scratchpad_desc',['../structdnnl_1_1primitive__desc__base.html#af8bb36148b4bb356ae61cf48353910fb',1,'dnnl::primitive_desc_base']]],
   ['scratchpad_5fengine',['scratchpad_engine',['../structdnnl_1_1primitive__desc__base.html#aa1e474433668f235b8fb3888d399f200',1,'dnnl::primitive_desc_base']]],
   ['set_5fbuffer',['set_buffer',['../namespacednnl_1_1sycl__interop.html#aa0d461dded1b8dee57c6ad7bf5ee3069',1,'dnnl::sycl_interop::set_buffer(memory &amp;amemory, cl::sycl::buffer&lt; T, ndims &gt; &amp;abuffer)'],['../namespacednnl_1_1sycl__interop.html#aa5afe32f087d20f85bdfdb418386c35d',1,'dnnl::sycl_interop::set_buffer(memory &amp;amemory, cl::sycl::buffer&lt; T, ndims &gt; &amp;abuffer, const stream &amp;astream)']]],
+  ['set_5fcpu_5fisa_5fhints',['set_cpu_isa_hints',['../group__dnnl__api__service.html#ga29aa5fb708d803e091ac61dc67f9e6ed',1,'dnnl']]],
   ['set_5fdata_5fhandle',['set_data_handle',['../structdnnl_1_1memory.html#afa06ef3c32a86ab1577e32424e6d4a00',1,'dnnl::memory::set_data_handle(void *handle, const stream &amp;astream) const '],['../structdnnl_1_1memory.html#aaf3c13ed6f4af1b719ef7413ee36f63d',1,'dnnl::memory::set_data_handle(void *handle) const ']]],
   ['set_5fjit_5fdump',['set_jit_dump',['../group__dnnl__api__service.html#ga2344639528a341878d2ce46fe1c1ac83',1,'dnnl']]],
   ['set_5fjit_5fprofiling_5fflags',['set_jit_profiling_flags',['../group__dnnl__api__service.html#ga966c54ccb1d9ff33d20c4ea47e34675d',1,'dnnl']]],

@@ -181,9 +181,15 @@ Enumerations</h2></td></tr>
 <tr class="memitem:gabad017feb1850634bf3babdb68234f83"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#gabad017feb1850634bf3babdb68234f83">dnnl::cpu_isa</a> </td></tr>
 <tr class="memdesc:gabad017feb1850634bf3babdb68234f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU instruction set flags.  <a href="group__dnnl__api__service.html#gabad017feb1850634bf3babdb68234f83">More...</a><br/></td></tr>
 <tr class="separator:gabad017feb1850634bf3babdb68234f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf574021058ebc6965da14fc4387dd0c4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4">dnnl::cpu_isa_hints</a> </td></tr>
+<tr class="memdesc:gaf574021058ebc6965da14fc4387dd0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU ISA hints flags.  <a href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4">More...</a><br/></td></tr>
+<tr class="separator:gaf574021058ebc6965da14fc4387dd0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga303bab5d2e7b371bb44495864df21dd2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2">dnnl_cpu_isa_t</a> </td></tr>
 <tr class="memdesc:ga303bab5d2e7b371bb44495864df21dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU instruction set flags.  <a href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2">More...</a><br/></td></tr>
 <tr class="separator:ga303bab5d2e7b371bb44495864df21dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf356412d94e35579bd509ed1fa174f5d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d">dnnl_cpu_isa_hints_t</a> </td></tr>
+<tr class="memdesc:gaf356412d94e35579bd509ed1fa174f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU ISA hints flags.  <a href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d">More...</a><br/></td></tr>
+<tr class="separator:gaf356412d94e35579bd509ed1fa174f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -208,6 +214,12 @@ Functions</h2></td></tr>
 <tr class="memitem:gac55836cf36bc25f8635e459678303570"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2">dnnl_cpu_isa_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#gac55836cf36bc25f8635e459678303570">dnnl_get_effective_cpu_isa</a> (void)</td></tr>
 <tr class="memdesc:gac55836cf36bc25f8635e459678303570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the maximal ISA the library can dispatch to on the CPU.  <a href="#gac55836cf36bc25f8635e459678303570">More...</a><br/></td></tr>
 <tr class="separator:gac55836cf36bc25f8635e459678303570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad078a384ab0e078d81595686efd26ed2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#gad078a384ab0e078d81595686efd26ed2">dnnl_set_cpu_isa_hints</a> (<a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d">dnnl_cpu_isa_hints_t</a> isa_hints)</td></tr>
+<tr class="memdesc:gad078a384ab0e078d81595686efd26ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the hints flag for the CPU ISA.  <a href="#gad078a384ab0e078d81595686efd26ed2">More...</a><br/></td></tr>
+<tr class="separator:gad078a384ab0e078d81595686efd26ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad93f9f4bf3c9e12a2be7337b1e41d145"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d">dnnl_cpu_isa_hints_t</a> DNNL_API&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#gad93f9f4bf3c9e12a2be7337b1e41d145">dnnl_get_cpu_isa_hints</a> (void)</td></tr>
+<tr class="memdesc:gad93f9f4bf3c9e12a2be7337b1e41d145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ISA specific hints that library can follow.  <a href="#gad93f9f4bf3c9e12a2be7337b1e41d145">More...</a><br/></td></tr>
+<tr class="separator:gad93f9f4bf3c9e12a2be7337b1e41d145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga37bcab6f832df551a9fc418e48743b15"><td class="memItemLeft" align="right" valign="top">status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga37bcab6f832df551a9fc418e48743b15">dnnl::set_verbose</a> (int level)</td></tr>
 <tr class="memdesc:ga37bcab6f832df551a9fc418e48743b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures verbose output to stdout.  <a href="#ga37bcab6f832df551a9fc418e48743b15">More...</a><br/></td></tr>
 <tr class="separator:ga37bcab6f832df551a9fc418e48743b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +241,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3953f71c3f0126d9cc005a1ceff65e8b"><td class="memItemLeft" align="right" valign="top">cpu_isa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga3953f71c3f0126d9cc005a1ceff65e8b">dnnl::get_effective_cpu_isa</a> ()</td></tr>
 <tr class="memdesc:ga3953f71c3f0126d9cc005a1ceff65e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the maximal ISA the library can dispatch to on the CPU.  <a href="#ga3953f71c3f0126d9cc005a1ceff65e8b">More...</a><br/></td></tr>
 <tr class="separator:ga3953f71c3f0126d9cc005a1ceff65e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29aa5fb708d803e091ac61dc67f9e6ed"><td class="memItemLeft" align="right" valign="top">status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga29aa5fb708d803e091ac61dc67f9e6ed">dnnl::set_cpu_isa_hints</a> (cpu_isa_hints isa_hints)</td></tr>
+<tr class="memdesc:ga29aa5fb708d803e091ac61dc67f9e6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the hints flag for the CPU ISA.  <a href="#ga29aa5fb708d803e091ac61dc67f9e6ed">More...</a><br/></td></tr>
+<tr class="separator:ga29aa5fb708d803e091ac61dc67f9e6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bee13aa79a9711489b401e9c4252ff2"><td class="memItemLeft" align="right" valign="top">cpu_isa_hints&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnnl__api__service.html#ga8bee13aa79a9711489b401e9c4252ff2">dnnl::get_cpu_isa_hints</a> ()</td></tr>
+<tr class="memdesc:ga8bee13aa79a9711489b401e9c4252ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ISA specific hints that library can follow.  <a href="#ga8bee13aa79a9711489b401e9c4252ff2">More...</a><br/></td></tr>
+<tr class="separator:ga8bee13aa79a9711489b401e9c4252ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>A set of functions that aid in oneDNN debugging and profiling. </p>
@@ -366,6 +384,36 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gaf574021058ebc6965da14fc4387dd0c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4">dnnl::cpu_isa_hints</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CPU ISA hints flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggaf574021058ebc6965da14fc4387dd0c4a5c2d3f6f845dca6d90d7a1c445644c99"></a>no_hints</em>&nbsp;</td><td class="fielddoc">
+<p>No hints (use default features) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf574021058ebc6965da14fc4387dd0c4ad5d95963017a7ba00e7ddc69b67cacb6"></a>prefer_ymm</em>&nbsp;</td><td class="fielddoc">
+<p>Prefer to exclusively use Ymm registers for computations. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="ga303bab5d2e7b371bb44495864df21dd2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -410,6 +458,28 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga303bab5d2e7b371bb44495864df21dd2a8f2cbdae2834cebd2e5bf86b8c65e9d4"></a>dnnl_cpu_isa_avx2_vnni</em>&nbsp;</td><td class="fielddoc">
 <p>Intel AVX2 and Intel Deep Learning Boost (Intel DL Boost) support. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gaf356412d94e35579bd509ed1fa174f5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d">dnnl_cpu_isa_hints_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU ISA hints flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggaf356412d94e35579bd509ed1fa174f5da9e598ac27ce94827b20cab264d623da4"></a>dnnl_cpu_isa_no_hints</em>&nbsp;</td><td class="fielddoc">
+<p>No hints (use default features) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf356412d94e35579bd509ed1fa174f5daf9dd6f8367a4de1e12aa617307edbe41"></a>dnnl_cpu_isa_prefer_ymm</em>&nbsp;</td><td class="fielddoc">
+<p>Prefer to exclusively use Ymm registers for computations. </p>
 </td></tr>
 </table>
 
@@ -621,6 +691,58 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 <p>See <a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2" title="CPU instruction set flags. ">dnnl_cpu_isa_t</a> and <a class="el" href="group__dnnl__api__service.html#gabad017feb1850634bf3babdb68234f83" title="CPU instruction set flags. ">dnnl::cpu_isa</a> for the list of the values returned by the C and C++ API functions respectively.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_dispatcher_control.html">CPU Dispatcher Control</a> for more details</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2" title="CPU instruction set flags. ">dnnl_cpu_isa_t</a> value reflecting the maximal ISA the library may dispatch to. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad078a384ab0e078d81595686efd26ed2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__dnnl__api__utils.html#gad24f9ded06e34d3ee71e7fc4b408d57a">dnnl_status_t</a> DNNL_API dnnl_set_cpu_isa_hints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d">dnnl_cpu_isa_hints_t</a>&#160;</td>
+          <td class="paramname"><em>isa_hints</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the hints flag for the CPU ISA. </p>
+<p>See <a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> and <a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4" title="CPU ISA hints flags. ">dnnl::cpu_isa_hints</a> for the list of the values accepted by the C and C++ API functions respectively.</p>
+<p>This function has effect only before the first JIT kernel is generated and will return an error afterwards.</p>
+<p>This function overrides the DNNL_CPU_ISA_HINTS environment variable. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA Hints</a> for more details</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isa_hints</td><td>CPU ISA hints to be passed over to the implementation. Pass <a class="el" href="group__dnnl__api__service.html#ggaf356412d94e35579bd509ed1fa174f5da9e598ac27ce94827b20cab264d623da4" title="No hints (use default features) ">dnnl_cpu_isa_no_hints</a>/<a class="el" href="group__dnnl__api__service.html#ggaf574021058ebc6965da14fc4387dd0c4a5c2d3f6f845dca6d90d7a1c445644c99" title="No hints (use default features) ">dnnl::cpu_isa_hints::no_hints</a> to use default features i.e. no hints. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a>/<a class="el" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda260ca9dd8a4577fc00b7bd5810298076" title="The operation was successful. ">dnnl::status::success</a> on success and a <a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aa38efb4adabcae7c9e6479e8ee1242b9b" title="Primitive or engine failed on execution. ">dnnl_runtime_error</a>/<a class="el" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda5b32065884bcc1f2ed126c47e6410808" title="Primitive or engine failed on execution. ">dnnl::status::runtime_error</a> if the ISA hints cannot be specified at the current time. </dd>
+<dd>
+<a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aa3a8579e8afc4e23344cd3115b0e81de1" title="The operation failed because requested functionality is not implemented. ">dnnl_unimplemented</a>/<a class="el" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda4316423dfe3ade85c292aa38185f9817" title="The operation failed because requested functionality is not implemented. ">dnnl::status::unimplemented</a> if the feature was disabled at build time (see <a class="el" href="dev_guide_build_options.html">Build Options</a> for more details). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad93f9f4bf3c9e12a2be7337b1e41d145"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d">dnnl_cpu_isa_hints_t</a> DNNL_API dnnl_get_cpu_isa_hints </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the ISA specific hints that library can follow. </p>
+<p>See <a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> and <a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4" title="CPU ISA hints flags. ">dnnl::cpu_isa_hints</a> for the list of the values returned by the C and C++ API functions respectively.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA Hints</a> for more details</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> value reflecting the ISA specific hints the library can follow. </dd></dl>
 
 </div>
 </div>
@@ -883,6 +1005,73 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 <p>See <a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2" title="CPU instruction set flags. ">dnnl_cpu_isa_t</a> and <a class="el" href="group__dnnl__api__service.html#gabad017feb1850634bf3babdb68234f83" title="CPU instruction set flags. ">dnnl::cpu_isa</a> for the list of the values returned by the C and C++ API functions respectively.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_dispatcher_control.html">CPU Dispatcher Control</a> for more details</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2" title="CPU instruction set flags. ">dnnl_cpu_isa_t</a> value reflecting the maximal ISA the library may dispatch to. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga29aa5fb708d803e091ac61dc67f9e6ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">status dnnl::set_cpu_isa_hints </td>
+          <td>(</td>
+          <td class="paramtype">cpu_isa_hints&#160;</td>
+          <td class="paramname"><em>isa_hints</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the hints flag for the CPU ISA. </p>
+<p>See <a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> and <a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4" title="CPU ISA hints flags. ">dnnl::cpu_isa_hints</a> for the list of the values accepted by the C and C++ API functions respectively.</p>
+<p>This function has effect only before the first JIT kernel is generated and will return an error afterwards.</p>
+<p>This function overrides the DNNL_CPU_ISA_HINTS environment variable. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA Hints</a> for more details</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isa_hints</td><td>CPU ISA hints to be passed over to the implementation. Pass <a class="el" href="group__dnnl__api__service.html#ggaf356412d94e35579bd509ed1fa174f5da9e598ac27ce94827b20cab264d623da4" title="No hints (use default features) ">dnnl_cpu_isa_no_hints</a>/<a class="el" href="group__dnnl__api__service.html#ggaf574021058ebc6965da14fc4387dd0c4a5c2d3f6f845dca6d90d7a1c445644c99" title="No hints (use default features) ">dnnl::cpu_isa_hints::no_hints</a> to use default features i.e. no hints. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a>/<a class="el" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda260ca9dd8a4577fc00b7bd5810298076" title="The operation was successful. ">dnnl::status::success</a> on success and a <a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aa38efb4adabcae7c9e6479e8ee1242b9b" title="Primitive or engine failed on execution. ">dnnl_runtime_error</a>/<a class="el" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda5b32065884bcc1f2ed126c47e6410808" title="Primitive or engine failed on execution. ">dnnl::status::runtime_error</a> if the ISA hints cannot be specified at the current time. </dd>
+<dd>
+<a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aa3a8579e8afc4e23344cd3115b0e81de1" title="The operation failed because requested functionality is not implemented. ">dnnl_unimplemented</a>/<a class="el" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda4316423dfe3ade85c292aa38185f9817" title="The operation failed because requested functionality is not implemented. ">dnnl::status::unimplemented</a> if the feature was disabled at build time (see <a class="el" href="dev_guide_build_options.html">Build Options</a> for more details). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8bee13aa79a9711489b401e9c4252ff2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cpu_isa_hints dnnl::get_cpu_isa_hints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the ISA specific hints that library can follow. </p>
+<p>See <a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> and <a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4" title="CPU ISA hints flags. ">dnnl::cpu_isa_hints</a> for the list of the values returned by the C and C++ API functions respectively.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA Hints</a> for more details</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> value reflecting the ISA specific hints the library can follow. </dd></dl>
 
 </div>
 </div>

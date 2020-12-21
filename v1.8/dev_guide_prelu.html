@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('dev_guide_prelu.html','');});
 <h3>Data Representation</h3>
 <p>The PReLU primitive works with arbitrary data tensors. There is no special meaning associated with any logical dimensions.</p>
 <h2>Implementation Limitations</h2>
-<p>Current implementation only supports 1D, 2D and 3D tensors.</p>
+<p>Current implementation only supports 1D, 2D and 3D tensors. GPU is not supported.</p>
 <h2>Performance Tips</h2>
 <p>Its recommended to allow PReLU primitive to choose the appropriate weights memory format by passing weights_md with format_tag::any. For best performance, the weights memory format should match data memory format.</p>
 <h2>Examples</h2>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('dev_guide_prelu.html','');});
 <tr>
 <th align="left">Engine </th><th align="left">Name </th><th align="left">Comments  </th></tr>
 <tr>
-<td align="left">CPU/GPU </td><td align="left"><a class="el" href="prelu_example_cpp.html">Primitive Example</a> </td><td align="left">This C++ API example demonstrates how to create and execute an <a class="el" href="dev_guide_prelu.html">PReLU</a> primitive in forward training propagation mode. </td></tr>
+<td align="left">CPU </td><td align="left"><a class="el" href="prelu_example_cpp.html">Primitive Example</a> </td><td align="left">This C++ API example demonstrates how to create and execute an <a class="el" href="dev_guide_prelu.html">PReLU</a> primitive in forward training propagation mode. </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

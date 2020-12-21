@@ -7,6 +7,7 @@ var searchData=
   ['get_5fcommand_5fqueue',['get_command_queue',['../namespacednnl_1_1ocl__interop.html#a14281f69db5178363ff0c971510d0452',1,'dnnl::ocl_interop']]],
   ['get_5fcontext',['get_context',['../namespacednnl_1_1ocl__interop.html#a248df8106d035e5a7e1ac5fd196c93c3',1,'dnnl::ocl_interop::get_context()'],['../namespacednnl_1_1sycl__interop.html#a351bee0c0076334dd0eb211720448d7e',1,'dnnl::sycl_interop::get_context()']]],
   ['get_5fcount',['get_count',['../structdnnl_1_1engine.html#a4377c19abca7fc5d761bb5e512c732d1',1,'dnnl::engine']]],
+  ['get_5fcpu_5fisa_5fhints',['get_cpu_isa_hints',['../group__dnnl__api__service.html#ga8bee13aa79a9711489b401e9c4252ff2',1,'dnnl']]],
   ['get_5fdata_5fhandle',['get_data_handle',['../structdnnl_1_1memory.html#a1b81db911a391cefc31e35bbe9ca95fe',1,'dnnl::memory']]],
   ['get_5fdesc',['get_desc',['../structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a',1,'dnnl::memory']]],
   ['get_5fdevice',['get_device',['../namespacednnl_1_1ocl__interop.html#a37ef1ccb75d09063ed049076fb23b927',1,'dnnl::ocl_interop::get_device()'],['../namespacednnl_1_1sycl__interop.html#ac4198f877f40ff0d037b0f8b88611207',1,'dnnl::sycl_interop::get_device()']]],

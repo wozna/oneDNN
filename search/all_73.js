@@ -17,6 +17,7 @@ var searchData=
   ['scratchpad_5fmd',['scratchpad_md',['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a9cbdd03b65c030ef560b5555be1a86c2',1,'dnnl']]],
   ['scratchpad_5fmode',['scratchpad_mode',['../group__dnnl__api__attributes.html#gac24d40ceea0256c7d6cc3a383a0fa07f',1,'dnnl']]],
   ['set_5fbuffer',['set_buffer',['../namespacednnl_1_1sycl__interop.html#aa0d461dded1b8dee57c6ad7bf5ee3069',1,'dnnl::sycl_interop::set_buffer(memory &amp;amemory, cl::sycl::buffer&lt; T, ndims &gt; &amp;abuffer)'],['../namespacednnl_1_1sycl__interop.html#aa5afe32f087d20f85bdfdb418386c35d',1,'dnnl::sycl_interop::set_buffer(memory &amp;amemory, cl::sycl::buffer&lt; T, ndims &gt; &amp;abuffer, const stream &amp;astream)']]],
+  ['set_5fcpu_5fisa_5fhints',['set_cpu_isa_hints',['../group__dnnl__api__service.html#ga29aa5fb708d803e091ac61dc67f9e6ed',1,'dnnl']]],
   ['set_5fdata_5fhandle',['set_data_handle',['../structdnnl_1_1memory.html#afa06ef3c32a86ab1577e32424e6d4a00',1,'dnnl::memory::set_data_handle(void *handle, const stream &amp;astream) const '],['../structdnnl_1_1memory.html#aaf3c13ed6f4af1b719ef7413ee36f63d',1,'dnnl::memory::set_data_handle(void *handle) const ']]],
   ['set_5fjit_5fdump',['set_jit_dump',['../group__dnnl__api__service.html#ga2344639528a341878d2ce46fe1c1ac83',1,'dnnl']]],
   ['set_5fjit_5fprofiling_5fflags',['set_jit_profiling_flags',['../group__dnnl__api__service.html#ga966c54ccb1d9ff33d20c4ea47e34675d',1,'dnnl']]],
@@ -59,12 +60,12 @@ var searchData=
   ['sse41',['sse41',['../group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83ab14e8c38c0a37f70c070f2a862d30d65',1,'dnnl']]],
   ['stat_5fdesc',['stat_desc',['../structdnnl__batch__normalization__desc__t.html#a5e779c209cd4296445ce2be9b6d5fbb8',1,'dnnl_batch_normalization_desc_t::stat_desc()'],['../structdnnl__layer__normalization__desc__t.html#aa4cde3388ff942b1410ca143ccb010d1',1,'dnnl_layer_normalization_desc_t::stat_desc()']]],
   ['status',['status',['../group__dnnl__api__service.html#ga7acc4d3516304ae68a1289551d8f2cdd',1,'dnnl']]],
-  ['stream',['stream',['../structdnnl_1_1stream.html',1,'dnnl']]],
   ['stream',['stream',['../structdnnl_1_1stream.html#ad264b142d2f7c728fe8c84aa65d62b13',1,'dnnl::stream::stream()=default'],['../structdnnl_1_1stream.html#a91cddfb27bc0d7577f8f9ff0327ca598',1,'dnnl::stream::stream(const engine &amp;aengine, flags aflags=flags::default_flags)']]],
+  ['stream',['stream',['../structdnnl_1_1stream.html',1,'dnnl']]],
   ['strides',['strides',['../structdnnl__blocking__desc__t.html#a48c1a3cb43f5b935fe3627e6312543b3',1,'dnnl_blocking_desc_t::strides()'],['../structdnnl__convolution__desc__t.html#a12d0bfc58c674901155a0e9a1f9a72f8',1,'dnnl_convolution_desc_t::strides()'],['../structdnnl__pooling__desc__t.html#a2ea5682de63b0f77709cd1d0197997a3',1,'dnnl_pooling_desc_t::strides()'],['../structdnnl__pooling__v2__desc__t.html#a4d33f71638bdf76e259f1291ab57e316',1,'dnnl_pooling_v2_desc_t::strides()']]],
   ['submemory_5fdesc',['submemory_desc',['../structdnnl_1_1memory_1_1desc.html#a18f16cc91b7b4137aa70f42cf57e32de',1,'dnnl::memory::desc']]],
   ['success',['success',['../group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda260ca9dd8a4577fc00b7bd5810298076',1,'dnnl']]],
-  ['sum',['sum',['../structdnnl_1_1sum.html#a08ab30bce8e2c28298a6926f144265b9',1,'dnnl::sum::sum()=default'],['../structdnnl_1_1sum.html#a393855f591d5700e6d35e458f6910110',1,'dnnl::sum::sum(const primitive_desc &amp;pd)'],['../structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a1d623b89683f9ce4e074de1676d12416',1,'dnnl::primitive::sum()']]],
   ['sum',['sum',['../structdnnl_1_1sum.html',1,'dnnl']]],
+  ['sum',['sum',['../structdnnl_1_1sum.html#a08ab30bce8e2c28298a6926f144265b9',1,'dnnl::sum::sum()=default'],['../structdnnl_1_1sum.html#a393855f591d5700e6d35e458f6910110',1,'dnnl::sum::sum(const primitive_desc &amp;pd)'],['../structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a1d623b89683f9ce4e074de1676d12416',1,'dnnl::primitive::sum()']]],
   ['sum_20primitive_20example',['Sum Primitive Example',['../sum_example_cpp.html',1,'']]]
 ];

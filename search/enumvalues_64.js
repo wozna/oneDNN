@@ -109,6 +109,8 @@ var searchData=
   ['dnnl_5fcpu_5fisa_5favx512_5fcore_5fvnni',['dnnl_cpu_isa_avx512_core_vnni',['../group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a3aced59a3047f7e407b1fe3310430554',1,'dnnl_types.h']]],
   ['dnnl_5fcpu_5fisa_5favx512_5fmic',['dnnl_cpu_isa_avx512_mic',['../group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a0929d2af13de542102f0d47776023164',1,'dnnl_types.h']]],
   ['dnnl_5fcpu_5fisa_5favx512_5fmic_5f4ops',['dnnl_cpu_isa_avx512_mic_4ops',['../group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2ad30d60a53b03395ab914e685656436e2',1,'dnnl_types.h']]],
+  ['dnnl_5fcpu_5fisa_5fno_5fhints',['dnnl_cpu_isa_no_hints',['../group__dnnl__api__service.html#ggaf356412d94e35579bd509ed1fa174f5da9e598ac27ce94827b20cab264d623da4',1,'dnnl_types.h']]],
+  ['dnnl_5fcpu_5fisa_5fprefer_5fymm',['dnnl_cpu_isa_prefer_ymm',['../group__dnnl__api__service.html#ggaf356412d94e35579bd509ed1fa174f5daf9dd6f8367a4de1e12aa617307edbe41',1,'dnnl_types.h']]],
   ['dnnl_5fcpu_5fisa_5fsse41',['dnnl_cpu_isa_sse41',['../group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a5e2f2cccadb94b34700a90bba91e0fe3',1,'dnnl_types.h']]],
   ['dnnl_5fdata_5ftype_5fundef',['dnnl_data_type_undef',['../group__dnnl__api__memory.html#gga012ba1c84ff24bdd068f9d2f9b26a130a7b0351f23ccd840c87a0a9d869339888',1,'dnnl_types.h']]],
   ['dnnl_5fdcab',['dnnl_dcab',['../group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dae6c549f1a265f8d61bffb24c24925a1d',1,'dnnl_types.h']]],

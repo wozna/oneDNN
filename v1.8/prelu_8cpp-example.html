@@ -183,8 +183,15 @@ $(document).ready(function(){initNavTree('prelu_8cpp-example.html','');});
 <div class="line">    <span class="keyword">auto</span> prelu_d = <a name="_a6"></a><a class="code" href="structdnnl_1_1prelu__forward_1_1desc.html">prelu_forward::desc</a>(</div>
 <div class="line">            <a name="a7"></a><a class="code" href="group__dnnl__api__attributes.html#ggac7db48f6583aa9903e54c2a39d65438fa24775787fab8f13aa4809e1ce8f82aeb">prop_kind::forward_training</a>, src_md, <a class="code" href="group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a06ba7b00a8c95dcf3a90e16d00eeb0e9">weights_md</a>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// Create primitive descriptor.</span></div>
-<div class="line">    <span class="keyword">auto</span> prelu_pd = <a name="_a8"></a><a class="code" href="structdnnl_1_1prelu__forward_1_1primitive__desc.html">prelu_forward::primitive_desc</a>(prelu_d, engine);</div>
+<div class="line">    <a name="_a8"></a><a class="code" href="structdnnl_1_1prelu__forward_1_1primitive__desc.html">prelu_forward::primitive_desc</a> prelu_pd;</div>
+<div class="line">    <span class="keywordflow">try</span> {</div>
+<div class="line">        <span class="comment">// Create primitive descriptor.</span></div>
+<div class="line">        prelu_pd = <a class="code" href="structdnnl_1_1prelu__forward_1_1primitive__desc.html">prelu_forward::primitive_desc</a>(prelu_d, engine);</div>
+<div class="line">    } <span class="keywordflow">catch</span> (<a name="_a9"></a><a class="code" href="structdnnl_1_1error.html">error</a> &amp;e) {</div>
+<div class="line">        <span class="keywordflow">if</span> (e.<a name="a10"></a>status == <a name="a11"></a><a class="code" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aa3a8579e8afc4e23344cd3115b0e81de1">dnnl_unimplemented</a>)</div>
+<div class="line">            <span class="keywordflow">throw</span> example_allows_unimplemented {</div>
+<div class="line">                    <span class="stringliteral">&quot;PReLU is not available for this engine.\n&quot;</span>};</div>
+<div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// For now, assume that the weights memory layout generated</span></div>
 <div class="line">    <span class="comment">// by the primitive and the one provided by the user are identical.</span></div>
@@ -194,26 +201,26 @@ $(document).ready(function(){initNavTree('prelu_8cpp-example.html','');});
 <div class="line">    <span class="comment">// the primitive and the one provided by the user are different. In this</span></div>
 <div class="line">    <span class="comment">// case, we create additional memory object with internal buffers that will</span></div>
 <div class="line">    <span class="comment">// contain the reordered data.</span></div>
-<div class="line">    <span class="keywordflow">if</span> (prelu_pd.weights_desc() != user_weights_mem.<a name="a9"></a><a class="code" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a">get_desc</a>()) {</div>
-<div class="line">        prelu_weights_mem = <a class="code" href="structdnnl_1_1memory.html">memory</a>(prelu_pd.weights_desc(), engine);</div>
-<div class="line">        <a name="_a10"></a><a class="code" href="structdnnl_1_1reorder.html">reorder</a>(user_weights_mem, prelu_weights_mem)</div>
-<div class="line">                .<a name="a11"></a><a class="code" href="structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7">execute</a>(engine_stream, user_weights_mem, prelu_weights_mem);</div>
+<div class="line">    <span class="keywordflow">if</span> (prelu_pd.<a name="a12"></a><a class="code" href="structdnnl_1_1primitive__desc__base.html#a35b7fb7725959ab336db58dd05e14d20">weights_desc</a>() != user_weights_mem.<a name="a13"></a><a class="code" href="structdnnl_1_1memory.html#a6bfc99db50d87d133c6b3b4f438b967a">get_desc</a>()) {</div>
+<div class="line">        prelu_weights_mem = <a class="code" href="structdnnl_1_1memory.html">memory</a>(prelu_pd.<a class="code" href="structdnnl_1_1primitive__desc__base.html#a35b7fb7725959ab336db58dd05e14d20">weights_desc</a>(), engine);</div>
+<div class="line">        <a name="_a14"></a><a class="code" href="structdnnl_1_1reorder.html">reorder</a>(user_weights_mem, prelu_weights_mem)</div>
+<div class="line">                .<a name="a15"></a><a class="code" href="structdnnl_1_1reorder.html#a20b3cad4c1dfe4ff0551b0cb27683ef7">execute</a>(engine_stream, user_weights_mem, prelu_weights_mem);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create the primitive.</span></div>
-<div class="line">    <span class="keyword">auto</span> prelu_prim = <a name="_a12"></a><a class="code" href="structdnnl_1_1prelu__forward.html">prelu_forward</a>(prelu_pd);</div>
+<div class="line">    <span class="keyword">auto</span> prelu_prim = <a name="_a16"></a><a class="code" href="structdnnl_1_1prelu__forward.html">prelu_forward</a>(prelu_pd);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Primitive arguments.</span></div>
 <div class="line">    std::unordered_map&lt;int, memory&gt; prelu_args;</div>
-<div class="line">    prelu_args.insert({<a name="a13"></a><a class="code" href="group__dnnl__api__primitives__common.html#gac37ad67b48edeb9e742af0e50b70fe09">DNNL_ARG_SRC</a>, user_src_mem});</div>
-<div class="line">    prelu_args.insert({<a name="a14"></a><a class="code" href="group__dnnl__api__primitives__common.html#gaf279f28c59a807e71a70c719db56c5b3">DNNL_ARG_WEIGHTS</a>, prelu_weights_mem});</div>
-<div class="line">    prelu_args.insert({<a name="a15"></a><a class="code" href="group__dnnl__api__primitives__common.html#ga3ca217e4a06d42a0ede3c018383c388f">DNNL_ARG_DST</a>, user_dst_mem});</div>
+<div class="line">    prelu_args.insert({<a name="a17"></a><a class="code" href="group__dnnl__api__primitives__common.html#gac37ad67b48edeb9e742af0e50b70fe09">DNNL_ARG_SRC</a>, user_src_mem});</div>
+<div class="line">    prelu_args.insert({<a name="a18"></a><a class="code" href="group__dnnl__api__primitives__common.html#gaf279f28c59a807e71a70c719db56c5b3">DNNL_ARG_WEIGHTS</a>, prelu_weights_mem});</div>
+<div class="line">    prelu_args.insert({<a name="a19"></a><a class="code" href="group__dnnl__api__primitives__common.html#ga3ca217e4a06d42a0ede3c018383c388f">DNNL_ARG_DST</a>, user_dst_mem});</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Primitive execution: PReLU.</span></div>
 <div class="line">    prelu_prim.execute(engine_stream, prelu_args);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Wait for the computation to finalize.</span></div>
-<div class="line">    engine_stream.<a name="a16"></a><a class="code" href="structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c">wait</a>();</div>
+<div class="line">    engine_stream.<a name="a20"></a><a class="code" href="structdnnl_1_1stream.html#a59985fa8746436057cf51a820ef8929c">wait</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Read data from memory object&#39;s handle.</span></div>
 <div class="line">    read_from_dnnl_memory(dst_data.data(), user_dst_mem);</div>

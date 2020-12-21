@@ -45,6 +45,10 @@ var group__dnnl__api__service =
       [ "avx512_core_amx", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83ad49189665b06a3259b3bf3603319fd0d", null ],
       [ "avx2_vnni", "group__dnnl__api__service.html#ggabad017feb1850634bf3babdb68234f83a59548f83cb32f5f6272186734a9a711d", null ]
     ] ],
+    [ "cpu_isa_hints", "group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4", [
+      [ "no_hints", "group__dnnl__api__service.html#ggaf574021058ebc6965da14fc4387dd0c4a5c2d3f6f845dca6d90d7a1c445644c99", null ],
+      [ "prefer_ymm", "group__dnnl__api__service.html#ggaf574021058ebc6965da14fc4387dd0c4ad5d95963017a7ba00e7ddc69b67cacb6", null ]
+    ] ],
     [ "dnnl_cpu_isa_t", "group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2", [
       [ "dnnl_cpu_isa_all", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a4f614e9d72ffc6338fdfc420b77601c8", null ],
       [ "dnnl_cpu_isa_sse41", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a5e2f2cccadb94b34700a90bba91e0fe3", null ],
@@ -58,6 +62,10 @@ var group__dnnl__api__service =
       [ "dnnl_cpu_isa_avx512_core_amx", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a3a4b0c594f109982fde90e221087ded9", null ],
       [ "dnnl_cpu_isa_avx2_vnni", "group__dnnl__api__service.html#gga303bab5d2e7b371bb44495864df21dd2a8f2cbdae2834cebd2e5bf86b8c65e9d4", null ]
     ] ],
+    [ "dnnl_cpu_isa_hints_t", "group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d", [
+      [ "dnnl_cpu_isa_no_hints", "group__dnnl__api__service.html#ggaf356412d94e35579bd509ed1fa174f5da9e598ac27ce94827b20cab264d623da4", null ],
+      [ "dnnl_cpu_isa_prefer_ymm", "group__dnnl__api__service.html#ggaf356412d94e35579bd509ed1fa174f5daf9dd6f8367a4de1e12aa617307edbe41", null ]
+    ] ],
     [ "dnnl_set_verbose", "group__dnnl__api__service.html#ga14cc3b56337322e1e5132c5ee0c84856", null ],
     [ "dnnl_set_jit_dump", "group__dnnl__api__service.html#ga03c8f4af3d01f76060f98e78039837fc", null ],
     [ "dnnl_version", "group__dnnl__api__service.html#ga73e40d184386e9d9ca917756e76fb232", null ],
@@ -65,11 +73,15 @@ var group__dnnl__api__service =
     [ "dnnl_set_jit_profiling_jitdumpdir", "group__dnnl__api__service.html#gafb0fb0d37d72bc58386ba97bb858f8f7", null ],
     [ "dnnl_set_max_cpu_isa", "group__dnnl__api__service.html#ga4b7f3b3299482f88f1a0aa61a4707156", null ],
     [ "dnnl_get_effective_cpu_isa", "group__dnnl__api__service.html#gac55836cf36bc25f8635e459678303570", null ],
+    [ "dnnl_set_cpu_isa_hints", "group__dnnl__api__service.html#gad078a384ab0e078d81595686efd26ed2", null ],
+    [ "dnnl_get_cpu_isa_hints", "group__dnnl__api__service.html#gad93f9f4bf3c9e12a2be7337b1e41d145", null ],
     [ "set_verbose", "group__dnnl__api__service.html#ga37bcab6f832df551a9fc418e48743b15", null ],
     [ "version", "group__dnnl__api__service.html#gaad8292408620d0296f22bdf65afb752d", null ],
     [ "set_jit_dump", "group__dnnl__api__service.html#ga2344639528a341878d2ce46fe1c1ac83", null ],
     [ "set_jit_profiling_flags", "group__dnnl__api__service.html#ga966c54ccb1d9ff33d20c4ea47e34675d", null ],
     [ "set_jit_profiling_jitdumpdir", "group__dnnl__api__service.html#ga533341aaf1402e27d1225d1a59819a62", null ],
     [ "set_max_cpu_isa", "group__dnnl__api__service.html#ga08734310b5f1ca794c64b6a5b944b698", null ],
-    [ "get_effective_cpu_isa", "group__dnnl__api__service.html#ga3953f71c3f0126d9cc005a1ceff65e8b", null ]
+    [ "get_effective_cpu_isa", "group__dnnl__api__service.html#ga3953f71c3f0126d9cc005a1ceff65e8b", null ],
+    [ "set_cpu_isa_hints", "group__dnnl__api__service.html#ga29aa5fb708d803e091ac61dc67f9e6ed", null ],
+    [ "get_cpu_isa_hints", "group__dnnl__api__service.html#ga8bee13aa79a9711489b401e9c4252ff2", null ]
 ];

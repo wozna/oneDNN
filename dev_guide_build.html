@@ -145,7 +145,8 @@ $(document).ready(function(){initNavTree('dev_guide_build.html','');});
 <div class="line">cmake .. \</div>
 <div class="line">         -DDNNL_AARCH64_USE_ACL=ON \</div>
 <div class="line">         &lt;extra build options&gt;</div>
-</div><!-- fragment --><h4>Build and Install the Library</h4>
+</div><!-- fragment --><p> Using ACL versions above 20.11 may require the <code>-DCMAKE_CXX_STANDARD=14</code> and <code>-DCMAKE_CXX_EXTENSIONS=OFF</code> flags to be passed.</p>
+<h4>Build and Install the Library</h4>
 <ul>
 <li>Build the library <div class="fragment"><div class="line">make -j</div>
 </div><!-- fragment --></li>

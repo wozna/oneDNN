@@ -118,6 +118,8 @@ $(document).ready(function(){initNavTree('dev_guide_build_options.html','');});
 <tr>
 <td align="left">DNNL_ENABLE_MAX_CPU_ISA </td><td align="left"><b>ON</b>, OFF </td><td align="left">Enables <a class="el" href="dev_guide_cpu_dispatcher_control.html">CPU dispatcher controls</a> </td></tr>
 <tr>
+<td align="left">DNNL_ENABLE_CPU_ISA_HINTS </td><td align="left"><b>ON</b>, OFF </td><td align="left">Enables <a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA hints</a> </td></tr>
+<tr>
 <td align="left">DNNL_VERBOSE </td><td align="left"><b>ON</b>, OFF </td><td align="left">Enables <a class="el" href="dev_guide_verbose.html">verbose mode</a> </td></tr>
 <tr>
 <td align="left">DNNL_AARCH64_USE_ACL </td><td align="left">ON, <b>OFF</b> </td><td align="left">Enables integration with Arm Compute Library for AArch64 builds </td></tr>
@@ -137,6 +139,8 @@ $(document).ready(function(){initNavTree('dev_guide_build_options.html','');});
 <dl class="section warning"><dt>Warning</dt><dd>While use of <code>DNNL_ARCH_OPT_FLAGS</code> option gives better performance, the resulting library can be run only on systems that have instruction set compatible with the target instruction set. Therefore, <code>ARCH_OPT_FLAGS</code> should be set to an empty string (<code>""</code>) if the resulting library needs to be portable.</dd></dl>
 <h3>Runtime CPU dispatcher control</h3>
 <p>oneDNN JIT relies on ISA features obtained from the processor it is being run on. There are situations when it is necessary to control this behavior at run-time to, for example, test SSE4.1 code on an AVX2-capable processor. The <code>DNNL_ENABLE_MAX_CPU_ISA</code> build option controls the availability of this feature. See <a class="el" href="dev_guide_cpu_dispatcher_control.html">CPU Dispatcher Control</a> for more information.</p>
+<h3>Runtime CPU ISA hints</h3>
+<p>For performance reasons, sometimes oneDNN JIT needs to be provided with extra hints so as to prefer or avoid particular CPU ISA feature. For example, one might want to disable Zmm registers usage in order to take advantage of higher clock speed. The <code>DNNL_ENABLE_CPU_ISA_HINTS</code> build option makes this feature available at runtime. See <a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA Hints</a> for more information.</p>
 <h3>Runtimes</h3>
 <p>CPU engine can use OpenMP, Threading Building Blocks (TBB) or sequential threading runtimes. OpenMP threading is the default build mode. This behavior is controlled by the <code>DNNL_CPU_RUNTIME</code> CMake option.</p>
 <h4>OpenMP</h4>

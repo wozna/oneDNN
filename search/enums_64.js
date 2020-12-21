@@ -2,6 +2,7 @@ var searchData=
 [
   ['data_5ftype',['data_type',['../structdnnl_1_1memory.html#a8e83474ec3a50e08e37af76c8c075dce',1,'dnnl::memory']]],
   ['dnnl_5falg_5fkind_5ft',['dnnl_alg_kind_t',['../group__dnnl__api__primitives__common.html#ga96946c805f6c4922c38c37049ab95d23',1,'dnnl_types.h']]],
+  ['dnnl_5fcpu_5fisa_5fhints_5ft',['dnnl_cpu_isa_hints_t',['../group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d',1,'dnnl_types.h']]],
   ['dnnl_5fcpu_5fisa_5ft',['dnnl_cpu_isa_t',['../group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2',1,'dnnl_types.h']]],
   ['dnnl_5fdata_5ftype_5ft',['dnnl_data_type_t',['../group__dnnl__api__memory.html#ga012ba1c84ff24bdd068f9d2f9b26a130',1,'dnnl_types.h']]],
   ['dnnl_5fengine_5fkind_5ft',['dnnl_engine_kind_t',['../group__dnnl__api__engine.html#ga04b3dd9eba628ea02218a52c4c4363a2',1,'dnnl_types.h']]],

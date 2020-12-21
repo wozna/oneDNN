@@ -71,7 +71,7 @@ var NAVTREE =
     [ "API Reference", "usergroup6.html", [
       [ "Modules", "modules.html", "modules" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
@@ -100,13 +100,13 @@ var NAVTREEINDEX =
 "group__dnnl__api__deconvolution.html#ga394d097b787b65b164039ee8cc772405",
 "group__dnnl__api__primitives__common.html#ga1fa3eca53abce941ace7d28f9af1ec61",
 "group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059ad78b3945c7d4da7938ca77daa425afab",
-"structdnnl_1_1convolution__backward__data_1_1desc.html#aa190da119ae1cdddef55031dd0a15b6a",
-"structdnnl_1_1layer__normalization__forward.html#aff43626ba95cf18f0d1aa599d8e3c034",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa235270d63611411252eb2ee8b154b8ae",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3faa928acc956c3370b8acae8085c7cfa06",
-"structdnnl_1_1post__ops.html#a128429160104654adcfb651e9ee02905",
-"structdnnl_1_1stream.html#acb0b2dcb354fd2302a7f5d930aa74866",
-"structdnnl__version__t.html#a2d0bade7e7ab7ff25d68f9011a3978e2"
+"structdnnl_1_1binary.html#a3e30f5d399c655ec1e5d03a1fd1b855c",
+"structdnnl_1_1inner__product__forward_1_1primitive__desc.html#a051a8a940fd2ddd3a7fe1c4882955065",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa0ecdca6185803e918e4544323c41d3e9",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa94bae6f8097adc154129b2fffe515971",
+"structdnnl_1_1pooling__forward_1_1primitive__desc.html",
+"structdnnl_1_1shuffle__forward_1_1primitive__desc.html#a9695ccdcfd24f9cc46191d5487546d87",
+"structdnnl__rnn__desc__t.html#a4f22acfd6dee07584cc62e3ed6b8e7be"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

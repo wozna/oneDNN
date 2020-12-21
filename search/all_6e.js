@@ -10,6 +10,7 @@ var searchData=
   ['ndims',['ndims',['../structdnnl__memory__desc__t.html#a72ed50c98f23f513550255ca8917b473',1,'dnnl_memory_desc_t']]],
   ['next_5fimpl',['next_impl',['../structdnnl_1_1primitive__desc.html#a841df469ca54c3de2d233e46f48322b2',1,'dnnl::primitive_desc']]],
   ['nhwc',['nhwc',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa763cbf7ba1b7b8793dcdc6e2157b5c42',1,'dnnl::memory']]],
+  ['no_5fhints',['no_hints',['../group__dnnl__api__service.html#ggaf574021058ebc6965da14fc4387dd0c4a5c2d3f6f845dca6d90d7a1c445644c99',1,'dnnl']]],
   ['none',['none',['../group__dnnl__api__primitives__common.html#ggad8ef0fcbb7b10cae3d67dd46892002bea334c4a4c42fdb79d7ebc3e73b517e6f8',1,'dnnl']]],
   ['normalization_5fflags',['normalization_flags',['../group__dnnl__api__primitives__common.html#gad8ef0fcbb7b10cae3d67dd46892002be',1,'dnnl']]],
   ['not_5frequired',['not_required',['../group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda20ab085a3c46af7db87fc1806865b329',1,'dnnl']]],

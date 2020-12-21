@@ -11,5 +11,6 @@ var searchData=
   ['concat',['Concat',['../dev_guide_concat.html',1,'']]],
   ['convolution',['Convolution',['../dev_guide_convolution.html',1,'']]],
   ['cpu_20dispatcher_20control',['CPU Dispatcher Control',['../dev_guide_cpu_dispatcher_control.html',1,'']]],
+  ['cpu_20isa_20hints',['CPU ISA Hints',['../dev_guide_cpu_isa_hints.html',1,'']]],
   ['configuring_20onednn_20for_20benchmarking',['Configuring oneDNN for Benchmarking',['../dev_guide_performance_settings.html',1,'']]]
 ];

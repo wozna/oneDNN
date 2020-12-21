@@ -6,6 +6,7 @@ var searchData=
   ['ncw',['ncw',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fabc4eee572ad38f8a5c2534e0b2533100',1,'dnnl::memory']]],
   ['ndhwc',['ndhwc',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fad2f2770ca9883423f680fd4a29481d64',1,'dnnl::memory']]],
   ['nhwc',['nhwc',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa763cbf7ba1b7b8793dcdc6e2157b5c42',1,'dnnl::memory']]],
+  ['no_5fhints',['no_hints',['../group__dnnl__api__service.html#ggaf574021058ebc6965da14fc4387dd0c4a5c2d3f6f845dca6d90d7a1c445644c99',1,'dnnl']]],
   ['none',['none',['../group__dnnl__api__primitives__common.html#ggad8ef0fcbb7b10cae3d67dd46892002bea334c4a4c42fdb79d7ebc3e73b517e6f8',1,'dnnl']]],
   ['not_5frequired',['not_required',['../group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda20ab085a3c46af7db87fc1806865b329',1,'dnnl']]],
   ['nt',['nt',['../structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa25930e3036f13852cb0b29694bbab611',1,'dnnl::memory']]],
