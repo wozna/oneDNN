@@ -142,27 +142,27 @@ $(document).ready(function(){initNavTree('dev_guide_binary.html','');});
 <td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a40bb2b39a685726ac54873b203be41b5">Binary</a> </td><td align="left">Applies a <a class="el" href="group__dnnl__api__binary.html">Binary</a> operation to the result </td><td align="left">General binary post-op restrictions </td></tr>
 </table>
 <h3>Data Types Support</h3>
-<p>The source and destination tensors may have <code>f32</code>, <code>bf16</code>, or <code>int8</code> data types. The binary primitive supports the following combinations of data types:</p>
+<p>The source and destination tensors may have <code>f32</code>, <code>bf16</code>, <code>f16</code> or <code>s8/u8</code> data types. The binary primitive supports the following combinations of data types:</p>
 <table class="doxtable">
 <tr>
 <th align="left">Source 0 / 1 </th><th align="left">Destination  </th></tr>
 <tr>
-<td align="left">f32 </td><td align="left">f32 </td></tr>
-<tr>
 <td align="left">bf16 </td><td align="left">bf16 </td></tr>
 <tr>
-<td align="left">f16 </td><td align="left">f16 </td></tr>
-<tr>
-<td align="left">s8, u8, f32 </td><td align="left">s8, u8 </td></tr>
-<tr>
-<td align="left">s8, u8, f32 </td><td align="left">s8, u8 </td></tr>
+<td align="left">s8, u8, f16, f32 </td><td align="left">s8, u8, f16, f32 </td></tr>
 </table>
+<dl class="section warning"><dt>Warning</dt><dd>There might be hardware and/or implementation specific restrictions. Check <a class="el" href="dev_guide_binary.html#dg_binary_impl_limits">Implementation Limitations</a> section below.</dd></dl>
 <h3>Data Representation</h3>
 <h4>Sources, Destination</h4>
 <p>The binary primitive works with arbitrary data tensors. There is no special meaning associated with any of tensors dimensions.</p>
+<p><a class="anchor" id="dg_binary_impl_limits"></a></p>
 <h2>Implementation Limitations</h2>
 <ol type="1">
 <li>Refer to <a class="el" href="dev_guide_data_types.html">Data Types</a> for limitations related to data types support.</li>
+<li><b>CPU</b><ul>
+<li>For <code>f32</code> destination type source 0 and source 1 tensors must have <code>f32</code> data type.</li>
+</ul>
+</li>
 </ol>
 <h2>Performance Tips</h2>
 <ol type="1">

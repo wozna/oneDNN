@@ -134,13 +134,27 @@ $(document).ready(function(){initNavTree('dev_guide_reduction.html','');});
 <td>\(\src\) </td><td>DNNL_ARG_SRC </td></tr>
 <tr>
 <td>\(\dst\) </td><td>DNNL_ARG_DST </td></tr>
+<tr>
+<td>\(\text{binary post-op}\) </td><td><a class="el" href="group__dnnl__api__primitives__common.html#ga30839136bbf81b03a173e0842ae015e1" title="Arguments for a binary post operation. ">DNNL_ARG_ATTR_MULTIPLE_POST_OP(binary_post_op_position)</a> | DNNL_ARG_SRC_1 </td></tr>
 </table>
 <h2>Implementation Details</h2>
 <h3>General Notes</h3>
 <ul>
 <li>The \(\dst\) memory format can be either specified explicitly or by <a class="el" href="structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa100b8cad7cf2a56f6df78f171f97a1ec" title="Placeholder memory format tag. ">dnnl::memory::format_tag::any</a> (recommended), in which case the primitive will derive the most appropriate memory format based on the format of the source tensor.</li>
 </ul>
-<h3>Data Type Support</h3>
+<h3>Post-ops and Attributes</h3>
+<p>The following attributes are supported:</p>
+<table class="doxtable">
+<tr>
+<th align="left">Type </th><th align="left">Operation </th><th align="left">Description </th><th align="left">Restrictions  </th></tr>
+<tr>
+<td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#ab8e3832e8600216a3646e9050d3bc1f3">Sum</a> </td><td align="left">Adds the operation result to the destination tensor instead of overwriting it. </td><td align="left"></td></tr>
+<tr>
+<td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a28460923ad579c780e4027a6256fe207">Eltwise</a> </td><td align="left">Applies an <a class="el" href="group__dnnl__api__eltwise.html">Eltwise</a> operation to the result. </td><td align="left"></td></tr>
+<tr>
+<td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a40bb2b39a685726ac54873b203be41b5">Binary</a> </td><td align="left">Applies a <a class="el" href="group__dnnl__api__binary.html">Binary</a> operation to the result </td><td align="left">General binary post-op restrictions </td></tr>
+</table>
+<h3>Data Types Support</h3>
 <p>The source and destination tensors may have <code>f32</code>, <code>bf16</code>, or <code>int8</code> data types. See <a class="el" href="dev_guide_data_types.html">Data Types</a> page for more details.</p>
 <h3>Data Representation</h3>
 <h4>Sources, Destination</h4>

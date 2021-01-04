@@ -107,12 +107,8 @@ $(document).ready(function(){initNavTree('dev_guide_resampling.html','');});
 <p>Resampling operation is defined by the source tensor and scaling factors in each spatial dimension. Upsampling and downsampling are the alternative terms for resampling that are used when all scaling factors are greater (upsampling) or less (downsampling) than one.</p>
 <p>The resampling operation is defined by the following formulas. We show formulas only for 2D spatial data which are straightforward to generalize to cases of higher and lower dimensions. Variable names follow the standard <a class="el" href="dev_guide_conventions.html">Naming Conventions</a>.</p>
 <p>Let \(\src\) and \(\dst\) be \(N \times C \times IH \times IW\) and \(N \times C \times OH \times OW\) tensors respectively. Let \( F_h = \frac{OH}{IH} \) and \( F_w = \frac{OW}{IW} \) define scaling factors in each spatial dimension.</p>
-<p>The following formulas show how oneDNN computes resampling for nearest neighbor and bilinear interpolation methods. To further simplify the formulas, we assume the following:</p>
-<ul>
-<li>\(\src(n, ic, ih, iw) = 0\) if \(ih &lt; 0\) or \(iw &lt; 0\),</li>
-<li>\(\src(n, ic, ih, iw) = \src(n, ic, IH - 1, iw)\) if \(ih \geq IH\),</li>
-<li>\(\src(n, ic, ih, iw) = \src(n, ic, ih, IW - 1)\) if \(iw \geq IW\).</li>
-</ul>
+<p>The following formulas show how oneDNN computes resampling for nearest neighbor and bilinear interpolation methods. To further simplify the formulas, we assume the following: \(\src(n, ic, ih, iw) = \begin{cases} \src(n, ic, ih, 0), &amp; \text{if}\ iw &lt; 0 \\ \src(n, ic, ih, iw), &amp; \text{if}\ IW - 1 \geq iw \geq 0 \\ \src(n, ic, ih, IW - 1), &amp; \text{if}\ iw &gt; IW - 1 \end{cases}\)</p>
+<p>Same assumptions apply for \(ih\). Definitions of \(ih\) and \(iw\) are provided below with a correspondent algorithm.</p>
 <h3>Forward</h3>
 <h4>Nearest Neighbor Resampling</h4>
 <p class="formulaDsp">
@@ -125,7 +121,7 @@ $(document).ready(function(){initNavTree('dev_guide_resampling.html','');});
 </ul>
 <h4>Bilinear Resampling</h4>
 <p class="formulaDsp">
-\[ \dst(n, c, oh, ow) = \src(n, c, ih_0, iw_0) \cdot W_{ih} \cdot W_{iw} + \\ \src(n, c, ih_1, iw_0) \cdot (1 - W_{ih}) \cdot W_{iw} + \\ \src(n, c, ih_0, iw_1) \cdot W_{ih} \cdot (1 - W_{iw}) + \\ \src(n, c, ih_1, iw_1) \cdot (1 - W_{ih}) \cdot (1 - W_{iw}) \\ \]
+\[ \dst(n, c, oh, ow) = \src(n, c, ih_0, iw_0) \cdot (1 - W_{ih}) \cdot (1 - W_{iw}) + \\ \src(n, c, ih_1, iw_0) \cdot W_{ih} \cdot (1 - W_{iw}) + \\ \src(n, c, ih_0, iw_1) \cdot (1 - W_{ih}) \cdot W_{iw} + \\ \src(n, c, ih_1, iw_1) \cdot W_{ih} \cdot W_{iw} \\ \]
 </p>
 <p>where</p>
 <ul>

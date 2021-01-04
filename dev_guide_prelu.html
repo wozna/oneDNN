@@ -99,7 +99,8 @@ $(document).ready(function(){initNavTree('dev_guide_prelu.html','');});
 <p></p>
 </blockquote>
 <h2>General</h2>
-<p>The PReLU primitive (Leaky ReLU with trainable alpha parameter) performs forward or backward operation on 1D, 2D, or 3D spatial data. Weights (alpha) tensor supports broadcast-semantics with 3 different configurations: Channel-wise, Channel-shared (scalar) and Whole-tensor (No broadcast). Broadcast type is assumed based on src and weights dimensions, according to following table:</p>
+<p>The PReLU primitive (Leaky ReLU with trainable alpha parameter) performs forward or backward operation on data tensor. Weights (alpha) tensor supports broadcast-semantics. Broadcast configuration is assumed based on src and weights dimensions.</p>
+<p>Example broadcasts:</p>
 <table class="doxtable">
 <tr>
 <th>broadcast type </th><th>src dimensions </th><th>weights dimensions  </th></tr>
@@ -109,13 +110,16 @@ $(document).ready(function(){initNavTree('dev_guide_prelu.html','');});
 <td>Channel-wise </td><td>\(\{n, c, h ,w\}\) </td><td>\(\{1, c, 1 ,1\}\) </td></tr>
 <tr>
 <td>Whole-tensor </td><td>\(\{n, c, h ,w\}\) </td><td>\(\{n, c, h ,w\}\) </td></tr>
+<tr>
+<td>Shared-axes </td><td>\(\{n, c, h ,w\}\) </td><td>\(\{n, 1, h ,1\}\) </td></tr>
 </table>
+<p>note: Shared-axes indicates broadcast with any combination of shared dimensions.</p>
 <h3>Forward</h3>
 <p>The PReLU operation is defined by the following formulas. We show formulas only for 2D spatial data which are straightforward to generalize to cases of higher and lower dimensions. Variable names follow the standard <a class="el" href="dev_guide_conventions.html">Naming Conventions</a>. For no broadcast case, results are calculated using formula:</p>
 <p class="formulaDsp">
 \[ \dst(n, c, h, w) = \begin{cases} \src(n, c, h, w) &amp; \mbox{if } \src(n, c, h, w) &gt; 0 \\ \src(n, c, h, w) \cdot \weights(n, c, h, w) &amp; \mbox{if } \src(n, c, h, w) \leq 0 \end{cases} \]
 </p>
-<p>Depending on broadcast type, result is calculated taking into account shared dimensions of weights tensor.</p>
+<p>Depending on broadcast configuration, result is calculated taking into account shared dimensions of weights tensor.</p>
 <h4>Difference Between Forward Training and Forward Inference</h4>
 <p>There is no difference between the <a class="el" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a992e03bebfe623ac876b3636333bbce0" title="Forward data propagation (training mode). ">dnnl_forward_training</a> and <a class="el" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a2f77a568a675dec649eb0450c997856d" title="Forward data propagation (inference mode). ">dnnl_forward_inference</a> propagation kinds.</p>
 <h3>Backward</h3>
@@ -146,7 +150,7 @@ $(document).ready(function(){initNavTree('dev_guide_prelu.html','');});
 <h3>General Notes</h3>
 <ul>
 <li>Prelu primitive requires all input/output tensors to have the same number of dimensions. Dimension sizes can differ however.</li>
-<li>\(\weights\) tensor dimensions sizes must match any of broadcast types, which is: Whole-tensor (No broadcast), Channel-wise or Channel-shared (scalar).</li>
+<li>\(\weights\) tensor dimensions sizes must follow broadcast semantics. Each dimension can either equal corresponding data dimension or equal 1 - to indicate that dimension is shared.</li>
 <li>Prelu primitive requires that \(\diffweights\) tensor has exact same dimensions sizes as \(\weights\) tensor, \(\diffsrc\) as src and \(\diffdst\) as dst.</li>
 <li>\(\weights\) tensor can be initialized with format_tag::any primitive will match it to data tensor format.</li>
 </ul>
@@ -161,7 +165,7 @@ $(document).ready(function(){initNavTree('dev_guide_prelu.html','');});
 <h3>Data Representation</h3>
 <p>The PReLU primitive works with arbitrary data tensors. There is no special meaning associated with any logical dimensions.</p>
 <h2>Implementation Limitations</h2>
-<p>Current implementation only supports 1D, 2D and 3D tensors.</p>
+<p>Current implementation supports all tensors up to 3D spatial (n, c, d, h, w).</p>
 <h2>Performance Tips</h2>
 <p>Its recommended to allow PReLU primitive to choose the appropriate weights memory format by passing weights_md with format_tag::any. For best performance, the weights memory format should match data memory format.</p>
 <h2>Examples</h2>
