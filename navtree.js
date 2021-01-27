@@ -58,7 +58,8 @@ var NAVTREE =
       [ "Profiling oneDNN Performance", "dev_guide_profilers.html", null ],
       [ "Inspecting JIT Code", "dev_guide_inspecting_jit.html", null ],
       [ "Performance Profiling Example", "performance_profiling_cpp.html", null ],
-      [ "CPU Dispatcher Controls", "dev_guide_cpu_dispatcher_control.html", null ]
+      [ "CPU Dispatcher Controls", "dev_guide_cpu_dispatcher_control.html", null ],
+      [ "CPU ISA Hints", "dev_guide_cpu_isa_hints.html", null ]
     ] ],
     [ "Advanced Topics", "usergroup5.html", [
       [ "Transition from v0.x to v1.x", "dev_guide_transition_to_v1.html", null ],
@@ -97,16 +98,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__dnnl__api__deconvolution.html#ga394d097b787b65b164039ee8cc772405",
-"group__dnnl__api__primitives__common.html#ga1fa3eca53abce941ace7d28f9af1ec61",
-"group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059ad78b3945c7d4da7938ca77daa425afab",
-"structdnnl_1_1binary.html#a3e30f5d399c655ec1e5d03a1fd1b855c",
-"structdnnl_1_1inner__product__forward_1_1primitive__desc.html#a051a8a940fd2ddd3a7fe1c4882955065",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa0ecdca6185803e918e4544323c41d3e9",
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa900150983cd24fb0d6963f7d28e17f72",
-"structdnnl_1_1memory_1_1desc.html#a517663e910e8c1795b3a935f49579652",
-"structdnnl_1_1rnn__primitive__desc__base.html#ab93f2d165469f53a80c5d9f3c3acdb12",
-"structdnnl__reduction__desc__t.html"
+"group__dnnl__api__deconvolution.html#ga1d03ab188e31c1efeae37d3d4c60f757",
+"group__dnnl__api__primitives__common.html#ga1d8616925684111f3a1b6d8116ab0077",
+"group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059aaa3009651cd11cc84f7a73ef88671b61",
+"structdnnl_1_1batch__normalization__forward_1_1primitive__desc.html#aed5593d06fd5bd5e2de7cc77689128b2",
+"structdnnl_1_1inner__product__forward_1_1desc.html#a26f9ccb7d914078d1eee94634025edfe",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa0c035ab408bbad64c4599d82204eca70",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa7664b9d3e206fcc6001fa5d83d279e8c",
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fad277a83ebd8cc0be41e3c0ddd88530cf",
+"structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a4abcef116566139e94c82bb1bb37583f",
+"structdnnl_1_1vanilla__rnn__forward_1_1primitive__desc.html#a20ed263ada89906c644190a972c2fd6b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

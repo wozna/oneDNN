@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">2.0.0</div>
+   <div id="projectnumber">2.1.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -149,6 +149,8 @@ $(document).ready(function(){initNavTree('dev_guide_resampling.html','');});
 <td>\(\diffsrc\) </td><td>DNNL_ARG_DIFF_SRC </td></tr>
 <tr>
 <td>\(\diffdst\) </td><td>DNNL_ARG_DIFF_DST </td></tr>
+<tr>
+<td>\(\text{binary post-op}\) </td><td><a class="el" href="group__dnnl__api__primitives__common.html#ga30839136bbf81b03a173e0842ae015e1" title="Arguments for a binary post operation. ">DNNL_ARG_ATTR_MULTIPLE_POST_OP(binary_post_op_position)</a> | DNNL_ARG_SRC_1 </td></tr>
 </table>
 <h2>Implementation Details</h2>
 <h3>General Notes</h3>
@@ -165,13 +167,24 @@ $(document).ready(function(){initNavTree('dev_guide_resampling.html','');});
 <tr>
 <td align="left">forward / backward </td><td align="left">f32, bf16 </td></tr>
 <tr>
-<td align="left">forward </td><td align="left">f16, s8, u8 </td></tr>
+<td align="left">forward </td><td align="left">f16, s32, s8, u8 </td></tr>
 </table>
 <h3>Post-ops and Attributes</h3>
-<p>The resampling primitive does not support any post-ops or attributes.</p>
+<p>The following attributes are supported:</p>
+<table class="doxtable">
+<tr>
+<th align="left">Type </th><th align="left">Operation </th><th align="left">Description </th><th align="left">Restrictions  </th></tr>
+<tr>
+<td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#ab8e3832e8600216a3646e9050d3bc1f3">Sum</a> </td><td align="left">Adds the operation result to the destination tensor instead of overwriting it. </td><td align="left"></td></tr>
+<tr>
+<td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a28460923ad579c780e4027a6256fe207">Eltwise</a> </td><td align="left">Applies an <a class="el" href="group__dnnl__api__eltwise.html">Eltwise</a> operation to the result. </td><td align="left"></td></tr>
+<tr>
+<td align="left">Post-op </td><td align="left"><a class="el" href="structdnnl_1_1post__ops.html#a40bb2b39a685726ac54873b203be41b5">Binary</a> </td><td align="left">Applies a <a class="el" href="group__dnnl__api__binary.html">Binary</a> operation to the result </td><td align="left">General binary post-op restrictions </td></tr>
+</table>
 <h2>Implementation Limitations</h2>
 <ol type="1">
 <li>No primitive specific limitations. Refer to <a class="el" href="dev_guide_data_types.html">Data Types</a> for limitations related to data types support.</li>
+<li>Only GPU support mixed data types and post-ops.</li>
 <li><b>CPU</b><ul>
 <li>No support for f16, u8, s8 data types.</li>
 </ul>

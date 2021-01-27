@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">2.0.0</div>
+   <div id="projectnumber">2.1.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('dev_guide_threadpool.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>When oneDNN is built with the threadpool CPU runtime (see <a class="el" href="dev_guide_build_options.html">Build Options</a>), oneDNN requires a user to implement a threadpool interface to enable the library to perform computations using multiple threads.</p>
-<p>The threadpool interface is defined in <code><a class="el" href="dnnl__threadpool__iface_8hpp_source.html">include/dnnl_threadpool_iface.hpp</a></code>. Below is a sample implementation based on Eigen threadpool that is also used for testing (see <code>tests/testing_threadpool.hpp</code>).</p>
+<p>The threadpool interface is defined in <code><a class="el" href="oneapi_2dnnl_2dnnl__threadpool__iface_8hpp_source.html">include/oneapi/dnnl/dnnl_threadpool_iface.hpp</a></code>. Below is a sample implementation based on Eigen threadpool that is also used for testing (see <code>tests/test_thread.cpp</code>).</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;dnnl_threadpool_iface.hpp&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keyword">class </span>threadpool : <span class="keyword">public</span> <a class="code" href="structdnnl_1_1threadpool__interop_1_1threadpool__iface.html">dnnl::threadpool_interop::threadpool_iface</a> {</div>

@@ -37,7 +37,7 @@
     </a>
    </div>
    <div id="projectbrief">Performance library for Deep Learning</div>
-   <div id="projectnumber">2.0.0</div>
+   <div id="projectnumber">2.1.0</div>
   <div>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('dev_guide_basic_concepts.html','');});
 <div class="caption">
 Figure 1: Overview of oneDNN programming model. Blue rectangles denote oneDNN objects, and red lines denote dependencies between objects.</div></div>
  <h3>Primitives</h3>
-<p>oneDNN is built around the notion of a <em>primitive</em> (<a class="el" href="structdnnl_1_1primitive.html">dnnl::primitive</a>). A <em>primitive</em> is a functor object that encapsulates a particular computation such as forward convolution, backward LSTM computations, or a data transformation operation. Additionally, using primitive <em>attributes</em> (<a class="el" href="structdnnl_1_1primitive__attr.html">dnnl::primitive_attr</a>) certain primitives can represent more complex <em>fused</em> computations such as a forward convolution followed by a ReLU.</p>
+<p>oneDNN is built around the notion of a <em>primitive</em> (<a class="el" href="structdnnl_1_1primitive.html">dnnl::primitive</a>). A <em>primitive</em> is an object that encapsulates a particular computation such as forward convolution, backward LSTM computations, or a data transformation operation. Additionally, using primitive <em>attributes</em> (<a class="el" href="structdnnl_1_1primitive__attr.html">dnnl::primitive_attr</a>) certain primitives can represent more complex <em>fused</em> computations such as a forward convolution followed by a ReLU.</p>
 <p>The most important difference between a primitive and a pure function is that a primitive can store state.</p>
 <p>One part of the primitive’s state is immutable. For example, convolution primitives store parameters like tensor shapes and can pre-compute other dependent parameters like cache blocking. This approach allows oneDNN primitives to pre-generate code specifically tailored for the operation to be performed. The oneDNN programming model assumes that the time it takes to perform the pre-computations is amortized by reusing the same primitive to perform computations multiple times.</p>
 <p>The mutable part of the primitive’s state is referred to as a scratchpad. It is a memory buffer that a primitive may use for temporary storage only during computations. The scratchpad can either be owned by a primitive object (which makes that object non-thread safe) or be an execution-time parameter.</p>
