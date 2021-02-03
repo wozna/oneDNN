@@ -1505,6 +1505,9 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga96946c805f6c4922c38c37049ab95d23a551dc23f954000fe81a97c9bd8ca4899"></a>dnnl_binary_sub</em>&nbsp;</td><td class="fielddoc">
 <p>Binary sub. </p>
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga96946c805f6c4922c38c37049ab95d23a8303a5bb9566ad2cd1323653a81dc494"></a>dnnl_binary_ge</em>&nbsp;</td><td class="fielddoc">
+<p>Binary greater or equal. </p>
+</td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be"></a>dnnl_resampling_nearest</em>&nbsp;</td><td class="fielddoc">
 <p>Nearest Neighbor Resampling Method. </p>
 </td></tr>
@@ -2313,6 +2316,13 @@ NULL in case of any error. </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__dnnl__api__utils.html#ggad24f9ded06e34d3ee71e7fc4b408d57aaa31395e9dccc103cf166cf7b38fc5b9c" title="The operation was successful. ">dnnl_success</a> on success and a status describing the error otherwise. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If any argument in </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>is padded (padded_dims &gt; dims), the primitive execution will assume properly zero-padded input arguments, and produce zero-padded output arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="cnn_inference_f32_8c-example.html#a53">cnn_inference_f32.c</a>, <a class="el" href="cpu_cnn_training_f32_8c-example.html#a66">cpu_cnn_training_f32.c</a>, and <a class="el" href="cross_engine_reorder_8c-example.html#a26">cross_engine_reorder.c</a>.</dd>
 </dl>
 </div>

@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('cross_engine_reorder_8c-example.html',
 <div class="contents">
 <p>This C API example demonstrates programming flow when reordering memory between CPU and GPU engines.</p>
 <div class="fragment"><div class="line"><span class="comment">/*******************************************************************************</span></div>
-<div class="line"><span class="comment">* Copyright 2019-2020 Intel Corporation</span></div>
+<div class="line"><span class="comment">* Copyright 2019-2021 Intel Corporation</span></div>
 <div class="line"><span class="comment">*</span></div>
 <div class="line"><span class="comment">* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><span class="comment">* you may not use this file except in compliance with the License.</span></div>
@@ -130,6 +130,7 @@ $(document).ready(function(){initNavTree('cross_engine_reorder_8c-example.html',
 <div class="line"><span class="keywordtype">void</span> fill(<a name="_a0"></a><a class="code" href="structdnnl__memory.html">dnnl_memory_t</a> mem, <span class="keywordtype">int</span> n_dims, <span class="keyword">const</span> <a class="code" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> dims[]) {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">size_t</span> n_elems = product(n_dims, dims);</div>
 <div class="line">    <span class="keywordtype">float</span> *array = (<span class="keywordtype">float</span> *)malloc(n_elems * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
+<div class="line">    <span class="keywordflow">if</span> (!array) COMPLAIN_EXAMPLE_ERROR_AND_EXIT(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;malloc returned NULL&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> e = 0; e &lt; n_elems; ++e) {</div>
 <div class="line">        array[e] = e % 7 ? 1.0f : -1.0f;</div>
@@ -142,6 +143,7 @@ $(document).ready(function(){initNavTree('cross_engine_reorder_8c-example.html',
 <div class="line"><span class="keywordtype">int</span> find_negative(<a class="code" href="structdnnl__memory.html">dnnl_memory_t</a> mem, <span class="keywordtype">int</span> n_dims, <span class="keyword">const</span> <a class="code" href="group__dnnl__api__memory.html#ga872631b12a112bf43fba985cba24dd20">dnnl_dim_t</a> dims[]) {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">size_t</span> n_elems = product(n_dims, dims);</div>
 <div class="line">    <span class="keywordtype">float</span> *array = (<span class="keywordtype">float</span> *)malloc(n_elems * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
+<div class="line">    <span class="keywordflow">if</span> (!array) COMPLAIN_EXAMPLE_ERROR_AND_EXIT(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;malloc returned NULL&quot;</span>);</div>
 <div class="line">    read_from_dnnl_memory(array, mem);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">int</span> negs = 0;</div>

@@ -106,15 +106,15 @@ $(document).ready(function(){initNavTree('dev_guide_profilers.html','');});
 <p>When the feature is enabled at build-time, the <code>DNNL_JIT_PROFILE</code> environment variable can be used to manage integration with performance profilers.</p>
 <table class="doxtable">
 <tr>
-<th align="left">Environment variable </th><th align="left">Value </th><th align="left">Description  </th></tr>
+<th align="left">Environment variable </th><th align="left">Value </th><th align="left">Description </th><th align="left">x64 </th><th align="left">AArch64  </th></tr>
 <tr>
-<td align="left">DNNL_JIT_PROFILE </td><td align="left"><b>1</b> </td><td align="left"><b>Enables VTune Amplifier integration (default)</b> </td></tr>
+<td align="left">DNNL_JIT_PROFILE </td><td align="left">1 </td><td align="left">Enables VTune Amplifier integration </td><td align="left"><b>x(default)</b> </td><td align="left">N/A </td></tr>
 <tr>
-<td align="left"></td><td align="left">2 </td><td align="left">Enables basic Linux perf integration </td></tr>
+<td align="left"></td><td align="left">2 </td><td align="left">Enables basic Linux perf integration </td><td align="left">x </td><td align="left"><b>x(default)</b> </td></tr>
 <tr>
-<td align="left"></td><td align="left">6 </td><td align="left">Enables Linux perf integration with JIT dump output </td></tr>
+<td align="left"></td><td align="left">6 </td><td align="left">Enables Linux perf integration with JIT dump output </td><td align="left">x </td><td align="left">x </td></tr>
 <tr>
-<td align="left"></td><td align="left">14 </td><td align="left">Enables Linux perf integration with JIT dump output and TSC timestamps </td></tr>
+<td align="left"></td><td align="left">14 </td><td align="left">Enables Linux perf integration with JIT dump output and TSC timestamps </td><td align="left">x </td><td align="left">N/A </td></tr>
 </table>
 <p>Other valid values for <code>DNNL_JIT_PROFILE</code> include integer values representing a combination of flags accepted by the <a class="el" href="group__dnnl__api__service.html#ga51ef634e4f201a12d32e573955943f48">dnnl_set_jit_profiling_flags</a> function.</p>
 <p>The default setting of the profiling flags is to enable integration with VTune Amplifier; therefore it does not require any additional setup and works out of the box. Code integrating oneDNN may override this behavior.</p>
@@ -240,7 +240,7 @@ $(document).ready(function(){initNavTree('dev_guide_profilers.html','');});
 </div><!-- fragment --><p>See more examples in the <a href="https://software.intel.com/content/www/us/en/develop/documentation/vtune-help/top/introduction/tutorials-and-samples.html">VTune Amplifier User Guide</a></p>
 <h2>Example: Profiling with Linux perf</h2>
 <p>The following command instructs oneDNN to enable both jitdump and perfmap profiling modes and write jitdump files into the <code>.debug</code> directory in the current directory by setting environment variable <code>JITDUMPDIR</code> to point to the current directory.</p>
-<div class="fragment"><div class="line">$ JITDUMPDIR=. DNNL_JIT_PROFILE=6 perf record -k1 ./tests/benchdnn/benchdnn --mode=P mb1ic32ih14oc32oh14kh3ph1n<span class="stringliteral">&quot;resnet_50:res4a_branch2b*6&quot;</span></div>
+<div class="fragment"><div class="line">$ JITDUMPDIR=. DNNL_JIT_PROFILE=6 perf record -k1 ./tests/benchdnn/benchdnn --conv --mode=P mb1ic32ih14oc32oh14kh3ph1n<span class="stringliteral">&quot;resnet_50:res4a_branch2b*6&quot;</span></div>
 <div class="line">Output <span class="keyword">template</span>: perf,%<a class="code" href="group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1aad1943a9fd6d3d7ee1e6af41a5b0d3e7">engine</a>%,%name%,%desc%,%Gops%,%Gfreq%,%-time%,%-Gflops%,%0time%,%0Gflops%</div>
 <div class="line">perf,cpu,resnet_50:res4a_branch2b*6,--conv mb1ic32ih14oc32oh14kh3ph1nresnet_50:res4a_branch2b*6,0.0032768,0,0.0131836,248.551,0.0262988,124.599</div>
 <div class="line">tests:1 passed:0 skipped:0 mistrusted:0 <a class="code" href="group__dnnl__api__service.html#gga7acc4d3516304ae68a1289551d8f2cdda4316423dfe3ade85c292aa38185f9817">unimplemented</a>:0 failed:0 listed:0</div>

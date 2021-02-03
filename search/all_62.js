@@ -29,6 +29,7 @@ var searchData=
   ['binary_5fd',['binary_d',['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1ab63c80112add4f3a967c6a08c2d4884b',1,'dnnl']]],
   ['binary_5fdiv',['binary_div',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a2835085341c109a886106f1b671aff71',1,'dnnl']]],
   ['binary_20primitive_20example',['Binary Primitive Example',['../binary_example_cpp.html',1,'']]],
+  ['binary_5fge',['binary_ge',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a2f7ccdf82eaf578e9781ae6a1d9faaa9',1,'dnnl']]],
   ['binary_5fmax',['binary_max',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a4ae0aa1c0bf5bd1bf54564a2485618be',1,'dnnl']]],
   ['binary_5fmin',['binary_min',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640ad096699e4ea7ada3d71428484e6119d8',1,'dnnl']]],
   ['binary_5fmul',['binary_mul',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a0905fc5c22e79a8eed0988681eb6a0ae',1,'dnnl']]],

@@ -110,6 +110,7 @@ var group__dnnl__api__attributes =
       [ "binary_min", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640ad096699e4ea7ada3d71428484e6119d8", null ],
       [ "binary_div", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a2835085341c109a886106f1b671aff71", null ],
       [ "binary_sub", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a979309f9436f7ebfa278b0ce682dd706", null ],
+      [ "binary_ge", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a2f7ccdf82eaf578e9781ae6a1d9faaa9", null ],
       [ "resampling_nearest", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a091b262cfae5e610fcad1490bfb79431", null ],
       [ "resampling_linear", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a05731680a83c6dccd19a758b72a4ecbd", null ],
       [ "reduction_max", "group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a42483cece49698bff4fc700cd2de655c", null ],

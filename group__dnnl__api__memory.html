@@ -1622,10 +1622,6 @@ The <a class="el" href="group__dnnl__api__memory.html#gac9006cdf6816b8bef7be3455
 </div><div class="memdoc">
 
 <p>Sets the underlying memory buffer. </p>
-<p>This function may write zero values to the memory specified by the <code>handle</code> if the memory object has a zero padding area. This may be time consuming and happens each time this function is called. The operation is always blocking and the stream parameter is a hint.</p>
-<dl class="section note"><dt>Note</dt><dd>The zero padding is required by memory objects created with blocked memory format tags like <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da9523ccda38e86a8f7f58f8f780ef6eac" title="4D tensor blocked by 2nd dimension with block size 8 ">dnnl_aBcd8b</a> when any of the dimensions is not a multiple of the corresponding block size. For "plain" formats like <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da83a751aedeb59613312339d0f8b90f54" title="4D CNN activations tensor, an alias to dnnl_abcd ">dnnl_nchw</a> or <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dae50c534446b3c18cc018b3946b3cebd7" title="4D CNN activations tensor, an alias to dnnl_acdb ">dnnl_nhwc</a> zero padding area needs to be set up explicitly when creating the corresponding memory descriptors. See <a class="el" href="dev_guide_understanding_memory_formats.html">Understanding Memory Formats</a> for more details.</dd>
-<dd>
-Even when the memory object is used to hold values that stay constant during the execution of the program (pre-packed weights during inference, for example), the function will still write zeroes to the padding area if it exists. Hence, the <code>handle</code> parameter cannot and does not have a const qualifier.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">memory</td><td>Memory object. </td></tr>
