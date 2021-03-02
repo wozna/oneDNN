@@ -38,6 +38,7 @@ var searchData=
   ['resampling_5fforward',['resampling_forward',['../structdnnl_1_1resampling__forward.html',1,'dnnl']]],
   ['resampling_5fforward',['resampling_forward',['../structdnnl_1_1resampling__forward.html#ae3dd4862c2aef73ea7c2021ac17fc153',1,'dnnl::resampling_forward::resampling_forward()=default'],['../structdnnl_1_1resampling__forward.html#ae78e079af6300bd2523c99a2c590b3f3',1,'dnnl::resampling_forward::resampling_forward(const primitive_desc &amp;pd)']]],
   ['resampling_5flinear',['resampling_linear',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a05731680a83c6dccd19a758b72a4ecbd',1,'dnnl']]],
+  ['resampling_5flinear_5fno_5fshift',['resampling_linear_no_shift',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a161f505da8a160827666b20e9ff8c532',1,'dnnl']]],
   ['resampling_5fnearest',['resampling_nearest',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a091b262cfae5e610fcad1490bfb79431',1,'dnnl']]],
   ['reserved',['reserved',['../structdnnl__memory__extra__desc__t.html#a305aa924612dd8fcd21802707d0cc364',1,'dnnl_memory_extra_desc_t']]],
   ['reset',['reset',['../structdnnl_1_1handle.html#a8862ef3d31c3b19bd88395e0b1373909',1,'dnnl::handle']]],

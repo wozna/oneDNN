@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('group__dnnl__api__resampling.html','')
 </div><!--header-->
 <div class="contents">
 
-<p>A primitive to compute resampling operation on 1D, 2D or 3D data tensor using Nearest Neighbor, or Linear (Bilinear, Trilinear) interpolation method.  
+<p>A primitive to compute resampling operation on 1D, 2D or 3D data tensor using either Nearest Neighbor, Linear (Bilinear, Trilinear), or Linear (Bilinear, Trilinear) with no shift interpolation method.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -122,7 +122,7 @@ Functions</h2></td></tr>
 <tr class="separator:ga5ef7bfb7acf8c0e2f66c6eca90d6401a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>A primitive to compute resampling operation on 1D, 2D or 3D data tensor using Nearest Neighbor, or Linear (Bilinear, Trilinear) interpolation method. </p>
+<p>A primitive to compute resampling operation on 1D, 2D or 3D data tensor using either Nearest Neighbor, Linear (Bilinear, Trilinear), or Linear (Bilinear, Trilinear) with no shift interpolation method. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_resampling.html">Resampling</a> in developer guide </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga9f866ba136e2a9a013b78386cc73bdc5"></a>
@@ -179,7 +179,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">resampling_desc</td><td>Output descriptor for a resampling primitive. </td></tr>
     <tr><td class="paramname">prop_kind</td><td>Propagation kind. Possible values are <a class="el" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a992e03bebfe623ac876b3636333bbce0" title="Forward data propagation (training mode). ">dnnl_forward_training</a> and <a class="el" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a2f77a568a675dec649eb0450c997856d" title="Forward data propagation (inference mode). ">dnnl_forward_inference</a>. </td></tr>
-    <tr><td class="paramname">alg_kind</td><td>resampling algorithm kind: either <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be" title="Nearest Neighbor Resampling Method. ">dnnl_resampling_nearest</a>, or <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b" title="Linear Resampling Method. ">dnnl_resampling_linear</a>. </td></tr>
+    <tr><td class="paramname">alg_kind</td><td>resampling algorithm kind: either <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be" title="Nearest Neighbor Resampling Method. ">dnnl_resampling_nearest</a>, <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b" title="Linear Resampling Method. ">dnnl_resampling_linear</a>, or <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a706161efc5ea83368345f609c7a4d3dd" title="Linear Resampling Method with no shift. ">dnnl_resampling_linear_no_shift</a>. </td></tr>
     <tr><td class="paramname">factors</td><td>Array of scaling factors for spatial dimension. </td></tr>
     <tr><td class="paramname">src_desc</td><td>Source memory descriptor. </td></tr>
     <tr><td class="paramname">dst_desc</td><td>Destination memory descriptor. </td></tr>
@@ -236,7 +236,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">resampling_desc</td><td>Output descriptor for a resampling primitive. </td></tr>
-    <tr><td class="paramname">alg_kind</td><td>resamplinging algorithm kind: either <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be" title="Nearest Neighbor Resampling Method. ">dnnl_resampling_nearest</a>, or <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b" title="Linear Resampling Method. ">dnnl_resampling_linear</a>. </td></tr>
+    <tr><td class="paramname">alg_kind</td><td>resampling algorithm kind: either <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be" title="Nearest Neighbor Resampling Method. ">dnnl_resampling_nearest</a>, <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b" title="Linear Resampling Method. ">dnnl_resampling_linear</a>, or <a class="el" href="group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a706161efc5ea83368345f609c7a4d3dd" title="Linear Resampling Method with no shift. ">dnnl_resampling_linear_no_shift</a>. </td></tr>
     <tr><td class="paramname">diff_src_desc</td><td>Diff source memory descriptor. </td></tr>
     <tr><td class="paramname">diff_dst_desc</td><td>Diff destination memory descriptor. </td></tr>
     <tr><td class="paramname">factors</td><td>Array of scaling factors for spatial dimension. </td></tr>

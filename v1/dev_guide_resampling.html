@@ -103,11 +103,12 @@ $(document).ready(function(){initNavTree('dev_guide_resampling.html','');});
 <ul>
 <li>Nearest Neighbor</li>
 <li>Linear (or Bilinear for 2D spatial tensor, Trilinear for 3D spatial tensor).</li>
+<li>Linear no shift (or Bilinear for 2D spatial tensor, Trilinear for 3D spatial tensor).</li>
 </ul>
 <p>Resampling operation is defined by the source tensor and scaling factors in each spatial dimension. Upsampling and downsampling are the alternative terms for resampling that are used when all scaling factors are greater (upsampling) or less (downsampling) than one.</p>
 <p>The resampling operation is defined by the following formulas. We show formulas only for 2D spatial data which are straightforward to generalize to cases of higher and lower dimensions. Variable names follow the standard <a class="el" href="dev_guide_conventions.html">Naming Conventions</a>.</p>
 <p>Let \(\src\) and \(\dst\) be \(N \times C \times IH \times IW\) and \(N \times C \times OH \times OW\) tensors respectively. Let \( F_h = \frac{OH}{IH} \) and \( F_w = \frac{OW}{IW} \) define scaling factors in each spatial dimension.</p>
-<p>The following formulas show how oneDNN computes resampling for nearest neighbor and bilinear interpolation methods. To further simplify the formulas, we assume the following:</p>
+<p>The following formulas show how oneDNN computes resampling for nearest neighbor and bilinear and bilinear no shift interpolation methods. To further simplify the formulas, we assume the following:</p>
 <ul>
 <li>\(\src(n, ic, ih, iw) = 0\) if \(ih &lt; 0\) or \(iw &lt; 0\),</li>
 <li>\(\src(n, ic, ih, iw) = \src(n, ic, IH - 1, iw)\) if \(ih \geq IH\),</li>
@@ -127,7 +128,7 @@ $(document).ready(function(){initNavTree('dev_guide_resampling.html','');});
 <p class="formulaDsp">
 \[ \dst(n, c, oh, ow) = \src(n, c, ih_0, iw_0) \cdot W_{ih} \cdot W_{iw} + \\ \src(n, c, ih_1, iw_0) \cdot (1 - W_{ih}) \cdot W_{iw} + \\ \src(n, c, ih_0, iw_1) \cdot W_{ih} \cdot (1 - W_{iw}) + \\ \src(n, c, ih_1, iw_1) \cdot (1 - W_{ih}) \cdot (1 - W_{iw}) \\ \]
 </p>
-<p>where</p>
+<p>where for bilinear:</p>
 <ul>
 <li>\(ih_0 = \left\lfloor{\frac {oh + 0.5} {F_h} - 0.5}\right\rfloor\),</li>
 <li>\(ih_1 = \left\lceil {\frac {oh + 0.5} {F_h} - 0.5}\right\rceil\),</li>
@@ -135,6 +136,15 @@ $(document).ready(function(){initNavTree('dev_guide_resampling.html','');});
 <li>\(iw_1 = \left\lceil {\frac {ow + 0.5} {F_w} - 0.5}\right\rceil\),</li>
 <li>\(W_{ih} = \frac{oh + 0.5}{F_h} - 0.5 - ih_0\),</li>
 <li>\(W_{iw} = \frac{ow + 0.5}{F_w} - 0.5 - iw_0\).</li>
+</ul>
+<p>and for bilinear no shift:</p>
+<ul>
+<li>\(ih_0 = \left\lfloor{\frac {oh} {F_h}}\right\rfloor\),</li>
+<li>\(ih_1 = \left\lceil {\frac {oh} {F_h}}\right\rceil\),</li>
+<li>\(iw_0 = \left\lfloor{\frac {ow} {F_w}}\right\rfloor\),</li>
+<li>\(iw_1 = \left\lceil {\frac {ow} {F_w}}\right\rceil\),</li>
+<li>\(W_{ih} = \frac{oh}{F_h} - ih_0\),</li>
+<li>\(W_{iw} = \frac{ow}{F_w} - iw_0\).</li>
 </ul>
 <h4>Difference Between Forward Training and Forward Inference</h4>
 <p>There is no difference between the <a class="el" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a992e03bebfe623ac876b3636333bbce0" title="Forward data propagation (training mode). ">dnnl_forward_training</a> and <a class="el" href="group__dnnl__api__primitives__common.html#ggae3c1f22ae55645782923fbfd8b07d0c4a2f77a568a675dec649eb0450c997856d" title="Forward data propagation (inference mode). ">dnnl_forward_inference</a> propagation kinds.</p>

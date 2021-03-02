@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059af291654d3c28900b0c8cf1e5a5c87dc3":[6,0,0,0,0,84,20],
+"group__dnnl__api__primitives__common.html#gga9e5235563cf7cfc10fa89f415de98059afef5b19704b36da50f1bcfa5b66a61a2":[6,0,0,0,0,84,28],
 "group__dnnl__api__primitives__common.html#ggad8ef0fcbb7b10cae3d67dd46892002bea0cbad8a346551ec47da7ff1afb1e1f76":[6,0,0,0,0,78,2],
 "group__dnnl__api__primitives__common.html#ggad8ef0fcbb7b10cae3d67dd46892002bea334c4a4c42fdb79d7ebc3e73b517e6f8":[6,0,0,0,0,78,0],
 "group__dnnl__api__primitives__common.html#ggad8ef0fcbb7b10cae3d67dd46892002bea898ce555425ee54271096bc9c8e0400c":[6,0,0,0,0,78,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a2a3a724c917eeb3f77174e8118ead4b3":[6,0,0,0,6,2,1,6],
 "structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a2d2c0750f733cd79da51454cd718ff78":[6,0,0,0,6,2,1,4],
 "structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a3ce1d91ca97a4c51c935d2dfbb5a9e99":[6,0,0,0,6,2,1,2],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a4c76ab88f4eee91cfda2eba496d7ac38":[6,0,0,0,6,2,1,3],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#ac5e0c28ebaa99aa9ad3957dc64079181":[6,0,0,0,6,2,1,0],
-"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#ac8e2d74ed74f23e984893f2a1c8c1baa":[6,0,0,0,6,2,1,1]
+"structdnnl_1_1convolution__backward__weights_1_1primitive__desc.html#a4c76ab88f4eee91cfda2eba496d7ac38":[6,0,0,0,6,2,1,3]
 };

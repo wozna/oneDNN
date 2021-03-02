@@ -277,6 +277,7 @@ var group__dnnl__api__primitives__common =
       [ "dnnl_binary_sub", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a551dc23f954000fe81a97c9bd8ca4899", null ],
       [ "dnnl_resampling_nearest", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be", null ],
       [ "dnnl_resampling_linear", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b", null ],
+      [ "dnnl_resampling_linear_no_shift", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a706161efc5ea83368345f609c7a4d3dd", null ],
       [ "dnnl_reduction_max", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23aae4722e394206cf9774ae45db959854e", null ],
       [ "dnnl_reduction_min", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a3edeac87290d164cfd3e79adcb6ed91a", null ],
       [ "dnnl_reduction_sum", "group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23ae74491a0b7bfe0720be69e3732894818", null ],

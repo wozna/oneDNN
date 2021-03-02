@@ -17,6 +17,7 @@ var searchData=
   ['resampling',['resampling',['../structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a4f9776b23053c32400f732de532df397',1,'dnnl::primitive']]],
   ['resampling_5fd',['resampling_d',['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1afcc6f3d53b14544cb287a355c2f1f228',1,'dnnl']]],
   ['resampling_5flinear',['resampling_linear',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a05731680a83c6dccd19a758b72a4ecbd',1,'dnnl']]],
+  ['resampling_5flinear_5fno_5fshift',['resampling_linear_no_shift',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a161f505da8a160827666b20e9ff8c532',1,'dnnl']]],
   ['resampling_5fnearest',['resampling_nearest',['../group__dnnl__api__attributes.html#gga00377dd4982333e42e8ae1d09a309640a091b262cfae5e610fcad1490bfb79431',1,'dnnl']]],
   ['rnn',['rnn',['../structdnnl_1_1primitive.html#ad1ec93215a0cf3aa0a32bae0c2cd9169a6eed45b9327120cabad6916919a9a600',1,'dnnl::primitive']]],
   ['rnn_5fd',['rnn_d',['../group__dnnl__api__primitives__common.html#gga94efdd650364f4d9776cfb9b711cbdc1a5bada9b07803d3e657d5bdc592f7fc52',1,'dnnl']]],

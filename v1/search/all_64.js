@@ -621,6 +621,7 @@ var searchData=
   ['dnnl_5fresampling_5fdesc_5ft',['dnnl_resampling_desc_t',['../structdnnl__resampling__desc__t.html',1,'']]],
   ['dnnl_5fresampling_5fforward_5fdesc_5finit',['dnnl_resampling_forward_desc_init',['../group__dnnl__api__resampling.html#ga9f866ba136e2a9a013b78386cc73bdc5',1,'dnnl.h']]],
   ['dnnl_5fresampling_5flinear',['dnnl_resampling_linear',['../group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a1db5bfa7000fa71a7b8bce1c3497ae1b',1,'dnnl_types.h']]],
+  ['dnnl_5fresampling_5flinear_5fno_5fshift',['dnnl_resampling_linear_no_shift',['../group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23a706161efc5ea83368345f609c7a4d3dd',1,'dnnl_types.h']]],
   ['dnnl_5fresampling_5fnearest',['dnnl_resampling_nearest',['../group__dnnl__api__primitives__common.html#gga96946c805f6c4922c38c37049ab95d23af3f4351e11d0792cdfddff5e12e806be',1,'dnnl_types.h']]],
   ['dnnl_5frnn',['dnnl_rnn',['../group__dnnl__api__primitives__common.html#gga9878f4795e53ad8443e5c0a29e53286aaf383485481e1d188df5b59c5424ee3ea',1,'dnnl_types.h']]],
   ['dnnl_5frnn_5fdesc_5ft',['dnnl_rnn_desc_t',['../structdnnl__rnn__desc__t.html',1,'']]],
