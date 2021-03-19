@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('dev_guide_build_options.html','');});
 </div><!-- fragment --><p>This assumes that the environment variable <code>ACL_ROOT_DIR</code> is set to the location of Arm Compute Library, which must be downloaded and built independently of oneDNN.</p>
 <dl class="section warning"><dt>Warning</dt><dd>For a debug build of oneDNN it is advisable to specify a Compute Library build which has also been built with debug enabled.</dd>
 <dd>
-oneDNN is only compatible with Compute Library builds v20.11 or later.</dd></dl>
+oneDNN is only compatible with Compute Library builds v21.02 or later.</dd></dl>
 <h4>Vendor BLAS libraries</h4>
 <p>oneDNN can use a standard BLAS library for GEMM operations. The <code>DNNL_BLAS_VENDOR</code> build option controls BLAS library selection, and defaults to <code>NONE</code>. For AArch64 builds with GCC, use the <a href="https://developer.arm.com/tools-and-software/server-and-hpc/downloads/arm-performance-libraries">Arm Performance Libraries</a>:</p>
 <div class="fragment"><div class="line">$ cmake -DDNNL_BLAS_VENDOR=ARMPL ..</div>
