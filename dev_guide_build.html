@@ -139,19 +139,10 @@ $(document).ready(function(){initNavTree('dev_guide_build.html','');});
 <div class="line">          -DDNNL_GPU_RUNTIME=DPCPP</div>
 <div class="line">          &lt;extra build options&gt;</div>
 </div><!-- fragment --></li>
-<li>Compile with Arm Compute Library (AArch64 only)</li>
-</ul>
-<div class="fragment"><div class="line">export ACL_ROOT_DIR=&lt;path/to/Compute Library&gt;</div>
-<div class="line">cmake .. \</div>
-<div class="line">         -DDNNL_AARCH64_USE_ACL=ON \</div>
-<div class="line">         &lt;extra build options&gt;</div>
-</div><!-- fragment --><p>Only ACL versions 21.02 or above are supported.</p>
-<h4>Build and Install the Library</h4>
-<ul>
 <li>Build the library <div class="fragment"><div class="line">make -j</div>
 </div><!-- fragment --></li>
 </ul>
-<h4>GCC targeting AArch64</h4>
+<h4>GCC targeting AArch64 on x64 host</h4>
 <ul>
 <li>Set up the environment for the compiler</li>
 <li>Configure CMake and generate makefiles <div class="fragment"><div class="line">export CC=aarch64-linux-gnu-gcc</div>
@@ -160,6 +151,17 @@ $(document).ready(function(){initNavTree('dev_guide_build.html','');});
 <div class="line">          -DCMAKE_SYSTEM_NAME=Linux \</div>
 <div class="line">          -DCMAKE_SYSTEM_PROCESSOR=AARCH64 \</div>
 <div class="line">          -DCMAKE_LIBRARY_PATH=/usr/aarch64-linux-gnu/lib \</div>
+<div class="line">          &lt;extra build options&gt;</div>
+</div><!-- fragment --></li>
+<li>Build the library <div class="fragment"><div class="line">make -j</div>
+</div><!-- fragment --></li>
+</ul>
+<h4>GCC with Arm Compute Library (ACL) on AArch64 host</h4>
+<ul>
+<li>Set up the environment for the compiler</li>
+<li>Configure CMake and generate makefiles <div class="fragment"><div class="line">export ACL_ROOT_DIR=&lt;path/to/Compute Library&gt;</div>
+<div class="line">cmake .. \</div>
+<div class="line">          -DDNNL_AARCH64_USE_ACL=ON \</div>
 <div class="line">          &lt;extra build options&gt;</div>
 </div><!-- fragment --></li>
 <li>Build the library <div class="fragment"><div class="line">make -j</div>
