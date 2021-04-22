@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('dev_guide_batch_normalization.html',''
 </p>
 <p>where</p>
 <ul>
-<li>\(\gamma(c), \beta(c)\) are optional scale and shift for a channel (see <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aeba5189d91e23448d706fb027867ae55" title="Use scale and shift parameters. ">dnnl_use_scaleshift</a> flag),</li>
+<li>\(\gamma(c), \beta(c)\) are optional scale and shift for a channel (see <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aeba5189d91e23448d706fb027867ae55" title="Use scale and shift parameters. ">dnnl_use_scaleshift</a>, <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3a01bf8edab9d40fd6a1f8827ee485dc65" title="Use scale parameter. ">dnnl_use_scale</a> and <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3afeb8455811d27d7835503a3740679df0" title="Use shift parameter. ">dnnl_use_shift</a> flags),</li>
 <li>\(\mu(c), \sigma^2(c)\) are mean and variance for a channel (see <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aec04425c28af752c0f8b4dc5ae11fb19" title="Use global statistics. ">dnnl_use_global_stats</a> flag), and</li>
 <li>\(\varepsilon\) is a constant to improve numerical stability.</li>
 </ul>
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('dev_guide_batch_normalization.html',''
 </ul>
 <h3>Backward</h3>
 <p>The backward propagation computes \(\diffsrc(n, c, h, w)\), \(\diffgamma(c)^*\), and \(\diffbeta(c)^*\) based on \(\diffdst(n, c, h, w)\), \(\src(n, c, h, w)\), \(\mu(c)\), \(\sigma^2(c)\), \(\gamma(c) ^*\), and \(\beta(c) ^*\).</p>
-<p>The tensors marked with an asterisk are used only when the primitive is configured to use \(\gamma(c)\) and \(\beta(c)\) (i.e., <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aeba5189d91e23448d706fb027867ae55" title="Use scale and shift parameters. ">dnnl_use_scaleshift</a> is set).</p>
+<p>The tensors marked with an asterisk are used only when the primitive is configured to use \(\gamma(c)\) and \(\beta(c)\) (i.e., <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aeba5189d91e23448d706fb027867ae55" title="Use scale and shift parameters. ">dnnl_use_scaleshift</a>, <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3a01bf8edab9d40fd6a1f8827ee485dc65" title="Use scale parameter. ">dnnl_use_scale</a> or <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3afeb8455811d27d7835503a3740679df0" title="Use shift parameter. ">dnnl_use_shift</a> are set).</p>
 <h2>Execution Arguments</h2>
 <p>Depending on the <a class="el" href="group__dnnl__api__primitives__common.html#ga301f673522a400c7c1e75f518431c9a3">flags</a> and <a class="el" href="group__dnnl__api__primitives__common.html#gae3c1f22ae55645782923fbfd8b07d0c4">propagation kind</a>, the batch normalization primitive requires different inputs and outputs. For clarity, a summary is shown below.</p>
 <table class="doxtable">
@@ -164,6 +164,22 @@ $(document).ready(function(){initNavTree('dev_guide_batch_normalization.html',''
 <br/>
  <em>Outputs</em>: \(\diffsrc\), \(\diffgamma\), \(\diffbeta\) </td><td align="left">Not supported </td></tr>
 <tr>
+<td align="left"><a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3a01bf8edab9d40fd6a1f8827ee485dc65" title="Use scale parameter. ">dnnl_use_scale</a> </td><td align="left"><em>Inputs</em>: \(\src\), \(\gamma\) <br/>
+<br/>
+ <em>Outputs</em>: \(\dst\) </td><td align="left"><em>Inputs</em>: \(\src\), \(\gamma\) <br/>
+<br/>
+ <em>Outputs</em>: \(\dst\), \(\mu\), \(\sigma^2\) </td><td align="left"><em>Inputs</em>: \(\diffdst\), \(\src\), \(\mu\), \(\sigma^2\), \(\gamma\) <br/>
+<br/>
+ <em>Outputs</em>: \(\diffsrc\), \(\diffgamma\) </td><td align="left">Not supported </td></tr>
+<tr>
+<td align="left"><a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3afeb8455811d27d7835503a3740679df0" title="Use shift parameter. ">dnnl_use_shift</a> </td><td align="left"><em>Inputs</em>: \(\src\), \(\beta\) <br/>
+<br/>
+ <em>Outputs</em>: \(\dst\) </td><td align="left"><em>Inputs</em>: \(\src\), \(\beta\) <br/>
+<br/>
+ <em>Outputs</em>: \(\dst\), \(\mu\), \(\sigma^2\) </td><td align="left"><em>Inputs</em>: \(\diffdst\), \(\src\), \(\mu\), \(\sigma^2\), \(\beta\) <br/>
+<br/>
+ <em>Outputs</em>: \(\diffsrc\), \(\diffbeta\) </td><td align="left">Not supported </td></tr>
+<tr>
 <td align="left"><a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aec04425c28af752c0f8b4dc5ae11fb19" title="Use global statistics. ">dnnl_use_global_stats</a> | <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aeba5189d91e23448d706fb027867ae55" title="Use scale and shift parameters. ">dnnl_use_scaleshift</a> </td><td align="left"><em>Inputs</em>: \(\src\), \(\mu\), \(\sigma^2\), \(\gamma\), \(\beta\) <br/>
 <br/>
  <em>Outputs</em>: \(\dst\) </td><td align="left"><em>Inputs</em>: \(\src\), \(\mu\), \(\sigma^2\), \(\gamma\), \(\beta\) <br/>
@@ -189,6 +205,10 @@ $(document).ready(function(){initNavTree('dev_guide_batch_normalization.html',''
 <tr>
 <td>\(\gamma, \beta\) </td><td>DNNL_ARG_SCALE_SHIFT </td></tr>
 <tr>
+<td>\(\gamma\) </td><td>DNNL_ARG_SCALE </td></tr>
+<tr>
+<td>\(\beta\) </td><td>DNNL_ARG_SHIFT </td></tr>
+<tr>
 <td>mean ( \(\mu\)) </td><td>DNNL_ARG_MEAN </td></tr>
 <tr>
 <td>variance ( \(\sigma^2\)) </td><td>DNNL_ARG_VARIANCE </td></tr>
@@ -202,11 +222,15 @@ $(document).ready(function(){initNavTree('dev_guide_batch_normalization.html',''
 <td>\(\diffsrc\) </td><td>DNNL_ARG_DIFF_SRC </td></tr>
 <tr>
 <td>\(\diffgamma, \diffbeta\) </td><td>DNNL_ARG_DIFF_SCALE_SHIFT </td></tr>
+<tr>
+<td>\(\diffgamma\) </td><td>DNNL_ARG_DIFF_SCALE </td></tr>
+<tr>
+<td>\(\diffbeta\) </td><td>DNNL_ARG_DIFF_SHIFT </td></tr>
 </table>
 <h2>Implementation Details</h2>
 <h3>General Notes</h3>
 <ol type="1">
-<li>The different flavors of the primitive are partially controlled by the <code>flags</code> parameter that is passed to the operation descriptor initialization function (e.g., <a class="el" href="structdnnl_1_1batch__normalization__forward_1_1desc.html#a93769b0a95b08e31ace5fe9d3e3ac974" title="Constructs a batch normalization descriptor for forward propagation. ">dnnl::batch_normalization_forward::desc::desc()</a>). Multiple flags can be set using the bitwise OR operator (<code>|</code>).</li>
+<li>The different flavors of the primitive are partially controlled by the <code>flags</code> parameter that is passed to the operation descriptor initialization function (e.g., <a class="el" href="structdnnl_1_1batch__normalization__forward_1_1desc.html#a93769b0a95b08e31ace5fe9d3e3ac974" title="Constructs a batch normalization descriptor for forward propagation. ">dnnl::batch_normalization_forward::desc::desc()</a>). Multiple flags can be set using the bitwise OR operator (<code>|</code>). Flag <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aeba5189d91e23448d706fb027867ae55" title="Use scale and shift parameters. ">dnnl_use_scaleshift</a> can not be mixed with <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3a01bf8edab9d40fd6a1f8827ee485dc65" title="Use scale parameter. ">dnnl_use_scale</a> or <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3afeb8455811d27d7835503a3740679df0" title="Use shift parameter. ">dnnl_use_shift</a>.</li>
 <li>For forward propagation, the mean and variance might be either computed at runtime (in which case they are outputs of the primitive) or provided by a user (in which case they are inputs). In the latter case, a user must set the <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aec04425c28af752c0f8b4dc5ae11fb19" title="Use global statistics. ">dnnl_use_global_stats</a> flag. For the backward propagation, the mean and variance are always input parameters.</li>
 <li>The memory format and data type for <code>src</code> and <code>dst</code> are assumed to be the same, and in the API they are typically referred to as <code>data</code> (e.g., see <code>data_desc</code> in <a class="el" href="structdnnl_1_1batch__normalization__forward_1_1desc.html#a93769b0a95b08e31ace5fe9d3e3ac974" title="Constructs a batch normalization descriptor for forward propagation. ">dnnl::batch_normalization_forward::desc::desc()</a>). The same is true for <code>diff_src</code> and <code>diff_dst</code>. The corresponding memory descriptors are referred to as <code>diff_data_desc</code>.</li>
 <li>Both forward and backward propagation support in-place operations, meaning that \(\src\) can be used as input and output for forward propagation, and \(\diffdst\) can be used as input and output for backward propagation. In case of an in-place operation, the original data will be overwritten. Note, however, that backward propagation requires original \(\src\), hence the corresponding forward propagation should not be performed in-place.</li>
@@ -230,7 +254,8 @@ $(document).ready(function(){initNavTree('dev_guide_batch_normalization.html',''
 <p>The mean ( \(\mu\)) and variance ( \(\sigma^2\)) are separate 1D tensors of size \(C\).</p>
 <p>The format of the corresponding memory object must be <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da9ccb37bb1a788f0245efbffbaf81e145" title="1D tensor, an alias to dnnl_a ">dnnl_x</a> (<a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da7a72c401669bf1737439d6c4af17d0be" title="plain 1D tensor ">dnnl_a</a>).</p>
 <h4>Scale and Shift</h4>
-<p>If used, the scale ( \(\gamma\)) and shift ( \(\beta\)) are combined in a single 2D tensor of shape \(2 \times C\).</p>
+<p>If <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3aeba5189d91e23448d706fb027867ae55" title="Use scale and shift parameters. ">dnnl_use_scaleshift</a> is used, the scale ( \(\gamma\)) and shift ( \(\beta\)) are combined in a single 2D tensor of shape \(2 \times C\).</p>
+<p>If <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3a01bf8edab9d40fd6a1f8827ee485dc65" title="Use scale parameter. ">dnnl_use_scale</a> or <a class="el" href="group__dnnl__api__primitives__common.html#gga301f673522a400c7c1e75f518431c9a3afeb8455811d27d7835503a3740679df0" title="Use shift parameter. ">dnnl_use_shift</a> are used, the scale ( \(\gamma\)) and shift ( \(\beta\)) are separate 1D tensors of shape \(C\).</p>
 <p>The format of the corresponding memory object must be <a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091dac08a541001fe70289305a5fbde48906d" title="2D CNN activations tensor, an alias to dnnl_ab ">dnnl_nc</a> (<a class="el" href="group__dnnl__api__memory.html#gga395e42b594683adb25ed2d842bb3091da1bd907fc29344dfe7ba88336960dcf53" title="plain 2D tensor ">dnnl_ab</a>).</p>
 <h4>Source, Destination, and Their Gradients</h4>
 <p>Like other CNN primitives, the batch normalization primitive expects data to be \(N \times C \times SP_n \times \cdots \times SP_0\) tensor.</p>

@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_int8_8cpp-example.ht
 <p>Annotated version: <a class="el" href="cpu_rnn_inference_int8_cpp.html">RNN int8 inference example</a> </p>
 </blockquote>
 <div class="fragment"><div class="line"><span class="comment">/*******************************************************************************</span></div>
-<div class="line"><span class="comment">* Copyright 2018-2020 Intel Corporation</span></div>
+<div class="line"><span class="comment">* Copyright 2018-2021 Intel Corporation</span></div>
 <div class="line"><span class="comment">*</span></div>
 <div class="line"><span class="comment">* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><span class="comment">* you may not use this file except in compliance with the License.</span></div>
@@ -131,15 +131,15 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_int8_8cpp-example.ht
 <div class="line"></div>
 <div class="line"><span class="keyword">using</span> dim_t = <a name="a0"></a><a class="code" href="structdnnl_1_1memory.html#a6ad818e4699872cc913474fa5f122cd5">dnnl::memory::dim</a>;</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">const</span> dim_t batch = 64;</div>
-<div class="line"><span class="keyword">const</span> dim_t src_seq_length_max = 25;</div>
-<div class="line"><span class="keyword">const</span> dim_t tgt_seq_length_max = 27;</div>
+<div class="line"><span class="keyword">const</span> dim_t batch = 32;</div>
+<div class="line"><span class="keyword">const</span> dim_t src_seq_length_max = 10;</div>
+<div class="line"><span class="keyword">const</span> dim_t tgt_seq_length_max = 10;</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">const</span> dim_t feature_size = 1024;</div>
+<div class="line"><span class="keyword">const</span> dim_t feature_size = 256;</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">const</span> dim_t enc_bidir_n_layers = 1;</div>
-<div class="line"><span class="keyword">const</span> dim_t enc_unidir_n_layers = 7;</div>
-<div class="line"><span class="keyword">const</span> dim_t dec_n_layers = 8;</div>
+<div class="line"><span class="keyword">const</span> dim_t enc_unidir_n_layers = 3;</div>
+<div class="line"><span class="keyword">const</span> dim_t dec_n_layers = 4;</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> lstm_n_gates = 4;</div>
 <div class="line"></div>
@@ -224,9 +224,9 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_int8_8cpp-example.ht
 <div class="line">    for (dim_t i = 0; i &lt; batch; i++)</div>
 <div class="line">        exp_sums[i] = 0.0f;</div>
 <div class="line"></div>
-<div class="line">    PRAGMA_OMP_PARALLEL_FOR_COLLAPSE(2)</div>
-<div class="line">    for (dim_t i = 0; i &lt; src_seq_length_max; i++) {</div>
-<div class="line">        <span class="keywordflow">for</span> (dim_t j = 0; j &lt; batch; j++) {</div>
+<div class="line">    PRAGMA_OMP_PARALLEL_FOR_COLLAPSE(1)</div>
+<div class="line">    for (dim_t j = 0; j &lt; batch; j++) {</div>
+<div class="line">        <span class="keywordflow">for</span> (dim_t i = 0; i &lt; src_seq_length_max; i++) {</div>
 <div class="line">            alignments[i * batch + j] = expf(alignments[i * batch + j]);</div>
 <div class="line">            exp_sums[j] += alignments[i * batch + j];</div>
 <div class="line">        }</div>
@@ -245,10 +245,10 @@ $(document).ready(function(){initNavTree('cpu_rnn_inference_int8_8cpp-example.ht
 <div class="line">                    + j]</div>
 <div class="line">                    = 0.0f;</div>
 <div class="line"></div>
-<div class="line">    PRAGMA_OMP_PARALLEL_FOR_COLLAPSE(3)</div>
+<div class="line">    PRAGMA_OMP_PARALLEL_FOR_COLLAPSE(2)</div>
 <div class="line">    for (dim_t i = 0; i &lt; batch; i++)</div>
-<div class="line">        for (dim_t k = 0; k &lt; src_seq_length_max; k++)</div>
-<div class="line">            for (dim_t j = 0; j &lt; feature_size; j++)</div>
+<div class="line">        for (dim_t j = 0; j &lt; feature_size; j++)</div>
+<div class="line">            for (dim_t k = 0; k &lt; src_seq_length_max; k++)</div>
 <div class="line">                context_vectors[i * (feature_size + feature_size) + feature_size</div>
 <div class="line">                        + j]</div>
 <div class="line">                        += alignments[k * batch + i]</div>

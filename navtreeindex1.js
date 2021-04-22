@@ -248,6 +248,6 @@ var NAVTREEINDEX1 =
 "group__dnnl__api__primitive__cache.html#gacc0f23351595504f3e2c2b6fcf603770":[6,0,0,4,2],
 "group__dnnl__api__primitives.html":[6,0,0,0],
 "group__dnnl__api__primitives__common.html":[6,0,0,0,0],
-"group__dnnl__api__primitives__common.html#ga01d8a1881875cdb94e230db4e53ccb97":[6,0,0,0,0,102],
-"group__dnnl__api__primitives__common.html#ga041881114858228279174aff5c1f5e75":[6,0,0,0,0,93]
+"group__dnnl__api__primitives__common.html#ga01d8a1881875cdb94e230db4e53ccb97":[6,0,0,0,0,107],
+"group__dnnl__api__primitives__common.html#ga041881114858228279174aff5c1f5e75":[6,0,0,0,0,98]
 };

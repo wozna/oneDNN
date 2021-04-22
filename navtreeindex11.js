@@ -1,5 +1,14 @@
 var NAVTREEINDEX11 =
 {
+"structdnnl__shuffle__desc__t.html#a1bb136f69743fc7381990f4406bf7fe2":[6,0,0,0,8,2,3],
+"structdnnl__shuffle__desc__t.html#aa08eeab619127a42ac431a3a2227dd05":[6,0,0,0,8,2,2],
+"structdnnl__shuffle__desc__t.html#ac7f1c0d9457322140f71af650b40cc24":[6,0,0,0,8,2,0],
+"structdnnl__shuffle__desc__t.html#ad63715e635c96f9c97952ab5db3dbc89":[6,0,0,0,8,2,1],
+"structdnnl__shuffle__desc__t.html#ade974f8027fee2319a64477110bd0619":[6,0,0,0,8,2,4],
+"structdnnl__softmax__desc__t.html":[6,0,0,0,10,2],
+"structdnnl__softmax__desc__t.html#a63ef3b7d75b3870d50cb209e0a265e47":[6,0,0,0,10,2,1],
+"structdnnl__softmax__desc__t.html#aada503f0c7cd766680d6a8720993b108":[6,0,0,0,10,2,0],
+"structdnnl__softmax__desc__t.html#abf2142a8799e960f8cb14bd661739ea8":[6,0,0,0,10,2,2],
 "structdnnl__softmax__desc__t.html#ae2923dc4fc7bea2fe6bf0745de54bffd":[6,0,0,0,10,2,4],
 "structdnnl__softmax__desc__t.html#affbec0ec38fb9093bad14be278a11874":[6,0,0,0,10,2,3],
 "structdnnl__stream.html":[6,0,0,3,1],

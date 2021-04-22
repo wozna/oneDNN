@@ -278,6 +278,8 @@ Figure 1: Example of stacked recurrent cells unrolled over the time dimension an
 <td>Forward </td><td>All (3) </td><td>f16 </td><td>f16 </td><td>f16 </td><td>f16 </td><td>f16 </td></tr>
 <tr>
 <td>Forward inference </td><td>Vanilla LSTM, LSTMP and GRU </td><td>u8 </td><td>u8 </td><td>s8 </td><td>f32 </td><td>u8, f32 </td></tr>
+<tr>
+<td>Forward inference </td><td>Vanilla LSTM, LSTMP </td><td>s8 </td><td>s8 </td><td>s8 </td><td>f32 </td><td>s8, f32 </td></tr>
 </table>
 <p>(1) With LSTM and Peephole LSTM cells, the cell state datatype is f32, except for the f16 configuration.</p>
 <p>(2) In backward propagation, all <code>diff_*</code> tensors are in f32.</p>
@@ -305,6 +307,7 @@ Figure 1: Example of stacked recurrent cells unrolled over the time dimension an
 <li>Refer to <a class="el" href="dev_guide_data_types.html">Data Types</a> for limitations related to data types support.</li>
 <li><b>CPU</b><ul>
 <li>Bias must always be present (that is, the corresponding memory descriptor argument cannot be zero memory descriptor when the RNN operation descriptor is initialized).</li>
+<li>oneDNN supports s8 as input data only on systems with Advanced Matrix Extension(AMX) support.</li>
 </ul>
 </li>
 </ol>
