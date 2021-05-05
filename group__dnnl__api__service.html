@@ -651,7 +651,7 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 
 <p>Sets the maximal ISA the library can dispatch to on the CPU. </p>
 <p>See <a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2" title="CPU instruction set flags. ">dnnl_cpu_isa_t</a> and <a class="el" href="group__dnnl__api__service.html#gabad017feb1850634bf3babdb68234f83" title="CPU instruction set flags. ">dnnl::cpu_isa</a> for the list of the values accepted by the C and C++ API functions respectively.</p>
-<p>This function has effect only before the first JIT kernel is generated and will return an error afterwards.</p>
+<p>This function has effect only once, and returns an error on subsequent calls. It should also be invoked before any other oneDNN API call, otherwise it may return an error.</p>
 <p>This function overrides the DNNL_MAX_CPU_ISA environment variable. The environment variable can be set to the desired maximal ISA name in upper case and with dnnl_cpu_isa prefix removed. For example: <code>DNNL_MAX_CPU_ISA=AVX2</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>The ISAs are only partially ordered:<ul>
 <li>SSE41 &lt; AVX &lt; AVX2,</li>
@@ -710,7 +710,7 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 
 <p>Sets the hints flag for the CPU ISA. </p>
 <p>See <a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> and <a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4" title="CPU ISA hints flags. ">dnnl::cpu_isa_hints</a> for the list of the values accepted by the C and C++ API functions respectively.</p>
-<p>This function has effect only before the first JIT kernel is generated and will return an error afterwards.</p>
+<p>This function has effect only once, and returns an error on subsequent calls. It should also be invoked before any other oneDNN API call, otherwise it may return an error.</p>
 <p>This function overrides the DNNL_CPU_ISA_HINTS environment variable. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA Hints</a> for more details</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -958,7 +958,7 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 
 <p>Sets the maximal ISA the library can dispatch to on the CPU. </p>
 <p>See <a class="el" href="group__dnnl__api__service.html#ga303bab5d2e7b371bb44495864df21dd2" title="CPU instruction set flags. ">dnnl_cpu_isa_t</a> and <a class="el" href="group__dnnl__api__service.html#gabad017feb1850634bf3babdb68234f83" title="CPU instruction set flags. ">dnnl::cpu_isa</a> for the list of the values accepted by the C and C++ API functions respectively.</p>
-<p>This function has effect only before the first JIT kernel is generated and will return an error afterwards.</p>
+<p>This function has effect only once, and returns an error on subsequent calls. It should also be invoked before any other oneDNN API call, otherwise it may return an error.</p>
 <p>This function overrides the DNNL_MAX_CPU_ISA environment variable. The environment variable can be set to the desired maximal ISA name in upper case and with dnnl_cpu_isa prefix removed. For example: <code>DNNL_MAX_CPU_ISA=AVX2</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>The ISAs are only partially ordered:<ul>
 <li>SSE41 &lt; AVX &lt; AVX2,</li>
@@ -1032,7 +1032,7 @@ The directory is accessed only when the first JIT kernel is being created. JIT p
 
 <p>Sets the hints flag for the CPU ISA. </p>
 <p>See <a class="el" href="group__dnnl__api__service.html#gaf356412d94e35579bd509ed1fa174f5d" title="CPU ISA hints flags. ">dnnl_cpu_isa_hints_t</a> and <a class="el" href="group__dnnl__api__service.html#gaf574021058ebc6965da14fc4387dd0c4" title="CPU ISA hints flags. ">dnnl::cpu_isa_hints</a> for the list of the values accepted by the C and C++ API functions respectively.</p>
-<p>This function has effect only before the first JIT kernel is generated and will return an error afterwards.</p>
+<p>This function has effect only once, and returns an error on subsequent calls. It should also be invoked before any other oneDNN API call, otherwise it may return an error.</p>
 <p>This function overrides the DNNL_CPU_ISA_HINTS environment variable. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="dev_guide_cpu_isa_hints.html">CPU ISA Hints</a> for more details</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>

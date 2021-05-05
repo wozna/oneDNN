@@ -1,5 +1,8 @@
 var NAVTREEINDEX11 =
 {
+"structdnnl__rnn__desc__t.html#afc36e9660a6d883ecaed0940a9c7fb99":[6,0,0,0,19,9,22],
+"structdnnl__rnn__packed__desc__t.html":[6,0,0,1,3],
+"structdnnl__shuffle__desc__t.html":[6,0,0,0,8,2],
 "structdnnl__shuffle__desc__t.html#a1bb136f69743fc7381990f4406bf7fe2":[6,0,0,0,8,2,3],
 "structdnnl__shuffle__desc__t.html#aa08eeab619127a42ac431a3a2227dd05":[6,0,0,0,8,2,2],
 "structdnnl__shuffle__desc__t.html#ac7f1c0d9457322140f71af650b40cc24":[6,0,0,0,8,2,0],

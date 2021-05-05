@@ -249,5 +249,5 @@ var NAVTREEINDEX5 =
 "structdnnl_1_1memory.html#a7463ff54b529ec2b5392230861212a09":[6,0,0,1,0,7],
 "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3f":[6,0,0,1,0,5],
 "structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa00025ae6907e34c690de6ddd60423523":[6,0,0,1,0,5,235],
-"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa00c22d0fcb6b55247c37eaf708524a82":[6,0,0,1,0,5,317]
+"structdnnl_1_1memory.html#a8e71077ed6a5f7fb7b3e6e1a5a2ecf3fa00c22d0fcb6b55247c37eaf708524a82":[6,0,0,1,0,5,320]
 };

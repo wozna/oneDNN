@@ -115,8 +115,8 @@ $(document).ready(function(){initNavTree('dev_guide_cpu_isa_hints.html','');});
 </table>
 <p>This feature can also be managed at run-time with the following functions:</p>
 <ul>
-<li><a class="el" href="group__dnnl__api__service.html#ga29aa5fb708d803e091ac61dc67f9e6ed">dnnl::set_cpu_isa_hints</a> function allows changing the CPU ISA hint at run-time. The limitation is that, it is possible to set the value only before the first JIT-ed function is generated - that is, before the primitive creation stage.</li>
-<li><a class="el" href="group__dnnl__api__service.html#ga8bee13aa79a9711489b401e9c4252ff2">dnnl::get_cpu_isa_hints</a> function returns the currently used CPU ISA hints that by default poses no restrictions.</li>
+<li><a class="el" href="group__dnnl__api__service.html#ga29aa5fb708d803e091ac61dc67f9e6ed">dnnl::set_cpu_isa_hints</a> function allows changing the CPU ISA hint at run-time. The limitation is that it is possible to set the value only once. In addition, it is advised to call this function before any other oneDNN API. This is because the first internal query of CPU ISA hints will disable the ability to change it. Once disabled, changing the CPU ISA hint will return an error.</li>
+<li><a class="el" href="group__dnnl__api__service.html#ga8bee13aa79a9711489b401e9c4252ff2">dnnl::get_cpu_isa_hints</a> function returns the currently used CPU ISA hints and by default poses no restrictions.</li>
 </ul>
 <p>Function settings take precedence over environment variables. Moreover, if the hint is not applicable then it would be silently ignored. For instance with SSE41 there are no YMM registers and so hint to prefer YMM registers would be silently bypassed. </p>
 </div></div><!-- contents -->

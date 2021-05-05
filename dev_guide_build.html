@@ -208,7 +208,8 @@ $(document).ready(function(){initNavTree('dev_guide_build.html','');});
 </div><!-- fragment --><h2>Install library</h2>
 <p>Install the library, headers, and documentation </p>
 <div class="fragment"><div class="line">cmake --build . --target install</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><p> The install directory is specified by the <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html">CMAKE_INSTALL_PREFIX</a> cmake variable. When installing in the default directory, the above command needs to be run with administrative privileges using <code>sudo</code> on Linux/Mac or a command prompt run as administrator on Windows. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="footer">
     <script>
